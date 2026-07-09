@@ -1,31 +1,14 @@
 {
-  "generated_at": "2026-07-09T10:45:56.019Z",
+  "generated_at": "2026-07-09T10:58:28.075Z",
   "mode": "local",
   "counts": {
     "catalogued": 35,
-    "candidates": 57,
-    "feature_candidates": 1,
+    "candidates": 56,
+    "feature_candidates": 0,
     "anomalies": 0,
     "stale": 5
   },
-  "feature_candidates": [
-    {
-      "name": "CmdPilot",
-      "verdict": "feature-candidate",
-      "reason": "Xcode/Swift 네이티브 앱",
-      "source": "local+github",
-      "repo_url": "https://github.com/johnfkoo951/CmdPilot",
-      "is_private": false,
-      "last_commit": "2026-07-09",
-      "signals": {
-        "git": true,
-        "vercel": false,
-        "nativeApp": true,
-        "obsidianPlugin": false,
-        "lastCommitDays": 0
-      }
-    }
-  ],
+  "feature_candidates": [],
   "skipped_candidates": [
     {
       "name": "Doit_R",

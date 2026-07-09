@@ -83,17 +83,17 @@ apps:
     dev_dir: "ai-baekiljang"
     repo: "johnfkoo951/ai-baekiljang"
     url: "https://writing.cmdspace.work"
-  - name: "MacPilot"
+  - name: "CmdPilot"
     category: macos-apps
     tier: flagship
     priority: 5
-    headline: "MacPilot — 폰이 맥의 리모컨"
-    sub: "브라우저만으로 트랙패드·키보드·AI 에이전트를 침대에서 원격 조종하는 메뉴바 헬퍼."
-    tech: "Swift (MacHelper.xcodeproj) + vanilla JS PWA 웹 클라이언트"
+    headline: "CmdPilot — 폰이 맥의 리모컨"
+    sub: "폰 앱 없이 브라우저만으로 트랙패드·키보드·스트림덱·AI 에이전트를 원격 조종하는 메뉴바 헬퍼."
+    tech: "Swift (menubar) + vanilla JS PWA 웹 클라이언트"
     tags: ["Swift"]
     status: "released"
-    dev_dir: "MacPilot"
-    repo: "johnfkoo951/MacPilot"
+    dev_dir: "CmdPilot"
+    repo: "johnfkoo951/CmdPilot"
     url: ""
     download: releases
   - name: "cmds-eagle"
