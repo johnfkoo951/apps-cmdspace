@@ -1,12 +1,18 @@
 # 카탈로그 드리프트 리포트
 
-> 생성: 2026-07-09T11:04:22.264Z · 모드: `local` · 카탈로그 35개 · 신규후보 0개 · 이상 0건
+> 생성: 2026-07-09T11:09:55.458Z · 모드: `public-only` · 카탈로그 35개 · 신규후보 5개 · 이상 0건
 
 이 파일은 `scripts/scan.mjs`가 자동 생성합니다. 새 프로젝트는 `catalog/apps.yaml`(피처링) 또는 `catalog/ignore.yaml`(제외)로 옮기면 다음 스캔부터 사라집니다.
 
 ## 🆕 피처 후보 (검토 필요)
 
-_없음._
+| 프로젝트 | 소스 | 최근 커밋 | 신호 | 판단 이유 |
+|---|---|---|---|---|
+| `Osync-p` | github | 2026-06-14 | git | 최근 25일 내 커밋된 활성 git 프로젝트 |
+| `cmds-vault` | github | 2026-07-03 | git | 최근 6일 내 커밋된 활성 git 프로젝트 |
+| `kordoc` | github | 2026-06-13 | git | 최근 26일 내 커밋된 활성 git 프로젝트 |
+| `omlx` | github | 2026-06-18 | git | 최근 21일 내 커밋된 활성 git 프로젝트 |
+| `synch` | github | 2026-06-28 | git | 최근 11일 내 커밋된 활성 git 프로젝트 |
 
 ## ⚠️ 기존 앱 이상 (알림 대상)
 
@@ -22,61 +28,32 @@ _없음._
 
 </details>
 
-<details><summary>스킵된 후보 (저신호) 53개</summary>
+<details><summary>스킵된 후보 (저신호) 24개</summary>
 
 - `Doit_R` — 배포/앱 신호 없음 (저신호)
-- `HR-Dashboard--for-Streamlit-Web-` — 배포/앱 신호 없음 (저신호)
 - `LDA` — 배포/앱 신호 없음 (저신호)
 - `LDA_ItsOK` — 배포/앱 신호 없음 (저신호)
 - `LDA_Research` — 배포/앱 신호 없음 (저신호)
 - `LDA_vis` — 배포/앱 신호 없음 (저신호)
 - `LDA_visualization` — 배포/앱 신호 없음 (저신호)
-- `Osync-p` — 배포/앱 신호 없음 (저신호)
 - `achmage-markdown-renderer` — 배포/앱 신호 없음 (저신호)
 - `audiocraft` — 배포/앱 신호 없음 (저신호)
-- `chatbot_1002` — 배포/앱 신호 없음 (저신호)
-- `chatgpt-chat-cmds` — 배포/앱 신호 없음 (저신호)
 - `claude-code` — 배포/앱 신호 없음 (저신호)
-- `cmds-9` — 배포/앱 신호 없음 (저신호)
-- `cmds-vault` — 배포/앱 신호 없음 (저신호)
 - `codex-plugin-cc` — 배포/앱 신호 없음 (저신호)
 - `defuddle` — 배포/앱 신호 없음 (저신호)
-- `descriptive-stat` — 배포/앱 신호 없음 (저신호)
-- `desktop-tutorial` — 배포/앱 신호 없음 (저신호)
 - `hermes-agent` — 배포/앱 신호 없음 (저신호)
-- `hr0930-2` — 배포/앱 신호 없음 (저신호)
-- `hrdashboard_0930` — 배포/앱 신호 없음 (저신호)
-- `hrdashboard_test` — 배포/앱 신호 없음 (저신호)
 - `johnfkoo951.github.io` — 배포/앱 신호 없음 (저신호)
-- `kordoc` — 배포/앱 신호 없음 (저신호)
 - `kr-book-info-plugin` — 배포/앱 신호 없음 (저신호)
-- `notebooklm-parent-guide` — 배포/앱 신호 없음 (저신호)
 - `obsidian-plugin-test` — 배포/앱 신호 없음 (저신호)
 - `obsidian-skills` — 배포/앱 신호 없음 (저신호)
 - `oh-my-claudecode` — 배포/앱 신호 없음 (저신호)
-- `omlx` — 배포/앱 신호 없음 (저신호)
-- `omnisync` — 배포/앱 신호 없음 (저신호)
-- `paullee_class` — 배포/앱 신호 없음 (저신호)
 - `plfetch` — 배포/앱 신호 없음 (저신호)
 - `polysomnography` — 배포/앱 신호 없음 (저신호)
 - `pretext` — 배포/앱 신호 없음 (저신호)
 - `rhwp` — 배포/앱 신호 없음 (저신호)
 - `rsm` — 배포/앱 신호 없음 (저신호)
 - `simple-obsidian-plugin` — 배포/앱 신호 없음 (저신호)
-- `sk_hr` — 배포/앱 신호 없음 (저신호)
-- `sk_hr_dashboard_0919` — 배포/앱 신호 없음 (저신호)
-- `skill-comp` — 배포/앱 신호 없음 (저신호)
-- `skt4` — 배포/앱 신호 없음 (저신호)
-- `skt_test` — 배포/앱 신호 없음 (저신호)
 - `streamlit-example` — 배포/앱 신호 없음 (저신호)
-- `survey-0930` — 이름 패턴상 백업/강의/개인 인프라로 추정
-- `synch` — 배포/앱 신호 없음 (저신호)
-- `tag_summarize_app` — 배포/앱 신호 없음 (저신호)
-- `toto-1105` — 배포/앱 신호 없음 (저신호)
-- `translator` — 배포/앱 신호 없음 (저신호)
-- `translator2` — 배포/앱 신호 없음 (저신호)
-- `youtube-summarizer` — 배포/앱 신호 없음 (저신호)
-- `youtube_summary` — 배포/앱 신호 없음 (저신호)
 
 </details>
 

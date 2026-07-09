@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T11:04:22.264Z",
+  "generated_at": "2026-07-09T11:09:55.458Z",
   "site": {
     "title": "CMDSPACE Apps",
     "tagline_ko": "커맨드스페이스가 만든 것들",
@@ -70,7 +70,7 @@
       "url_alive": true,
       "is_private": false,
       "is_archived": false,
-      "dirty": true,
+      "dirty": null,
       "stale": false
     },
     {
@@ -88,13 +88,13 @@
       "url": "https://cmdspace.work",
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/cmdspace-main",
-      "last_commit": "2026-07-07",
+      "last_commit": "2026-07-03",
       "stars": 0,
       "latest_release": null,
       "url_alive": true,
       "is_private": false,
       "is_archived": false,
-      "dirty": false,
+      "dirty": null,
       "stale": false
     },
     {
@@ -112,14 +112,14 @@
       "url": "",
       "download_url": "",
       "repo_url": "",
-      "last_commit": "2026-07-07",
+      "last_commit": null,
       "stars": null,
       "latest_release": null,
       "url_alive": null,
       "is_private": null,
       "is_archived": null,
-      "dirty": true,
-      "stale": false
+      "dirty": null,
+      "stale": null
     },
     {
       "name": "ai-baekiljang",
@@ -138,14 +138,14 @@
       "url": "https://writing.cmdspace.work",
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/ai-baekiljang",
-      "last_commit": "2026-07-05",
-      "stars": 0,
+      "last_commit": null,
+      "stars": null,
       "latest_release": null,
       "url_alive": true,
-      "is_private": true,
-      "is_archived": false,
-      "dirty": false,
-      "stale": false
+      "is_private": null,
+      "is_archived": null,
+      "dirty": null,
+      "stale": null
     },
     {
       "name": "CmdPilot",
@@ -168,7 +168,7 @@
       "url_alive": null,
       "is_private": false,
       "is_archived": false,
-      "dirty": true,
+      "dirty": null,
       "stale": false
     },
     {
@@ -193,7 +193,7 @@
       "url_alive": null,
       "is_private": false,
       "is_archived": false,
-      "dirty": false,
+      "dirty": null,
       "stale": false
     },
     {
@@ -211,13 +211,13 @@
       "url": "",
       "download_url": "https://github.com/johnfkoo951/CmdTrace/releases/tag/v2.4.2-build39",
       "repo_url": "https://github.com/johnfkoo951/CmdTrace",
-      "last_commit": "2026-06-22",
+      "last_commit": "2026-04-07",
       "stars": 8,
       "latest_release": "v2.4.2-build39",
       "url_alive": null,
       "is_private": false,
       "is_archived": false,
-      "dirty": true,
+      "dirty": null,
       "stale": false
     },
     {
@@ -237,13 +237,13 @@
       "url": "https://plaud.cmdspace.work",
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/plaud-note-manager",
-      "last_commit": "2026-06-23",
+      "last_commit": "2026-06-16",
       "stars": 0,
       "latest_release": null,
       "url_alive": true,
       "is_private": false,
       "is_archived": false,
-      "dirty": true,
+      "dirty": null,
       "stale": false
     },
     {
@@ -262,14 +262,14 @@
       "url": "",
       "download_url": "",
       "repo_url": "",
-      "last_commit": "2026-07-07",
+      "last_commit": null,
       "stars": null,
       "latest_release": null,
       "url_alive": null,
       "is_private": null,
       "is_archived": null,
-      "dirty": false,
-      "stale": false
+      "dirty": null,
+      "stale": null
     },
     {
       "name": "codeburn",
@@ -292,7 +292,7 @@
       "url_alive": null,
       "is_private": false,
       "is_archived": false,
-      "dirty": false,
+      "dirty": null,
       "stale": false
     },
     {
@@ -310,13 +310,13 @@
       "url": "https://llm-wiki.cmdspace.work",
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/cmds-llm-wiki",
-      "last_commit": "2026-07-03",
+      "last_commit": "2026-07-02",
       "stars": 48,
       "latest_release": "v1.7.1",
       "url_alive": true,
       "is_private": false,
       "is_archived": false,
-      "dirty": false,
+      "dirty": null,
       "stale": false
     },
     {
@@ -334,13 +334,13 @@
       "url": "https://bio.cmdspace.work",
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/cmds-bio",
-      "last_commit": "2026-07-07",
+      "last_commit": "2026-07-04",
       "stars": 7,
       "latest_release": null,
       "url_alive": true,
       "is_private": false,
       "is_archived": false,
-      "dirty": false,
+      "dirty": null,
       "stale": false
     },
     {
@@ -366,7 +366,7 @@
       "url_alive": null,
       "is_private": null,
       "is_archived": null,
-      "dirty": true,
+      "dirty": null,
       "stale": null
     },
     {
@@ -391,7 +391,7 @@
       "url_alive": null,
       "is_private": false,
       "is_archived": false,
-      "dirty": true,
+      "dirty": null,
       "stale": false
     },
     {
@@ -410,13 +410,13 @@
       "url": "https://starlink.cmdspace.work",
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/starlink-cmdspace",
-      "last_commit": "2026-06-18",
+      "last_commit": "2026-06-04",
       "stars": 0,
       "latest_release": null,
       "url_alive": true,
       "is_private": false,
       "is_archived": false,
-      "dirty": false,
+      "dirty": null,
       "stale": false
     },
     {
@@ -465,7 +465,7 @@
       "url_alive": null,
       "is_private": false,
       "is_archived": false,
-      "dirty": false,
+      "dirty": null,
       "stale": true
     },
     {
@@ -483,14 +483,14 @@
       "url": "",
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/claude-multiplexer",
-      "last_commit": "2026-07-07",
-      "stars": 0,
+      "last_commit": null,
+      "stars": null,
       "latest_release": null,
       "url_alive": null,
-      "is_private": true,
-      "is_archived": false,
-      "dirty": false,
-      "stale": false
+      "is_private": null,
+      "is_archived": null,
+      "dirty": null,
+      "stale": null
     },
     {
       "name": "cmds-vault-bridge",
@@ -560,7 +560,7 @@
       "url_alive": null,
       "is_private": false,
       "is_archived": false,
-      "dirty": false,
+      "dirty": null,
       "stale": true
     },
     {
@@ -584,7 +584,7 @@
       "url_alive": true,
       "is_private": false,
       "is_archived": false,
-      "dirty": false,
+      "dirty": null,
       "stale": false
     },
     {
@@ -608,7 +608,7 @@
       "url_alive": null,
       "is_private": false,
       "is_archived": false,
-      "dirty": false,
+      "dirty": null,
       "stale": true
     },
     {
@@ -626,14 +626,14 @@
       "url": "",
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/cmd-sync",
-      "last_commit": "2026-06-11",
-      "stars": 0,
+      "last_commit": null,
+      "stars": null,
       "latest_release": null,
       "url_alive": null,
-      "is_private": true,
-      "is_archived": false,
-      "dirty": true,
-      "stale": false
+      "is_private": null,
+      "is_archived": null,
+      "dirty": null,
+      "stale": null
     },
     {
       "name": "cmds-link-devonthink",
@@ -728,7 +728,7 @@
       "url_alive": null,
       "is_private": false,
       "is_archived": false,
-      "dirty": false,
+      "dirty": null,
       "stale": true
     },
     {
@@ -752,7 +752,7 @@
       "url_alive": null,
       "is_private": false,
       "is_archived": false,
-      "dirty": false,
+      "dirty": null,
       "stale": true
     },
     {
@@ -776,7 +776,7 @@
       "url_alive": true,
       "is_private": false,
       "is_archived": false,
-      "dirty": true,
+      "dirty": null,
       "stale": false
     },
     {
@@ -890,14 +890,14 @@
       "url": "https://dream.cmdspace.work",
       "download_url": "",
       "repo_url": "",
-      "last_commit": "2026-06-20",
+      "last_commit": null,
       "stars": null,
       "latest_release": null,
       "url_alive": true,
       "is_private": null,
       "is_archived": null,
-      "dirty": true,
-      "stale": false
+      "dirty": null,
+      "stale": null
     }
   ],
   "longtail": [
@@ -908,8 +908,8 @@
       "url": "",
       "repo_url": "https://github.com/johnfkoo951/nemotron-persona-kit",
       "url_alive": null,
-      "last_commit": "2026-07-04",
-      "stars": 0
+      "last_commit": null,
+      "stars": null
     },
     {
       "name": "macbook-power-guide",
