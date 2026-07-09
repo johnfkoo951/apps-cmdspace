@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T10:59:34.110Z",
+  "generated_at": "2026-07-09T11:02:36.401Z",
   "site": {
     "title": "CMDSPACE Apps",
     "tagline_ko": "커맨드스페이스가 만든 것들",
@@ -7,7 +7,7 @@
   },
   "stats": {
     "total": 35,
-    "live": 17,
+    "live": 18,
     "categories": 6
   },
   "categories": [
@@ -289,7 +289,7 @@
       "last_commit": "2026-07-08",
       "stars": 8549,
       "latest_release": "v0.9.15",
-      "url_alive": null,
+      "url_alive": true,
       "is_private": false,
       "is_archived": false,
       "dirty": null,
