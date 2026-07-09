@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>OG Apps</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1200px; height: 630px; overflow: hidden; }
+body {
+    font-family: -apple-system, 'SF Pro Display', Inter, 'Pretendard', sans-serif;
+    background: #0b0f0d;
+    color: #f2f4f3;
+    position: relative;
+    padding: 64px 72px;
+    display: flex; flex-direction: column; justify-content: space-between;
+}
+body::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 800px; height: 800px;
+    background: radial-gradient(circle at center, rgba(233,133,162,0.16) 0%, transparent 55%);
+    pointer-events: none;
+}
+.top-row { display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+.brand { display: flex; align-items: center; gap: 14px; font-weight: 600; font-size: 20px; letter-spacing: -0.018em; }
+.brand-mark { width: 48px; height: 48px; border-radius: 50%; object-fit: contain; }
+.version-pill {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 15px; font-weight: 500; color: #F4A4B8;
+    padding: 8px 18px; background: rgba(233,133,162,0.1);
+    border-radius: 999px; border: 1px solid rgba(233,133,162,0.3);
+}
+.version-pill::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #E985A2; box-shadow: 0 0 0 4px rgba(233,133,162,0.25); }
+.main { position: relative; z-index: 1; }
+.title { font-weight: 700; font-size: 92px; line-height: 1.04; letter-spacing: -0.04em; margin-bottom: 22px; }
+.title .accent {
+    background: linear-gradient(135deg, #F4A4B8 0%, #E985A2 50%, #D16C8A 100%);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.lede { font-size: 21px; line-height: 1.5; letter-spacing: -0.01em; color: #9aa39d; max-width: 940px; }
+.bottom-row { display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+.chips { display: flex; gap: 10px; flex-wrap: wrap; }
+.chip {
+    padding: 6px 14px; background: rgba(242,244,243,0.06);
+    border: 1px solid rgba(242,244,243,0.12); border-radius: 999px;
+    font-family: ui-monospace, 'SF Mono', 'Menlo', monospace; font-size: 13px; color: #9aa39d;
+}
+.url { font-family: ui-monospace, 'SF Mono', 'Menlo', monospace; font-size: 16px; color: #E985A2; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="top-row">
+    <div class="brand">
+        <img class="brand-mark" src="logo-round.png" alt="CMDS">
+        <span>CMDS · Apps</span>
+    </div>
+    <div class="version-pill">35 apps · 6 categories</div>
+</div>
+<div class="main">
+    <h1 class="title">커맨드스페이스가<br><span class="accent">만든 것들</span></h1>
+    <p class="lede">CmdMD · CmdPilot · NetHelm · Obsidian 플러그인 · 웹 앱 · Claude Code 도구까지 — 커맨드스페이스가 직접 만든 앱과 도구를 한곳에서.</p>
+</div>
+<div class="bottom-row">
+    <div class="chips">
+        <span class="chip">macOS</span>
+        <span class="chip">Obsidian</span>
+        <span class="chip">Web</span>
+        <span class="chip">AI Dev Tools</span>
+        <span class="chip">Claude Code</span>
+    </div>
+    <div class="url">apps.cmdspace.work</div>
+</div>
+</body>
+</html>

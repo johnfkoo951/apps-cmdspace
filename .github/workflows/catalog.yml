@@ -1,0 +1,63 @@
+name: catalog scan
+
+# Cloud half of the monitoring: refreshes live status of public repos daily,
+# commits the manifest (→ Vercel auto-deploys), and files a tracking issue for
+# uncatalogued projects. The local launchd job covers private/unpushed work.
+
+on:
+  schedule:
+    - cron: '17 21 * * *'   # 06:17 KST daily (off the hour on purpose)
+  workflow_dispatch: {}
+  push:
+    paths: ['catalog/**']   # re-scan whenever the curated source changes
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: catalog-scan
+  cancel-in-progress: true
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+      - run: npm ci
+      - name: Scan (public repos + urls)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/scan.mjs --public-only
+
+      - name: Commit refreshed manifest
+        run: |
+          git config user.name  "cmds-apps-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/apps.json data/candidates.json CANDIDATES.md
+          if git diff --cached --quiet; then
+            echo "no manifest changes"
+          else
+            git commit -m "chore(catalog): refresh live status ($(date -u +%F))"
+            git push
+          fi
+
+      - name: File / refresh drift issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash scripts/ci-issue.sh
+
+      # Optional: deploy via Vercel CLI when a token is present. If the repo is
+      # connected to Vercel via Git integration, the push above already triggers
+      # a production deploy and this step is unnecessary (skipped without secret).
+      - name: Deploy to Vercel (optional)
+        if: ${{ env.VERCEL_TOKEN != '' }}
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          npx --yes vercel@latest pull --yes --environment=production --token="$VERCEL_TOKEN" || true
+          npx --yes vercel@latest deploy --prod --yes --token="$VERCEL_TOKEN" || true

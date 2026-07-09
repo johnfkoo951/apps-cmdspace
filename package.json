@@ -1,0 +1,15 @@
+{
+  "name": "apps-cmdspace",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "description": "CMDSPACE apps showcase + catalog monitoring engine (apps.cmdspace.work)",
+  "scripts": {
+    "scan": "node scripts/scan.mjs --local",
+    "scan:public": "node scripts/scan.mjs --public-only",
+    "dev": "python3 -m http.server 4321"
+  },
+  "dependencies": {
+    "yaml": "^2.6.1"
+  }
+}

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>
+  // Set theme before paint (no FOUC). Manual toggle wins; else system pref.
+  (function () {
+    var saved = localStorage.getItem('cmds-theme');
+    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var theme = saved || (prefersDark ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+    var savedLang = localStorage.getItem('cmds-lang') || 'ko';
+    document.documentElement.setAttribute('lang', savedLang);
+  })();
+</script>
+
+<title>CMDSPACE Apps — 커맨드스페이스가 만든 것들</title>
+<meta name="description" content="커맨드스페이스(구요한)가 직접 만든 앱·도구 모음 — macOS 앱, Obsidian 플러그인, 웹 앱/플랫폼, AI 개발 도구, Claude Code 생태계까지." />
+
+<link rel="icon" type="image/png" href="/assets/logos/cmds-logo-round.png" />
+<link rel="apple-touch-icon" href="/assets/logos/cmds-logo-round.png" />
+<link rel="canonical" href="https://apps.cmdspace.work/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="CMDSPACE" />
+<meta property="og:title" content="CMDSPACE Apps — 커맨드스페이스가 만든 것들" />
+<meta property="og:description" content="직접 만든 앱·도구를 한곳에서 — macOS 앱, Obsidian 플러그인, 웹 앱, AI 개발 도구, Claude Code 생태계." />
+<meta property="og:url" content="https://apps.cmdspace.work/" />
+<meta property="og:image" content="https://apps.cmdspace.work/assets/og/og-apps.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="ko_KR" />
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="CMDSPACE Apps — 커맨드스페이스가 만든 것들" />
+<meta name="twitter:description" content="직접 만든 앱·도구를 한곳에서." />
+<meta name="twitter:image" content="https://apps.cmdspace.work/assets/og/og-apps.png" />
+
+<meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#06080a" media="(prefers-color-scheme: dark)" />
+
+<!-- Pretendard (non-blocking) -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" /></noscript>
+
+<style>
+:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Pretendard Variable', 'Pretendard', 'Helvetica Neue', Arial, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard Variable', 'Pretendard', sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', 'Menlo', monospace;
+
+  --bg: #fbfbfa; --surface: #ffffff; --surface-2: #f4f4f2;
+  --text: #171a18; --text-dim: #5c635e; --text-faint: #8a908b;
+  --border: rgba(0,0,0,.09); --border-strong: rgba(0,0,0,.16);
+  --accent: #134538; --accent-on: #ffffff; --accent-soft: rgba(19,69,56,.08); --accent-line: rgba(19,69,56,.22);
+  --ok: #1a7f4b; --ok-soft: rgba(26,127,75,.10);
+  --warn: #b06a00; --warn-soft: rgba(176,106,0,.10);
+  --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.05);
+  --radius: 16px;
+}
+[data-theme="dark"] {
+  --bg: #06080a; --surface: #0e1214; --surface-2: #151b1e;
+  --text: #e9edeb; --text-dim: #9aa39d; --text-faint: #6b736e;
+  --border: rgba(255,255,255,.10); --border-strong: rgba(255,255,255,.18);
+  --accent: #E985A2; --accent-on: #1a0f14; --accent-soft: rgba(233,133,162,.12); --accent-line: rgba(233,133,162,.30);
+  --ok: #46d08a; --ok-soft: rgba(70,208,138,.12);
+  --warn: #f0b45c; --warn-soft: rgba(240,180,92,.12);
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 32px rgba(0,0,0,.4);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans); background: var(--bg); color: var(--text);
+  line-height: 1.55; -webkit-font-smoothing: antialiased; letter-spacing: -0.011em;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+.accent-word { color: var(--accent); }
+
+/* ── header ── */
+header {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px clamp(18px, 5vw, 56px);
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter: saturate(1.6) blur(14px); -webkit-backdrop-filter: saturate(1.6) blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+.brand { display: flex; align-items: center; gap: 11px; font-weight: 650; font-size: 17px; letter-spacing: -0.02em; }
+.brand img { width: 28px; height: 28px; border-radius: 50%; object-fit: contain; }
+.brand small { color: var(--text-faint); font-weight: 500; }
+.controls { display: flex; align-items: center; gap: 8px; }
+.ctl {
+  height: 34px; padding: 0 12px; display: inline-flex; align-items: center; gap: 6px;
+  border: 1px solid var(--border); border-radius: 999px; background: var(--surface);
+  color: var(--text-dim); font-size: 13px; font-weight: 600; cursor: pointer; font-family: var(--font-sans);
+  transition: border-color .15s, color .15s;
+}
+.ctl:hover { border-color: var(--border-strong); color: var(--text); }
+.ctl svg { width: 15px; height: 15px; }
+
+/* ── hero ── */
+.hero { padding: clamp(48px, 9vw, 104px) clamp(18px, 5vw, 56px) clamp(28px, 4vw, 44px); max-width: 1240px; margin: 0 auto; }
+.hero h1 {
+  font-family: var(--font-display); font-weight: 760;
+  font-size: clamp(38px, 7vw, 76px); line-height: 1.04; letter-spacing: -0.04em; margin-bottom: 18px;
+}
+.hero p.lede { font-size: clamp(16px, 2.1vw, 21px); color: var(--text-dim); max-width: 720px; }
+.stat-strip { display: flex; flex-wrap: wrap; gap: 26px; margin-top: 32px; }
+.stat b { font-family: var(--font-display); font-size: clamp(24px, 3.4vw, 34px); font-weight: 720; letter-spacing: -0.03em; }
+.stat span { display: block; font-size: 12.5px; color: var(--text-faint); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; margin-top: 2px; }
+
+/* ── filter bar ── */
+.filterbar {
+  position: sticky; top: 62px; z-index: 40;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+  padding: 12px clamp(18px, 5vw, 56px); max-width: 1240px; margin: 0 auto;
+  background: color-mix(in srgb, var(--bg) 90%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+}
+.chips { display: flex; flex-wrap: wrap; gap: 7px; flex: 1; }
+.chip {
+  padding: 6px 13px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface);
+  font-size: 13px; font-weight: 600; color: var(--text-dim); cursor: pointer; white-space: nowrap;
+  transition: all .14s;
+}
+.chip:hover { border-color: var(--border-strong); color: var(--text); }
+.chip.active { background: var(--accent); color: var(--accent-on); border-color: var(--accent); }
+.search {
+  height: 36px; padding: 0 14px 0 34px; min-width: 180px;
+  border: 1px solid var(--border); border-radius: 999px; background: var(--surface) var(--search-icon) 12px center/15px no-repeat;
+  color: var(--text); font-size: 14px; font-family: var(--font-sans);
+  --search-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238a908b' stroke-width='2.2'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-3.5-3.5'/%3E%3C/svg%3E");
+}
+.search:focus { outline: none; border-color: var(--accent); }
+
+/* ── sections ── */
+main { max-width: 1240px; margin: 0 auto; padding: 12px clamp(18px, 5vw, 56px) 60px; }
+.section { margin-top: 46px; scroll-margin-top: 120px; }
+.section-head { margin-bottom: 20px; }
+.section-head h2 { font-family: var(--font-display); font-size: clamp(22px, 3vw, 30px); font-weight: 720; letter-spacing: -0.03em; }
+.section-head .en { color: var(--text-faint); font-weight: 600; font-size: .62em; letter-spacing: 0; margin-left: 8px; }
+.section-head p { color: var(--text-dim); font-size: 15px; margin-top: 5px; max-width: 760px; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+.card {
+  position: relative; display: flex; flex-direction: column; gap: 11px;
+  padding: 20px; background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); box-shadow: var(--shadow);
+  transition: transform .16s ease, border-color .16s, box-shadow .16s;
+}
+.card:hover { transform: translateY(-3px); border-color: var(--accent-line); }
+.card.flagship { border-top: 3px solid var(--accent); }
+.card.flagship::after {
+  content: 'FLAGSHIP'; position: absolute; top: 15px; right: 16px;
+  font-family: var(--font-mono); font-size: 9.5px; font-weight: 700; letter-spacing: .1em; color: var(--accent);
+}
+.card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+.card h3 { font-family: var(--font-display); font-size: 17.5px; font-weight: 680; letter-spacing: -0.02em; line-height: 1.25; }
+.card .sub { color: var(--text-dim); font-size: 14px; line-height: 1.5; }
+.badge {
+  flex-shrink: 0; font-family: var(--font-mono); font-size: 10.5px; font-weight: 700; letter-spacing: .03em;
+  padding: 3px 8px; border-radius: 6px; text-transform: uppercase; white-space: nowrap;
+}
+.badge.released, .badge.stable { background: var(--ok-soft); color: var(--ok); }
+.badge.active { background: var(--accent-soft); color: var(--accent); }
+.badge.wip { background: var(--warn-soft); color: var(--warn); }
+.badge.unknown { background: var(--surface-2); color: var(--text-faint); }
+.card.flagship .badge { margin-right: 68px; }
+
+.meta { display: flex; flex-wrap: wrap; gap: 4px 12px; font-family: var(--font-mono); font-size: 11.5px; color: var(--text-faint); }
+.meta .dead { color: var(--warn); }
+.pills { display: flex; flex-wrap: wrap; gap: 6px; }
+.pill { font-family: var(--font-mono); font-size: 11px; padding: 3px 9px; border-radius: 999px; background: var(--surface-2); color: var(--text-dim); border: 1px solid var(--border); }
+
+.actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 4px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 5px; height: 32px; padding: 0 13px;
+  border-radius: 9px; font-size: 13px; font-weight: 640; cursor: pointer; transition: all .14s;
+  border: 1px solid var(--border);
+}
+.btn.primary { background: var(--accent); color: var(--accent-on); border-color: var(--accent); }
+.btn.primary:hover { filter: brightness(1.06); }
+.btn.ghost { background: transparent; color: var(--text-dim); }
+.btn.ghost:hover { border-color: var(--border-strong); color: var(--text); }
+
+/* ── longtail ── */
+.longtail { margin-top: 60px; padding-top: 34px; border-top: 1px solid var(--border); }
+.longtail h2 { font-family: var(--font-display); font-size: 20px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 4px; }
+.longtail > p { color: var(--text-dim); font-size: 14px; margin-bottom: 18px; }
+.lt-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.lt-item { padding: 14px 16px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+.lt-item strong { font-size: 14.5px; font-weight: 650; }
+.lt-item p { color: var(--text-dim); font-size: 13px; margin-top: 3px; }
+.lt-item a { color: var(--accent); font-size: 12px; font-weight: 600; font-family: var(--font-mono); margin-top: 8px; display: inline-block; }
+
+/* ── footer ── */
+footer { border-top: 1px solid var(--border); padding: 40px clamp(18px, 5vw, 56px); text-align: center; color: var(--text-faint); font-size: 13px; }
+footer a { color: var(--accent); font-weight: 600; }
+footer .lockup { font-family: var(--font-display); font-weight: 720; font-size: 17px; color: var(--text); letter-spacing: -0.02em; margin-bottom: 8px; }
+
+.empty { text-align: center; color: var(--text-faint); padding: 60px 0; font-size: 15px; }
+.hidden { display: none !important; }
+
+/* reveal */
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } .card:hover { transform: none; } }
+
+@media (max-width: 560px) {
+  .filterbar { top: 60px; }
+  .grid { grid-template-columns: 1fr; }
+  .brand small { display: none; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="/">
+    <img src="/assets/logos/cmds-logo-round.png" alt="CMDSPACE" />
+    <span>CMDSPACE <small>Apps</small></span>
+  </a>
+  <div class="controls">
+    <button class="ctl" id="langBtn" aria-label="language">KO / EN</button>
+    <button class="ctl" id="themeBtn" aria-label="theme">
+      <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+  </div>
+</header>
+
+<section class="hero reveal">
+  <h1 id="heroTitle"></h1>
+  <p class="lede" id="heroLede"></p>
+  <div class="stat-strip" id="statStrip"></div>
+</section>
+
+<div class="filterbar reveal">
+  <div class="chips" id="chips"></div>
+  <input class="search" id="search" type="search" placeholder="검색…" aria-label="search" />
+</div>
+
+<main id="catalog"></main>
+
+<script>
+const I18N = {
+  ko: { search: '검색…', all: '전체', open: '열기', download: '다운로드', source: '소스',
+        alsoBuilt: '이런 것도 만들었어요', alsoSub: '세컨더리 도구·라이브러리·리서치 자산',
+        statApps: '앱', statCat: '카테고리', statLive: '라이브', empty: '조건에 맞는 앱이 없어요.',
+        updated: '업데이트', footer: '커맨드스페이스가 만든 것들 · 데이터는 매일 자동 갱신' },
+  en: { search: 'Search…', all: 'All', open: 'Open', download: 'Download', source: 'Source',
+        alsoBuilt: 'Also built', alsoSub: 'Secondary tools, libraries & research assets',
+        statApps: 'apps', statCat: 'categories', statLive: 'live', empty: 'No apps match your filters.',
+        updated: 'updated', footer: 'Everything CMDSPACE builds · data auto-refreshed daily' },
+};
+let LANG = document.documentElement.getAttribute('lang') || 'ko';
+let DATA = null;
+let activeCat = 'all';
+
+const el = (t, c, h) => { const e = document.createElement(t); if (c) e.className = c; if (h != null) e.innerHTML = h; return e; };
+const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (m) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[m]));
+const relMonth = (d) => d ? d.slice(0, 7) : '';
+
+function badgeClass(status) {
+  if (['released', 'stable'].includes(status)) return status;
+  if (status === 'active') return 'active';
+  if (status === 'wip') return 'wip';
+  return 'unknown';
+}
+
+function cardHTML(app) {
+  const t = I18N[LANG];
+  const flag = app.tier === 'flagship' ? ' flagship' : '';
+  const meta = [];
+  if (app.stars != null && app.stars > 0) meta.push(`★ ${app.stars.toLocaleString()}`);
+  if (app.latest_release) meta.push(esc(app.latest_release));
+  if (app.last_commit) meta.push(`${t.updated} ${relMonth(app.last_commit)}`);
+  if (app.url && app.url_alive === false) meta.push(`<span class="dead">⚠ link</span>`);
+
+  const pillSrc = (app.tags && app.tags.length) ? app.tags : (app.tech ? [app.tech.split(/[,(]/)[0].trim()] : []);
+  const pills = pillSrc.slice(0, 4).map((x) => `<span class="pill">${esc(x)}</span>`).join('');
+
+  const acts = [];
+  if (app.url) acts.push(`<a class="btn primary" href="${esc(app.url)}" target="_blank" rel="noopener">${t.open} ↗</a>`);
+  if (app.download_url) acts.push(`<a class="btn ghost" href="${esc(app.download_url)}" target="_blank" rel="noopener">${t.download} ⬇</a>`);
+  if (app.repo_url) acts.push(`<a class="btn ghost" href="${esc(app.repo_url)}" target="_blank" rel="noopener">${t.source} &lt;/&gt;</a>`);
+
+  const searchText = `${app.name} ${app.headline} ${app.sub} ${app.tech} ${(app.tags||[]).join(' ')}`.toLowerCase();
+  return `<article class="card${flag} reveal" data-category="${esc(app.category)}" data-status="${esc(app.status)}" data-text="${esc(searchText)}">
+    <div class="card-top">
+      <h3>${esc(app.headline || app.name)}</h3>
+      <span class="badge ${badgeClass(app.status)}">${esc(app.status || '—')}</span>
+    </div>
+    <p class="sub">${esc(app.sub)}</p>
+    ${meta.length ? `<div class="meta">${meta.map((m) => `<span>${m}</span>`).join('')}</div>` : ''}
+    ${pills ? `<div class="pills">${pills}</div>` : ''}
+    ${acts.length ? `<div class="actions">${acts.join('')}</div>` : ''}
+  </article>`;
+}
+
+function render() {
+  const t = I18N[LANG];
+  const cats = DATA.categories || [];
+  const appsByCat = {};
+  for (const a of DATA.apps) (appsByCat[a.category] = appsByCat[a.category] || []).push(a);
+
+  // hero
+  document.getElementById('heroTitle').innerHTML = LANG === 'ko'
+    ? '커맨드스페이스가<br><span class="accent-word">만든 것들</span>'
+    : 'Everything<br><span class="accent-word">CMDSPACE builds</span>';
+  document.getElementById('heroLede').textContent = LANG === 'ko'
+    ? '직접 만든 앱·도구를 한곳에서. macOS 앱부터 Obsidian 플러그인, 웹 플랫폼, AI 개발 도구, Claude Code 생태계까지.'
+    : 'Apps and tools built in-house — native macOS apps, Obsidian plugins, web platforms, AI dev tooling, and the Claude Code ecosystem.';
+  const s = DATA.stats;
+  document.getElementById('statStrip').innerHTML =
+    `<div class="stat"><b>${s.total}</b><span>${t.statApps}</span></div>` +
+    `<div class="stat"><b>${s.categories}</b><span>${t.statCat}</span></div>` +
+    `<div class="stat"><b>${s.live}</b><span>${t.statLive}</span></div>`;
+
+  // chips
+  const chips = document.getElementById('chips');
+  chips.innerHTML = `<button class="chip ${activeCat === 'all' ? 'active' : ''}" data-cat="all">${t.all}</button>` +
+    cats.map((c) => `<button class="chip ${activeCat === c.id ? 'active' : ''}" data-cat="${c.id}">${esc(LANG === 'ko' ? c.label_ko : c.label_en)}</button>`).join('');
+
+  // sections
+  const main = document.getElementById('catalog');
+  main.innerHTML = cats.map((c) => {
+    const list = (appsByCat[c.id] || []).slice().sort((a, b) => (a.priority || 99) - (b.priority || 99));
+    if (!list.length) return '';
+    return `<section class="section" id="cat-${c.id}" data-cat="${c.id}">
+      <div class="section-head reveal">
+        <h2>${esc(LANG === 'ko' ? c.label_ko : c.label_en)}<span class="en">${esc(LANG === 'ko' ? c.label_en : c.label_ko)}</span></h2>
+        <p>${esc(c.blurb_ko)}</p>
+      </div>
+      <div class="grid">${list.map(cardHTML).join('')}</div>
+    </section>`;
+  }).join('');
+
+  // longtail
+  if (DATA.longtail && DATA.longtail.length) {
+    main.insertAdjacentHTML('beforeend', `<section class="longtail reveal">
+      <h2>${t.alsoBuilt}</h2><p>${t.alsoSub}</p>
+      <div class="lt-grid">${DATA.longtail.map((l) => `<div class="lt-item">
+        <strong>${esc(l.name)}</strong><p>${esc(l.sub)}</p>
+        ${l.url ? `<a href="${esc(l.url)}" target="_blank" rel="noopener">열기 ↗</a>` : (l.repo_url ? `<a href="${esc(l.repo_url)}" target="_blank" rel="noopener">소스 &lt;/&gt;</a>` : '')}
+      </div>`).join('')}</div>
+    </section>`);
+  }
+  main.insertAdjacentHTML('beforeend', `<div class="empty hidden" id="empty">${t.empty}</div>`);
+
+  document.getElementById('search').placeholder = t.search;
+  applyFilters();
+  observeReveal();
+}
+
+function applyFilters() {
+  const q = document.getElementById('search').value.trim().toLowerCase();
+  let shown = 0;
+  document.querySelectorAll('.section').forEach((sec) => {
+    let visInSec = 0;
+    sec.querySelectorAll('.card').forEach((card) => {
+      const okCat = activeCat === 'all' || card.dataset.category === activeCat;
+      const okText = !q || card.dataset.text.includes(q);
+      const vis = okCat && okText;
+      card.classList.toggle('hidden', !vis);
+      if (vis) { visInSec++; shown++; }
+    });
+    sec.classList.toggle('hidden', visInSec === 0);
+  });
+  const lt = document.querySelector('.longtail');
+  if (lt) lt.classList.toggle('hidden', activeCat !== 'all' || !!q);
+  document.getElementById('empty').classList.toggle('hidden', shown > 0);
+}
+
+let io;
+function observeReveal() {
+  if (io) io.disconnect();
+  io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal:not(.in)').forEach((n) => io.observe(n));
+}
+
+// events
+document.getElementById('chips').addEventListener('click', (e) => {
+  const b = e.target.closest('.chip'); if (!b) return;
+  activeCat = b.dataset.cat;
+  document.querySelectorAll('.chip').forEach((c) => c.classList.toggle('active', c === b));
+  applyFilters();
+});
+document.getElementById('search').addEventListener('input', applyFilters);
+document.getElementById('themeBtn').addEventListener('click', () => {
+  const cur = document.documentElement.getAttribute('data-theme');
+  const next = cur === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('cmds-theme', next);
+});
+document.getElementById('langBtn').addEventListener('click', () => {
+  LANG = LANG === 'ko' ? 'en' : 'ko';
+  document.documentElement.setAttribute('lang', LANG);
+  localStorage.setItem('cmds-lang', LANG);
+  render();
+});
+
+// boot
+fetch('./data/apps.json', { cache: 'no-cache' })
+  .then((r) => r.json())
+  .then((d) => { DATA = d; render(); buildFooter(d); })
+  .catch((err) => {
+    document.getElementById('catalog').innerHTML = `<div class="empty">카탈로그를 불러오지 못했어요.<br><small>${esc(err.message)}</small></div>`;
+  });
+
+function buildFooter(d) {
+  const t = I18N[LANG];
+  const upd = d.generated_at ? d.generated_at.slice(0, 10) : '';
+  const f = el('footer', 'reveal',
+    `<div class="lockup">CMDSPACE</div><div>${t.footer}${upd ? ' · ' + upd : ''}</div>
+     <div style="margin-top:10px"><a href="https://cmdspace.work">cmdspace.work ↗</a></div>`);
+  document.body.appendChild(f);
+  observeReveal();
+}
+</script>
+</body>
+</html>

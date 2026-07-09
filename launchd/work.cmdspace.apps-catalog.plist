@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>work.cmdspace.apps-catalog</string>
+
+    <!-- login zsh so node/gh/homebrew are on PATH -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/zsh</string>
+        <string>-lc</string>
+        <string>/Users/yohankoo/DEV/apps-cmdspace/scripts/local-scan.sh</string>
+    </array>
+
+    <!-- daily at 09:12 (off the hour); catches up if the Mac was asleep -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key><integer>9</integer>
+        <key>Minute</key><integer>12</integer>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <false/>
+    <key>StandardOutPath</key>
+    <string>/tmp/cmds-apps-catalog.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/cmds-apps-catalog.err</string>
+</dict>
+</plist>
