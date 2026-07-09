@@ -56,11 +56,10 @@
   --bg: #fbfbfa; --surface: #ffffff; --surface-2: #f4f4f2;
   --text: #171a18; --text-dim: #5c635e; --text-faint: #8a908b;
   --border: rgba(0,0,0,.09); --border-strong: rgba(0,0,0,.16);
-  --accent: #134538; --accent-on: #ffffff; --accent-soft: rgba(19,69,56,.08); --accent-line: rgba(19,69,56,.22);
+  --accent: #134538; --accent-on: #ffffff; --accent-soft: rgba(19,69,56,.08); --accent-line: rgba(19,69,56,.30);
+  --surface-hover: #fcfcfb; --tag-bg: rgba(19,69,56,.055); --tag-fg: #35473f; --tag-border: rgba(19,69,56,.13);
   --ok: #1a7f4b; --ok-soft: rgba(26,127,75,.10);
   --warn: #b06a00; --warn-soft: rgba(176,106,0,.10);
-  --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.05);
-  --radius: 16px;
 }
 [data-theme="dark"] {
   --bg: #06080a; --surface: #0e1214; --surface-2: #151b1e;
@@ -147,54 +146,51 @@ main { max-width: 1240px; margin: 0 auto; padding: 12px clamp(18px, 5vw, 56px) 6
 .section-head .en { color: var(--text-faint); font-weight: 600; font-size: .62em; letter-spacing: 0; margin-left: 8px; }
 .section-head p { color: var(--text-dim); font-size: 15px; margin-top: 5px; max-width: 760px; }
 
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 13px; }
 .card {
-  position: relative; display: flex; flex-direction: column; gap: 11px;
-  padding: 20px; background: var(--surface); border: 1px solid var(--border);
-  border-radius: var(--radius); box-shadow: var(--shadow);
-  transition: transform .16s ease, border-color .16s, box-shadow .16s;
+  display: flex; flex-direction: column;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+  overflow: hidden; transition: border-color .15s ease, background .15s ease;
 }
-.card:hover { transform: translateY(-3px); border-color: var(--accent-line); }
-.card.flagship { border-top: 3px solid var(--accent); }
-.card.flagship::after {
-  content: 'FLAGSHIP'; position: absolute; top: 15px; right: 16px;
-  font-family: var(--font-mono); font-size: 9.5px; font-weight: 700; letter-spacing: .1em; color: var(--accent);
-}
-.card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
-.card h3 { font-family: var(--font-display); font-size: 17.5px; font-weight: 680; letter-spacing: -0.02em; line-height: 1.25; }
-.card .sub { color: var(--text-dim); font-size: 14px; line-height: 1.5; }
-.badge {
-  flex-shrink: 0; font-family: var(--font-mono); font-size: 10.5px; font-weight: 700; letter-spacing: .03em;
-  padding: 3px 8px; border-radius: 6px; text-transform: uppercase; white-space: nowrap;
-}
+.card:hover { border-color: var(--accent-line); background: var(--surface-hover); }
+.card.flagship { border-left: 2px solid var(--accent); }
+
+.card-body { flex: 1; display: flex; flex-direction: column; gap: 9px; padding: 16px 18px 14px; }
+.card-kicker { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.kind { font-family: var(--font-mono); font-size: 10px; letter-spacing: .09em; text-transform: uppercase; color: var(--text-faint); }
+.kind .star { color: var(--accent); }
+.badge { font-family: var(--font-mono); font-size: 9.5px; font-weight: 700; letter-spacing: .05em; padding: 2px 7px; border-radius: 4px; text-transform: uppercase; white-space: nowrap; }
 .badge.released, .badge.stable { background: var(--ok-soft); color: var(--ok); }
 .badge.active { background: var(--accent-soft); color: var(--accent); }
 .badge.wip { background: var(--warn-soft); color: var(--warn); }
 .badge.unknown { background: var(--surface-2); color: var(--text-faint); }
-.card.flagship .badge { margin-right: 68px; }
 
-.meta { display: flex; flex-wrap: wrap; gap: 4px 12px; font-family: var(--font-mono); font-size: 11.5px; color: var(--text-faint); }
+.card h3 { font-family: var(--font-display); font-size: 16px; font-weight: 680; letter-spacing: -0.02em; line-height: 1.3; }
+.card .sub { color: var(--text-dim); font-size: 13px; line-height: 1.5; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.tag { font-size: 11.5px; line-height: 1.45; padding: 2px 8px; border-radius: 5px; background: var(--tag-bg); color: var(--tag-fg); border: 1px solid var(--tag-border); font-weight: 500; white-space: nowrap; }
+
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: 3px 11px; margin-top: auto; padding-top: 4px; font-family: var(--font-mono); font-size: 11px; color: var(--text-faint); }
 .meta .dead { color: var(--warn); }
-.pills { display: flex; flex-wrap: wrap; gap: 6px; }
-.pill { font-family: var(--font-mono); font-size: 11px; padding: 3px 9px; border-radius: 999px; background: var(--surface-2); color: var(--text-dim); border: 1px solid var(--border); }
 
-.actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 4px; }
-.btn {
-  display: inline-flex; align-items: center; gap: 5px; height: 32px; padding: 0 13px;
-  border-radius: 9px; font-size: 13px; font-weight: 640; cursor: pointer; transition: all .14s;
-  border: 1px solid var(--border);
-}
-.btn.primary { background: var(--accent); color: var(--accent-on); border-color: var(--accent); }
-.btn.primary:hover { filter: brightness(1.06); }
-.btn.ghost { background: transparent; color: var(--text-dim); }
-.btn.ghost:hover { border-color: var(--border-strong); color: var(--text); }
+.card-foot { display: flex; flex-wrap: wrap; border-top: 1px solid var(--border); }
+.card-foot.empty-foot { display: none; }
+.act { display: inline-flex; align-items: center; gap: 6px; padding: 10px 14px; font-size: 12.5px; font-weight: 600; color: var(--text-dim); transition: color .14s, background .14s; }
+.act + .act { border-left: 1px solid var(--border); }
+.act svg { width: 14px; height: 14px; flex-shrink: 0; opacity: .9; }
+.act:hover { color: var(--text); background: var(--surface-2); }
+.act.web { color: var(--accent); }
+.act.web:hover { background: var(--accent-soft); color: var(--accent); }
+.act .host { font-family: var(--font-mono); font-weight: 500; font-size: 12px; }
 
 /* ── longtail ── */
 .longtail { margin-top: 60px; padding-top: 34px; border-top: 1px solid var(--border); }
 .longtail h2 { font-family: var(--font-display); font-size: 20px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 4px; }
 .longtail > p { color: var(--text-dim); font-size: 14px; margin-bottom: 18px; }
 .lt-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
-.lt-item { padding: 14px 16px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+.lt-item { padding: 14px 16px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); transition: border-color .15s; }
+.lt-item:hover { border-color: var(--accent-line); }
 .lt-item strong { font-size: 14.5px; font-weight: 650; }
 .lt-item p { color: var(--text-dim); font-size: 13px; margin-top: 3px; }
 .lt-item a { color: var(--accent); font-size: 12px; font-weight: 600; font-family: var(--font-mono); margin-top: 8px; display: inline-block; }
@@ -273,33 +269,49 @@ function badgeClass(status) {
   return 'unknown';
 }
 
+const KIND = {
+  'macos-apps': 'macOS App', 'obsidian-plugins': 'Obsidian Plugin', 'web-apps': 'Web App',
+  'dev-tools': 'CLI · Tool', 'claude-ecosystem': 'Claude Code', 'research-showcase': 'Showcase',
+};
+const ICON = {
+  web: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9.2"/><path d="M2.8 12h18.4M12 2.8c2.7 2.8 2.7 15.6 0 18.4M12 2.8c-2.7 2.8-2.7 15.6 0 18.4"/></svg>',
+  gh: '<svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>',
+  dl: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11m0 0l-4.2-4.2M12 14.5l4.2-4.2M4.5 20.5h15"/></svg>',
+};
+function hostOf(u) { try { return new URL(u).host.replace(/^www\./, ''); } catch { return String(u).replace(/^https?:\/\//, '').replace(/\/.*$/, ''); } }
+
 function cardHTML(app) {
   const t = I18N[LANG];
   const flag = app.tier === 'flagship' ? ' flagship' : '';
+  const tags = (app.tags || []).slice(0, 6).map((x) => `<span class="tag">${esc(x)}</span>`).join('');
+  const tech = app.tech ? esc(app.tech.split(/[,(]/)[0].trim()) : '';
+
   const meta = [];
+  if (tech) meta.push(tech);
   if (app.stars != null && app.stars > 0) meta.push(`★ ${app.stars.toLocaleString()}`);
-  if (app.latest_release) meta.push(esc(app.latest_release));
   if (app.last_commit) meta.push(`${t.updated} ${relMonth(app.last_commit)}`);
   if (app.url && app.url_alive === false) meta.push(`<span class="dead">⚠ link</span>`);
 
-  const pillSrc = (app.tags && app.tags.length) ? app.tags : (app.tech ? [app.tech.split(/[,(]/)[0].trim()] : []);
-  const pills = pillSrc.slice(0, 4).map((x) => `<span class="pill">${esc(x)}</span>`).join('');
-
+  // Action footer — each link names its destination so you know what opens BEFORE clicking:
+  // web = globe + host, download = ⬇ + version, source = GitHub mark + "GitHub".
   const acts = [];
-  if (app.url) acts.push(`<a class="btn primary" href="${esc(app.url)}" target="_blank" rel="noopener">${t.open} ↗</a>`);
-  if (app.download_url) acts.push(`<a class="btn ghost" href="${esc(app.download_url)}" target="_blank" rel="noopener">${t.download} ⬇</a>`);
-  if (app.repo_url) acts.push(`<a class="btn ghost" href="${esc(app.repo_url)}" target="_blank" rel="noopener">${t.source} &lt;/&gt;</a>`);
+  if (app.url) acts.push(`<a class="act web" href="${esc(app.url)}" target="_blank" rel="noopener" title="${t.open}: ${esc(app.url)}">${ICON.web}<span class="host">${esc(hostOf(app.url))}</span></a>`);
+  if (app.download_url) acts.push(`<a class="act" href="${esc(app.download_url)}" target="_blank" rel="noopener" title="${t.download}: ${esc(app.download_url)}">${ICON.dl}${esc(app.latest_release || t.download)}</a>`);
+  if (app.repo_url) acts.push(`<a class="act" href="${esc(app.repo_url)}" target="_blank" rel="noopener" title="${esc(app.repo_url)}">${ICON.gh}GitHub</a>`);
 
   const searchText = `${app.name} ${app.headline} ${app.sub} ${app.tech} ${(app.tags||[]).join(' ')}`.toLowerCase();
   return `<article class="card${flag} reveal" data-category="${esc(app.category)}" data-status="${esc(app.status)}" data-text="${esc(searchText)}">
-    <div class="card-top">
+    <div class="card-body">
+      <div class="card-kicker">
+        <span class="kind">${flag ? '<span class="star">★</span> ' : ''}${esc(KIND[app.category] || '')}</span>
+        <span class="badge ${badgeClass(app.status)}">${esc(app.status || '—')}</span>
+      </div>
       <h3>${esc(app.headline || app.name)}</h3>
-      <span class="badge ${badgeClass(app.status)}">${esc(app.status || '—')}</span>
+      <p class="sub">${esc(app.sub)}</p>
+      ${tags ? `<div class="tags">${tags}</div>` : ''}
+      ${meta.length ? `<div class="meta">${meta.map((m) => `<span>${m}</span>`).join('')}</div>` : ''}
     </div>
-    <p class="sub">${esc(app.sub)}</p>
-    ${meta.length ? `<div class="meta">${meta.map((m) => `<span>${m}</span>`).join('')}</div>` : ''}
-    ${pills ? `<div class="pills">${pills}</div>` : ''}
-    ${acts.length ? `<div class="actions">${acts.join('')}</div>` : ''}
+    <div class="card-foot${acts.length ? '' : ' empty-foot'}">${acts.join('')}</div>
   </article>`;
 }
 

@@ -41,7 +41,7 @@ apps:
     headline: "CmdMD — 리뷰 우선 마크다운 에디터"
     sub: "렌더링 미리보기로 열고 한 키로 옵시디언 볼트에 정리하는 네이티브 macOS 에디터."
     tech: "Swift/SwiftUI (macOS 14+), swift-markdown, Highlightr, Yams"
-    tags: ["Swift"]
+    tags: ["실시간 미리보기", "Obsidian 전송", "자동 라우팅", "Mermaid·수식", "단축키 중심", "오프라인"]
     status: "released"
     dev_dir: "CmdMD"
     repo: "johnfkoo951/CmdMD"
@@ -54,7 +54,7 @@ apps:
     headline: "cmdspace.work — 커맨드스페이스 본진"
     sub: "브랜드·이력·모든 서브도메인을 잇는 CMDSPACE 생태계의 공개 관문."
     tech: "단일 파일 정적 사이트 (vanilla HTML/CSS/JS, 무빌드), Vercel"
-    tags: ["Static/Vercel"]
+    tags: ["생태계 관문", "서브도메인 허브", "이력 아카이브", "주간 갱신", "활동 갤러리"]
     status: "active"
     dev_dir: "cmdspace-main"
     repo: "johnfkoo951/cmdspace-main"
@@ -66,7 +66,7 @@ apps:
     headline: "NetHelm — 멀티회선 네트워크 지휘탑"
     sub: "회선 우선순위·자동 릴레이·Starlink 예측 페일오버를 담당하는 macOS 메뉴바 앱."
     tech: "Swift/SwiftUI (SwiftPM, macOS 14+, CoreWLAN/SystemConfiguration/CoreLocation)"
-    tags: ["Swift"]
+    tags: ["멀티회선", "자동 페일오버", "Starlink 예측", "메뉴바", "시나리오 프리셋", "강의 모드"]
     status: "active"
     dev_dir: "NetHelm"
     repo: ""
@@ -78,7 +78,7 @@ apps:
     headline: "AI 백일장 — 인간 vs AI 글쓰기 심사"
     sub: "작성 방식·모델·프롬프트까지 추적하며 블라인드로 겨루는 라이브 글쓰기 플랫폼."
     tech: "Next.js 16 App Router + TypeScript + Tailwind 4 + Supabase(Postgres/Auth, 서울)"
-    tags: ["Next.js", "TypeScript", "Supabase"]
+    tags: ["블라인드 심사", "3트랙 자기신고", "카드 뒤집기", "구글 로그인", "본문 불변", "옵트인 동의"]
     status: "active"
     dev_dir: "ai-baekiljang"
     repo: "johnfkoo951/ai-baekiljang"
@@ -90,7 +90,7 @@ apps:
     headline: "CmdPilot — 폰이 맥의 리모컨"
     sub: "폰 앱 없이 브라우저만으로 트랙패드·키보드·스트림덱·AI 에이전트를 원격 조종하는 메뉴바 헬퍼."
     tech: "Swift (menubar) + vanilla JS PWA 웹 클라이언트"
-    tags: ["Swift"]
+    tags: ["폰 리모컨", "앱설치 불필요", "트랙패드·키보드", "에이전트 승인", "LAN 전용", "무료·오픈소스"]
     status: "released"
     dev_dir: "CmdPilot"
     repo: "johnfkoo951/CmdPilot"
@@ -103,7 +103,7 @@ apps:
     headline: "CMDS Eagle — Eagle × Obsidian"
     sub: "Eagle 에셋을 볼트에서 검색·임베드하고 클라우드 업로드까지 잇는 옵시디언 커뮤니티 플러그인."
     tech: "Obsidian 플러그인 (TypeScript, esbuild), v1.6.4"
-    tags: ["Obsidian", "TypeScript"]
+    tags: ["Eagle 연동", "검색·임베드", "클라우드 업로드", "붙여넣기 처리", "크로스플랫폼", "커뮤니티 배포"]
     status: "released"
     dev_dir: "cmds-eagle"
     repo: "johnfkoo951/cmds-eagle"
@@ -115,7 +115,7 @@ apps:
     headline: "CmdTrace — AI 세션 뷰어"
     sub: "Claude Code 등 AI 코딩 어시스턴트의 지난 세션을 검색·관리하는 macOS 앱."
     tech: "Swift/SwiftUI (Swift Package, macOS 14+)"
-    tags: ["Swift"]
+    tags: ["세션 검색", "멀티 CLI", "태그·프로젝트 필터", "즉시 검색", "오프라인"]
     status: "active"
     dev_dir: "CmdTrace"
     repo: "johnfkoo951/CmdTrace"
@@ -128,7 +128,7 @@ apps:
     headline: "Plaud Note Manager — 녹음 워크스페이스"
     sub: "하나의 Python 코어를 CLI·스킬·에이전트·macOS 앱이 공유하는 Plaud 녹음 통합 도구."
     tech: "Python core (httpx/pydantic/typer) + SwiftUI macOS 앱 + Vercel 랜딩"
-    tags: ["Swift", "Python", "Static/Vercel"]
+    tags: ["녹음 동기화", "회의록 생성", "자동 분류·태깅", "멀티 서피스", "로컬 저장"]
     status: "released"
     dev_dir: "plaud-note-manager"
     repo: "johnfkoo951/plaud-note-manager"
@@ -140,7 +140,7 @@ apps:
     headline: "OmniControl — CLI 에이전트 리모컨"
     sub: "cmux·Claude Code의 음성 인·아웃, 알림, Telegram 원격을 한 곳에서 관리."
     tech: "Python 브리지 데몬 + Swift 온디바이스 STT + LaunchAgent, Telegram bot"
-    tags: ["Swift", "Python"]
+    tags: ["음성 입출력", "Telegram 원격", "핸즈프리", "턴 완료 브리핑", "온디바이스 STT", "클론보이스"]
     status: "active"
     dev_dir: "OmniControl"
     repo: ""
@@ -152,7 +152,7 @@ apps:
     headline: "codeburn — AI 코딩 토큰 관측기"
     sub: "작업·도구·모델·프로젝트별 토큰 사용량을 보여주는 CLI/TUI + 맥 메뉴바 앱 (npm 배포)."
     tech: "TypeScript / Node 22+, Ink + React TUI, tsup; mac/ 메뉴바 앱"
-    tags: ["TypeScript"]
+    tags: ["토큰 사용량", "멀티 에이전트", "TUI 대시보드", "메뉴바 앱", "성공률 추적", "npm 배포"]
     status: "released"
     dev_dir: "codeburn"
     repo: "getagentseal/codeburn"
@@ -164,7 +164,7 @@ apps:
     headline: "CMDS LLM Wiki — 복리 성장 볼트 스타터킷"
     sub: "외부 소스를 LLM이 컴파일해 쌓는 옵시디언 볼트 + Claude Code·Codex 듀얼 하네스(11 커맨드)."
     tech: "Obsidian 볼트 템플릿 + Claude Code/Codex 하네스 (slash commands, hooks, qmd)"
-    tags: ["Obsidian"]
+    tags: ["복리 성장 볼트", "11 슬래시 커맨드", "듀얼 하네스", "목적 질문 강제", "스타터킷", "오픈소스"]
     status: "active"
     dev_dir: "cmds-llm-wiki"
     repo: "johnfkoo951/cmds-llm-wiki"
@@ -176,7 +176,7 @@ apps:
     headline: "CMDS Bio — self-hosted 링크인바이오"
     sub: "SNS 팔로워 자동 집계까지 붙은 litt.ly/Linktree 대체 한 페이지 프로필."
     tech: "단일 index.html (인라인 CSS/JS, 무빌드) + Vercel"
-    tags: ["Static/Vercel"]
+    tags: ["링크인바이오", "SNS 팔로워 집계", "self-hosted", "한 페이지", "무빌드"]
     status: "active"
     dev_dir: "cmds-bio"
     repo: "johnfkoo951/cmds-bio"
@@ -188,7 +188,7 @@ apps:
     headline: "Lexa — 읽은 것을 학습으로"
     sub: "읽은 것을 개념·단어·퀴즈·발표로 바꿔 옵시디언 볼트로 돌려보내는 네이티브 학습 엔진."
     tech: "SwiftUI (iOS/iPadOS/macOS) + Next.js 15/React 19 + Supabase"
-    tags: ["Swift", "Next.js", "Supabase"]
+    tags: ["학습 변환", "Obsidian 내보내기", "발표 연습", "크로스디바이스", "클라우드 동기화"]
     status: "wip"
     dev_dir: "lexa"
     repo: ""
@@ -200,7 +200,7 @@ apps:
     headline: "CMDS Share — 노트 원클릭 웹 공유"
     sub: "옵시디언 노트를 5개 백엔드로 한 번에 배포(선택적 종단간 암호화)하는 플러그인."
     tech: "Obsidian 플러그인 (TypeScript, esbuild, Convex)"
-    tags: ["Obsidian", "TypeScript"]
+    tags: ["원클릭 공유", "5개 백엔드", "종단간 암호화", "공유 CMS", "커스텀 슬러그", "비번 보호"]
     status: "released"
     dev_dir: "cmds-share"
     repo: "johnfkoo951/cmds-share"
@@ -212,7 +212,7 @@ apps:
     headline: "Starlink Dashboard — 이동중 네트워크 텔레메트리"
     sub: "networkQuality·Starlink ISP·주행 필드리포트를 시각화하는 인터랙티브 대시보드."
     tech: "정적 HTML/JS 대시보드 + Python 수집 스크립트, Vercel"
-    tags: ["Python", "Static/Vercel"]
+    tags: ["실측 텔레메트리", "이동중 리포트", "타임라인", "ISP 식별", "시나리오 랩"]
     status: "active"
     dev_dir: "starlink-cmdspace"
     repo: "johnfkoo951/starlink-cmdspace"
@@ -224,7 +224,7 @@ apps:
     headline: "Vault Map — 시스템 인터랙티브 지도"
     sub: "두 볼트+글로벌 레이어의 룰·명령·스킬·에이전트를 4단계 추상화로 보여주는 지도."
     tech: "단일 정적 index.html (한/영 i18n, 라이트/다크), Vercel"
-    tags: ["Static/Vercel"]
+    tags: ["인터랙티브 지도", "4단 추상화", "한/영 전환", "라이트/다크", "학습 경로"]
     status: "stable"
     dev_dir: "vault-map"
     repo: ""
@@ -236,7 +236,7 @@ apps:
     headline: "Agent Archives — 에이전트 세션 아카이브"
     sub: "Claude Code·OpenCode 세션 히스토리를 검색·통계·터미널 Resume까지 잇는 데스크톱 앱."
     tech: "Electron + Python FastAPI + Vue.js (arm64/x64 DMG)"
-    tags: ["Python", "Electron"]
+    tags: ["세션 히스토리", "멀티 CLI", "통계 대시보드", "터미널 Resume", "오픈소스", "DMG 배포"]
     status: "released"
     dev_dir: "agent-archives"
     repo: "johnfkoo951/agent-archives"
@@ -249,7 +249,7 @@ apps:
     headline: "cmux — 멀티계정 Claude 라우터"
     sub: "여러 Claude 계정을 로컬 프록시로 묶어 모델·쿼터별 라우팅 + 429 자동 페일오버."
     tech: "Node.js (ESM), CLI bin cmux, node --test"
-    tags: ["TypeScript"]
+    tags: ["멀티계정", "자동 페일오버", "쿼터 라우팅", "로컬 프록시", "상시 구동"]
     status: "wip"
     dev_dir: "claude-multiplexer"
     repo: "johnfkoo951/claude-multiplexer"
@@ -261,7 +261,7 @@ apps:
     headline: "Vault Bridge — 7볼트 크로스 MCP"
     sub: "7개 CMDS 볼트를 한 인터페이스로 검색·읽기하고 볼트 경계를 넘는 딥링크를 만드는 MCP 서버."
     tech: "MCP 서버 (TypeScript, @modelcontextprotocol/sdk, ripgrep, zod)"
-    tags: ["TypeScript", "MCP"]
+    tags: ["7볼트 검색", "크로스 볼트", "딥링크 생성", "개념 추적", "MCP 서버"]
     status: "wip"
     dev_dir: "cmds-vault-bridge"
     repo: ""
@@ -273,7 +273,7 @@ apps:
     headline: "Mobile Command Center — 이동식 작전본부"
     sub: "Starlink+5G+EcoFlow+MacBook 기반 '사무실은 장소가 아니라 시스템' 쇼케이스."
     tech: "단일 index.html (v4.3 CMDSPACE Landing 표준), Vercel"
-    tags: ["Static/Vercel"]
+    tags: ["이동식 사무실", "Starlink+5G", "전력 자립", "실측 텔레메트리", "한/영 토글", "라이트/다크"]
     status: "stable"
     dev_dir: "mobile-command-center"
     repo: ""
@@ -285,7 +285,7 @@ apps:
     headline: "CMDSPACE Plugins — Claude Code 마켓플레이스"
     sub: "연구-출판 파이프라인과 자율 개발 오케스트레이터(13 에이전트·12 스킬)를 담은 플러그인 마켓."
     tech: "Claude Code 플러그인 (marketplace.json + agents/skills)"
-    tags: []
+    tags: ["플러그인 마켓", "자율 개발", "연구 파이프라인", "3티어 에이전트", "원클릭 설치", "오픈소스"]
     status: "stable"
     dev_dir: "cmdspace-plugins"
     repo: "johnfkoo951/cmdspace-plugins"
@@ -297,7 +297,7 @@ apps:
     headline: "CMDS System Files — PKM 시스템 공개 문서"
     sub: "생태계를 구동하는 6개 코어 시스템 파일·8개 규칙·9개 패턴을 배포하는 공개 사이트."
     tech: "정적 HTML/CSS/JS (Vercel), design-tokens.json"
-    tags: ["Static/Vercel"]
+    tags: ["시스템 문서 공개", "AI 가이드", "공유 규칙", "다운로드 번들", "버전 관리", "오픈소스"]
     status: "active"
     dev_dir: "cmds-system-files"
     repo: "johnfkoo951/cmds-system-files"
@@ -309,7 +309,7 @@ apps:
     headline: "Claude Scheduler — Claude Code 예약 실행"
     sub: "launchd 기반으로 Claude Code CLI를 정시에 자동 실행하는 macOS 메뉴바 스케줄러."
     tech: "Swift/SwiftUI (Xcode project), launchd"
-    tags: ["Swift"]
+    tags: ["예약 실행", "launchd 자동화", "메뉴바", "실행 로그", "앱꺼져도 실행"]
     status: "stable"
     dev_dir: "claude-code-macos-scheduler"
     repo: "johnfkoo951/claude-code-macos-scheduler"
@@ -322,7 +322,7 @@ apps:
     headline: "CmdSync — 저지연 원격 합주"
     sub: "지연·지터·손실을 측정하고 두 Mac 간 실시간 오디오(UDP/Bonjour)를 잇는 협업 대시보드."
     tech: "Swift/SwiftUI (SwiftPM), CmdSyncCore 엔진 + 테스트"
-    tags: ["Swift"]
+    tags: ["지연 측정", "실시간 오디오", "두 Mac 합주", "지터·손실 모니터", "LAN 전용"]
     status: "wip"
     dev_dir: "cmd-sync"
     repo: "johnfkoo951/cmd-sync"
@@ -334,7 +334,7 @@ apps:
     headline: "CMDS Link: DEVONthink"
     sub: "DEVONthink 문서를 x-devonthink-item:// 딥링크로 볼트에 잇는 옵시디언 플러그인 (macOS)."
     tech: "Obsidian 플러그인 (TypeScript, esbuild, AppleScript 브리지)"
-    tags: ["Obsidian", "TypeScript"]
+    tags: ["DEVONthink 연동", "딥링크", "검색 링크", "마크다운 생성", "링크카드", "macOS 전용"]
     status: "released"
     dev_dir: "cmds-link-devonthink"
     repo: ""
@@ -346,7 +346,7 @@ apps:
     headline: "CMDS Link: Bookends"
     sub: "Bookends 참고문헌을 Literature note·인용·주석 동기화로 볼트에 잇는 플러그인 (macOS)."
     tech: "Obsidian 플러그인 (TypeScript, esbuild, AppleScript 브리지)"
-    tags: ["Obsidian", "TypeScript"]
+    tags: ["Bookends 연동", "Literature note", "인용 삽입", "주석 동기화", "딥링크", "macOS 전용"]
     status: "released"
     dev_dir: "cmds-link-bookends"
     repo: ""
@@ -358,7 +358,7 @@ apps:
     headline: "바람빛 아카이브 — 말씀 묵상"
     sub: "이남정 목사님 말씀 묵상 발췌본을 모은 바람빛교회 아카이브 웹사이트."
     tech: "정적 HTML/JS + book-data.json (CMDS v4.3 템플릿), Vercel"
-    tags: ["Static/Vercel"]
+    tags: ["말씀 묵상", "발췌본 모음", "도서 아카이브", "설교 인용"]
     status: "released"
     dev_dir: "windlight"
     repo: ""
@@ -370,7 +370,7 @@ apps:
     headline: "Claude Code Actions — 서버리스 스케줄러"
     sub: "서버 없이 GitHub Actions 무료 분(2000/월)으로 Claude Code를 돌리는 자동화 템플릿."
     tech: "GitHub Actions (YAML) + Claude Code CLI, 템플릿 레포"
-    tags: []
+    tags: ["서버리스", "무료 실행", "cron 예약", "서버 불필요", "자동화 템플릿", "오픈소스"]
     status: "stable"
     dev_dir: "claude-code-actions"
     repo: "johnfkoo951/claude-code-actions"
@@ -382,7 +382,7 @@ apps:
     headline: "YouTube 한글 자막 스킬"
     sub: "유튜브 영상을 받아 맥락까지 이해해 한글 자막으로 번역·합성하는 Claude Code 스킬."
     tech: "Python 3.7+ + FFmpeg, Claude Code skill"
-    tags: ["Python"]
+    tags: ["한글 자막", "맥락 번역", "자막 합성", "용어 일관성", "자동 처리"]
     status: "stable"
     dev_dir: "claude-skill-youtube-kr-subtitle"
     repo: "Koomook/claude-skill-youtube-kr-subtitle"
@@ -394,7 +394,7 @@ apps:
     headline: "9요한 성좌 — 다중 페르소나 커널"
     sub: "9명의 역사적 요한을 9개 Division·성령의 9열매에 1:1:1로 매핑한 에이전트 아키텍처 사이트."
     tech: "정적 HTML/CSS/JS (v4.3, marked.js, IntersectionObserver)"
-    tags: ["Static/Vercel"]
+    tags: ["9 페르소나", "1:1:1 매핑", "성좌 다이어그램", "⌘K 팔레트", "한/영 토글"]
     status: "released"
     dev_dir: "9yohan-constellation"
     repo: "johnfkoo951/9yohan-constellation"
@@ -406,7 +406,7 @@ apps:
     headline: "지식의 해상도 — Knowledge Resolution"
     sub: "나레이션·영상 기반으로 '지식의 해상도' 개념을 풀어낸 CmdSpace 브랜드 페이지."
     tech: "정적 HTML/CSS/JS + media (mp4/mp3), Vercel"
-    tags: ["Static/Vercel"]
+    tags: ["3국면 프레임워크", "오디오 나레이션", "시나리오별 쇼츠", "프레임워크 요약"]
     status: "stable"
     dev_dir: "resolution-cmdspace"
     repo: ""
@@ -418,7 +418,7 @@ apps:
     headline: "HR Prompt Playbook v3.0"
     sub: "HR 실무용 실전 프롬프트 패턴을 모은 브루탈리스트 스타일 플레이북."
     tech: "정적 HTML (단일 index.html), Vercel"
-    tags: ["Static/Vercel"]
+    tags: ["실전 프롬프트", "HR 실무", "보안 가이드", "QA 검증", "카테고리 분류"]
     status: "released"
     dev_dir: "hrprompt-cmdspace"
     repo: ""
@@ -430,7 +430,7 @@ apps:
     headline: "Deep Research 5종 비교"
     sub: "ChatGPT·Gemini·Claude·Perplexity·Grok의 딥리서치·최고 추론 모드를 비교 정리한 자료."
     tech: "정적 HTML (v4.3, 17-tag OG), Vercel"
-    tags: ["Static/Vercel"]
+    tags: ["5종 비교", "딥리서치", "추론 모드", "선택 가이드"]
     status: "stable"
     dev_dir: "ai-deep-research-compare"
     repo: ""
@@ -442,7 +442,7 @@ apps:
     headline: "궤도 데이터센터 열 방출 리서치"
     sub: "궤도 데이터센터의 열 방출(thermal rejection) 병목을 다루는 인터랙티브 리서치 쇼케이스."
     tech: "정적 HTML + 오디오 나레이션 + OG 자산, Vercel"
-    tags: ["Static/Vercel"]
+    tags: ["방열 리서치", "물리 기반", "12개 실증", "6개국어 브리핑", "오디오 나레이션"]
     status: "stable"
     dev_dir: "space-data-center-thermal"
     repo: ""
@@ -454,7 +454,7 @@ apps:
     headline: "꿈도 환승이 되나요"
     sub: "2026 꿈환승 컨퍼런스 발표 겸 CMDSPACE 서비스 쇼케이스 랜딩."
     tech: "정적 HTML/CSS (단일 index.html), Vercel"
-    tags: ["Static/Vercel"]
+    tags: ["컨퍼런스 발표", "서비스 쇼케이스", "하네스 서사", "2인 회사"]
     status: "released"
     dev_dir: "dream-cmdspace"
     repo: ""
