@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T13:09:14.822Z",
+  "generated_at": "2026-07-14T22:15:14.173Z",
   "mode": "public-only",
   "counts": {
     "catalogued": 35,
@@ -130,13 +130,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/LDA_ItsOK",
       "is_private": false,
-      "last_commit": "2021-01-09",
+      "last_commit": "2021-01-08",
       "signals": {
         "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 2012
+        "lastCommitDays": 2013
       }
     },
     {
@@ -146,13 +146,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/LDA_Research",
       "is_private": false,
-      "last_commit": "2021-01-09",
+      "last_commit": "2021-01-08",
       "signals": {
         "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 2012
+        "lastCommitDays": 2013
       }
     },
     {
@@ -162,13 +162,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/LDA_vis",
       "is_private": false,
-      "last_commit": "2021-01-09",
+      "last_commit": "2021-01-08",
       "signals": {
         "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 2012
+        "lastCommitDays": 2013
       }
     },
     {
@@ -210,13 +210,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/audiocraft",
       "is_private": false,
-      "last_commit": "2023-08-02",
+      "last_commit": "2023-08-01",
       "signals": {
         "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 1077
+        "lastCommitDays": 1078
       }
     },
     {
@@ -242,13 +242,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/codex-plugin-cc",
       "is_private": false,
-      "last_commit": "2026-04-09",
+      "last_commit": "2026-04-08",
       "signals": {
         "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 96
+        "lastCommitDays": 97
       }
     },
     {
@@ -258,13 +258,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/defuddle",
       "is_private": false,
-      "last_commit": "2026-04-29",
+      "last_commit": "2026-04-28",
       "signals": {
         "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 76
+        "lastCommitDays": 77
       }
     },
     {
@@ -306,13 +306,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/kr-book-info-plugin",
       "is_private": false,
-      "last_commit": "2022-04-09",
+      "last_commit": "2022-04-08",
       "signals": {
         "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 1557
+        "lastCommitDays": 1558
       }
     },
     {
@@ -338,13 +338,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/obsidian-skills",
       "is_private": false,
-      "last_commit": "2026-04-03",
+      "last_commit": "2026-04-02",
       "signals": {
         "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 102
+        "lastCommitDays": 103
       }
     },
     {
@@ -386,13 +386,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/polysomnography",
       "is_private": false,
-      "last_commit": "2025-03-13",
+      "last_commit": "2025-03-12",
       "signals": {
         "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 488
+        "lastCommitDays": 489
       }
     },
     {
@@ -402,13 +402,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/pretext",
       "is_private": false,
-      "last_commit": "2026-04-02",
+      "last_commit": "2026-04-01",
       "signals": {
         "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 103
+        "lastCommitDays": 104
       }
     },
     {
@@ -434,13 +434,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/rsm",
       "is_private": false,
-      "last_commit": "2019-06-29",
+      "last_commit": "2019-06-28",
       "signals": {
         "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 2572
+        "lastCommitDays": 2573
       }
     },
     {
@@ -466,13 +466,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/streamlit-example",
       "is_private": false,
-      "last_commit": "2024-08-09",
+      "last_commit": "2024-08-08",
       "signals": {
         "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 704
+        "lastCommitDays": 705
       }
     }
   ],
