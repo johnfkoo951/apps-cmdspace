@@ -1,44 +1,92 @@
 {
-  "generated_at": "2026-07-14T13:08:44.016Z",
-  "mode": "local",
+  "generated_at": "2026-07-14T13:09:14.822Z",
+  "mode": "public-only",
   "counts": {
     "catalogued": 35,
-    "candidates": 58,
-    "feature_candidates": 2,
+    "candidates": 29,
+    "feature_candidates": 5,
     "anomalies": 0,
     "stale": 5
   },
   "feature_candidates": [
     {
-      "name": "cmds-link-zotero",
+      "name": "Osync-p",
       "verdict": "feature-candidate",
-      "reason": "Obsidian 플러그인 manifest 존재",
-      "source": "local+local-only",
-      "repo_url": "",
-      "is_private": null,
-      "last_commit": null,
+      "reason": "최근 30일 내 커밋된 활성 git 프로젝트",
+      "source": "github",
+      "repo_url": "https://github.com/johnfkoo951/Osync-p",
+      "is_private": false,
+      "last_commit": "2026-06-14",
       "signals": {
-        "git": false,
+        "git": true,
         "vercel": false,
         "nativeApp": false,
-        "obsidianPlugin": true,
-        "lastCommitDays": null
+        "obsidianPlugin": false,
+        "lastCommitDays": 30
       }
     },
     {
-      "name": "cmdspace-labs",
+      "name": "cmds-vault",
       "verdict": "feature-candidate",
-      "reason": "Vercel 배포 설정 존재",
-      "source": "local+local-only",
-      "repo_url": "",
-      "is_private": null,
-      "last_commit": null,
+      "reason": "최근 1일 내 커밋된 활성 git 프로젝트",
+      "source": "github",
+      "repo_url": "https://github.com/johnfkoo951/cmds-vault",
+      "is_private": false,
+      "last_commit": "2026-07-13",
       "signals": {
-        "git": false,
-        "vercel": true,
+        "git": true,
+        "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": null
+        "lastCommitDays": 1
+      }
+    },
+    {
+      "name": "kordoc",
+      "verdict": "feature-candidate",
+      "reason": "최근 31일 내 커밋된 활성 git 프로젝트",
+      "source": "github",
+      "repo_url": "https://github.com/johnfkoo951/kordoc",
+      "is_private": false,
+      "last_commit": "2026-06-13",
+      "signals": {
+        "git": true,
+        "vercel": false,
+        "nativeApp": false,
+        "obsidianPlugin": false,
+        "lastCommitDays": 31
+      }
+    },
+    {
+      "name": "omlx",
+      "verdict": "feature-candidate",
+      "reason": "최근 26일 내 커밋된 활성 git 프로젝트",
+      "source": "github",
+      "repo_url": "https://github.com/johnfkoo951/omlx",
+      "is_private": false,
+      "last_commit": "2026-06-18",
+      "signals": {
+        "git": true,
+        "vercel": false,
+        "nativeApp": false,
+        "obsidianPlugin": false,
+        "lastCommitDays": 26
+      }
+    },
+    {
+      "name": "synch",
+      "verdict": "feature-candidate",
+      "reason": "최근 16일 내 커밋된 활성 git 프로젝트",
+      "source": "github",
+      "repo_url": "https://github.com/johnfkoo951/synch",
+      "is_private": false,
+      "last_commit": "2026-06-28",
+      "signals": {
+        "git": true,
+        "vercel": false,
+        "nativeApp": false,
+        "obsidianPlugin": false,
+        "lastCommitDays": 16
       }
     }
   ],
@@ -50,29 +98,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/Doit_R",
       "is_private": false,
-      "last_commit": null,
+      "last_commit": "2020-04-24",
       "signals": {
-        "git": false,
+        "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "HR-Dashboard--for-Streamlit-Web-",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/HR-Dashboard--for-Streamlit-Web-",
-      "is_private": true,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
+        "lastCommitDays": 2272
       }
     },
     {
@@ -82,13 +114,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/LDA",
       "is_private": false,
-      "last_commit": null,
+      "last_commit": "2021-02-09",
       "signals": {
-        "git": false,
+        "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": null
+        "lastCommitDays": 1981
       }
     },
     {
@@ -98,13 +130,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/LDA_ItsOK",
       "is_private": false,
-      "last_commit": null,
+      "last_commit": "2021-01-09",
       "signals": {
-        "git": false,
+        "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": null
+        "lastCommitDays": 2012
       }
     },
     {
@@ -114,13 +146,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/LDA_Research",
       "is_private": false,
-      "last_commit": null,
+      "last_commit": "2021-01-09",
       "signals": {
-        "git": false,
+        "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": null
+        "lastCommitDays": 2012
       }
     },
     {
@@ -130,13 +162,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/LDA_vis",
       "is_private": false,
-      "last_commit": null,
+      "last_commit": "2021-01-09",
       "signals": {
-        "git": false,
+        "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": null
+        "lastCommitDays": 2012
       }
     },
     {
@@ -146,29 +178,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/LDA_visualization",
       "is_private": false,
-      "last_commit": null,
+      "last_commit": "2021-06-23",
       "signals": {
-        "git": false,
+        "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "Osync-p",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/Osync-p",
-      "is_private": false,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
+        "lastCommitDays": 1847
       }
     },
     {
@@ -178,13 +194,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/achmage-markdown-renderer",
       "is_private": false,
-      "last_commit": null,
+      "last_commit": "2026-04-05",
       "signals": {
-        "git": false,
+        "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": null
+        "lastCommitDays": 100
       }
     },
     {
@@ -194,45 +210,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/audiocraft",
       "is_private": false,
-      "last_commit": null,
+      "last_commit": "2023-08-02",
       "signals": {
-        "git": false,
+        "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "chatbot_1002",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/chatbot_1002",
-      "is_private": true,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "chatgpt-chat-cmds",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/chatgpt-chat-cmds",
-      "is_private": true,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
+        "lastCommitDays": 1077
       }
     },
     {
@@ -242,45 +226,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/claude-code",
       "is_private": false,
-      "last_commit": null,
+      "last_commit": "2026-03-31",
       "signals": {
-        "git": false,
+        "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "cmds-9",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/cmds-9",
-      "is_private": true,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "cmds-vault",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/cmds-vault",
-      "is_private": false,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
+        "lastCommitDays": 105
       }
     },
     {
@@ -290,13 +242,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/codex-plugin-cc",
       "is_private": false,
-      "last_commit": null,
+      "last_commit": "2026-04-09",
       "signals": {
-        "git": false,
+        "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": null
+        "lastCommitDays": 96
       }
     },
     {
@@ -306,45 +258,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/defuddle",
       "is_private": false,
-      "last_commit": null,
+      "last_commit": "2026-04-29",
       "signals": {
-        "git": false,
+        "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "descriptive-stat",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/descriptive-stat",
-      "is_private": true,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "desktop-tutorial",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/desktop-tutorial",
-      "is_private": true,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
+        "lastCommitDays": 76
       }
     },
     {
@@ -354,61 +274,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/hermes-agent",
       "is_private": false,
-      "last_commit": null,
+      "last_commit": "2026-04-20",
       "signals": {
-        "git": false,
+        "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "hr0930-2",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/hr0930-2",
-      "is_private": true,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "hrdashboard_0930",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/hrdashboard_0930",
-      "is_private": true,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "hrdashboard_test",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/hrdashboard_test",
-      "is_private": true,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
+        "lastCommitDays": 85
       }
     },
     {
@@ -418,45 +290,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/johnfkoo951.github.io",
       "is_private": false,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "kakao-archive",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "local+local-only",
-      "repo_url": "",
-      "is_private": null,
-      "last_commit": null,
+      "last_commit": "2020-12-29",
       "signals": {
         "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "kordoc",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/kordoc",
-      "is_private": false,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
+        "lastCommitDays": 2023
       }
     },
     {
@@ -466,45 +306,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/kr-book-info-plugin",
       "is_private": false,
-      "last_commit": null,
+      "last_commit": "2022-04-09",
       "signals": {
-        "git": false,
+        "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "lge-cto-asimov-2026-07-10",
-      "verdict": "skip",
-      "reason": "이름 패턴상 백업/강의/개인 인프라로 추정",
-      "source": "local+local-only",
-      "repo_url": "",
-      "is_private": null,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "notebooklm-parent-guide",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/notebooklm-parent-guide",
-      "is_private": true,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
+        "lastCommitDays": 1557
       }
     },
     {
@@ -514,13 +322,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/obsidian-plugin-test",
       "is_private": false,
-      "last_commit": null,
+      "last_commit": "2025-06-04",
       "signals": {
-        "git": false,
+        "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": null
+        "lastCommitDays": 405
       }
     },
     {
@@ -530,13 +338,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/obsidian-skills",
       "is_private": false,
-      "last_commit": null,
+      "last_commit": "2026-04-03",
       "signals": {
-        "git": false,
+        "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": null
+        "lastCommitDays": 102
       }
     },
     {
@@ -546,61 +354,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/oh-my-claudecode",
       "is_private": false,
-      "last_commit": null,
+      "last_commit": "2026-05-04",
       "signals": {
-        "git": false,
+        "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "omlx",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/omlx",
-      "is_private": false,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "omnisync",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/omnisync",
-      "is_private": true,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "paullee_class",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/paullee_class",
-      "is_private": true,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
+        "lastCommitDays": 71
       }
     },
     {
@@ -610,13 +370,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/plfetch",
       "is_private": false,
-      "last_commit": null,
+      "last_commit": "2026-04-25",
       "signals": {
-        "git": false,
+        "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": null
+        "lastCommitDays": 80
       }
     },
     {
@@ -626,13 +386,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/polysomnography",
       "is_private": false,
-      "last_commit": null,
+      "last_commit": "2025-03-13",
       "signals": {
-        "git": false,
+        "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": null
+        "lastCommitDays": 488
       }
     },
     {
@@ -642,13 +402,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/pretext",
       "is_private": false,
-      "last_commit": null,
+      "last_commit": "2026-04-02",
       "signals": {
-        "git": false,
+        "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": null
+        "lastCommitDays": 103
       }
     },
     {
@@ -658,13 +418,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/rhwp",
       "is_private": false,
-      "last_commit": null,
+      "last_commit": "2026-05-15",
       "signals": {
-        "git": false,
+        "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": null
+        "lastCommitDays": 60
       }
     },
     {
@@ -674,29 +434,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/rsm",
       "is_private": false,
-      "last_commit": null,
+      "last_commit": "2019-06-29",
       "signals": {
-        "git": false,
+        "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "security",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "local+local-only",
-      "repo_url": "",
-      "is_private": null,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
+        "lastCommitDays": 2572
       }
     },
     {
@@ -706,93 +450,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/simple-obsidian-plugin",
       "is_private": false,
-      "last_commit": null,
+      "last_commit": "2025-06-08",
       "signals": {
-        "git": false,
+        "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "sk_hr",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/sk_hr",
-      "is_private": true,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "sk_hr_dashboard_0919",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/sk_hr_dashboard_0919",
-      "is_private": true,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "skill-comp",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/skill-comp",
-      "is_private": true,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "skt4",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/skt4",
-      "is_private": true,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "skt_test",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/skt_test",
-      "is_private": true,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
+        "lastCommitDays": 401
       }
     },
     {
@@ -802,141 +466,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/streamlit-example",
       "is_private": false,
-      "last_commit": null,
+      "last_commit": "2024-08-09",
       "signals": {
-        "git": false,
+        "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "survey-0930",
-      "verdict": "skip",
-      "reason": "이름 패턴상 백업/강의/개인 인프라로 추정",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/survey-0930",
-      "is_private": true,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "synch",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/synch",
-      "is_private": false,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "tag_summarize_app",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/tag_summarize_app",
-      "is_private": true,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "toto-1105",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/toto-1105",
-      "is_private": true,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "translator",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/translator",
-      "is_private": true,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "translator2",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/translator2",
-      "is_private": true,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "youtube-summarizer",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/youtube-summarizer",
-      "is_private": true,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
-      }
-    },
-    {
-      "name": "youtube_summary",
-      "verdict": "skip",
-      "reason": "배포/앱 신호 없음 (저신호)",
-      "source": "github",
-      "repo_url": "https://github.com/johnfkoo951/youtube_summary",
-      "is_private": true,
-      "last_commit": null,
-      "signals": {
-        "git": false,
-        "vercel": false,
-        "nativeApp": false,
-        "obsidianPlugin": false,
-        "lastCommitDays": null
+        "lastCommitDays": 704
       }
     }
   ],
