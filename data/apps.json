@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T22:13:09.426Z",
+  "generated_at": "2026-07-14T13:04:39.282Z",
   "site": {
     "title": "CMDSPACE Apps",
     "tagline_ko": "커맨드스페이스가 만든 것들",
@@ -15,37 +15,43 @@
       "id": "macos-apps",
       "label_ko": "macOS 데스크톱 앱",
       "label_en": "macOS Desktop Apps",
-      "blurb_ko": "Swift/SwiftUI로 직접 빌드해 배포한 네이티브 맥 앱들 — 에디터, 네트워크 지휘탑, 세션 뷰어, 원격 조종기까지."
+      "blurb_ko": "Swift/SwiftUI로 직접 빌드해 배포한 네이티브 맥 앱들 — 에디터, 네트워크 지휘탑, 세션 뷰어, 원격 조종기까지.",
+      "blurb_en": "Native Mac apps built and shipped in Swift/SwiftUI — an editor, a network helm, session viewers, and remote controls."
     },
     {
       "id": "obsidian-plugins",
       "label_ko": "Obsidian 플러그인",
       "label_en": "Obsidian Plugins",
-      "blurb_ko": "외부 앱과 볼트를 잇는 커맨드스페이스제 옵시디언 플러그인 — Eagle·DEVONthink·Bookends 연동과 원클릭 웹 공유."
+      "blurb_ko": "외부 앱과 볼트를 잇는 커맨드스페이스제 옵시디언 플러그인 — Eagle·DEVONthink·Bookends 연동과 원클릭 웹 공유.",
+      "blurb_en": "CMDSPACE-made Obsidian plugins bridging external apps and your vault — Eagle, DEVONthink, Bookends, one-click web sharing."
     },
     {
       "id": "web-apps",
       "label_ko": "웹 앱 · 플랫폼",
       "label_en": "Web Apps & Platforms",
-      "blurb_ko": "실제 도메인에 배포된 인터랙티브 웹 프로덕트 — 생태계 관문, 풀스택 심사 플랫폼, 텔레메트리 대시보드, 링크인바이오."
+      "blurb_ko": "실제 도메인에 배포된 인터랙티브 웹 프로덕트 — 생태계 관문, 풀스택 심사 플랫폼, 텔레메트리 대시보드, 링크인바이오.",
+      "blurb_en": "Interactive web products on real domains — the ecosystem gateway, a full-stack judging platform, telemetry dashboards, link-in-bio."
     },
     {
       "id": "dev-tools",
       "label_ko": "AI 개발 도구 · CLI",
       "label_en": "AI Dev Tools & CLI",
-      "blurb_ko": "AI 코딩 워크플로를 관측·라우팅·원격조종·연결하는 CLI/TUI·MCP·브리지 도구들."
+      "blurb_ko": "AI 코딩 워크플로를 관측·라우팅·원격조종·연결하는 CLI/TUI·MCP·브리지 도구들.",
+      "blurb_en": "CLI/TUI, MCP, and bridge tools that observe, route, remote-control, and connect AI coding workflows."
     },
     {
       "id": "claude-ecosystem",
       "label_ko": "Claude Code 생태계",
       "label_en": "Claude Code Ecosystem",
-      "blurb_ko": "Claude Code·Codex를 확장하는 스타터킷·플러그인 마켓·스킬·서버리스 자동화와 공개 시스템 문서."
+      "blurb_ko": "Claude Code·Codex를 확장하는 스타터킷·플러그인 마켓·스킬·서버리스 자동화와 공개 시스템 문서.",
+      "blurb_en": "Starter kits, a plugin marketplace, skills, serverless automation, and public system docs extending Claude Code & Codex."
     },
     {
       "id": "research-showcase",
       "label_ko": "리서치 · 브랜드 쇼케이스",
       "label_en": "Research & Brand Showcases",
-      "blurb_ko": "개념·리서치·발표를 담은 배포형 브랜드 페이지 — 에이전트 아키텍처부터 궤도 데이터센터 열역학까지."
+      "blurb_ko": "개념·리서치·발표를 담은 배포형 브랜드 페이지 — 에이전트 아키텍처부터 궤도 데이터센터 열역학까지.",
+      "blurb_en": "Deployed brand pages for concepts, research, and talks — from agent architectures to orbital data-center thermodynamics."
     }
   ],
   "apps": [
@@ -75,7 +81,7 @@
       "url_alive": true,
       "is_private": false,
       "is_archived": false,
-      "dirty": null,
+      "dirty": true,
       "stale": false
     },
     {
@@ -97,13 +103,13 @@
       "url": "https://cmdspace.work",
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/cmdspace-main",
-      "last_commit": "2026-07-03",
+      "last_commit": "2026-07-07",
       "stars": 0,
       "latest_release": null,
       "url_alive": true,
       "is_private": false,
       "is_archived": false,
-      "dirty": null,
+      "dirty": true,
       "stale": false
     },
     {
@@ -126,14 +132,14 @@
       "url": "",
       "download_url": "",
       "repo_url": "",
-      "last_commit": null,
+      "last_commit": "2026-07-07",
       "stars": null,
       "latest_release": null,
       "url_alive": null,
       "is_private": null,
       "is_archived": null,
-      "dirty": null,
-      "stale": null
+      "dirty": true,
+      "stale": false
     },
     {
       "name": "ai-baekiljang",
@@ -155,14 +161,14 @@
       "url": "https://writing.cmdspace.work",
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/ai-baekiljang",
-      "last_commit": null,
-      "stars": null,
+      "last_commit": "2026-07-05",
+      "stars": 0,
       "latest_release": null,
       "url_alive": true,
-      "is_private": null,
-      "is_archived": null,
-      "dirty": null,
-      "stale": null
+      "is_private": true,
+      "is_archived": false,
+      "dirty": false,
+      "stale": false
     },
     {
       "name": "CmdPilot",
@@ -190,7 +196,7 @@
       "url_alive": null,
       "is_private": false,
       "is_archived": false,
-      "dirty": null,
+      "dirty": true,
       "stale": false
     },
     {
@@ -213,13 +219,13 @@
       "url": "",
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/cmds-eagle",
-      "last_commit": "2026-07-09",
+      "last_commit": "2026-07-10",
       "stars": 54,
       "latest_release": "1.7.0",
       "url_alive": null,
       "is_private": false,
       "is_archived": false,
-      "dirty": null,
+      "dirty": false,
       "stale": false
     },
     {
@@ -241,13 +247,13 @@
       "url": "",
       "download_url": "https://github.com/johnfkoo951/CmdTrace/releases/tag/v2.4.2-build39",
       "repo_url": "https://github.com/johnfkoo951/CmdTrace",
-      "last_commit": "2026-04-07",
+      "last_commit": "2026-06-22",
       "stars": 8,
       "latest_release": "v2.4.2-build39",
       "url_alive": null,
       "is_private": false,
       "is_archived": false,
-      "dirty": null,
+      "dirty": true,
       "stale": false
     },
     {
@@ -269,13 +275,13 @@
       "url": "https://plaud.cmdspace.work",
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/plaud-note-manager",
-      "last_commit": "2026-06-16",
+      "last_commit": "2026-06-23",
       "stars": 0,
       "latest_release": null,
       "url_alive": true,
       "is_private": false,
       "is_archived": false,
-      "dirty": null,
+      "dirty": true,
       "stale": false
     },
     {
@@ -298,14 +304,14 @@
       "url": "",
       "download_url": "",
       "repo_url": "",
-      "last_commit": null,
+      "last_commit": "2026-07-07",
       "stars": null,
       "latest_release": null,
       "url_alive": null,
       "is_private": null,
       "is_archived": null,
-      "dirty": null,
-      "stale": null
+      "dirty": false,
+      "stale": false
     },
     {
       "name": "codeburn",
@@ -327,13 +333,13 @@
       "url": "https://www.npmjs.com/package/codeburn",
       "download_url": "",
       "repo_url": "https://github.com/getagentseal/codeburn",
-      "last_commit": "2026-07-13",
-      "stars": 8644,
+      "last_commit": "2026-07-14",
+      "stars": 8653,
       "latest_release": "v0.9.15",
       "url_alive": null,
       "is_private": false,
       "is_archived": false,
-      "dirty": null,
+      "dirty": false,
       "stale": false
     },
     {
@@ -356,13 +362,13 @@
       "url": "https://llm-wiki.cmdspace.work",
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/cmds-llm-wiki",
-      "last_commit": "2026-07-02",
+      "last_commit": "2026-07-03",
       "stars": 50,
       "latest_release": "v1.7.1",
       "url_alive": true,
       "is_private": false,
       "is_archived": false,
-      "dirty": null,
+      "dirty": false,
       "stale": false
     },
     {
@@ -384,13 +390,13 @@
       "url": "https://bio.cmdspace.work",
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/cmds-bio",
-      "last_commit": "2026-07-04",
+      "last_commit": "2026-07-13",
       "stars": 8,
       "latest_release": null,
       "url_alive": true,
       "is_private": false,
       "is_archived": false,
-      "dirty": null,
+      "dirty": false,
       "stale": false
     },
     {
@@ -418,7 +424,7 @@
       "url_alive": null,
       "is_private": null,
       "is_archived": null,
-      "dirty": null,
+      "dirty": true,
       "stale": null
     },
     {
@@ -447,7 +453,7 @@
       "url_alive": null,
       "is_private": false,
       "is_archived": false,
-      "dirty": null,
+      "dirty": true,
       "stale": false
     },
     {
@@ -469,13 +475,13 @@
       "url": "https://starlink.cmdspace.work",
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/starlink-cmdspace",
-      "last_commit": "2026-06-04",
+      "last_commit": "2026-06-18",
       "stars": 0,
       "latest_release": null,
       "url_alive": true,
       "is_private": false,
       "is_archived": false,
-      "dirty": null,
+      "dirty": false,
       "stale": false
     },
     {
@@ -532,7 +538,7 @@
       "url_alive": null,
       "is_private": false,
       "is_archived": false,
-      "dirty": null,
+      "dirty": false,
       "stale": true
     },
     {
@@ -554,14 +560,14 @@
       "url": "",
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/claude-multiplexer",
-      "last_commit": null,
-      "stars": null,
+      "last_commit": "2026-07-07",
+      "stars": 0,
       "latest_release": null,
       "url_alive": null,
-      "is_private": null,
-      "is_archived": null,
-      "dirty": null,
-      "stale": null
+      "is_private": true,
+      "is_archived": false,
+      "dirty": false,
+      "stale": false
     },
     {
       "name": "cmds-vault-bridge",
@@ -646,7 +652,7 @@
       "url_alive": null,
       "is_private": false,
       "is_archived": false,
-      "dirty": null,
+      "dirty": false,
       "stale": true
     },
     {
@@ -675,7 +681,7 @@
       "url_alive": true,
       "is_private": false,
       "is_archived": false,
-      "dirty": null,
+      "dirty": false,
       "stale": false
     },
     {
@@ -703,7 +709,7 @@
       "url_alive": null,
       "is_private": false,
       "is_archived": false,
-      "dirty": null,
+      "dirty": false,
       "stale": true
     },
     {
@@ -725,14 +731,14 @@
       "url": "",
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/cmd-sync",
-      "last_commit": null,
-      "stars": null,
+      "last_commit": "2026-06-11",
+      "stars": 0,
       "latest_release": null,
       "url_alive": null,
-      "is_private": null,
-      "is_archived": null,
-      "dirty": null,
-      "stale": null
+      "is_private": true,
+      "is_archived": false,
+      "dirty": true,
+      "stale": false
     },
     {
       "name": "cmds-link-devonthink",
@@ -845,7 +851,7 @@
       "url_alive": null,
       "is_private": false,
       "is_archived": false,
-      "dirty": null,
+      "dirty": false,
       "stale": true
     },
     {
@@ -873,7 +879,7 @@
       "url_alive": null,
       "is_private": false,
       "is_archived": false,
-      "dirty": null,
+      "dirty": false,
       "stale": true
     },
     {
@@ -901,7 +907,7 @@
       "url_alive": true,
       "is_private": false,
       "is_archived": false,
-      "dirty": null,
+      "dirty": true,
       "stale": false
     },
     {
@@ -1032,14 +1038,14 @@
       "url": "https://dream.cmdspace.work",
       "download_url": "",
       "repo_url": "",
-      "last_commit": null,
+      "last_commit": "2026-06-20",
       "stars": null,
       "latest_release": null,
       "url_alive": true,
       "is_private": null,
       "is_archived": null,
-      "dirty": null,
-      "stale": null
+      "dirty": true,
+      "stale": false
     }
   ],
   "longtail": [
@@ -1050,8 +1056,8 @@
       "url": "",
       "repo_url": "https://github.com/johnfkoo951/nemotron-persona-kit",
       "url_alive": null,
-      "last_commit": null,
-      "stars": null
+      "last_commit": "2026-07-04",
+      "stars": 0
     },
     {
       "name": "macbook-power-guide",
