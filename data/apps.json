@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T22:15:14.173Z",
+  "generated_at": "2026-07-15T22:15:35.427Z",
   "site": {
     "title": "CMDSPACE Apps",
     "tagline_ko": "커맨드스페이스가 만든 것들",
@@ -333,8 +333,8 @@
       "url": "https://www.npmjs.com/package/codeburn",
       "download_url": "",
       "repo_url": "https://github.com/getagentseal/codeburn",
-      "last_commit": "2026-07-14",
-      "stars": 8657,
+      "last_commit": "2026-07-15",
+      "stars": 8673,
       "latest_release": "v0.9.15",
       "url_alive": null,
       "is_private": false,
@@ -363,7 +363,7 @@
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/cmds-llm-wiki",
       "last_commit": "2026-07-02",
-      "stars": 50,
+      "stars": 52,
       "latest_release": "v1.7.1",
       "url_alive": true,
       "is_private": false,
