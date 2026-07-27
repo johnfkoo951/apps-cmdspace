@@ -1,6 +1,6 @@
 # 카탈로그 드리프트 리포트
 
-> 생성: 2026-07-26T22:14:49.158Z · 모드: `public-only` · 카탈로그 35개 · 신규후보 7개 · 이상 0건
+> 생성: 2026-07-27T22:28:40.876Z · 모드: `public-only` · 카탈로그 35개 · 신규후보 7개 · 이상 0건
 
 이 파일은 `scripts/scan.mjs`가 자동 생성합니다. 새 프로젝트는 `catalog/apps.yaml`(피처링) 또는 `catalog/ignore.yaml`(제외)로 옮기면 다음 스캔부터 사라집니다.
 
@@ -8,13 +8,13 @@
 
 | 프로젝트 | 소스 | 최근 커밋 | 신호 | 판단 이유 |
 |---|---|---|---|---|
-| `Osync-p` | github | 2026-06-14 | git | 최근 42일 내 커밋된 활성 git 프로젝트 |
-| `akm-eval` | github | 2026-07-21 | git | 최근 5일 내 커밋된 활성 git 프로젝트 |
-| `cmds-vault` | github | 2026-07-13 | git | 최근 13일 내 커밋된 활성 git 프로젝트 |
-| `johnfkoo951` | github | 2026-07-18 | git | 최근 8일 내 커밋된 활성 git 프로젝트 |
-| `kordoc` | github | 2026-06-13 | git | 최근 43일 내 커밋된 활성 git 프로젝트 |
-| `omlx` | github | 2026-06-18 | git | 최근 38일 내 커밋된 활성 git 프로젝트 |
-| `synch` | github | 2026-06-28 | git | 최근 28일 내 커밋된 활성 git 프로젝트 |
+| `Osync-p` | github | 2026-06-14 | git | 최근 43일 내 커밋된 활성 git 프로젝트 |
+| `akm-eval` | github | 2026-07-21 | git | 최근 6일 내 커밋된 활성 git 프로젝트 |
+| `cmds-vault` | github | 2026-07-13 | git | 최근 14일 내 커밋된 활성 git 프로젝트 |
+| `johnfkoo951` | github | 2026-07-18 | git | 최근 9일 내 커밋된 활성 git 프로젝트 |
+| `kordoc` | github | 2026-06-13 | git | 최근 44일 내 커밋된 활성 git 프로젝트 |
+| `omlx` | github | 2026-06-18 | git | 최근 39일 내 커밋된 활성 git 프로젝트 |
+| `synch` | github | 2026-06-28 | git | 최근 29일 내 커밋된 활성 git 프로젝트 |
 
 ## ⚠️ 기존 앱 이상 (알림 대상)
 
