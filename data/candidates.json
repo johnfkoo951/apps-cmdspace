@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-01T22:13:12.315Z",
+  "generated_at": "2026-08-02T22:12:46.363Z",
   "mode": "public-only",
   "counts": {
     "catalogued": 35,
@@ -12,23 +12,23 @@
     {
       "name": "akm-eval",
       "verdict": "feature-candidate",
-      "reason": "최근 11일 내 커밋된 활성 git 프로젝트",
+      "reason": "최근 0일 내 커밋된 활성 git 프로젝트",
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/akm-eval",
       "is_private": false,
-      "last_commit": "2026-07-21",
+      "last_commit": "2026-08-02",
       "signals": {
         "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 11
+        "lastCommitDays": 0
       }
     },
     {
       "name": "cmds-vault",
       "verdict": "feature-candidate",
-      "reason": "최근 19일 내 커밋된 활성 git 프로젝트",
+      "reason": "최근 20일 내 커밋된 활성 git 프로젝트",
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/cmds-vault",
       "is_private": false,
@@ -38,13 +38,13 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 19
+        "lastCommitDays": 20
       }
     },
     {
       "name": "johnfkoo951",
       "verdict": "feature-candidate",
-      "reason": "최근 14일 내 커밋된 활성 git 프로젝트",
+      "reason": "최근 15일 내 커밋된 활성 git 프로젝트",
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/johnfkoo951",
       "is_private": false,
@@ -54,13 +54,13 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 14
+        "lastCommitDays": 15
       }
     },
     {
       "name": "omlx",
       "verdict": "feature-candidate",
-      "reason": "최근 44일 내 커밋된 활성 git 프로젝트",
+      "reason": "최근 45일 내 커밋된 활성 git 프로젝트",
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/omlx",
       "is_private": false,
@@ -70,13 +70,13 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 44
+        "lastCommitDays": 45
       }
     },
     {
       "name": "synch",
       "verdict": "feature-candidate",
-      "reason": "최근 34일 내 커밋된 활성 git 프로젝트",
+      "reason": "최근 35일 내 커밋된 활성 git 프로젝트",
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/synch",
       "is_private": false,
@@ -86,7 +86,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 34
+        "lastCommitDays": 35
       }
     }
   ],
@@ -104,7 +104,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 2290
+        "lastCommitDays": 2291
       }
     },
     {
@@ -120,7 +120,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 1999
+        "lastCommitDays": 2000
       }
     },
     {
@@ -136,7 +136,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 2031
+        "lastCommitDays": 2032
       }
     },
     {
@@ -152,7 +152,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 2031
+        "lastCommitDays": 2032
       }
     },
     {
@@ -168,7 +168,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 2031
+        "lastCommitDays": 2032
       }
     },
     {
@@ -184,7 +184,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 1865
+        "lastCommitDays": 1866
       }
     },
     {
@@ -200,7 +200,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 48
+        "lastCommitDays": 49
       }
     },
     {
@@ -216,7 +216,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 118
+        "lastCommitDays": 119
       }
     },
     {
@@ -232,7 +232,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 1096
+        "lastCommitDays": 1097
       }
     },
     {
@@ -248,7 +248,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 123
+        "lastCommitDays": 124
       }
     },
     {
@@ -264,7 +264,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 115
+        "lastCommitDays": 116
       }
     },
     {
@@ -280,7 +280,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 95
+        "lastCommitDays": 96
       }
     },
     {
@@ -296,7 +296,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 103
+        "lastCommitDays": 104
       }
     },
     {
@@ -312,7 +312,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 2041
+        "lastCommitDays": 2042
       }
     },
     {
@@ -328,7 +328,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 49
+        "lastCommitDays": 50
       }
     },
     {
@@ -344,7 +344,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 1576
+        "lastCommitDays": 1577
       }
     },
     {
@@ -360,7 +360,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 423
+        "lastCommitDays": 424
       }
     },
     {
@@ -376,7 +376,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 121
+        "lastCommitDays": 122
       }
     },
     {
@@ -392,7 +392,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 89
+        "lastCommitDays": 90
       }
     },
     {
@@ -408,7 +408,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 98
+        "lastCommitDays": 99
       }
     },
     {
@@ -424,7 +424,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 507
+        "lastCommitDays": 508
       }
     },
     {
@@ -440,7 +440,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 122
+        "lastCommitDays": 123
       }
     },
     {
@@ -456,7 +456,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 78
+        "lastCommitDays": 79
       }
     },
     {
@@ -472,7 +472,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 2591
+        "lastCommitDays": 2592
       }
     },
     {
@@ -488,7 +488,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 419
+        "lastCommitDays": 420
       }
     },
     {
@@ -504,7 +504,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 723
+        "lastCommitDays": 724
       }
     }
   ],
