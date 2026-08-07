@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-05T22:28:55.595Z",
+  "generated_at": "2026-08-07T01:02:32.490Z",
   "site": {
     "title": "CMDSPACE Apps",
     "tagline_ko": "커맨드스페이스가 만든 것들",
@@ -254,7 +254,7 @@
       "is_private": false,
       "is_archived": false,
       "dirty": null,
-      "stale": false
+      "stale": true
     },
     {
       "name": "plaud-note-manager",
@@ -334,7 +334,7 @@
       "download_url": "",
       "repo_url": "https://github.com/getagentseal/codeburn",
       "last_commit": "2026-08-04",
-      "stars": 9151,
+      "stars": 9173,
       "latest_release": "desktop-v0.9.19",
       "url_alive": null,
       "is_private": false,
