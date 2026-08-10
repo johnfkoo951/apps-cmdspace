@@ -1,6 +1,6 @@
 # 카탈로그 드리프트 리포트
 
-> 생성: 2026-08-09T21:49:59.256Z · 모드: `public-only` · 카탈로그 35개 · 신규후보 6개 · 이상 0건
+> 생성: 2026-08-10T22:00:18.358Z · 모드: `public-only` · 카탈로그 35개 · 신규후보 6개 · 이상 0건
 
 이 파일은 `scripts/scan.mjs`가 자동 생성합니다. 새 프로젝트는 `catalog/apps.yaml`(피처링) 또는 `catalog/ignore.yaml`(제외)로 옮기면 다음 스캔부터 사라집니다.
 
@@ -8,12 +8,12 @@
 
 | 프로젝트 | 소스 | 최근 커밋 | 신호 | 판단 이유 |
 |---|---|---|---|---|
-| `akm-eval` | github | 2026-08-03 | git | 최근 6일 내 커밋된 활성 git 프로젝트 |
-| `cmds-vault` | github | 2026-07-13 | git | 최근 27일 내 커밋된 활성 git 프로젝트 |
-| `cmux-tips` | github | 2026-08-03 | git | 최근 6일 내 커밋된 활성 git 프로젝트 |
-| `johnfkoo951` | github | 2026-08-03 | git | 최근 6일 내 커밋된 활성 git 프로젝트 |
-| `paseo` | github | 2026-08-08 | git | 최근 1일 내 커밋된 활성 git 프로젝트 |
-| `synch` | github | 2026-06-28 | git | 최근 42일 내 커밋된 활성 git 프로젝트 |
+| `akm-eval` | github | 2026-08-03 | git | 최근 7일 내 커밋된 활성 git 프로젝트 |
+| `cmds-vault` | github | 2026-07-13 | git | 최근 28일 내 커밋된 활성 git 프로젝트 |
+| `cmux-tips` | github | 2026-08-03 | git | 최근 7일 내 커밋된 활성 git 프로젝트 |
+| `johnfkoo951` | github | 2026-08-03 | git | 최근 7일 내 커밋된 활성 git 프로젝트 |
+| `paseo` | github | 2026-08-08 | git | 최근 2일 내 커밋된 활성 git 프로젝트 |
+| `synch` | github | 2026-06-28 | git | 최근 43일 내 커밋된 활성 git 프로젝트 |
 
 ## ⚠️ 기존 앱 이상 (알림 대상)
 
