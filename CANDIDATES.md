@@ -1,6 +1,6 @@
 # 카탈로그 드리프트 리포트
 
-> 생성: 2026-08-12T22:05:27.347Z · 모드: `public-only` · 카탈로그 35개 · 신규후보 6개 · 이상 0건
+> 생성: 2026-08-13T22:05:02.649Z · 모드: `public-only` · 카탈로그 35개 · 신규후보 5개 · 이상 0건
 
 이 파일은 `scripts/scan.mjs`가 자동 생성합니다. 새 프로젝트는 `catalog/apps.yaml`(피처링) 또는 `catalog/ignore.yaml`(제외)로 옮기면 다음 스캔부터 사라집니다.
 
@@ -8,12 +8,11 @@
 
 | 프로젝트 | 소스 | 최근 커밋 | 신호 | 판단 이유 |
 |---|---|---|---|---|
-| `akm-eval` | github | 2026-08-03 | git | 최근 9일 내 커밋된 활성 git 프로젝트 |
-| `cmds-vault` | github | 2026-07-13 | git | 최근 30일 내 커밋된 활성 git 프로젝트 |
-| `cmux-tips` | github | 2026-08-03 | git | 최근 9일 내 커밋된 활성 git 프로젝트 |
-| `johnfkoo951` | github | 2026-08-03 | git | 최근 9일 내 커밋된 활성 git 프로젝트 |
-| `paseo` | github | 2026-08-08 | git | 최근 4일 내 커밋된 활성 git 프로젝트 |
-| `synch` | github | 2026-06-28 | git | 최근 45일 내 커밋된 활성 git 프로젝트 |
+| `akm-eval` | github | 2026-08-03 | git | 최근 10일 내 커밋된 활성 git 프로젝트 |
+| `cmds-vault` | github | 2026-07-13 | git | 최근 31일 내 커밋된 활성 git 프로젝트 |
+| `cmux-tips` | github | 2026-08-03 | git | 최근 10일 내 커밋된 활성 git 프로젝트 |
+| `johnfkoo951` | github | 2026-08-03 | git | 최근 10일 내 커밋된 활성 git 프로젝트 |
+| `paseo` | github | 2026-08-08 | git | 최근 5일 내 커밋된 활성 git 프로젝트 |
 
 ## ⚠️ 기존 앱 이상 (알림 대상)
 
@@ -30,7 +29,7 @@ _없음._
 
 </details>
 
-<details><summary>스킵된 후보 (저신호) 27개</summary>
+<details><summary>스킵된 후보 (저신호) 28개</summary>
 
 - `Doit_R` — 배포/앱 신호 없음 (저신호)
 - `LDA` — 배포/앱 신호 없음 (저신호)
@@ -59,6 +58,7 @@ _없음._
 - `rsm` — 배포/앱 신호 없음 (저신호)
 - `simple-obsidian-plugin` — 배포/앱 신호 없음 (저신호)
 - `streamlit-example` — 배포/앱 신호 없음 (저신호)
+- `synch` — 배포/앱 신호 없음 (저신호)
 
 </details>
 
