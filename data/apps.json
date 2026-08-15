@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-14T21:42:44.029Z",
+  "generated_at": "2026-08-15T21:37:01.134Z",
   "site": {
     "title": "CMDSPACE Apps",
     "tagline_ko": "커맨드스페이스가 만든 것들",
@@ -275,7 +275,7 @@
       "url": "https://plaud.cmdspace.work",
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/plaud-note-manager",
-      "last_commit": "2026-06-16",
+      "last_commit": "2026-08-15",
       "stars": 0,
       "latest_release": null,
       "url_alive": true,
@@ -334,7 +334,7 @@
       "download_url": "",
       "repo_url": "https://github.com/getagentseal/codeburn",
       "last_commit": "2026-08-12",
-      "stars": 9370,
+      "stars": 9397,
       "latest_release": "desktop-v0.9.20",
       "url_alive": null,
       "is_private": false,
@@ -675,7 +675,7 @@
       "url": "https://system.cmdspace.work",
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/cmds-system-files",
-      "last_commit": "2026-08-02",
+      "last_commit": "2026-08-15",
       "stars": 222,
       "latest_release": "v4.9.5",
       "url_alive": true,
