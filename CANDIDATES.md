@@ -1,6 +1,6 @@
 # 카탈로그 드리프트 리포트
 
-> 생성: 2026-08-18T21:40:58.713Z · 모드: `public-only` · 카탈로그 35개 · 신규후보 8개 · 이상 0건
+> 생성: 2026-08-19T21:43:21.513Z · 모드: `public-only` · 카탈로그 35개 · 신규후보 8개 · 이상 0건
 
 이 파일은 `scripts/scan.mjs`가 자동 생성합니다. 새 프로젝트는 `catalog/apps.yaml`(피처링) 또는 `catalog/ignore.yaml`(제외)로 옮기면 다음 스캔부터 사라집니다.
 
@@ -8,20 +8,20 @@
 
 | 프로젝트 | 소스 | 최근 커밋 | 신호 | 판단 이유 |
 |---|---|---|---|---|
-| `akm-eval` | github | 2026-08-03 | git | 최근 15일 내 커밋된 활성 git 프로젝트 |
-| `cmds-share-server` | github | 2026-08-16 | git | 최근 2일 내 커밋된 활성 git 프로젝트 |
-| `cmds-vault` | github | 2026-08-17 | git | 최근 1일 내 커밋된 활성 git 프로젝트 |
-| `cmux-tips` | github | 2026-08-03 | git | 최근 15일 내 커밋된 활성 git 프로젝트 |
-| `jisan-blog` | github | 2026-08-17 | git | 최근 1일 내 커밋된 활성 git 프로젝트 |
-| `johnfkoo951` | github | 2026-08-17 | git | 최근 1일 내 커밋된 활성 git 프로젝트 |
-| `obsidian-releases` | github | 2026-08-16 | git | 최근 2일 내 커밋된 활성 git 프로젝트 |
-| `paseo` | github | 2026-08-08 | git | 최근 10일 내 커밋된 활성 git 프로젝트 |
+| `akm-eval` | github | 2026-08-03 | git | 최근 16일 내 커밋된 활성 git 프로젝트 |
+| `cmds-share-server` | github | 2026-08-16 | git | 최근 3일 내 커밋된 활성 git 프로젝트 |
+| `cmds-vault` | github | 2026-08-17 | git | 최근 2일 내 커밋된 활성 git 프로젝트 |
+| `cmux-tips` | github | 2026-08-03 | git | 최근 16일 내 커밋된 활성 git 프로젝트 |
+| `jisan-blog` | github | 2026-08-17 | git | 최근 2일 내 커밋된 활성 git 프로젝트 |
+| `johnfkoo951` | github | 2026-08-17 | git | 최근 2일 내 커밋된 활성 git 프로젝트 |
+| `obsidian-releases` | github | 2026-08-16 | git | 최근 3일 내 커밋된 활성 git 프로젝트 |
+| `paseo` | github | 2026-08-08 | git | 최근 11일 내 커밋된 활성 git 프로젝트 |
 
 ## ⚠️ 기존 앱 이상 (알림 대상)
 
 _없음._
 
-<details><summary>😴 오래된 앱 (참고용, 6개 · 알림 아님)</summary>
+<details><summary>😴 오래된 앱 (참고용, 7개 · 알림 아님)</summary>
 
 - `CmdTrace` — 120일+ 무커밋 (last 2026-04-07)
 - `agent-archives` — 120일+ 무커밋 (last 2026-01-12)
@@ -29,6 +29,7 @@ _없음._
 - `claude-code-macos-scheduler` — 120일+ 무커밋 (last 2026-03-04)
 - `claude-code-actions` — 120일+ 무커밋 (last 2026-03-04)
 - `claude-skill-youtube-kr-subtitle` — 120일+ 무커밋 (last 2025-11-16)
+- `9yohan-constellation` — 120일+ 무커밋 (last 2026-04-20)
 
 </details>
 

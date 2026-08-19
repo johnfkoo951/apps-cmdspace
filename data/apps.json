@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-18T21:40:58.713Z",
+  "generated_at": "2026-08-19T21:43:21.513Z",
   "site": {
     "title": "CMDSPACE Apps",
     "tagline_ko": "커맨드스페이스가 만든 것들",
@@ -333,8 +333,8 @@
       "url": "https://www.npmjs.com/package/codeburn",
       "download_url": "",
       "repo_url": "https://github.com/getagentseal/codeburn",
-      "last_commit": "2026-08-18",
-      "stars": 9515,
+      "last_commit": "2026-08-19",
+      "stars": 9547,
       "latest_release": "windows-v0.9.20",
       "url_alive": null,
       "is_private": false,
@@ -908,7 +908,7 @@
       "is_private": false,
       "is_archived": false,
       "dirty": null,
-      "stale": false
+      "stale": true
     },
     {
       "name": "resolution-cmdspace",
