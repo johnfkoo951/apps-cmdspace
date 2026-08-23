@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T21:38:50.952Z",
+  "generated_at": "2026-08-23T21:38:13.518Z",
   "site": {
     "title": "CMDSPACE Apps",
     "tagline_ko": "커맨드스페이스가 만든 것들",
@@ -333,8 +333,8 @@
       "url": "https://www.npmjs.com/package/codeburn",
       "download_url": "",
       "repo_url": "https://github.com/getagentseal/codeburn",
-      "last_commit": "2026-08-22",
-      "stars": 9604,
+      "last_commit": "2026-08-23",
+      "stars": 9612,
       "latest_release": "windows-v0.9.20",
       "url_alive": null,
       "is_private": false,
@@ -363,7 +363,7 @@
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/cmds-llm-wiki",
       "last_commit": "2026-08-17",
-      "stars": 78,
+      "stars": 79,
       "latest_release": "v1.11.0",
       "url_alive": true,
       "is_private": false,
@@ -901,14 +901,14 @@
       "url": "https://9yohan.cmdspace.work",
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/9yohan-constellation",
-      "last_commit": "2026-04-20",
+      "last_commit": "2026-08-23",
       "stars": 0,
       "latest_release": null,
       "url_alive": true,
       "is_private": false,
       "is_archived": false,
       "dirty": null,
-      "stale": true
+      "stale": false
     },
     {
       "name": "resolution-cmdspace",
