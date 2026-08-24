@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-23T21:38:13.518Z",
+  "generated_at": "2026-08-24T21:46:01.075Z",
   "site": {
     "title": "CMDSPACE Apps",
     "tagline_ko": "커맨드스페이스가 만든 것들",
@@ -333,9 +333,9 @@
       "url": "https://www.npmjs.com/package/codeburn",
       "download_url": "",
       "repo_url": "https://github.com/getagentseal/codeburn",
-      "last_commit": "2026-08-23",
-      "stars": 9612,
-      "latest_release": "windows-v0.9.20",
+      "last_commit": "2026-08-24",
+      "stars": 9622,
+      "latest_release": "windows-v0.9.21",
       "url_alive": null,
       "is_private": false,
       "is_archived": false,
