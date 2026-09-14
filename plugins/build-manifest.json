@@ -1,0 +1,54 @@
+{
+  "updated": "2026-09-14",
+  "renderer": "marked@18.0.13",
+  "outputs": [
+    {
+      "file": "cmds-eagle/guide.ko.md",
+      "sha256": "aec32702aebf4475b3ac5d03d22625284e49b2cc8cfb433177e080b1c0035ae7"
+    },
+    {
+      "file": "cmds-eagle/guide.en.md",
+      "sha256": "35897b9a87cfc3e07d403aef6375dabb0cfb5239978d06003cb8fc31e0bf8176"
+    },
+    {
+      "file": "cmds-eagle/index.html",
+      "sha256": "83d53b99d8f223c7e552ad795278debfb19e44533d7c9f7ecd17218393585948"
+    },
+    {
+      "file": "cmds-achmage/guide.ko.md",
+      "sha256": "f823dc2781c40799407ec470529870561efa8152b4b10382d7dcea6e3f062919"
+    },
+    {
+      "file": "cmds-achmage/guide.en.md",
+      "sha256": "205ea5562243467f225161f152e6ec80455637302a7f34d763e15e0e1aff6fb5"
+    },
+    {
+      "file": "cmds-achmage/index.html",
+      "sha256": "7ca36eb5a8c9c55bb4ee988091bda82360f07fd3192623f1d53504576f6832b6"
+    },
+    {
+      "file": "cmds-share/guide.ko.md",
+      "sha256": "610fe5c3505447ca8ed45be8bd4a56bf512d30980e23afcd638d863e080183a9"
+    },
+    {
+      "file": "cmds-share/guide.en.md",
+      "sha256": "5da6cd9fdfe18f812a883d699dba61789e90cbbf0a90e5fc0ad85838e95a4287"
+    },
+    {
+      "file": "cmds-share/index.html",
+      "sha256": "73bcf70601ec8d2a59be4e693faac975b5c9d70115b348d646be65293e7e3191"
+    },
+    {
+      "file": "cmds-zotero/guide.ko.md",
+      "sha256": "9730ab40f0bb7ea6a8b7fda7460d6ce1fecf58656ba1dbb7b65725802b075893"
+    },
+    {
+      "file": "cmds-zotero/guide.en.md",
+      "sha256": "9f366bcc282af0371299a9edd302554437921ce601bc05c86b2342cbe63c1e3b"
+    },
+    {
+      "file": "cmds-zotero/index.html",
+      "sha256": "050a47189defcca2898393a01848298f50fbe51ac3705cb5a5833c831a6f55f7"
+    }
+  ]
+}

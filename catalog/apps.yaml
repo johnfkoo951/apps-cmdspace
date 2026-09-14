@@ -16,8 +16,8 @@ categories:
   - id: obsidian-plugins
     label_ko: "Obsidian 플러그인"
     label_en: "Obsidian Plugins"
-    blurb_ko: "외부 앱과 볼트를 잇는 커맨드스페이스제 옵시디언 플러그인 — Eagle·DEVONthink·Bookends 연동과 원클릭 웹 공유."
-    blurb_en: "CMDSPACE-made Obsidian plugins bridging external apps and your vault — Eagle, DEVONthink, Bookends, one-click web sharing."
+    blurb_ko: "이미지 자료, 노트 기반 AI 작업, 웹 공유, 문헌 관리를 연결하는 플러그인. 네 제품의 소개와 사용설명서를 한곳에서 확인하세요."
+    blurb_en: "Plugins connecting assets, note-grounded AI work, web sharing and literature. Explore the four-product family and user guides."
   - id: web-apps
     label_ko: "웹 앱 · 플랫폼"
     label_en: "Web Apps & Platforms"
@@ -108,12 +108,13 @@ apps:
     priority: 6
     headline: "CMDS Eagle — Eagle × Obsidian"
     sub: "Eagle 에셋을 볼트에서 검색·임베드하고 클라우드 업로드까지 잇는 옵시디언 커뮤니티 플러그인."
-    tech: "Obsidian 플러그인 (TypeScript, esbuild), v1.6.4"
+    tech: "Obsidian 플러그인 (TypeScript, esbuild)"
     tags: ["Eagle 연동", "검색·임베드", "클라우드 업로드", "붙여넣기 처리", "크로스플랫폼", "커뮤니티 배포"]
     status: "released"
     dev_dir: "cmds-eagle"
     repo: "johnfkoo951/cmds-eagle"
     url: ""
+    docs_url: "https://apps.cmdspace.work/plugins/cmds-eagle/"
   - name: "CmdTrace"
     category: macos-apps
     tier: flagship
@@ -204,13 +205,40 @@ apps:
     tier: featured
     priority: 14
     headline: "CMDS Share — 노트 원클릭 웹 공유"
-    sub: "옵시디언 노트를 5개 백엔드로 한 번에 배포(선택적 종단간 암호화)하는 플러그인."
+    sub: "선택한 노트를 웹페이지로 공유하고 링크를 관리합니다. 보호 기능은 백엔드에 따라 다르며 이미지는 암호화되지 않습니다."
     tech: "Obsidian 플러그인 (TypeScript, esbuild, Convex)"
-    tags: ["원클릭 공유", "5개 백엔드", "종단간 암호화", "공유 CMS", "커스텀 슬러그", "비번 보호"]
+    tags: ["노트 웹 공유", "GitHub Pages", "공유 CMS", "백엔드별 보호", "사용설명서"]
     status: "released"
     dev_dir: "cmds-share"
     repo: "johnfkoo951/cmds-share"
     url: ""
+    docs_url: "https://apps.cmdspace.work/plugins/cmds-share/"
+  - name: "CMDS-Achmage"
+    category: obsidian-plugins
+    tier: featured
+    priority: 14.1
+    headline: "CMDS Achmage — 내 노트를 바탕으로 하는 AI 작업"
+    sub: "노트와 폴더를 맥락으로 지정하고 편집 제안을 검토해 반영합니다. 제공자 설정과 비용을 먼저 확인하세요."
+    tech: "Obsidian 플러그인 (TypeScript)"
+    tags: ["노트 기반 대화", "편집 검토", "이미지 생성", "사용설명서"]
+    status: "released"
+    dev_dir: "CMDS-Achmage"
+    repo: "CMDSPACE-DEV/CMDS-Achmage"
+    url: ""
+    docs_url: "https://apps.cmdspace.work/plugins/cmds-achmage/"
+  - name: "cmds-zotero"
+    category: obsidian-plugins
+    tier: featured
+    priority: 14.2
+    headline: "CMDS Zotero — 문헌과 노트 연결 (개발 중)"
+    sub: "Zotero 문헌과 주석 가져오기, 인용과 원문 이동을 연결합니다. 일반 배포 전 개발 및 검증 단계입니다."
+    tech: "Obsidian 플러그인 (TypeScript)"
+    tags: ["Zotero", "Better BibTeX", "문헌 노트", "인용", "개발 중"]
+    status: "wip"
+    dev_dir: "cmds-zotero"
+    repo: "johnfkoo951/cmds-zotero"
+    url: ""
+    docs_url: "https://apps.cmdspace.work/plugins/cmds-zotero/"
   - name: "starlink-cmdspace"
     category: web-apps
     tier: featured

@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CMDS Share | CMDSPACE Plugins</title><meta name="description" content="선택한 노트를 웹페이지로 내보내고 공유 링크를 관리합니다. 공개 위치와 보호 기능은 선택한 백엔드에 맞춰 결정합니다."><link rel="canonical" href="https://apps.cmdspace.work/plugins/cmds-share/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="CMDSPACE"><meta property="og:title" content="CMDS Share | CMDSPACE Plugins"><meta property="og:description" content="선택한 노트를 웹페이지로 내보내고 공유 링크를 관리합니다. 공개 위치와 보호 기능은 선택한 백엔드에 맞춰 결정합니다."><meta property="og:url" content="https://apps.cmdspace.work/plugins/cmds-share/"><meta property="og:image" content="https://apps.cmdspace.work/plugins/assets/og-plugins.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="CMDSPACE Plugins: Eagle, Achmage, Share, Zotero"><meta property="og:locale" content="ko_KR"><meta property="og:locale:alternate" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="CMDS Share | CMDSPACE Plugins"><meta name="twitter:description" content="선택한 노트를 웹페이지로 내보내고 공유 링크를 관리합니다. 공개 위치와 보호 기능은 선택한 백엔드에 맞춰 결정합니다."><meta name="twitter:image" content="https://apps.cmdspace.work/plugins/assets/og-plugins.png"><meta name="twitter:image:alt" content="CMDSPACE Plugins"><meta name="theme-color" content="#134538">
+<link rel="icon" type="image/png" href="../assets/logo.png"><link rel="apple-touch-icon" href="../assets/logo.png"><link rel="stylesheet" href="../assets/plugins.css"><script src="../assets/plugins.js" defer></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>try{const l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('cmds-lang');if(l==='en')document.documentElement.lang='en';const t=localStorage.getItem('cmds-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch{}</script></head><body>
+<a href="#main" class="skip"><span data-lang="ko">본문으로 바로가기</span><span data-lang="en">Skip to content</span></a><header class="site-header"><a class="brand" href="/" aria-label="CMDSPACE Apps"><img src="../assets/logo.png" alt="" width="34" height="34"><span>CMDSPACE <b>Plugins</b></span></a><nav aria-label="Primary"><a href="/" data-ko="모든 앱" data-en="All apps">모든 앱</a><a href="/plugins/" data-ko="플러그인" data-en="Plugins">플러그인</a><button id="language" type="button" aria-label="Switch language">EN</button><button id="theme" type="button" aria-label="Toggle theme" data-ko="테마" data-en="Theme">테마</button></nav></header><main id="main" class="product-page"><div data-lang="ko"><section class="product-hero"><div class="product-meta"><a href="../?lang=ko">← 플러그인</a><span class="status">공개 릴리스 2.1.1</span></div><p class="eyebrow">CMDS Share / 완성한 노트를 건네다</p><h1>볼트 전체가 아니라,<br>노트 하나를 공유한다.</h1><p class="lede">선택한 노트를 웹페이지로 내보내고 공유 링크를 관리합니다. 공개 위치와 보호 기능은 선택한 백엔드에 맞춰 결정합니다.</p><div class="actions"><a class="button primary" href="#ko-manual">사용설명서 ↓</a><a class="button" href="https://github.com/johnfkoo951/cmds-share">GitHub 소스 ↗</a></div><div class="requirements"><div><h2>시작 전 준비</h2><p>Obsidian 1.7.2+ / 데스크톱 또는 모바일 / 게시할 서비스 계정</p></div><div><h2>먼저 알아둘 것</h2><p>기본 GitHub Pages 설정은 공개 저장소를 만듭니다. 암호화한 노트의 이미지도 이미지 자체가 암호화되는 것은 아닙니다.</p></div></div></section><div class="docs-layout" id="ko-manual"><aside class="toc"><p>이 문서의 내용</p><nav aria-label="이 문서의 내용"><a href="#ko-배포-상태와-준비물" class="depth-2">배포 상태와 준비물</a><a href="#ko-설치" class="depth-2">설치</a><a href="#ko-먼저-호스트를-고릅니다" class="depth-2">먼저 호스트를 고릅니다</a><a href="#ko-첫-성공-공개-github-pages-예제" class="depth-2">첫 성공: 공개 GitHub Pages 예제</a><a href="#ko-관리형-또는-자체-거버넌스" class="depth-2">관리형 또는 자체 거버넌스</a><a href="#ko-명령어-사전" class="depth-2">명령어 사전</a><a href="#ko-설정-사전" class="depth-2">설정 사전</a><a href="#ko-이미지-링크-페이지-기능" class="depth-2">이미지, 링크, 페이지 기능</a><a href="#ko-암호화와-개인정보" class="depth-2">암호화와 개인정보</a><a href="#ko-문제-해결" class="depth-2">문제 해결</a><a href="#ko-업데이트-지원-제작자" class="depth-2">업데이트, 지원, 제작자</a><a href="#ko-검증-범위" class="depth-2">검증 범위</a></nav><a class="download" href="guide.ko.md" download>Markdown 내려받기 ↙</a></aside><article class="prose"><div class="doc-meta"><span>문서 기준 2026-09-14</span><span>소스 버전 2.1.1</span><a href="guide.ko.md" download>Markdown ↙</a></div><h1 id="ko-cmds-share-사용설명서">CMDS Share 사용설명서</h1>
+<p>노트를 읽기 좋은 웹페이지로 발행하고, 선택한 호스트가 제공하는 범위 안에서 관리합니다.</p>
+<h2 id="ko-배포-상태와-준비물">배포 상태와 준비물</h2>
+<p><strong>2026-09-14</strong>에 로컬 소스와 공개 릴리스를 확인한 <strong>2.1.1</strong> 기준입니다. 릴리스에는 <code>main.js</code>, <code>manifest.json</code>, <code>styles.css</code>가 있으며 Community Plugins 목록에도 등록되어 있습니다. 목록에는 Obsidian 직원의 수동 검토를 받지 않았다는 고지가 있습니다.</p>
+<ul>
+<li><strong>Obsidian 1.7.2 이상</strong>. manifest는 데스크톱과 모바일을 허용하지만 이 설명서 작업에서 모바일 실기 검증을 하지는 않았습니다.</li>
+<li>인터넷과 선택한 호스트의 계정/토큰. 기본 호스트는 관리형 CMDSPACE 서버가 아니라 <strong>GitHub Pages</strong>입니다.</li>
+<li>노트, 원본 Markdown, 이미지, 메타데이터, 테마 자산을 공개할 권한. 비민감 예제를 따로 준비합니다.</li>
+<li>플러그인은 MIT 라이선스입니다. 호스팅 요금, 한도, 저장과 전송 비용은 별도이며 바뀔 수 있습니다.</li>
+</ul>
+<h2 id="ko-설치">설치</h2>
+<p><strong>설정 → 커뮤니티 플러그인 → 탐색 → CMDS Share → 설치 → 활성화</strong>를 사용합니다. 커뮤니티 플러그인 권한 안내를 먼저 확인합니다.
+수동 설치는 <a href="https://github.com/johnfkoo951/cmds-share/releases/tag/2.1.1">2.1.1 릴리스</a>의 파일 3종을 <code>&lt;vault&gt;/.obsidian/plugins/cmds-share/</code>에 넣고 Obsidian을 다시 로드한 뒤 활성화합니다. 기존 <code>data.json</code>은 비공개로 보존합니다.</p>
+<h2 id="ko-먼저-호스트를-고릅니다">먼저 호스트를 고릅니다</h2>
+<p>백엔드는 발행할 노트를 받아 보관하고 웹에 제공하는 서비스입니다. 백엔드 선택만으로 계정이나 부가 기능이 생기지는 않습니다.</p>
+<table>
+<thead>
+<tr>
+<th>제공업체</th>
+<th>준비할 것</th>
+<th>서버 목록/조회수/철회</th>
+<th>서버가 강제하는 만료</th>
+<th>웹 대시보드</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GitHub Pages 기본값</td>
+<td>본인 GitHub 토큰과 저장소</td>
+<td>없음</td>
+<td>없음</td>
+<td>없음</td>
+</tr>
+<tr>
+<td>CMDSPACE</td>
+<td>초대 토큰 또는 직접 운영하는 호환 서버</td>
+<td>있음</td>
+<td>있음</td>
+<td>있음</td>
+</tr>
+<tr>
+<td>Synology NAS</td>
+<td>WebDAV 인증과 공개 URL</td>
+<td>없음</td>
+<td>없음</td>
+<td>없음</td>
+</tr>
+<tr>
+<td>Supabase</td>
+<td>프로젝트 URL, anon 키, 공개 버킷과 정책</td>
+<td>없음</td>
+<td>없음</td>
+<td>없음</td>
+</tr>
+<tr>
+<td>Convex</td>
+<td>별도 배포한 호환 백엔드와 URL</td>
+<td>거버넌스 목록 없음</td>
+<td>호환 백엔드에서 지원</td>
+<td>거버넌스 대시보드 없음</td>
+</tr>
+</tbody></table>
+<p>정적 호스트의 업로드/삭제는 거버넌스 서버의 철회/복구와 다릅니다. 정적 페이지의 카운트다운이나 만료 메타데이터는 <strong>접근 차단이 아닙니다</strong>. 만료 강제가 필요하다면 거버넌스 서버를 고르며 GitHub Pages에서 보장한다고 안내하지 않습니다.</p>
+<h2 id="ko-첫-성공-공개-github-pages-예제">첫 성공: 공개 GitHub Pages 예제</h2>
+<p><strong>공개 저장소를 만들거나 사용하고 콘텐츠를 발행하는 절차입니다. 개인 노트를 테스트에 사용하지 않습니다.</strong> Pages가 준비되기 전에도 공개 저장소의 파일은 GitHub에서 보일 수 있습니다.</p>
+<ol>
+<li>GitHub 설정에서 개인 액세스 토큰을 만듭니다. 간편 설정 흐름은 <code>repo</code> 권한의 classic 토큰을 안내합니다. 광범위한 권한이므로 범위를 이해하고 비공개로 보관하며 노출 시 폐기합니다. Fine-grained 토큰은 저장소/Pages 권한을 별도로 맞춰야 하며 자동 생성의 무조건적인 대체재는 아닙니다.</li>
+<li><strong>설정 → CMDS Share → Active provider → GitHub Pages</strong>인지 확인합니다.</li>
+<li><strong>Personal access token</strong>에 토큰을 넣고 <strong>Repository</strong> 이름(기본 <code>obsidian-shared-notes</code>)을 확인합니다.</li>
+<li><strong>Set up repository</strong>를 누릅니다. 공개 저장소 생성, <code>.nojekyll</code> 추가, Pages 활성화, URL 기록이 일어날 수 있으므로 소유자와 저장소를 먼저 확인합니다.</li>
+<li><strong>Test connection</strong>을 실행합니다. 첫 시험에서는 고급 브랜치/경로/도메인을 기본값으로 둡니다.</li>
+<li>예제 제목, 문장, 공개 가능한 이미지로 노트를 만들고 <strong>Share current note to web</strong>를 실행합니다.</li>
+<li>암호화/만료 옵션을 확인해 발행하고 복사된 URL을 엽니다. GitHub Pages 빌드가 필요하므로 즉시 또는 30초 이내 공개를 보장하지 않습니다.</li>
+<li>로그아웃한 브라우저에서 렌더링과 <strong>Markdown 복사/다운로드</strong>를 확인합니다. 원본 Markdown도 공유물에 포함됩니다.</li>
+<li>예제를 수정하고 다시 공유해 같은 링크에서 호스트 처리 후 새 내용이 보이는지 확인합니다.
+업로드 성공 직후 Pages가 안 열린다고 곧바로 업로드 실패는 아닙니다. 반복 발행 전에 저장소의 Pages 배포 상태를 확인합니다.</li>
+</ol>
+<h2 id="ko-관리형-또는-자체-거버넌스">관리형 또는 자체 거버넌스</h2>
+<p>CMDSPACE 선택 시 기본 주소는 <code>https://share.cmdspace.work</code>입니다. <strong>초대제 개인/팀 인스턴스</strong>이며 공개 가입형 호스팅 서비스가 아닙니다. 토큰이 필요하고 가동시간/SLA를 보장하지 않습니다. <a href="https://github.com/johnfkoo951/cmds-share/issues">이슈 트래커</a>에 문의할 수 있지만 토큰과 개인 내용을 게시하면 안 됩니다.
+인스턴스 토큰은 해당 서버의 모든 공유물을 조회하고 관리할 수 있습니다. 노트 하나의 암호가 아닌 팀 전체 관리 자격증명으로 취급합니다. 한 사람 또는 서로 신뢰하는 팀 단위로 운영합니다.
+자체 서버는 <a href="https://github.com/johnfkoo951/cmds-share-server">cmds-share-server</a>를 따라 별도로 배포하고 플러그인에 <strong>Server URL</strong>, <strong>API token</strong>을 넣습니다. 평범한 버킷 주소를 바꾼다고 거버넌스 서버가 되지는 않습니다.
+거버넌스 CMS는 로컬 기록과 서버 목록을 대조해 조회수, 철회, 고아 기록 등을 보여줍니다. 알려진 링크 미리보기 봇을 제외하지만 조회수는 실제 사람 수의 정확한 측정값이 아닙니다.</p>
+<h2 id="ko-명령어-사전">명령어 사전</h2>
+<p>Ctrl/Cmd+P에서 CMDS Share를 검색합니다. 일부 명령은 활성 노트나 이미 공유된 노트가 있을 때만 표시됩니다.</p>
+<table>
+<thead>
+<tr>
+<th>실제 명령 이름</th>
+<th>결과</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Share current note to web</td>
+<td>현재 노트를 렌더링해 신규 발행/갱신하고 URL 복사</td>
+</tr>
+<tr>
+<td>Copy share link of current note</td>
+<td>다시 발행하지 않고 기존 공유 URL 복사</td>
+</tr>
+<tr>
+<td>Delete shared note from server</td>
+<td>선택한 제공업체에서 공유 노트 삭제; 로컬 실행취소와 다른 외부 변경</td>
+</tr>
+<tr>
+<td>Open CMS dashboard</td>
+<td>볼트 내 관리 화면 열기; 모든 호스트에 서버 기능이 생기는 것은 아님</td>
+</tr>
+<tr>
+<td>Browse all shared notes</td>
+<td>플러그인이 알고 있는 공유 노트 탐색</td>
+</tr>
+</tbody></table>
+<p>CMS에서 조회, 재공유, 삭제를 수행합니다. 거버넌스 서버의 철회는 파일을 보존하면서 HTTP 410 종료 안내를 제공하고, 삭제는 목록과 저장 노트를 제거합니다. 복구는 거버넌스 전용입니다. 이미 수신자가 내려받은 사본이나 모든 캐시/이력까지 회수하지는 못합니다.</p>
+<h2 id="ko-설정-사전">설정 사전</h2>
+<table>
+<thead>
+<tr>
+<th>구역</th>
+<th>실제 설정과 의미</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Vault Identity</td>
+<td>Vault display name과 Vault ID는 발행 볼트를 식별; 충돌 우회 목적으로 임의 변경하지 않기</td>
+</tr>
+<tr>
+<td>Server Provider</td>
+<td>Active provider는 이후 작업의 목적지</td>
+</tr>
+<tr>
+<td>Sharing</td>
+<td>Share title source, Share page theme, Footer link와 label, Encryption mode, Default expiration</td>
+</tr>
+<tr>
+<td>렌더링</td>
+<td>Include theme CSS, Remove backlinks, Remove frontmatter, Note width</td>
+</tr>
+<tr>
+<td>Frontmatter Fields</td>
+<td>Share field, Link field, Encrypted field, Expires field는 노트에서 쓸 필드 이름</td>
+</tr>
+<tr>
+<td>CMS Dashboard</td>
+<td>Enable CMS dashboard, Auto refresh</td>
+</tr>
+<tr>
+<td>Advanced</td>
+<td>Debug mode; 지원에 보내기 전 비밀정보 제거</td>
+</tr>
+<tr>
+<td>CMDSPACE</td>
+<td>Enabled, API token, Server URL</td>
+</tr>
+<tr>
+<td>Synology NAS</td>
+<td>Enabled, NAS URL, Username, Password, Shared folder, Public URL</td>
+</tr>
+<tr>
+<td>GitHub Pages</td>
+<td>Personal access token, Repository, 설정 버튼; 고급 Enabled/Branch/Path/Custom domain</td>
+</tr>
+<tr>
+<td>Supabase</td>
+<td>Enabled, Project URL, Anon key, Bucket, Table name</td>
+</tr>
+<tr>
+<td>Convex</td>
+<td>Enabled, Deployment URL, Public URL</td>
+</tr>
+</tbody></table>
+<p>Remove frontmatter는 다운로드 Markdown의 앞쪽 YAML도 제거합니다. 본문, 주석 등 임의의 민감정보까지 지우지는 않으며 backlink 표시 제어도 완전한 원문 새니타이저는 아닙니다. 공개용 원본을 따로 준비하고 다운로드된 Markdown까지 확인합니다. 호스트 변경만으로 이전 공유물이 이관되거나 이전 URL이 철회되지는 않습니다.</p>
+<h2 id="ko-이미지-링크-페이지-기능">이미지, 링크, 페이지 기능</h2>
+<p>Obsidian 렌더링과 테마 CSS를 사용해 읽기 화면을 재현합니다. 목차, 제목 링크, 코드 복사, 라이트/다크 모드, 그래프/목차 표시 제어를 제공합니다. 복잡한 플러그인, 스크립트, 로컬 파일 참조, 모든 사용자 테마의 동작을 독립 브라우저에서 보장하지는 않습니다.
+Eagle 자료는 외부에서 읽을 수 있는 클라우드 URL 또는 Share가 업로드할 수 있는 지원 이미지로 준비합니다. <code>file://</code>는 특정 컴퓨터의 경로이며 <code>eagle://</code>는 앱 이동 링크입니다. 내 라이브러리가 없는 기기에서도 확인합니다.
+페이지에는 원본 Markdown 복사/다운로드도 들어갑니다. 그래프는 링크/태그 이름을 드러낼 수 있고 암호화 공유에서는 해당 그래프 메타데이터를 제외합니다. 첫 화면뿐 아니라 원본과 전체 렌더링을 검토합니다.</p>
+<h2 id="ko-암호화와-개인정보">암호화와 개인정보</h2>
+<p>선택적 <strong>AES-256-GCM</strong> 암호화는 업로드 전에 노트 페이로드를 암호화합니다. 복호화 키는 공유 URL의 <code>#</code> 뒤에 들어가며 일반 브라우저 요청은 그 부분을 서버에 보내지 않습니다. <strong>전체 URL을 받은 사람은 키도 받습니다.</strong> 링크 기반 접근이지 실명 사용자 인증, DRM, 재전달 방지가 아닙니다.
+<strong>암호화 노트의 삽입 이미지도 암호화하지 않고 업로드합니다.</strong> 콘텐츠 해시 기반의 비공개 목록 URL은 접근 통제가 아닙니다. 기밀 스크린샷, 얼굴, 도표, 스캔 문서를 노트 암호화만 믿고 공개하지 않습니다. Markdown 원본은 암호화 페이로드 안에 있지만 이미지 바이트는 아닙니다.</p>
+<ul>
+<li>공개 저장소나 호스트의 일반 HTML/원문은 공개 자료입니다. 짧고 찾기 어려운 ID를 비밀보장으로 삼지 않습니다.</li>
+<li>호스트 운영자는 네트워크 요청을 처리합니다. GitHub/Supabase/NAS/Convex와 자체 서버의 로그, 보관 정책, 비용이 별도로 적용됩니다.</li>
+<li>API 토큰, 암호, 복호화 키, 공유 기록, 설정은 안전하게 백업합니다. <code>data.json</code>을 이슈나 공개 저장소에 올리지 않습니다.</li>
+<li>Git 이력, 캐시, 수신자의 사본은 과거 공개 내용을 보존할 수 있습니다. 나중에 암호화를 켜도 이전 평문 발행이 지워지지는 않습니다.</li>
+<li>관리용 서비스 토큰과 URL 복호화 키는 서로 다른 자격증명입니다.</li>
+</ul>
+<h2 id="ko-문제-해결">문제 해결</h2>
+<table>
+<thead>
+<tr>
+<th>증상</th>
+<th>안전한 확인 순서</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GitHub 토큰 거절</td>
+<td>만료, repo/Pages 권한, 계정과 저장소 확인; 지원 이슈에 토큰 붙이지 않기</td>
+</tr>
+<tr>
+<td>저장소는 있지만 Pages 설정 실패</td>
+<td>공개 여부, Pages 활성화, 브랜치/경로 권한, GitHub 오류 확인</td>
+</tr>
+<tr>
+<td>새 링크 404</td>
+<td>Pages 빌드 완료와 base URL/사용자 도메인 확인</td>
+</tr>
+<tr>
+<td>이미지 누락</td>
+<td>외부 읽기 가능 여부, 로컬 파일 참조, 이미지 URL, 브라우저 네트워크 오류 확인</td>
+</tr>
+<tr>
+<td>만료/철회/조회수 없음</td>
+<td>호스트 기능 표 확인; 정적 호스트에 거버넌스 강제 기능 없음</td>
+</tr>
+<tr>
+<td>HTTP 410</td>
+<td>거버넌스 서버의 만료/철회 상태 확인</td>
+</tr>
+<tr>
+<td>볼트 간 HTTP 409</td>
+<td>볼트 식별/소유권 충돌 해결; 다른 볼트의 공유물 덮어쓰지 않기</td>
+</tr>
+<tr>
+<td>암호화 페이지가 안 열림</td>
+<td><code>#</code>까지 포함한 전체 URL 확인; 서버 암호문만으로 빠진 키 복구 불가</td>
+</tr>
+<tr>
+<td>CMS의 과거 기록이 예상과 다름</td>
+<td>현재 제공업체와 원래 발행 볼트 확인; 호스트 전환은 이관이 아님</td>
+</tr>
+</tbody></table>
+<h2 id="ko-업데이트-지원-제작자">업데이트, 지원, 제작자</h2>
+<p>업데이트 전 설정과 중요한 원본 노트를 백업합니다. 커뮤니티 업데이트 또는 같은 릴리스 파일 3종을 함께 사용합니다. 비민감 노트로 같은 호스트의 발행/수정/삭제 흐름을 먼저 확인합니다.
+<a href="https://apps.cmdspace.work/plugins/cmds-share/">웹 설명서</a> | <a href="https://github.com/johnfkoo951/cmds-share/releases">릴리스</a> | <a href="https://github.com/johnfkoo951/cmds-share/issues">문제 신고</a>.
+신고에는 플러그인/Obsidian 버전, OS, 제공업체, 비밀정보를 지운 오류, 최소 예제를 제공합니다. 암호화된 전체 URL, 토큰, 개인 노트, 설정 파일을 첨부하지 않습니다.
+MIT © <strong>Yohan Koo (CMDSPACE)</strong>, <a href="https://cmdspace.work">https://cmdspace.work</a>. <a href="https://github.com/johnfkoo951/cmds-share/blob/main/LICENSE">LICENSE</a>.</p>
+<h2 id="ko-검증-범위">검증 범위</h2>
+<p><code>manifest.json</code>, <code>src/main.ts</code>, <code>src/settings.ts</code>, <code>src/types.ts</code>, <code>src/providers.ts</code>, <code>src/crypto.ts</code>와 기존 문서, 공개 릴리스/등록 목록을 대조했습니다. 실제 발행, 저장소 생성, 토큰 발급, 삭제, 모바일 시험은 실행하지 않았습니다. 현재 UI 스크린샷을 촬영했다고 주장하거나 생성 이미지로 대체하지 않았습니다.</p>
+<a href="#main" class="back-top">맨 위로 ↑</a></article></div></div><div data-lang="en"><section class="product-hero"><div class="product-meta"><a href="../?lang=en">← Plugins</a><span class="status">Public release 2.1.1</span></div><p class="eyebrow">CMDS Share / Share a finished note</p><h1>Share one note.<br>Not your whole vault.</h1><p class="lede">Publish a selected note as a web page and manage its link. Choose a hosting backend and the protection features that backend actually supports.</p><div class="actions"><a class="button primary" href="#en-manual">User guide ↓</a><a class="button" href="https://github.com/johnfkoo951/cmds-share">GitHub source ↗</a></div><div class="requirements"><div><h2>Before you start</h2><p>Obsidian 1.7.2+ / desktop or mobile / hosting account</p></div><div><h2>Know the boundaries</h2><p>The default GitHub Pages setup creates a public repository. Images are not themselves encrypted, even when note encryption is enabled.</p></div></div></section><div class="docs-layout" id="en-manual"><aside class="toc"><p>On this page</p><nav aria-label="On this page"><a href="#en-status-and-prerequisites" class="depth-2">Status and prerequisites</a><a href="#en-install" class="depth-2">Install</a><a href="#en-choose-the-host-before-sharing" class="depth-2">Choose the host before sharing</a><a href="#en-first-success-a-public-github-pages-example" class="depth-2">First success: a public GitHub Pages example</a><a href="#en-managed-or-self-hosted-governance" class="depth-2">Managed or self-hosted governance</a><a href="#en-command-reference" class="depth-2">Command reference</a><a href="#en-settings-reference" class="depth-2">Settings reference</a><a href="#en-images-links-and-page-features" class="depth-2">Images, links, and page features</a><a href="#en-encryption-and-privacy" class="depth-2">Encryption and privacy</a><a href="#en-troubleshooting" class="depth-2">Troubleshooting</a><a href="#en-update-support-and-credits" class="depth-2">Update, support, and credits</a><a href="#en-verification-scope" class="depth-2">Verification scope</a></nav><a class="download" href="guide.en.md" download>Download Markdown ↙</a></aside><article class="prose"><div class="doc-meta"><span>Documentation checked 2026-09-14</span><span>Source version 2.1.1</span><a href="guide.en.md" download>Markdown ↙</a></div><h1 id="en-cmds-share-user-guide">CMDS Share user guide</h1>
+<p>Publish a note as a readable web page, then manage it according to the capabilities of the host you chose.</p>
+<h2 id="en-status-and-prerequisites">Status and prerequisites</h2>
+<p>This guide covers <strong>2.1.1</strong>, verified against local source and public release metadata on <strong>2026-09-14</strong>. Release 2.1.1 has <code>main.js</code>, <code>manifest.json</code>, and <code>styles.css</code>; CMDS Share is in the Community Plugins registry. The registry explicitly says it has not been manually reviewed by Obsidian staff.</p>
+<ul>
+<li>Obsidian <strong>1.7.2+</strong>. The manifest allows desktop and mobile; this documentation pass did not run a mobile acceptance test.</li>
+<li>Internet access and an account/token for your selected host. The default is <strong>GitHub Pages</strong>, not the managed CMDSPACE server.</li>
+<li>Permission to publish the note, its original Markdown, images, metadata, and theme assets. Prepare a separate non-sensitive example first.</li>
+<li>The plugin is MIT-licensed. Hosting plans, quotas, storage and traffic costs are separate and may change.</li>
+</ul>
+<h2 id="en-install">Install</h2>
+<p>Use <strong>Settings → Community plugins → Browse → CMDS Share → Install → Enable</strong>. Review Obsidian&#39;s community-plugin notice first.
+Alternatively, download the three files from <a href="https://github.com/johnfkoo951/cmds-share/releases/tag/2.1.1">release 2.1.1</a>, place them in <code>&lt;vault&gt;/.obsidian/plugins/cmds-share/</code>, reload Obsidian, and enable the plugin. Keep an existing <code>data.json</code> private and intact.</p>
+<h2 id="en-choose-the-host-before-sharing">Choose the host before sharing</h2>
+<p>A backend is the service that receives and serves your published note. Selecting a backend does not create an account or guarantee its optional capabilities.</p>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>What you supply</th>
+<th>Registry / view counts / revoke</th>
+<th>Server-enforced expiry</th>
+<th>Web dashboard</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GitHub Pages (default)</td>
+<td>Your GitHub token and repository</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>CMDSPACE</td>
+<td>Invite token for the managed instance, or your own compatible server</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Synology NAS</td>
+<td>WebDAV credentials and a public serving URL</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Supabase</td>
+<td>Your project URL, anon key and public bucket/policies</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Convex</td>
+<td>Your deployed compatible backend and URLs</td>
+<td>No governance registry</td>
+<td>Yes, in compatible backend</td>
+<td>No governance dashboard</td>
+</tr>
+</tbody></table>
+<p>Static-host delete/upload operations are not the same as governance-server revoke/restore. A countdown badge or expiry metadata on a static page is <strong>not access enforcement</strong>. Choose a governance server if you require that behavior; do not promise expiration on GitHub Pages.</p>
+<h2 id="en-first-success-a-public-github-pages-example">First success: a public GitHub Pages example</h2>
+<p><strong>This workflow creates or uses a public repository and publishes content. Do not use a private note as the test.</strong> A public repository can expose files through GitHub even before its Pages site is ready.</p>
+<ol>
+<li>Create a GitHub personal access token using GitHub&#39;s settings. The plugin&#39;s simple setup flow documents a classic token with <code>repo</code> scope, which is broad: understand its permissions, keep it private, and revoke it if exposed. Fine-grained tokens require the correct repository/Pages permissions and are not a universal drop-in for auto-creation.</li>
+<li>Open <strong>Settings → CMDS Share</strong>. Confirm <strong>Active provider → GitHub Pages</strong>.</li>
+<li>Paste the token under <strong>Personal access token</strong> and confirm the <strong>Repository</strong> name (default <code>obsidian-shared-notes</code>).</li>
+<li>Click <strong>Set up repository</strong>. The implementation can create a public repository, add <code>.nojekyll</code>, enable Pages, and record the URL. Review the selected owner/repository before doing this.</li>
+<li>Run <strong>Test connection</strong>. Keep advanced branch/path/domain settings unchanged for the first test.</li>
+<li>Open a note containing only a sample heading, paragraph, and an image you may publish. Run <strong>Share current note to web</strong>.</li>
+<li>Review the encryption/expiry options, publish, and open the copied URL. New Pages content waits for GitHub&#39;s build; availability is not instant or guaranteed in 30 seconds.</li>
+<li>Inspect the page&#39;s rendered content and <strong>copy/download Markdown</strong> controls in a signed-out browser. Original Markdown is part of the share, not merely an internal editing source.</li>
+<li>Edit the example, re-share it, and verify the same link now shows the update after the host finishes processing.
+A successful upload followed by a temporarily missing Pages page is not automatically a failed upload. Check the repository&#39;s Pages deployment before repeatedly publishing.</li>
+</ol>
+<h2 id="en-managed-or-self-hosted-governance">Managed or self-hosted governance</h2>
+<p>The CMDSPACE option points by default to <code>https://share.cmdspace.work</code>. It is an <strong>invite-only personal/team instance</strong>, not an open self-service hosting promise. It needs a token and carries no uptime/SLA guarantee. Requests can be made through the <a href="https://github.com/johnfkoo951/cmds-share/issues">issue tracker</a>, without posting a token or private content.
+An instance token can list and manage all shares on that instance. Treat it as a team-wide management credential, not an isolated per-note password. Use one instance for one person or a mutually trusting team.
+For your own instance, follow <a href="https://github.com/johnfkoo951/cmds-share-server">cmds-share-server</a>, configure the server separately, and enter your <strong>Server URL</strong> and <strong>API token</strong>. The plugin cannot turn a plain bucket into a governance server by changing its URL.
+The governance CMS reconciles local records with server registry state, including approximate views, revoked items, and orphaned records. Known preview bots are filtered, but view counts are not an exact count of people.</p>
+<h2 id="en-command-reference">Command reference</h2>
+<p>Open Ctrl/Cmd+P and search by CMDS Share. Some actions appear only when a relevant active/shared note exists.</p>
+<table>
+<thead>
+<tr>
+<th>Exact command</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Share current note to web</td>
+<td>Render and publish/update the active note; copy its URL</td>
+</tr>
+<tr>
+<td>Copy share link of current note</td>
+<td>Copy the known existing share URL without republishing</td>
+</tr>
+<tr>
+<td>Delete shared note from server</td>
+<td>Delete a shared note through the selected provider; an external write, not a local undo</td>
+</tr>
+<tr>
+<td>Open CMS dashboard</td>
+<td>Open the in-vault management view, not a promise of server features on every host</td>
+</tr>
+<tr>
+<td>Browse all shared notes</td>
+<td>Browse shares known to the plugin</td>
+</tr>
+</tbody></table>
+<p>Use the CMS to inspect, re-share, or delete entries. Governance-host revocation keeps the stored file but serves a tombstone (HTTP 410), whereas deletion removes the registry entry and stored note. Restore is governance-specific. Neither revocation nor deletion can retrieve copies already downloaded by recipients or purge every cache/history.</p>
+<h2 id="en-settings-reference">Settings reference</h2>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Actual controls and meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Vault Identity</td>
+<td>Vault display name and Vault ID identify the publishing vault; do not casually change identity to bypass a conflict</td>
+</tr>
+<tr>
+<td>Server Provider</td>
+<td>Active provider chooses the destination for later operations</td>
+</tr>
+<tr>
+<td>Sharing</td>
+<td>Share title source; Share page theme; Footer link and label; Encryption mode; Default expiration</td>
+</tr>
+<tr>
+<td>Rendering</td>
+<td>Include theme CSS; Remove backlinks; Remove frontmatter; Note width</td>
+</tr>
+<tr>
+<td>Frontmatter Fields</td>
+<td>Share field, Link field, Encrypted field, Expires field control names used in your notes</td>
+</tr>
+<tr>
+<td>CMS Dashboard</td>
+<td>Enable CMS dashboard; Auto refresh</td>
+</tr>
+<tr>
+<td>Advanced</td>
+<td>Debug mode; keep diagnostics free of secrets before sending them</td>
+</tr>
+<tr>
+<td>CMDSPACE</td>
+<td>Enabled, API token, Server URL</td>
+</tr>
+<tr>
+<td>Synology NAS</td>
+<td>Enabled, NAS URL, Username, Password, Shared folder, Public URL</td>
+</tr>
+<tr>
+<td>GitHub Pages</td>
+<td>Personal access token, Repository, setup action; advanced Enabled/Branch/Path/Custom domain</td>
+</tr>
+<tr>
+<td>Supabase</td>
+<td>Enabled, Project URL, Anon key, Bucket, Table name</td>
+</tr>
+<tr>
+<td>Convex</td>
+<td>Enabled, Deployment URL, Public URL</td>
+</tr>
+</tbody></table>
+<p>Remove frontmatter also strips leading YAML from the downloadable Markdown. It does not scrub arbitrary sensitive prose, comments or other original source content; backlink display controls are not a complete source sanitizer. Publish a clean source note and inspect the downloadable Markdown. Switching providers does not migrate every old share or revoke the old host&#39;s URLs.</p>
+<h2 id="en-images-links-and-page-features">Images, links, and page features</h2>
+<p>The publisher uses Obsidian rendering and theme CSS to approximate the note&#39;s reading view. Pages offer a table of contents, heading links, code copying, light/dark mode, and graph/TOC display controls. Complex plugins, scripts, local-file references, and every custom theme are not guaranteed to work in a standalone browser.
+Before sharing Eagle material, prefer a readable cloud URL or a supported image that Share can upload. <code>file://</code> is machine-local and <code>eagle://</code> navigates into a desktop app; neither is a public image host. Test from a device without your local library.
+The page also carries Markdown copy/download tools. A graph may reveal link/tag names; encrypted shares omit that graph metadata. Always review source and rendered output, not just the visible first screen.</p>
+<h2 id="en-encryption-and-privacy">Encryption and privacy</h2>
+<p>Encryption is optional <strong>AES-256-GCM</strong> of the note payload before upload. The decryption key travels after <code>#</code> in the share URL; ordinary browser requests do not send that fragment to the server. Anyone who receives the <strong>full URL</strong> receives the key. This is link-based access, not named-user authentication, DRM, or a guarantee against forwarding.
+<strong>Embedded images are uploaded unencrypted</strong>, including for encrypted notes. Their content-addressed/unlisted URLs are not access controls. Do not rely on note encryption to protect confidential screenshots, faces, diagrams, or scanned documents. The Markdown source is inside the encrypted payload, but image bytes are not.
+Other boundaries:</p>
+<ul>
+<li>Plain HTML/source published to a public repository or host is public; an obscure short ID is not secrecy.</li>
+<li>Host operators process network requests. GitHub/Supabase/NAS/Convex and governance hosting have their own logging, retention, policies, and costs.</li>
+<li>API tokens, passwords, encryption keys, share records and settings need careful local backup. Do not upload <code>data.json</code> to an issue or public repo.</li>
+<li>Git history, caches and recipients&#39; saved copies may retain earlier public content. Enabling encryption later does not erase an earlier plaintext publication.</li>
+<li>A service token with management access is not the decryption key, and the URL key is not a server-management credential.</li>
+</ul>
+<h2 id="en-troubleshooting">Troubleshooting</h2>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Safe next check</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GitHub token rejected</td>
+<td>Token expiry, repo/Pages permissions, intended account and repository; never paste the token into a support issue</td>
+</tr>
+<tr>
+<td>Repo exists but Pages setup fails</td>
+<td>Public repository status, enabled Pages and branch/path permissions; inspect GitHub&#39;s error before retrying</td>
+</tr>
+<tr>
+<td>New link is 404</td>
+<td>Pages deployment/build completion, correct base URL and custom domain</td>
+</tr>
+<tr>
+<td>Image missing</td>
+<td>External readability, local file references, provider image URL, and browser network errors</td>
+</tr>
+<tr>
+<td>Expiry/revoke/views unavailable</td>
+<td>Check the host capability table; a static host cannot enforce governance features</td>
+</tr>
+<tr>
+<td>HTTP 410</td>
+<td>Share may be expired or revoked on the governance server; use the instance&#39;s management controls</td>
+</tr>
+<tr>
+<td>HTTP 409 across vaults</td>
+<td>Resolve the vault-identity/ownership conflict; do not overwrite another vault&#39;s share</td>
+</tr>
+<tr>
+<td>Encrypted page will not open</td>
+<td>Use the complete URL including <code>#</code> fragment; missing key cannot be recovered merely from server ciphertext</td>
+</tr>
+<tr>
+<td>CMS shows unexpected old entries</td>
+<td>Check the selected provider and originating vault; provider switching is not migration</td>
+</tr>
+</tbody></table>
+<h2 id="en-update-support-and-credits">Update, support, and credits</h2>
+<p>Back up your plugin settings and important original notes before updating. Use community updates or one release&#39;s complete three-file set. Verify a non-sensitive publish/update/delete cycle on the same host before returning to regular work.
+<a href="https://apps.cmdspace.work/plugins/cmds-share/">Web manual</a> | <a href="https://github.com/johnfkoo951/cmds-share/releases">Releases</a> | <a href="https://github.com/johnfkoo951/cmds-share/issues">Issues</a>.
+Provide plugin/Obsidian version, OS, provider, sanitized error and minimal sample Markdown. Do not attach full encrypted URLs, tokens, private notes, or a settings file.
+MIT © <strong>Yohan Koo (CMDSPACE)</strong>, <a href="https://cmdspace.work">https://cmdspace.work</a>. <a href="https://github.com/johnfkoo951/cmds-share/blob/main/LICENSE">LICENSE</a>.</p>
+<h2 id="en-verification-scope">Verification scope</h2>
+<p>Compared <code>manifest.json</code>, <code>src/main.ts</code>, <code>src/settings.ts</code>, <code>src/types.ts</code>, <code>src/providers.ts</code>, and <code>src/crypto.ts</code> with the existing documentation and public release/registry records. No actual publishing, repository creation, token issuance, deletion, or mobile test was performed for this manual. No current UI screenshot is claimed or fabricated.</p>
+<a href="#main" class="back-top">Back to top ↑</a></article></div></div></main><footer class="site-footer"><a href="https://cmdspace.work">CMDSPACE</a><p data-ko="Yohan Koo (CMDSPACE). 내게 필요한 도구를 만들고 나눕니다." data-en="Yohan Koo (CMDSPACE). Build the tools you need. Share what works.">Yohan Koo (CMDSPACE). 내게 필요한 도구를 만들고 나눕니다.</p><a href="https://bio.cmdspace.work">bio.cmdspace.work ↗</a></footer><div id="glossTip" role="tooltip" hidden></div><p class="sr-only" id="feedback" aria-live="polite"></p></body></html>

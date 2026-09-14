@@ -1,0 +1,905 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CMDS Eagle | CMDSPACE Plugins</title><meta name="description" content="Eagle의 에셋을 Obsidian에서 검색하고 노트에 넣습니다. 저장 위치와 링크 방식을 선택해 내 작업 환경에 맞게 연결합니다."><link rel="canonical" href="https://apps.cmdspace.work/plugins/cmds-eagle/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="CMDSPACE"><meta property="og:title" content="CMDS Eagle | CMDSPACE Plugins"><meta property="og:description" content="Eagle의 에셋을 Obsidian에서 검색하고 노트에 넣습니다. 저장 위치와 링크 방식을 선택해 내 작업 환경에 맞게 연결합니다."><meta property="og:url" content="https://apps.cmdspace.work/plugins/cmds-eagle/"><meta property="og:image" content="https://apps.cmdspace.work/plugins/assets/og-plugins.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="CMDSPACE Plugins: Eagle, Achmage, Share, Zotero"><meta property="og:locale" content="ko_KR"><meta property="og:locale:alternate" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="CMDS Eagle | CMDSPACE Plugins"><meta name="twitter:description" content="Eagle의 에셋을 Obsidian에서 검색하고 노트에 넣습니다. 저장 위치와 링크 방식을 선택해 내 작업 환경에 맞게 연결합니다."><meta name="twitter:image" content="https://apps.cmdspace.work/plugins/assets/og-plugins.png"><meta name="twitter:image:alt" content="CMDSPACE Plugins"><meta name="theme-color" content="#134538">
+<link rel="icon" type="image/png" href="../assets/logo.png"><link rel="apple-touch-icon" href="../assets/logo.png"><link rel="stylesheet" href="../assets/plugins.css"><script src="../assets/plugins.js" defer></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>try{const l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('cmds-lang');if(l==='en')document.documentElement.lang='en';const t=localStorage.getItem('cmds-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch{}</script></head><body>
+<a href="#main" class="skip"><span data-lang="ko">본문으로 바로가기</span><span data-lang="en">Skip to content</span></a><header class="site-header"><a class="brand" href="/" aria-label="CMDSPACE Apps"><img src="../assets/logo.png" alt="" width="34" height="34"><span>CMDSPACE <b>Plugins</b></span></a><nav aria-label="Primary"><a href="/" data-ko="모든 앱" data-en="All apps">모든 앱</a><a href="/plugins/" data-ko="플러그인" data-en="Plugins">플러그인</a><button id="language" type="button" aria-label="Switch language">EN</button><button id="theme" type="button" aria-label="Toggle theme" data-ko="테마" data-en="Theme">테마</button></nav></header><main id="main" class="product-page"><div data-lang="ko"><section class="product-hero"><div class="product-meta"><a href="../?lang=ko">← 플러그인</a><span class="status">공개 릴리스 1.8.4</span></div><p class="eyebrow">CMDS Eagle / 자료를 연결하다</p><h1>모아 둔 이미지가<br>노트의 재료가 된다.</h1><p class="lede">Eagle의 에셋을 Obsidian에서 검색하고 노트에 넣습니다. 저장 위치와 링크 방식을 선택해 내 작업 환경에 맞게 연결합니다.</p><div class="actions"><a class="button primary" href="#ko-manual">사용설명서 ↓</a><a class="button" href="https://github.com/johnfkoo951/cmds-eagle">GitHub 소스 ↗</a></div><figure class="product-preview"><img src="../assets/eagle-storage-choice.png" alt="저장 위치 선택 화면. 클라우드 항목은 설정한 제공자에 따라 달라집니다. 기존 공개 캡처의 항목을 현재 소스와 대조했습니다." loading="lazy"><figcaption>저장 위치 선택 화면. 클라우드 항목은 설정한 제공자에 따라 달라집니다. 기존 공개 캡처의 항목을 현재 소스와 대조했습니다.</figcaption></figure><div class="requirements"><div><h2>시작 전 준비</h2><p>데스크톱 Obsidian 1.6.6+ / 실행 중인 Eagle</p></div><div><h2>먼저 알아둘 것</h2><p>로컬 경로 링크는 다른 컴퓨터에서 바로 열리지 않을 수 있습니다. 공유 목적이라면 링크 방식과 원본 접근성을 먼저 확인하세요.</p></div></div></section><div class="docs-layout" id="ko-manual"><aside class="toc"><p>이 문서의 내용</p><nav aria-label="이 문서의 내용"><a href="#ko-배포-상태와-준비물" class="depth-2">배포 상태와 준비물</a><a href="#ko-설치" class="depth-2">설치</a><a href="#ko-첫-성공-노트-하나에-이미지-하나" class="depth-2">첫 성공: 노트 하나에 이미지 하나</a><a href="#ko-저장-위치와-링크-모드는-별개입니다" class="depth-2">저장 위치와 링크 모드는 별개입니다</a><a href="#ko-라이브러리-폴더-검색" class="depth-2">라이브러리, 폴더, 검색</a><a href="#ko-명령어-사전" class="depth-2">명령어 사전</a><a href="#ko-설정-사전" class="depth-2">설정 사전</a><a href="#ko-클라우드-업로드와-excalidraw" class="depth-2">클라우드 업로드와 Excalidraw</a><a href="#ko-여러-기기에서-읽기" class="depth-2">여러 기기에서 읽기</a><a href="#ko-이전-명령-실행-전-주의" class="depth-2">이전 명령 실행 전 주의</a><a href="#ko-개인정보와-한계" class="depth-2">개인정보와 한계</a><a href="#ko-문제-해결" class="depth-2">문제 해결</a><a href="#ko-업데이트-지원-제작자" class="depth-2">업데이트, 지원, 제작자</a><a href="#ko-소스와-검증-기준" class="depth-2">소스와 검증 기준</a><a href="#ko-부록-기존-릴리스-이력" class="depth-2">부록: 기존 릴리스 이력</a><a href="#ko-1-8-4의-변경-사항" class="depth-3">1.8.4의 변경 사항</a><a href="#ko-1-8-2의-변경-사항" class="depth-3">1.8.2의 변경 사항</a><a href="#ko-1-8-0의-새로운-기능" class="depth-3">1.8.0의 새로운 기능</a></nav><a class="download" href="guide.ko.md" download>Markdown 내려받기 ↙</a></aside><article class="prose"><div class="doc-meta"><span>문서 기준 2026-09-14</span><span>소스 버전 1.8.4</span><a href="guide.ko.md" download>Markdown ↙</a></div><h1 id="ko-cmds-eagle-사용설명서">CMDS Eagle 사용설명서</h1>
+<p>시각 자료 라이브러리를 노트와 연결하되, 원본과 미리보기와 공개 사본을 구분해 사용합니다.</p>
+<h2 id="ko-배포-상태와-준비물">배포 상태와 준비물</h2>
+<p><strong>2026-09-14</strong>에 확인한 <strong>1.8.4 소스</strong> 기준입니다. 공개 릴리스 1.8.4에는 설치 파일 3종이 있으며 Obsidian Community Plugins 목록에도 등록되어 있습니다. 등록은 수동 보안 검토 완료를 뜻하지 않습니다. 목록에는 Obsidian 직원의 수동 검토를 받지 않았다는 고지가 있습니다.</p>
+<ul>
+<li>Eagle을 실행할 수 있는 컴퓨터와 <strong>Obsidian 데스크톱 1.6.6 이상</strong>. 모바일에서는 플러그인이 실행되지 않습니다.</li>
+<li><a href="https://eagle.cool">Eagle</a> 설치, 해당 제품 이용 조건에 맞는 라이선스, 열린 라이브러리. 플러그인은 MIT 라이선스이고 Eagle은 별도 제품입니다.</li>
+<li>기본 로컬 API 주소는 <code>http://localhost:41595</code>. 로컬 검색과 가져오기에는 클라우드 계정이 필요 없습니다.</li>
+<li>클라우드 기능은 ImgHippo, R2, S3, WebDAV 또는 사용자 서버의 계정과 저장/전송 비용을 별도로 고려합니다. 플러그인이 서버를 대신 개설하지는 않습니다.</li>
+<li>백업한 테스트 노트와 비공개 정보가 없는 이미지 1개. 첫 작업으로 볼트 전체 이전을 실행하지 않습니다.</li>
+</ul>
+<h2 id="ko-설치">설치</h2>
+<ol>
+<li>Obsidian <strong>설정 → 커뮤니티 플러그인 → 탐색</strong>을 엽니다.</li>
+<li><strong>CMDS Eagle</strong>을 검색해 권한 안내를 확인한 뒤 설치하고 활성화합니다.</li>
+<li>Eagle을 실행한 상태에서 <strong>설정 → CMDS Eagle → Connection → Test Connection</strong>으로 연결을 확인합니다.
+수동 설치는 <a href="https://github.com/johnfkoo951/cmds-eagle/releases/tag/1.8.4">1.8.4 릴리스</a>의 <code>main.js</code>, <code>manifest.json</code>, <code>styles.css</code>를 <code>&lt;vault&gt;/.obsidian/plugins/cmds-eagle/</code>에 함께 넣고 Obsidian을 다시 로드한 뒤 활성화합니다. 다른 컴퓨터의 <code>data.json</code>으로 기존 설정을 덮어쓰지 않습니다.</li>
+</ol>
+<h2 id="ko-첫-성공-노트-하나에-이미지-하나">첫 성공: 노트 하나에 이미지 하나</h2>
+<ol>
+<li>Eagle에서 테스트 이미지가 있는 라이브러리를 엽니다.</li>
+<li>플러그인 설정의 **Where to store images → Import into Eagle (recommended)**을 선택합니다. 새 붙여넣기/가져오기의 저장 위치이며, 검색한 기존 자료의 위치를 바꾸는 설정은 아닙니다.</li>
+<li><strong>What goes into the note → Photo + info — portable thumbnail</strong> (<code>photo-info</code>)를 선택합니다. 다른 기기에서도 미리보기를 읽기 좋은 추천값입니다. 실제 기본값은 <code>cmds-eagle</code>입니다.</li>
+<li>연습용 Markdown 노트를 열고 이미지를 넣을 위치에 커서를 둡니다.</li>
+<li>Ctrl/Cmd+P로 명령 팔레트를 열어 <strong>Search Eagle library and embed</strong>를 실행하고 알고 있는 이미지 이름을 검색해 선택합니다.</li>
+<li>이미지 미리보기, 한 줄 메타데이터 카드, <strong>Open in Eagle</strong> 링크가 의도한 자료를 가리키는지 확인합니다. 설정한 썸네일 폴더에는 미리보기 사본이 생깁니다.
+노트와 썸네일을 동기화하면 다른 기기에서도 미리보기를 읽을 수 있습니다. 다만 <code>eagle://</code> 링크를 열려면 해당 기기에 Eagle과 관련 라이브러리가 필요합니다.</li>
+</ol>
+<h2 id="ko-저장-위치와-링크-모드는-별개입니다">저장 위치와 링크 모드는 별개입니다</h2>
+<p><strong>Where to store images</strong>는 Eagle/볼트/클라우드/매번 묻기 중 저장 위치를 정합니다. <strong>What goes into the note</strong>는 Eagle 자료를 노트에 어떻게 참조할지 정합니다. 기본값 변경만으로 기존 노트 전체가 이전되지는 않습니다.</p>
+<table>
+<thead>
+<tr>
+<th>모드</th>
+<th>노트에 들어가는 내용</th>
+<th>볼트 사본</th>
+<th>적합한 용도와 한계</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>photo-info</code></td>
+<td>Eagle 링크가 걸린 썸네일과 한 줄 카드</td>
+<td>썸네일</td>
+<td>메타데이터를 포함한 휴대 가능한 미리보기</td>
+</tr>
+<tr>
+<td><code>photo-only</code></td>
+<td>Eagle 링크가 걸린 썸네일</td>
+<td>썸네일</td>
+<td>간결한 미리보기</td>
+</tr>
+<tr>
+<td><code>link-only</code></td>
+<td>Eagle 딥링크</td>
+<td>없음</td>
+<td>이미지 미리보기 없는 이동 링크; 수신자에게 Eagle 필요</td>
+</tr>
+<tr>
+<td><code>cmds-eagle</code> 기본값</td>
+<td>원본 <code>file://</code> 임베드와 카드</td>
+<td>없음</td>
+<td>라이브러리가 마운트된 등록 데스크톱</td>
+</tr>
+<tr>
+<td><code>cmds-eagle-photo-only</code></td>
+<td>원본 <code>file://</code> 임베드</td>
+<td>없음</td>
+<td>데스크톱에서 원본 화질로 보기</td>
+</tr>
+<tr>
+<td><code>cmds-eagle-photo-link</code></td>
+<td>Eagle 링크가 걸린 원본 미리보기</td>
+<td>없음</td>
+<td>미리보기를 눌러 해당 Eagle 항목 열기</td>
+</tr>
+</tbody></table>
+<p>썸네일은 원본 백업이 아닙니다. Eagle이 썸네일을 만들지 않는 작은 이미지는 원본이 복사될 수 있습니다. 대기 시간 안에 이미지를 찾지 못하면 임시 파일 대신 Eagle 딥링크로 대체합니다. Eagle 원본을 삭제하면 원본 경로 모드는 깨집니다. 복사된 썸네일은 남을 수 있지만 Eagle 이동 링크는 더 이상 해당 항목을 열지 못합니다.</p>
+<h2 id="ko-라이브러리-폴더-검색">라이브러리, 폴더, 검색</h2>
+<p>검색 대상은 <strong>현재 Eagle에 열린 라이브러리</strong>입니다. 가져오기 대상 라이브러리를 바꾼다고 모든 라이브러리를 동시에 검색하지는 않습니다.</p>
+<ul>
+<li><strong>Detect libraries → Scan Eagle</strong>은 열린 라이브러리와 Eagle이 기억하는 이력을 읽습니다.</li>
+<li><strong>Target library</strong>: 현재 열린 라이브러리(기본), 지정 라이브러리, 매번 묻기. 지정 모드에서 <strong>Default library</strong>가 나타납니다.</li>
+<li><strong>Target folder</strong>: 라이브러리별 기본 폴더, 매번 묻기, 루트. 폴더 ID는 라이브러리마다 다르므로 각각 지정합니다.</li>
+<li>폴더 선택기는 전체 경로로 검색하고 가져오기 전에 새 폴더를 만들 수 있습니다. Eagle API는 가져오기 시 폴더를 배정하며, 이 설정으로 기존 항목을 사후 이동하는 것은 보장하지 않습니다.</li>
+<li><strong>Switch back after import</strong>는 적절할 때 이전 라이브러리로 돌아갑니다. 진행 중 사용자가 직접 바꾼 라이브러리를 강제로 되돌리지 않습니다.</li>
+<li>기억된 라이브러리 프로필을 지우면 저장한 기본 폴더도 제거됩니다. 디스크의 Eagle 라이브러리를 삭제하는 작업은 아니며 다음 검색에서 재발견될 수 있습니다.</li>
+<li><strong>Remove missing libraries on scan</strong>은 기본 꺼짐입니다. Eagle 이력과 디스크 양쪽에서 사라진 경우만 Missing으로 봅니다. 연결 실패 자체를 삭제 증거로 삼지 않습니다.</li>
+<li>검색 범위는 이름/태그/메모/폴더와 파일 형식으로 제한할 수 있습니다. <strong>Items to pre-load for search</strong>는 기본 5000이며 그 밖의 항목은 입력 중 Eagle 키워드 검색으로 보완합니다.</li>
+</ul>
+<h2 id="ko-명령어-사전">명령어 사전</h2>
+<p>명령 팔레트에는 CMDS Eagle 접두어가 붙습니다. 편집기 동작에는 활성 Markdown 편집기가 필요합니다.</p>
+<table>
+<thead>
+<tr>
+<th>실제 명령 이름</th>
+<th>기능과 영향</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Search Eagle library and embed</td>
+<td>열린 라이브러리에서 찾아 삽입</td>
+</tr>
+<tr>
+<td>Switch Eagle library</td>
+<td>Eagle에서 열린 라이브러리 변경</td>
+</tr>
+<tr>
+<td>Set default Eagle folder for the open library</td>
+<td>해당 라이브러리의 가져오기 폴더 저장</td>
+</tr>
+<tr>
+<td>Upload clipboard Eagle image to cloud</td>
+<td>클립보드 Eagle 참조를 읽어 이미지를 업로드하고 URL 삽입</td>
+</tr>
+<tr>
+<td>Embed Eagle image and upload to cloud</td>
+<td>Eagle 항목 선택 후 업로드와 삽입</td>
+</tr>
+<tr>
+<td>Convert all images in note to cloud URLs</td>
+<td>현재 노트의 지원 이미지를 업로드하고 링크 수정</td>
+</tr>
+<tr>
+<td>Convert cross-platform image paths in current note</td>
+<td>등록한 루트 경로 매핑; 원문 수정 여부는 Conversion mode에 따름</td>
+</tr>
+<tr>
+<td>Move this note&#39;s local images into Eagle</td>
+<td>선택 노트의 로컬 이미지 이전; <strong>다른 노트 수정과 원본 휴지통 이동 가능</strong></td>
+</tr>
+<tr>
+<td>Move all local images in the vault into Eagle</td>
+<td>볼트 전체 이전; <strong>파괴적 작업이며 첫 실습용 아님</strong></td>
+</tr>
+<tr>
+<td>Verify Eagle references in current note</td>
+<td>파일/항목 누락 보고; 일시적 라이브러리 전환 가능; 노트 원문은 수정하지 않음</td>
+</tr>
+</tbody></table>
+<h2 id="ko-설정-사전">설정 사전</h2>
+<p>다음은 1.8.4 설정 코드에서 확인한 실제 표시 이름입니다.</p>
+<table>
+<thead>
+<tr>
+<th>구역</th>
+<th>주요 설정</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Connection</td>
+<td>Eagle API Base URL, Connection Timeout(밀리초), Test Connection</td>
+</tr>
+<tr>
+<td>Eagle libraries</td>
+<td>Target library/folder, 조건부 Default library, Switch back after import, Library switch timeout, Scan Eagle, 누락 프로필 정리</td>
+</tr>
+<tr>
+<td>Image paste/drop behavior</td>
+<td>Where to store images, What goes into the note, Thumbnail folder(기본 <code>attachments/eagle</code>), Hidden tag prefixes in card</td>
+</tr>
+<tr>
+<td>썸네일 처리</td>
+<td>Thumbnail wait timeout(기본 10000 ms), Thumbnail size warning(기본 2048 KB), Remove staged copy after import</td>
+</tr>
+<tr>
+<td>Search &amp; embed</td>
+<td>Include metadata card, Items to pre-load for search</td>
+</tr>
+<tr>
+<td>Cloud storage provider</td>
+<td>Active Cloud Provider와 해당 제공업체의 인증/URL</td>
+</tr>
+<tr>
+<td>Cross-platform sync</td>
+<td>Enable cross-platform path conversion, Conversion mode, Auto-convert paths on file open, Add current computer와 라이브러리 루트</td>
+</tr>
+<tr>
+<td>Excalidraw integration</td>
+<td>Embed images in Excalidraw via cloud, Also add pasted screenshots to Eagle</td>
+</tr>
+</tbody></table>
+<p>임시 <code>.eagle-temp/</code> 파일은 정리가 켜진 경우 Eagle에 복사한 원본의 전체 크기가 확인된 뒤 제거됩니다. 디버깅 목적으로 이 옵션을 끄면 사본이 더 남습니다.</p>
+<h2 id="ko-클라우드-업로드와-excalidraw">클라우드 업로드와 Excalidraw</h2>
+<p>클라우드 명령을 사용하기 전에 제공업체를 설정합니다. 이름 선택만으로 인증 정보가 채워지지는 않습니다.</p>
+<table>
+<thead>
+<tr>
+<th>제공업체</th>
+<th>준비할 것</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ImgHippo</td>
+<td>계정/API 키; 서비스 보관 정책과 제한 확인</td>
+</tr>
+<tr>
+<td>Cloudflare R2</td>
+<td>호환 Worker 업로드 엔드포인트, Worker API 키, 공개 버킷 URL; 버킷만으로는 부족</td>
+</tr>
+<tr>
+<td>Amazon S3</td>
+<td>엔드포인트, 리전, 버킷, 액세스 키 ID와 비밀키, 선택적 공개 URL</td>
+</tr>
+<tr>
+<td>WebDAV</td>
+<td>서버 URL, 사용자명/암호, 업로드 경로, 외부에서 읽을 수 있는 공개 URL</td>
+</tr>
+<tr>
+<td>Custom server</td>
+<td>플러그인 업로드 계약에 맞는 Upload URL과 Public URL</td>
+</tr>
+</tbody></table>
+<p>비민감 이미지로 시험하고 로그인하지 않은 브라우저에서도 결과 URL이 열리는지 확인합니다. 업로드 성공과 공개 읽기 가능은 별개입니다. 요금, 접근 정책, 보관 기간은 해당 서비스가 결정합니다.
+Excalidraw 연동에는 별도 Excalidraw 플러그인과 클라우드 설정이 필요합니다. Eagle 자료는 원본을 사용하고, 스크린샷은 업로드하면서 선택적으로 Eagle에도 가져옵니다. 그림은 외부 이미지 URL에 의존하게 됩니다. CMDS Eagle이 이 이미지를 암호화하지는 않습니다.</p>
+<h2 id="ko-여러-기기에서-읽기">여러 기기에서 읽기</h2>
+<p>경로 변환은 <strong>Eagle 라이브러리 동기화가 아니라 루트 매핑</strong>입니다. 각 데스크톱에서 <strong>Add current computer</strong>를 실행하고 실제 마운트된 라이브러리 루트를 등록합니다. 로컬 볼륨, Windows 드라이브, UNC 공유 경로를 표현할 수 있습니다.
+기본 <strong>Render only</strong>는 표시만 바꾸고 Markdown을 수정하지 않습니다. <strong>Modify note source</strong>는 파일 URL을 수정하며 마운트되지 않은 경로는 건너뜁니다. 여러 컴퓨터가 노트를 동기화한다면 render-only를 권장합니다. 휴대폰은 이 플러그인으로 데스크톱 <code>file://</code> 라이브러리를 마운트할 수 없으므로 동기화된 썸네일이나 공개 이미지를 사용합니다.</p>
+<h2 id="ko-이전-명령-실행-전-주의">이전 명령 실행 전 주의</h2>
+<p>볼트와 Eagle 라이브러리를 모두 백업하고 다른 편집을 멈춥니다. 노트 단위 이전도 이미지 선택만 한 노트에서 할 뿐, <strong>같은 이미지를 참조하는 다른 Markdown 노트까지 수정합니다</strong>. 가져오기와 참조 수정이 성공한 뒤 볼트 원본을 Obsidian 삭제 설정에 따라 휴지통으로 보냅니다. 시스템 휴지통을 원하면 Obsidian에서 그 방식을 선택합니다.
+생성 썸네일, 임시 파일, 참조되지 않은 자산은 제외됩니다. 실패한 항목의 원본은 남지만 <strong>앞서 성공한 변경은 자동 롤백되지 않습니다</strong>. 변경 파일과 실패 목록을 확인하고, 복원할 때 더 최근의 편집을 덮어쓰지 않습니다. 플러그인 설치나 설명서 열람만으로 이전은 실행되지 않습니다.</p>
+<h2 id="ko-개인정보와-한계">개인정보와 한계</h2>
+<ul>
+<li>로컬 검색은 Eagle API에 요청합니다. 명시적 가져오기는 Eagle과 지정한 볼트 위치에 쓰며 클라우드 동작은 이미지 바이트와 요청 정보를 해당 서비스에 보냅니다.</li>
+<li><code>data.json</code>, 저장소 키, 라이브러리 경로, 진단 출력은 비공개로 취급합니다. 입력란이 가려져 있다고 저장 파일까지 암호화됐다는 뜻은 아닙니다.</li>
+<li>공개 이미지 URL은 전달되거나 캐시될 수 있습니다. 노트 링크 삭제만으로 클라우드 자산 삭제가 보장되지는 않습니다.</li>
+<li><code>file://</code>, <code>eagle://</code>는 공개 웹 이미지 URL이 아닙니다. Share 페이지가 수신자의 컴퓨터에 내 라이브러리를 마운트해 주지 않습니다.</li>
+<li>데스크톱 지원은 모든 OS의 새 컴퓨터 시험 완료를 의미하지 않습니다. 이 설명서 작업에서는 소스와 릴리스 메타데이터를 확인했으며 가져오기, 이전, 클라우드 업로드를 실행하지 않았습니다.</li>
+</ul>
+<h2 id="ko-문제-해결">문제 해결</h2>
+<table>
+<thead>
+<tr>
+<th>증상</th>
+<th>확인 순서</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>연결 실패</td>
+<td>Eagle 실행과 라이브러리 열기 → API 주소/시간 확인 → Test Connection</td>
+</tr>
+<tr>
+<td>알고 있는 자료가 안 나옴</td>
+<td>열린 라이브러리 확인 → 검색 범위/형식 필터 해제 → 정확한 이름 검색</td>
+</tr>
+<tr>
+<td>Eagle 링크만 삽입됨</td>
+<td>이미지 존재와 썸네일 대기 시간 확인; 임시 경로를 추측해 붙이지 않기</td>
+</tr>
+<tr>
+<td>삭제한 이미지가 계속 보임</td>
+<td>Obsidian 창 다시 로드 후 Verify Eagle references 실행; 메모리 캐시 주의</td>
+</tr>
+<tr>
+<td>다른 컴퓨터에서 안 보임</td>
+<td>라이브러리 마운트와 컴퓨터 루트 등록 또는 photo-info 사용</td>
+</tr>
+<tr>
+<td>업로드 성공 뒤 이미지가 안 열림</td>
+<td>업로드 인증과 별도로 공개 URL/읽기 권한 확인</td>
+</tr>
+<tr>
+<td>지운 라이브러리가 다시 나타남</td>
+<td>Eagle이 여전히 기억하는 항목인지 확인; 프로필 삭제는 디스크 삭제가 아님</td>
+</tr>
+<tr>
+<td>이전이 일부만 완료됨</td>
+<td>추가 일괄 실행 중단 → 알림/콘솔/백업 확인; 먼저 성공한 변경은 남음</td>
+</tr>
+</tbody></table>
+<h2 id="ko-업데이트-지원-제작자">업데이트, 지원, 제작자</h2>
+<p>업데이트 전에 설정을 백업하고 커뮤니티 플러그인 업데이트 또는 같은 릴리스의 파일 3종을 사용합니다. 노트 하나로 재확인하고 버전이 다른 파일을 섞지 않습니다.
+<a href="https://apps.cmdspace.work/plugins/cmds-eagle/">제품과 웹 설명서</a> | <a href="https://github.com/johnfkoo951/cmds-eagle/releases">릴리스</a> | <a href="https://github.com/johnfkoo951/cmds-eagle/issues">문제 신고</a>.
+신고에는 플러그인/Obsidian/Eagle 버전, OS, 링크 모드, 제공업체 종류, 비민감 재현 절차를 포함합니다. 인증 정보나 개인 라이브러리, 전체 설정 파일을 첨부하지 않습니다.
+<strong>Yohan Koo (CMDSPACE)</strong>, <a href="https://cmdspace.work">https://cmdspace.work</a>. MIT, <a href="https://github.com/johnfkoo951/cmds-eagle/blob/main/LICENSE">LICENSE</a> 참조.</p>
+<h2 id="ko-소스와-검증-기준">소스와 검증 기준</h2>
+<p><code>manifest.json</code>, <code>src/main.ts</code>, <code>src/settings.ts</code>, <code>src/types.ts</code>, <code>src/canonical.ts</code>, <code>src/api.ts</code>, <code>src/cloud-providers.ts</code>를 대조했습니다. <a href="https://github.com/johnfkoo951/cmds-eagle">소스 저장소</a>. 아래 기존 스크린샷은 저장 위치 선택을 보여주며 1.8.4 전체 UI를 보증하지 않습니다. 화면의 비공개 정보 노출 여부를 확인했습니다.
+<img src="https://raw.githubusercontent.com/johnfkoo951/cmds-eagle/main/assets/CMDS-eagle3.png" alt="기존 Eagle 저장 위치 선택 화면" loading="lazy"></p>
+<h2 id="ko-부록-기존-릴리스-이력">부록: 기존 릴리스 이력</h2>
+<p>이전 README의 1.8.0–1.8.4 설명을 보존합니다. 역사적 표현은 당시 기록이며 현재 사용 절차와 한계는 위 설명서를 우선합니다.</p>
+<h3 id="ko-1-8-4의-변경-사항">1.8.4의 변경 사항</h3>
+<p><strong>이름을 바꾸거나 지운 라이브러리가 목록에 영원히 남았습니다.</strong> 감지는 프로필을 추가하기만 했기 때문에,
+Eagle에서 이름을 바꾼 라이브러리는 존재하지 않는 경로를 가리키는 예전 항목으로 설정에 남았고 지울 방법도
+없었습니다. 이제 모든 라이브러리 줄에 제거 버튼이 있고, Eagle이 더 이상 알지 못하면서 디스크에서도 사라진
+라이브러리는 <code>Missing</code>으로 표시되며 목록 위에 <code>Remove all missing</code> 버튼이 나타납니다.</p>
+<p>프로필에는 저장해둔 기본 폴더가 들어 있으므로 삭제는 기본적으로 사용자가 직접 하도록 두었습니다. 두 신호가
+<strong>모두</strong> 일치할 때만 missing으로 판정합니다. Eagle이 목록에서 뺐고 <em>동시에</em> 디스크에서도 사라진 경우입니다.
+마운트만 해제된 외장·네트워크 볼륨은 Eagle이 계속 기억하므로 목록에 남고 설정도 유지됩니다. Eagle이 실행
+중이 아니면 아무것도 판정하지 않습니다. <code>Scan Eagle</code>이 알아서 정리하기를 원하면
+<code>Remove missing libraries on scan</code>을 켜면 됩니다.</p>
+<h3 id="ko-1-8-2의-변경-사항">1.8.2의 변경 사항</h3>
+<p><strong>검색이 라이브러리의 일부만 보고 있었습니다.</strong> Eagle은 limit을 주지 않으면 200개만 반환하는데, 검색
+창이 limit을 넘기지 않았습니다. 항목이 2,400개인 라이브러리에서는 8%만 대상으로 퍼지 매칭한 셈이고,
+나머지는 존재하지 않는 것처럼 동작했습니다. 이제 <code>Items to pre-load for search</code>(기본값 5000)만큼 미리
+불러오고, 그 상한을 넘으면 입력에 맞춰 Eagle의 keyword 검색 결과를 합칩니다. 라이브러리 크기와 무관하게
+모든 항목에 도달할 수 있습니다.</p>
+<p><strong>검색 필터가 아예 그려지지 않았습니다.</strong> 검색 범위 필터(<code>Name</code> / <code>Tags</code> / <code>Notes</code> / <code>Folders</code>), 파일
+유형 필터, 라이브러리 항목 수 헤더가 모두 빠져 있었습니다. 이를 삽입하는 코드가 잘못된 요소를 찾고
+있었기 때문입니다. 이제 정상적으로 표시됩니다.</p>
+<p><strong>볼트 루트에서 첨부 파일 경로가 깨지지 않습니다.</strong> Obsidian의 <em>Default location for new attachments</em>를
+<code>Vault folder</code>로 둔 상태에서 이미지를 로컬에 저장하면 <code>//파일명.png</code> 경로가 만들어져 Obsidian이 해석하지
+못했습니다. <a href="https://github.com/nancyel">@nancyel</a> 님이 <a href="https://github.com/johnfkoo951/cmds-eagle/pull/1">#1</a>
+에서 보고하고 수정해 주었고, 인접한 경우까지 확장해 반영했습니다.</p>
+<h3 id="ko-1-8-0의-새로운-기능">1.8.0의 새로운 기능</h3>
+<h4 id="ko-여러-eagle-라이브러리">여러 Eagle 라이브러리</h4>
+<p>Eagle은 한 번에 하나의 라이브러리만 엽니다. 다른 라이브러리로 가져오려면 해당 라이브러리로
+전환한 뒤 돌아와야 하며, 각 전환에는 약 1초가 걸립니다. <strong>Settings → Eagle libraries</strong>에서 설정합니다.</p>
+<table>
+<thead>
+<tr>
+<th>Target library</th>
+<th>동작</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Currently open library (기본값)</td>
+<td>전환하지 않습니다. 1.7.x와 동일하게 동작합니다.</td>
+</tr>
+<tr>
+<td>Always a specific library</td>
+<td>필요할 때 지정한 라이브러리로 전환하고, <code>Switch back after import</code>가 켜져 있으면 돌아옵니다.</td>
+</tr>
+<tr>
+<td>Ask every time</td>
+<td>가져올 때마다 선택하므로 한 노트에 여러 라이브러리의 에셋을 담을 수 있습니다.</td>
+</tr>
+</tbody></table>
+<p>가져오는 도중 Eagle에서 직접 다른 라이브러리로 전환하면 사용자의 선택을 우선합니다.
+플러그인이 복귀 전에 현재 라이브러리를 확인하므로 사용자가 선택한 상태를 유지합니다.</p>
+<h4 id="ko-라이브러리별-폴더">라이브러리별 폴더</h4>
+<p>라이브러리 루트 대신 폴더로 가져올 수 있습니다. 폴더 ID는 해당 라이브러리에 속하므로
+라이브러리마다 기본 폴더를 따로 저장합니다. <strong>Target folder</strong>를 <em>Ask every time</em>으로 설정하면
+전체 폴더 경로를 검색하는 선택 창이 열립니다. 예를 들어 <code>proj/jazz</code>로 <code>Projects/Jazz Blend</code>를
+찾을 수 있으며, <code>Inbox/2026</code>을 입력하면 <code>Inbox</code> 아래에 <code>2026</code> 폴더를 바로 만들 수 있습니다.</p>
+<p>Eagle은 가져올 때만 폴더를 지정합니다. API로 기존 항목을 다른 폴더로 이동할 수 없으므로
+대상 폴더를 먼저 선택하며, 다시 분류하려면 재가져오기가 필요합니다.</p>
+<h4 id="ko-저장-방식과-링크-모드">저장 방식과 링크 모드</h4>
+<p>이전에는 Eagle로 붙여넣어도 볼트에 사본이 남았고, 삽입한 참조가 재동기화나 다른 컴퓨터로의
+이동 후에는 유지되지 않았습니다. 이번 버전에서는 다음 세 가지가 바뀌었습니다.</p>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>이전</th>
+<th>현재</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>.eagle-temp/</code>의 임시 사본</td>
+<td>붙여넣을 때마다 기록하고 삭제하지 않아 Eagle과 볼트 양쪽에 원본이 남았습니다.</td>
+<td>Eagle에서 가져오기를 확인하면 삭제합니다.</td>
+</tr>
+<tr>
+<td>삽입 경로</td>
+<td>대안 없이 Eagle 라이브러리의 절대 <code>file://</code> 경로를 사용했습니다.</td>
+<td>기본값은 여전히 <code>cmds-eagle</code>이지만, <code>photo-info</code>는 볼트 상대 경로 썸네일과 <code>eagle://</code> 딥 링크를 사용하므로 재동기화 후에도 유지되고 다른 기기에서도 표시됩니다.</td>
+</tr>
+<tr>
+<td>썸네일 대기</td>
+<td>고정된 <code>delay(1000)</code>을 사용했으며, 큰 파일은 임시 파일 링크로 대체되어 나중에 연결이 끊겼습니다.</td>
+<td>대기 간격을 지수적으로 늘리며 확인하고, 실패하면 딥 링크를 사용합니다. 컴퓨터에 종속된 경로로 대체하지 않습니다.</td>
+</tr>
+</tbody></table>
+<p>기존 설치의 동작은 유지됩니다. <code>linkMode</code> 기본값은 <code>cmds-eagle</code>이므로 다른 모드를 선택하기
+전까지는 바뀌지 않습니다.</p>
+<blockquote>
+<p><strong>Eagle에서 삭제하면 노트에서도 이미지가 사라집니다.</strong> Eagle을 원본 저장소로 사용하는
+<code>cmds-eagle</code> 계열 모드의 의도된 동작입니다. 다만 Obsidian이 창을 다시 불러올 때까지
+메모리에서 이미지를 제공하므로 삭제 직후에도 잠시 표시될 수 있습니다.
+실제 상태는 <code>Verify Eagle references in current note</code>로 확인합니다.
+Eagle에서 삭제한 뒤에도 노트에 이미지를 남기려면 <code>photo-info</code>를 선택합니다.</p>
+</blockquote>
+<h4 id="ko-링크-모드">링크 모드</h4>
+<p><strong>파일 저장 위치</strong>(Eagle / 볼트 / 클라우드 / 매번 선택)와 <strong>노트에 삽입할 형식</strong>은 서로 독립적인
+설정입니다. 두 번째 설정이 <code>linkMode</code>입니다.</p>
+<table>
+<thead>
+<tr>
+<th>모드</th>
+<th>노트에 삽입되는 내용</th>
+<th>볼트 사본</th>
+<th>다른 기기</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong><code>photo-info</code></strong></td>
+<td>썸네일 + 한 줄 카드</td>
+<td>썸네일 1개</td>
+<td>가능</td>
+</tr>
+<tr>
+<td><code>photo-only</code></td>
+<td>썸네일</td>
+<td>썸네일 1개</td>
+<td>가능</td>
+</tr>
+<tr>
+<td><code>link-only</code></td>
+<td><code>eagle://</code> 링크</td>
+<td>없음</td>
+<td>가능</td>
+</tr>
+<tr>
+<td><strong><code>cmds-eagle</code></strong> (기본값)</td>
+<td>절대 <code>file://</code> 임베드 + 카드</td>
+<td>없음</td>
+<td>등록한 데스크톱만 지원</td>
+</tr>
+<tr>
+<td><code>cmds-eagle-photo-only</code></td>
+<td>절대 <code>file://</code> 임베드</td>
+<td>없음</td>
+<td>등록한 데스크톱만 지원</td>
+</tr>
+<tr>
+<td><code>cmds-eagle-photo-link</code></td>
+<td><code>eagle://</code> 항목 링크가 연결된 원본 이미지</td>
+<td>없음</td>
+<td>등록한 데스크톱만 지원</td>
+</tr>
+</tbody></table>
+<pre><code class="language-markdown"># photo-info
+[![hero shot](attachments/eagle/KXYZ01.png)](eagle://item/KXYZ01)
+&gt; `png` · 4.2 MB · 1920×1080 · #ui #ref · [Open in Eagle](eagle://item/KXYZ01)
+
+# photo-only
+[![hero shot](attachments/eagle/KXYZ01.png)](eagle://item/KXYZ01)
+
+# link-only
+[hero shot](eagle://item/KXYZ01)
+</code></pre>
+<p><code>cmds-eagle*</code> 세 모드는 볼트 썸네일 대신 원본 이미지를 사용하며, 출력 구성은 표와 같습니다.
+예시에는 컴퓨터별 파일 위치를 넣지 않았습니다.</p>
+<p>썸네일은 Eagle 항목 ID를 기준으로 저장하므로 이름을 바꾸거나 다시 삽입해도 중복 생성되지
+않습니다. 이미지 경로는 노트 기준 상대 경로이므로 볼트 전체를 동기화할 수 있으며, 카드는
+정확히 한 줄입니다. <code>cmds-eagle*</code> 모드는 원본 자체를 임베드하므로 라이브러리가 마운트되어
+있어야 합니다. 여러 데스크톱에서 같은 라이브러리를 사용하는 방법은
+<a href="#ko-여러-기기에서-읽기">크로스 플랫폼 동기화</a>를 참조합니다.
+이식 가능한 사진 모드는 썸네일을 얻지 못하면 일반 <code>eagle://</code> 링크로 대체합니다.
+원본 모드도 원본을 찾지 못하면 같은 방식으로 대체하며, 임시 파일 참조는 사용하지 않습니다.
+<code>cmds-eagle-photo-link</code>에서는 표시된 원본을 클릭하면 Eagle의 해당 항목이 열립니다.</p>
+<p><code>photo-*</code> 출력 형식은 계약 테스트로 검증합니다. <code>src/canonical.ts</code>와
+<code>tests/canonical.test.ts</code>를 참조하며, 표시 형식을 변경할 때 두 파일도 일치시켜야 합니다.</p>
+<h4 id="ko-기존-볼트의-이미지-이전">기존 볼트의 이미지 이전</h4>
+<p><code>Move all local images in the vault into Eagle</code>은 참조된 이미지를 가져오고, 모든 참조를
+표준 형식으로 바꾼 뒤 볼트 사본을 휴지통으로 보냅니다.
+<code>Move this note&#39;s local images into Eagle</code>은 한 노트에서 대상 이미지를 선택하므로 먼저
+시험하기에 적합합니다. 다른 노트에 있는 동일 이미지의 참조도 함께 바뀝니다.
+두 명령 모두 확인을 요청하고 처리 결과를 알립니다. 볼트 전체 이전은 원본을 제거하는 작업이며
+큰 볼트에서는 오래 걸릴 수 있으므로 먼저 백업합니다. 시스템 휴지통으로 보내려면 Obsidian에서
+해당 옵션을 선택합니다. 플러그인은 Obsidian의 삭제 설정을 따릅니다.</p>
+<a href="#main" class="back-top">맨 위로 ↑</a></article></div></div><div data-lang="en"><section class="product-hero"><div class="product-meta"><a href="../?lang=en">← Plugins</a><span class="status">Public release 1.8.4</span></div><p class="eyebrow">CMDS Eagle / Connect your assets</p><h1>Collected images.<br>Working knowledge.</h1><p class="lede">Find Eagle assets from Obsidian and bring them into your notes. Choose storage destinations and link formats that fit your workspace.</p><div class="actions"><a class="button primary" href="#en-manual">User guide ↓</a><a class="button" href="https://github.com/johnfkoo951/cmds-eagle">GitHub source ↗</a></div><figure class="product-preview"><img src="../assets/eagle-storage-choice.png" alt="Choose where to save an image. The cloud option follows the configured provider. This existing public capture was checked against the current source labels." loading="lazy"><figcaption>Choose where to save an image. The cloud option follows the configured provider. This existing public capture was checked against the current source labels.</figcaption></figure><div class="requirements"><div><h2>Before you start</h2><p>Desktop Obsidian 1.6.6+ / Eagle running</p></div><div><h2>Know the boundaries</h2><p>Local-path links may not work on another computer. Check your link format and access to the original before sharing.</p></div></div></section><div class="docs-layout" id="en-manual"><aside class="toc"><p>On this page</p><nav aria-label="On this page"><a href="#en-status-and-prerequisites" class="depth-2">Status and prerequisites</a><a href="#en-install" class="depth-2">Install</a><a href="#en-first-success-one-image-in-one-note" class="depth-2">First success: one image in one note</a><a href="#en-decide-storage-and-link-style-separately" class="depth-2">Decide storage and link style separately</a><a href="#en-libraries-folders-and-search" class="depth-2">Libraries, folders, and search</a><a href="#en-command-reference" class="depth-2">Command reference</a><a href="#en-settings-reference" class="depth-2">Settings reference</a><a href="#en-cloud-upload-and-excalidraw" class="depth-2">Cloud upload and Excalidraw</a><a href="#en-cross-device-reading" class="depth-2">Cross-device reading</a><a href="#en-migration-read-before-running" class="depth-2">Migration: read before running</a><a href="#en-privacy-and-limitations" class="depth-2">Privacy and limitations</a><a href="#en-troubleshooting" class="depth-2">Troubleshooting</a><a href="#en-updates-support-and-credits" class="depth-2">Updates, support, and credits</a><a href="#en-source-and-verification-reference" class="depth-2">Source and verification reference</a><a href="#en-appendix-preserved-release-history" class="depth-2">Appendix: preserved release history</a><a href="#en-what-s-new-in-1-8-4" class="depth-3">What&#39;s new in 1.8.4</a><a href="#en-what-s-new-in-1-8-2" class="depth-3">What&#39;s new in 1.8.2</a><a href="#en-what-s-new-in-1-8-0" class="depth-3">What&#39;s new in 1.8.0</a></nav><a class="download" href="guide.en.md" download>Download Markdown ↙</a></aside><article class="prose"><div class="doc-meta"><span>Documentation checked 2026-09-14</span><span>Source version 1.8.4</span><a href="guide.en.md" download>Markdown ↙</a></div><h1 id="en-cmds-eagle-user-guide">CMDS Eagle user guide</h1>
+<p>Connect a visual asset library to your notes without confusing the original, the preview, and the published copy.</p>
+<h2 id="en-status-and-prerequisites">Status and prerequisites</h2>
+<p>This guide covers source version <strong>1.8.4</strong>, checked on <strong>2026-09-14</strong>. Release 1.8.4 contains the three installable plugin files and CMDS Eagle is in the Obsidian Community Plugins registry. Registry listing is not a manual security review; its listing explicitly says it has not been manually reviewed by Obsidian staff.</p>
+<ul>
+<li>Obsidian <strong>desktop 1.6.6+</strong> on a machine that can run Eagle; no mobile plugin support.</li>
+<li><a href="https://eagle.cool">Eagle</a> installed, licensed according to Eagle&#39;s own terms, running with a library open. The plugin is MIT-licensed; Eagle is separate software.</li>
+<li>Local API normally at <code>http://localhost:41595</code>. No cloud account is needed for local search/import.</li>
+<li>Optional cloud account and storage/traffic budget for ImgHippo, R2, S3, WebDAV, or a custom upload service. The plugin does not provision a storage service for you.</li>
+<li>A backed-up test note and one non-sensitive image. Do not begin with a whole-vault migration.</li>
+</ul>
+<h2 id="en-install">Install</h2>
+<ol>
+<li>Open Obsidian <strong>Settings → Community plugins → Browse</strong>.</li>
+<li>Search <strong>CMDS Eagle</strong>, install, and enable it. Review the community-plugin permissions notice first.</li>
+<li>Open <strong>Settings → CMDS Eagle → Connection → Test Connection</strong> with Eagle running.
+For manual installation, download <code>main.js</code>, <code>manifest.json</code>, and <code>styles.css</code> from <a href="https://github.com/johnfkoo951/cmds-eagle/releases/tag/1.8.4">release 1.8.4</a>. Put all three in <code>&lt;vault&gt;/.obsidian/plugins/cmds-eagle/</code>, reload Obsidian, and enable the plugin. Do not replace an existing <code>data.json</code> with somebody else&#39;s configuration.</li>
+</ol>
+<h2 id="en-first-success-one-image-in-one-note">First success: one image in one note</h2>
+<ol>
+<li>In Eagle, open a library containing a harmless sample image.</li>
+<li>In plugin settings choose <strong>Where to store images → Import into Eagle (recommended)</strong>. This is about new pastes/imports, not where an existing searched item lives.</li>
+<li>Choose <strong>What goes into the note → Photo + info — portable thumbnail</strong> (<code>photo-info</code>) for a portable preview. This is a recommendation, not the shipped default: the default is <code>cmds-eagle</code>.</li>
+<li>Open a scratch Markdown note and place the cursor where the image should appear.</li>
+<li>Open the command palette with Ctrl/Cmd+P and run <strong>Search Eagle library and embed</strong>. Search by a known item name, then choose it.</li>
+<li>Check the rendered preview, the one-line metadata card, and the <strong>Open in Eagle</strong> link. A thumbnail should be in the vault&#39;s configured thumbnail folder.
+Success means the image is visible and the link opens the intended Eagle item. Syncing the note and thumbnail can make the preview visible elsewhere; opening <code>eagle://</code> still requires a supported Eagle installation and the relevant library.</li>
+</ol>
+<h2 id="en-decide-storage-and-link-style-separately">Decide storage and link style separately</h2>
+<p><strong>Storage</strong> (<code>Where to store images</code>) offers Eagle, vault, cloud, or ask. <strong>Link style</strong> (<code>What goes into the note</code>) controls the reference inserted for an Eagle item. Changing the default does not migrate every existing note.</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>What the note uses</th>
+<th>Copy in vault</th>
+<th>Best use / limitation</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>photo-info</code></td>
+<td>Thumbnail linked to Eagle, plus a one-line card</td>
+<td>Thumbnail</td>
+<td>Portable reading with metadata</td>
+</tr>
+<tr>
+<td><code>photo-only</code></td>
+<td>Thumbnail linked to Eagle</td>
+<td>Thumbnail</td>
+<td>Portable, compact reading</td>
+</tr>
+<tr>
+<td><code>link-only</code></td>
+<td>Eagle deep link</td>
+<td>None</td>
+<td>Navigation, not an image preview; recipient needs Eagle</td>
+</tr>
+<tr>
+<td><code>cmds-eagle</code> (default)</td>
+<td>Original <code>file://</code> embed and metadata card</td>
+<td>None</td>
+<td>Original quality on a mounted, registered desktop</td>
+</tr>
+<tr>
+<td><code>cmds-eagle-photo-only</code></td>
+<td>Original <code>file://</code> embed</td>
+<td>None</td>
+<td>Compact original-quality desktop preview</td>
+</tr>
+<tr>
+<td><code>cmds-eagle-photo-link</code></td>
+<td>Original preview linked to Eagle</td>
+<td>None</td>
+<td>Click the original preview to open its Eagle item</td>
+</tr>
+</tbody></table>
+<p>A thumbnail is not a backup of the original. Small images without an Eagle thumbnail may use a copied original instead. If an image cannot be resolved within the configured wait, the output falls back to an Eagle deep link rather than a temporary file. Deleting an Eagle original breaks the original-file modes; a previously copied thumbnail may survive, but its Eagle link will no longer resolve.</p>
+<h2 id="en-libraries-folders-and-search">Libraries, folders, and search</h2>
+<p>Search uses the library Eagle <strong>currently has open</strong>. Import destination settings do not make search span every library at once.</p>
+<ul>
+<li><strong>Detect libraries → Scan Eagle</strong> reads the open library and library history.</li>
+<li><strong>Target library</strong>: currently open (default), always a specific library, or ask every time. The specific-library mode exposes <strong>Default library</strong>.</li>
+<li><strong>Target folder</strong>: each library&#39;s default, ask every time, or library root. Folder IDs belong to a library; configure them separately.</li>
+<li>The folder picker searches full paths and can create a folder before import. Eagle&#39;s API assigns folders during import; re-filing an already imported item is not promised by this control.</li>
+<li><strong>Switch back after import</strong> restores the previous library when appropriate. A manual library change during import is respected rather than overwritten.</li>
+<li>Removing a remembered library profile also removes its saved default folder, not the Eagle library on disk. A scan may rediscover it.</li>
+<li><strong>Remove missing libraries on scan</strong> is off by default. A library is marked missing only when absent from both Eagle&#39;s history and disk; an unavailable scan is not evidence of deletion.</li>
+<li>Search has name/tag/notes/folder scope and file-type filters. <strong>Items to pre-load for search</strong> defaults to 5000; additional results can come from Eagle keyword search as you type.</li>
+</ul>
+<h2 id="en-command-reference">Command reference</h2>
+<p>Command-palette entries are prefixed by CMDS Eagle. Editor actions need an active Markdown editor.</p>
+<table>
+<thead>
+<tr>
+<th>Exact command</th>
+<th>Use and side effects</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Search Eagle library and embed</td>
+<td>Search the open library and insert the chosen item</td>
+</tr>
+<tr>
+<td>Switch Eagle library</td>
+<td>Change the library open in Eagle</td>
+</tr>
+<tr>
+<td>Set default Eagle folder for the open library</td>
+<td>Save the import folder for that library</td>
+</tr>
+<tr>
+<td>Upload clipboard Eagle image to cloud</td>
+<td>Read an Eagle reference from the clipboard, upload the resolved image, insert a URL</td>
+</tr>
+<tr>
+<td>Embed Eagle image and upload to cloud</td>
+<td>Choose an Eagle item, upload and insert it</td>
+</tr>
+<tr>
+<td>Convert all images in note to cloud URLs</td>
+<td>Upload supported images in the active note and rewrite their links; inspect the resulting note</td>
+</tr>
+<tr>
+<td>Convert cross-platform image paths in current note</td>
+<td>Remap registered roots; source writes depend on Conversion mode</td>
+</tr>
+<tr>
+<td>Move this note&#39;s local images into Eagle</td>
+<td>Migrate referenced local images; <strong>can rewrite other notes and trash originals</strong></td>
+</tr>
+<tr>
+<td>Move all local images in the vault into Eagle</td>
+<td>Vault-wide migration; <strong>destructive, not a first-use action</strong></td>
+</tr>
+<tr>
+<td>Verify Eagle references in current note</td>
+<td>Report missing files/items; may temporarily switch libraries; does not rewrite the note</td>
+</tr>
+</tbody></table>
+<h2 id="en-settings-reference">Settings reference</h2>
+<p>The visible labels below come from the 1.8.4 settings implementation.</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Important controls</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Connection</td>
+<td>Eagle API Base URL; Connection Timeout (milliseconds); Test Connection</td>
+</tr>
+<tr>
+<td>Eagle libraries</td>
+<td>Target library/folder; Default library when relevant; Switch back after import; Library switch timeout; Scan Eagle; missing-profile removal</td>
+</tr>
+<tr>
+<td>Image paste/drop behavior</td>
+<td>Where to store images; What goes into the note; Thumbnail folder (default <code>attachments/eagle</code>); Hidden tag prefixes in card</td>
+</tr>
+<tr>
+<td>Thumbnail handling</td>
+<td>Thumbnail wait timeout (default 10000 ms); Thumbnail size warning (default 2048 KB); Remove staged copy after import</td>
+</tr>
+<tr>
+<td>Search &amp; embed</td>
+<td>Include metadata card; Items to pre-load for search</td>
+</tr>
+<tr>
+<td>Cloud storage provider</td>
+<td>Active Cloud Provider and that provider&#39;s credentials/URLs</td>
+</tr>
+<tr>
+<td>Cross-platform sync</td>
+<td>Enable cross-platform path conversion; Conversion mode; Auto-convert paths on file open; Add current computer and library root</td>
+</tr>
+<tr>
+<td>Excalidraw integration</td>
+<td>Embed images in Excalidraw via cloud; Also add pasted screenshots to Eagle</td>
+</tr>
+</tbody></table>
+<p>The staged file under <code>.eagle-temp/</code> is removed after the copied Eagle original is confirmed at full size when cleanup is enabled. Disabling that option for debugging leaves additional copies.</p>
+<h2 id="en-cloud-upload-and-excalidraw">Cloud upload and Excalidraw</h2>
+<p>Set a provider before using any cloud command; selecting its name alone does not configure credentials.</p>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Required setup</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ImgHippo</td>
+<td>Account/API key from the provider; review its retention and service limits</td>
+</tr>
+<tr>
+<td>Cloudflare R2</td>
+<td>Compatible Worker upload endpoint, Worker API key, public bucket URL; a bucket alone is insufficient</td>
+</tr>
+<tr>
+<td>Amazon S3</td>
+<td>Endpoint, region, bucket, access key ID and secret; optional public URL</td>
+</tr>
+<tr>
+<td>WebDAV</td>
+<td>Server URL, username/password, upload path, externally readable public URL</td>
+</tr>
+<tr>
+<td>Custom server</td>
+<td>Upload URL and public URL matching the plugin&#39;s custom upload contract</td>
+</tr>
+</tbody></table>
+<p>Test using a non-sensitive image, then open the resulting URL in a browser that is not logged in. Upload success does not prove public readability. Charges, access policies, and retention are controlled by the chosen service.
+Excalidraw integration requires that separate plugin and a configured cloud provider. Eagle assets resolve to originals; screenshots can be uploaded and optionally also imported into Eagle. The drawing then depends on externally reachable image URLs. These uploads are not encrypted by CMDS Eagle.</p>
+<h2 id="en-cross-device-reading">Cross-device reading</h2>
+<p>Path conversion is a root mapping, <strong>not Eagle-library synchronization</strong>. On each desktop use <strong>Add current computer</strong> and enter the actual mounted library root. Local volumes, mapped Windows drives, and UNC network shares can be represented.
+<strong>Render only</strong> is the default conversion mode: it changes displayed paths without editing the Markdown. <strong>Modify note source</strong> rewrites file URLs and skips unmounted targets. Prefer render-only when several computers sync the same notes. Phones cannot mount a desktop <code>file://</code> library through this plugin; use synced thumbnails or accessible cloud images for reading there.</p>
+<h2 id="en-migration-read-before-running">Migration: read before running</h2>
+<p>Back up both the vault and Eagle library and pause competing edits first. The per-note migration chooses images from one note, but <strong>rewrites references to those images across other Markdown notes too</strong>. Successful imports/references are processed before the vault originals are trashed according to Obsidian&#39;s deletion preference. Select system trash in Obsidian if that is the intended destination.
+Generated thumbnails, temporary staging files, and unreferenced assets are excluded. Failure preserves the affected original, but earlier successful operations are <strong>not automatically rolled back</strong>. Inspect the reported touched files and failures. Restore from your backup deliberately, without overwriting newer edits. Migration is not performed by installing the plugin or reading this guide.</p>
+<h2 id="en-privacy-and-limitations">Privacy and limitations</h2>
+<ul>
+<li>Local search talks to Eagle&#39;s local API; explicit imports write to Eagle and selected vault locations. Cloud actions send image bytes and associated request data to the configured service.</li>
+<li>Treat <code>data.json</code>, storage keys, library paths, and diagnostic output as private. A masked field is not proof of encrypted-at-rest storage.</li>
+<li>Public image URLs can be forwarded or cached. Removing a note link does not guarantee deletion of its cloud asset.</li>
+<li><code>file://</code> and <code>eagle://</code> links are not public web image URLs. A Share page cannot make a recipient&#39;s machine mount your library.</li>
+<li>Desktop source support is not a clean-machine test on every OS. This documentation pass inspected source and public release metadata; it did not execute imports, migrations, or provider uploads.</li>
+</ul>
+<h2 id="en-troubleshooting">Troubleshooting</h2>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Check next</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Connection fails</td>
+<td>Start Eagle, open a library, verify the local API URL and timeout, then Test Connection</td>
+</tr>
+<tr>
+<td>Known item missing</td>
+<td>Confirm the open library; clear scope/type filters; search the exact name; check pre-load limit and API keyword results</td>
+</tr>
+<tr>
+<td>Only an Eagle link appears</td>
+<td>Thumbnail/original could not be resolved; check file availability and thumbnail wait, not a guessed temp path</td>
+</tr>
+<tr>
+<td>Image still appears after deletion</td>
+<td>Reload the Obsidian window and run Verify Eagle references; cached rendering can be stale</td>
+</tr>
+<tr>
+<td>Missing on another computer</td>
+<td>Mount the library, register that computer/root, or use photo-info for a synced preview</td>
+</tr>
+<tr>
+<td>Cloud upload succeeds but image fails</td>
+<td>Verify public URL/access policy separately from upload credentials</td>
+</tr>
+<tr>
+<td>Removed library reappears</td>
+<td>Eagle still remembers it; profile removal does not remove Eagle&#39;s history or disk data</td>
+</tr>
+<tr>
+<td>Migration partly completes</td>
+<td>Stop further bulk runs; inspect notices/console and backups; successful prior edits remain</td>
+</tr>
+</tbody></table>
+<h2 id="en-updates-support-and-credits">Updates, support, and credits</h2>
+<p>Back up configuration before upgrading; use Community Plugins updates or the matching three files from one release, then retest one note. Keep release versions together.
+<a href="https://apps.cmdspace.work/plugins/cmds-eagle/">Product and web manual</a> | <a href="https://github.com/johnfkoo951/cmds-eagle/releases">Releases</a> | <a href="https://github.com/johnfkoo951/cmds-eagle/issues">Issues</a>.
+When reporting a problem, include plugin/Obsidian/Eagle versions, OS, link mode, provider type, and a sanitized reproduction. Never attach credentials, a private library, or full plugin settings.
+<strong>Yohan Koo (CMDSPACE)</strong>, <a href="https://cmdspace.work">https://cmdspace.work</a>. MIT; see <a href="https://github.com/johnfkoo951/cmds-eagle/blob/main/LICENSE">LICENSE</a>.</p>
+<h2 id="en-source-and-verification-reference">Source and verification reference</h2>
+<p>Behavior was checked against <code>manifest.json</code>, <code>src/main.ts</code>, <code>src/settings.ts</code>, <code>src/types.ts</code>, <code>src/canonical.ts</code>, <code>src/api.ts</code>, and <code>src/cloud-providers.ts</code>. <a href="https://github.com/johnfkoo951/cmds-eagle">Source repository</a>. Existing screenshot below shows the storage-choice interaction, not every current 1.8.4 setting; reviewed for visible private content.
+<img src="https://raw.githubusercontent.com/johnfkoo951/cmds-eagle/main/assets/CMDS-eagle3.png" alt="Existing Eagle storage-choice screenshot" loading="lazy"></p>
+<h2 id="en-appendix-preserved-release-history">Appendix: preserved release history</h2>
+<p>The following records the earlier README release notes (1.8.0–1.8.4). Historical wording is retained; the current workflow and limitations above take precedence.</p>
+<h3 id="en-what-s-new-in-1-8-4">What&#39;s new in 1.8.4</h3>
+<p><strong>A renamed or deleted library stayed in the list for good.</strong> Detection only ever added profiles, so a
+library you renamed in Eagle kept its old entry in settings — pointing at a path that no longer exists,
+with no way to remove it. Every library row now has a remove button, and a library Eagle has forgotten
+that is also gone from disk is marked <code>Missing</code> with a <code>Remove all missing</code> action above the list.</p>
+<p>Removal stays deliberate by default, because a profile holds your saved default folder. A library is
+only called missing when <strong>both</strong> signals agree: Eagle no longer lists it <em>and</em> the bundle is gone from
+disk. An external or network volume that is merely unmounted is still remembered by Eagle, so it stays
+listed and keeps its settings. When Eagle is not running nothing is judged at all. Turn on
+<code>Remove missing libraries on scan</code> if you would rather have <code>Scan Eagle</code> clean up on its own.</p>
+<h3 id="en-what-s-new-in-1-8-2">What&#39;s new in 1.8.2</h3>
+<p><strong>Search saw only a fraction of your library.</strong> Eagle returns 200 items when no limit is given, and the
+search modal never gave one — so on a 2,400-item library it fuzzy-matched against 8% of it and
+everything else behaved as though it did not exist. The modal now pre-loads <code>Items to pre-load for search</code> (default 5000) and, beyond that cap, merges in Eagle&#39;s own keyword search as you type, so no
+item is unreachable regardless of library size.</p>
+<p><strong>The search filters were never drawn.</strong> The scope filters (<code>Name</code> / <code>Tags</code> / <code>Notes</code> / <code>Folders</code>), the
+file-type filters and the library item-count header had all been silently missing, because the code that
+inserts them looked for the wrong element. They now render.</p>
+<p><strong>Attachments no longer break at the vault root.</strong> With Obsidian&#39;s <em>Default location for new attachments</em>
+left at <code>Vault folder</code>, saving an image locally produced a <code>//name.png</code> path that Obsidian could not
+resolve. Reported and fixed by <a href="https://github.com/nancyel">@nancyel</a> in
+<a href="https://github.com/johnfkoo951/cmds-eagle/pull/1">#1</a>, then extended to the neighbouring cases.</p>
+<h3 id="en-what-s-new-in-1-8-0">What&#39;s new in 1.8.0</h3>
+<h4 id="en-multiple-eagle-libraries">Multiple Eagle libraries</h4>
+<p>Eagle opens one library at a time, so importing into another one means switching Eagle to it and
+switching back — about a second each way. Set this up under <strong>Settings → Eagle libraries</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Target library</th>
+<th>Behaviour</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Currently open library (default)</td>
+<td>Never switches. Identical to 1.7.x.</td>
+</tr>
+<tr>
+<td>Always a specific library</td>
+<td>Switches to it when needed, then restores if <code>Switch back after import</code> is enabled.</td>
+</tr>
+<tr>
+<td>Ask every time</td>
+<td>Prompts, so one note can hold assets from several libraries.</td>
+</tr>
+</tbody></table>
+<p>If you switch libraries in Eagle yourself while an import is running, your choice wins — the plugin
+checks before restoring and leaves Eagle where you put it.</p>
+<h4 id="en-per-library-folders">Per-library folders</h4>
+<p>Imports can land in a folder rather than the library root. Folder ids belong to their library, so each
+library remembers its own default folder. <strong>Target folder</strong> can also be set to <em>Ask every time</em>, which
+opens a picker that searches full paths (<code>proj/jazz</code> finds <code>Projects/Jazz Blend</code>) and can create a
+folder inline — type <code>Inbox/2026</code> to create <code>2026</code> under <code>Inbox</code>.</p>
+<p>Eagle assigns folders at import time only: its API cannot move an item between folders afterwards. So
+the target is chosen up front, and re-filing means re-importing.</p>
+<h4 id="en-capture-and-link-modes">Capture and link modes</h4>
+<p>Pasting into Eagle previously left a copy in the vault as well, and the reference that was inserted did
+not survive a resync or a move to a second machine. This version changes three things:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Before</th>
+<th>Now</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Staged copy under <code>.eagle-temp/</code></td>
+<td>written on every paste, never deleted — the original ends up in both Eagle and the vault</td>
+<td>removed once Eagle confirms the import</td>
+</tr>
+<tr>
+<td>Inserted path</td>
+<td>absolute <code>file://</code> into the Eagle library, with no alternative</td>
+<td>still the default (<code>cmds-eagle</code>), but <code>photo-info</code> now offers a vault-relative thumbnail + <code>eagle://</code> deep link that survives a resync and renders on other devices</td>
+</tr>
+<tr>
+<td>Thumbnail wait</td>
+<td>hardcoded <code>delay(1000)</code>; large files fall back to a link to the temp file, which is then orphaned</td>
+<td>exponential-backoff polling, then a deep link — never a machine-local path</td>
+</tr>
+</tbody></table>
+<p>Existing installs keep their current behaviour: <code>linkMode</code> defaults to <code>cmds-eagle</code>, so nothing changes
+until you pick another mode.</p>
+<blockquote>
+<p><strong>Deleting in Eagle removes the image from your notes.</strong> That is the intent of the <code>cmds-eagle</code>
+modes — Eagle is the source of truth. Be aware that the image may keep rendering for a while after
+deletion: Obsidian serves it from memory until the window reloads. Run
+<code>Verify Eagle references in current note</code> to see the real state. Choose <code>photo-info</code> instead if you
+want notes to survive deletions in Eagle.</p>
+</blockquote>
+<h4 id="en-link-modes">Link modes</h4>
+<p>Two independent settings: <strong>where the file is stored</strong> (Eagle / vault / cloud / ask) and <strong>what goes into
+the note</strong>. The second one is <code>linkMode</code>:</p>
+<table>
+<thead>
+<tr>
+<th>mode</th>
+<th>note contains</th>
+<th>vault copies</th>
+<th>other devices</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong><code>photo-info</code></strong></td>
+<td>thumbnail + one-line card</td>
+<td>1 thumbnail</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>photo-only</code></td>
+<td>thumbnail</td>
+<td>1 thumbnail</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>link-only</code></td>
+<td><code>eagle://</code> link</td>
+<td>none</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong><code>cmds-eagle</code></strong> (default)</td>
+<td>absolute <code>file://</code> embed + card</td>
+<td>none</td>
+<td>registered desktops only</td>
+</tr>
+<tr>
+<td><code>cmds-eagle-photo-only</code></td>
+<td>absolute <code>file://</code> embed</td>
+<td>none</td>
+<td>registered desktops only</td>
+</tr>
+<tr>
+<td><code>cmds-eagle-photo-link</code></td>
+<td>original image linked to its <code>eagle://</code> item</td>
+<td>none</td>
+<td>registered desktops only</td>
+</tr>
+</tbody></table>
+<pre><code class="language-markdown"># photo-info
+[![hero shot](attachments/eagle/KXYZ01.png)](eagle://item/KXYZ01)
+&gt; `png` · 4.2 MB · 1920×1080 · #ui #ref · [Open in Eagle](eagle://item/KXYZ01)
+
+# photo-only
+[![hero shot](attachments/eagle/KXYZ01.png)](eagle://item/KXYZ01)
+
+# link-only
+[hero shot](eagle://item/KXYZ01)
+</code></pre>
+<p>For the three <code>cmds-eagle*</code> modes, the table describes the equivalent output using the original
+image rather than a vault thumbnail; machine-specific file locations are omitted from these examples.</p>
+<p>The thumbnail is keyed by Eagle item id (so renames and re-inserts are idempotent), the image path is
+relative to the note (so the whole vault syncs), and the card is exactly one line. The <code>cmds-eagle*</code>
+modes embed the original itself, so they need the library to be mounted — see
+<a href="#en-cross-device-reading">Cross-platform sync</a> for sharing one library across desktops. The portable
+photo modes degrade to a plain <code>eagle://</code> link when their thumbnail is unavailable. The original modes
+do the same when the original cannot be resolved — never to a temp-file reference.
+In <code>cmds-eagle-photo-link</code>, clicking the rendered original opens that exact item in Eagle.</p>
+<p>The <code>photo-*</code> output shape is covered by contract tests — see <code>src/canonical.ts</code> and
+<code>tests/canonical.test.ts</code>. Keep them in sync when changing the rendered form.</p>
+<h4 id="en-moving-an-existing-vault-over">Moving an existing vault over</h4>
+<p><code>Move all local images in the vault into Eagle</code> imports every referenced image, rewrites all references
+to the canonical form, and sends the vault copy to the trash. <code>Move this note&#39;s local images into Eagle</code>
+selects images from one note — try that first. References to those images in other notes are also
+rewritten. Both ask for confirmation and report what they touched. The vault-wide operation is
+destructive and can be slow on large vaults; back up first. To send originals to the system trash,
+select that option in Obsidian: the plugin follows Obsidian&#39;s deletion setting.</p>
+<a href="#main" class="back-top">Back to top ↑</a></article></div></div></main><footer class="site-footer"><a href="https://cmdspace.work">CMDSPACE</a><p data-ko="Yohan Koo (CMDSPACE). 내게 필요한 도구를 만들고 나눕니다." data-en="Yohan Koo (CMDSPACE). Build the tools you need. Share what works.">Yohan Koo (CMDSPACE). 내게 필요한 도구를 만들고 나눕니다.</p><a href="https://bio.cmdspace.work">bio.cmdspace.work ↗</a></footer><div id="glossTip" role="tooltip" hidden></div><p class="sr-only" id="feedback" aria-live="polite"></p></body></html>

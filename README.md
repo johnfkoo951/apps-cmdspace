@@ -1,75 +1,119 @@
-# apps-cmdspace
+[![한국어](https://img.shields.io/badge/한국어-README-E985A2)](README.ko.md)
 
-**커맨드스페이스가 만든 앱·도구 쇼케이스 + 카탈로그 모니터링 엔진** → [apps.cmdspace.work](https://apps.cmdspace.work)
+# CMDSPACE Apps
 
-두 가지를 한 레포로 관장한다:
+A curated home for the apps, plugins, and tools built by CMDSPACE.
 
-1. **공개 쇼케이스** — `/DEV`·GitHub의 프로젝트 중 *직접 만든 앱/도구*만 큐레이션해 카테고리별 갤러리로 보여준다.
-2. **상시 모니터링 엔진** — `/DEV` 폴더 + GitHub를 주기 스캔해 (a) featured 앱의 라이브 상태(최근 커밋·릴리스·★·배포 URL 생사)를 자동 갱신하고, (b) 아직 카탈로그에 없는 새 프로젝트를 *후보*로 감지·알림한다.
+**[App gallery](https://apps.cmdspace.work)** | **[Plugin guides](https://apps.cmdspace.work/plugins/)**
 
-데이터 흐름은 apex(cmdspace.work)의 `gallery.json` 패턴과 동일: **`scan.mjs` → `data/apps.json` → 정적 `index.html`이 fetch 렌더.** 큐레이션은 사람이(`catalog/apps.yaml`), 라이브 상태·드리프트 감지는 스캐너가 담당한다.
+## What it does
 
-## 구조
+- **Public gallery:** a bilingual static site with category filters, text search, keyboard quick-find, and light/dark themes.
+- **Catalog monitoring:** an editorial YAML catalog enriched with GitHub release and activity information. Local and scheduled scans identify projects for editorial review, not automatic publication.
 
-```
-catalog/apps.yaml     ← ★ 큐레이션 원천 (사람이 편집): featured + longtail + 카테고리
-catalog/ignore.yaml   ← 알려진 제외 목록 (포크·강의·백업·개인 인프라) — 드리프트 재감지 방지
-scripts/scan.mjs      ← 스캐너: apps.yaml enrich → data/apps.json + candidates.json + CANDIDATES.md
-index.html            ← v4.3 Landing 갤러리 (data/apps.json 렌더)
-data/apps.json        ← 생성물 (커밋됨, Vercel이 서빙)
-data/candidates.json  ← 생성물: 드리프트 리포트
-CANDIDATES.md         ← 사람이 읽는 드리프트 리포트
-.github/workflows/catalog.yml         ← 클라우드 크론: 공개 스캔 → 커밋 → Vercel 자동배포 → 이슈
-launchd/…apps-catalog.plist           ← 로컬 크론: 매일 전체 스캔 + macOS 알림
-```
+The four-plugin documentation area covers **CMDS Eagle**, **CMDS Achmage**, **CMDS Share**, and **CMDS Zotero**. Other gallery entries remain available. Zotero is work in progress, not a finished general release.
 
-## 앱 추가·수정하기 (가장 흔한 작업)
+## Plugin family
 
-1. `catalog/apps.yaml`의 `apps:`에 항목 추가 (또는 기존 항목 수정).
-   - `category`는 `categories:`의 `id` 중 하나. `tier`는 `flagship`(상단) / `featured`.
-   - `repo: owner/name` → GitHub에서 ★·릴리스·최근 push 자동 수집.
-   - `dev_dir: <폴더명>` → 로컬 `/DEV/<폴더>` git에서 마지막 커밋 수집.
-   - `url:` 배포 주소(있으면). `download: releases` → 최신 GitHub 릴리스로 자동 링크(네이티브 앱용).
-2. `npm run scan` → `data/apps.json` 재생성.
-3. 커밋·푸시 → (Vercel Git 연동 시) 자동 배포. 또는 `vercel deploy --prod --yes`.
+| Plugin | Connection | Guide |
+| --- | --- | --- |
+| CMDS Eagle | Bring assets from Eagle into notes | [Overview and guide](https://apps.cmdspace.work/plugins/cmds-eagle/) |
+| CMDS Achmage | Work with selected notes and review AI edits | [Overview and guide](https://apps.cmdspace.work/plugins/cmds-achmage/) |
+| CMDS Share | Publish a reviewed note and manage its link | [Overview and guide](https://apps.cmdspace.work/plugins/cmds-share/) |
+| CMDS Zotero | Connect literature, annotations and citations; in development | [Development guide](https://apps.cmdspace.work/plugins/cmds-zotero/) |
 
-제외할 프로젝트는 `catalog/ignore.yaml`로.
+Manuals start as Markdown in the owner's vault. Reviewed public copies are shared by plugin repositories and this website; generated HTML is not a separate manuscript. See [the publishing workflow](docs/plugin-publishing.md).
 
-## 스캔
+## Local development
 
-```bash
-npm run scan          # --local: 로컬 /DEV git + 비공개 repo + gh (전체)
-npm run scan:public   # --public-only: gh API만 (CI용, 로컬 파일 안 봄)
+Requirements: Node.js 20+, npm, and Python 3 for the local static server. Catalog scans use an authenticated GitHub CLI. Website checks use Python Playwright and Chromium.
+
+```sh
+npm ci
+npm run dev
 ```
 
-산출: `data/apps.json`(렌더 매니페스트) · `data/candidates.json` · `CANDIDATES.md`.
-스캔이 새 *피처 후보*나 *앱 이상(dead-url/archived)*을 찾으면 리포트에 올린다. (오래된 앱 `stale`은 정보성 — 알림 대상 아님.)
+Open `http://localhost:4321`. The gallery needs no application server or database.
 
-## 모니터링 (둘 다)
+## Structure
 
-**로컬 (launchd)** — 매일 09:12, 로컬 `/DEV`·비공개·미푸시까지 전체 탐지 후 새 후보/이상 시 macOS 알림.
-```bash
-./scripts/install-launchd.sh            # 설치
-launchctl kickstart -k gui/$(id -u)/work.cmdspace.apps-catalog   # 즉시 1회
+```text
+catalog/apps.yaml             Editorial catalog: apps, categories and longtail
+catalog/plugins.json          Four-plugin summaries and documentation status
+catalog/ignore.yaml           Known exclusions from discovery
+scripts/scan.mjs               Enrichment and candidate discovery
+scripts/sync-plugin-docs.mjs   Explicit vault-to-public manual export
+scripts/build-plugins.mjs      Static bilingual guide build
+scripts/check-plugins.py       Local website verification
+scripts/stage-public.mjs       Public-only upload staging
+index.html                    App gallery
+plugins/                      Product pages and downloadable manuals
+assets/logos/                 CMDSPACE brand assets
+assets/og/                    Social preview images and templates
+data/apps.json                Generated gallery manifest
+data/candidates.json          Candidate report; not for website upload
+CANDIDATES.md                 Discovery report; not for website upload
+.github/workflows/catalog.yml Scheduled public catalog refresh
+launchd/                      Local scheduled-scanning definition
+```
+
+## Update the catalog
+
+1. Edit `catalog/apps.yaml`, choosing an existing category and a `flagship` or `featured` tier.
+2. Set `repo` to the verified public repository when applicable. `dev_dir` identifies its local project directory.
+3. Set `url` for a website, `docs_url` for a manual, and `download: releases` only when a GitHub release is the intended download channel.
+4. Generate and review the manifest diff. Do not mix unrelated existing changes into the publication.
+
+`enrichApp()` explicitly selects supported fields. New fields must pass through enrichment and rendering. A manifest version, a local tag, a published release and community-directory acceptance are different facts.
+
+```sh
+npm run scan          # Local projects and GitHub; includes private/local discovery
+npm run scan:public   # Public GitHub only
+```
+
+Both scans rewrite `data/apps.json`, `data/candidates.json`, and `CANDIDATES.md`. They are not needed to rebuild manuals. `classifyCandidate()` separates promising projects from backups, event packages and low-signal directories. Add known exclusions to `catalog/ignore.yaml`.
+
+### Scheduled monitoring
+
+The optional local LaunchAgent schedules a full scan for 09:12 local time and can notify about candidates or broken app links. Staleness is informational.
+
+```sh
+./scripts/install-launchd.sh
+launchctl kickstart -k gui/$(id -u)/work.cmdspace.apps-catalog
 ./scripts/install-launchd.sh --uninstall
 ```
 
-**클라우드 (GitHub Actions)** — `.github/workflows/catalog.yml`, 매일 06:17 KST + `catalog/**` 푸시 시. 공개 repo 상태 갱신 → `data/apps.json` 변경 시 커밋(→ Vercel 자동배포) → 드리프트 GitHub 이슈 개설/갱신.
-- Vercel **Git 연동**을 켜면 커밋만으로 배포된다. 아니면 `VERCEL_TOKEN` 시크릿을 넣으면 Action이 CLI로 배포한다.
+The GitHub Actions schedule corresponds to 06:17 KST, with additional catalog-change and manual triggers. Deployment depends on configured Git integration or `VERCEL_TOKEN`; workflow completion alone is not proof of a successful production deployment. The guide build installs no scheduled jobs.
 
-역할 분담: launchd = 로컬 전권 탐지·알림, Action = 공개 상태 신선도·자동 배포·이슈.
+## Build guides
 
-## 배포 (Vercel + Cloudflare)
+Set the actual source paths in `VAULT_ROOT` and `DEV_ROOT`, and a temporary verification directory in `SCRATCH`:
 
-```bash
-vercel link            # 프로젝트 apps-cmdspace 연결
-vercel deploy --prod --yes
+```sh
+node scripts/sync-plugin-docs.mjs --vault-root "$VAULT_ROOT" --repo-root "$DEV_ROOT"
+node scripts/sync-plugin-docs.mjs --vault-root "$VAULT_ROOT" --repo-root "$DEV_ROOT" --write
+npm run build:plugins
+python3 scripts/check-plugins.py --out "$SCRATCH/plugin-web-checks"
 ```
-Cloudflare DNS: `apps` CNAME → `cname.vercel-dns.com`. Vercel 도메인에 `apps.cmdspace.work` 추가.
-OG 이미지 재생성: `bash scripts/build-og.sh` (Chrome headless).
 
-## 큐레이션 판단은 `scan.mjs`의 `classifyCandidate()`에
+Sync stops if an existing repository copy differs from its master. The renderer escapes raw HTML and rejects unsafe link schemes. Builds do not run plugins, upload notes, or publish websites.
 
-새로 감지된 프로젝트를 *피처 후보*로 올릴지 *노이즈로 스킵*할지는 `scripts/scan.mjs`의
-`classifyCandidate()` 휴리스틱이 결정한다. 이 함수가 "모니터가 무엇을 알려줄지"를 정의하므로,
-피처 기준이 바뀌면 여기 신호·패턴·임계값을 조정하면 된다.
+## Deployment
+
+**Do not upload the whole working tree for a documentation release.** Candidate reports and local monitoring sources are not public website content.
+
+```sh
+node scripts/stage-public.mjs --out "$PUBLIC_STAGE"
+```
+
+Use a new directory. Review the entire stage, confirm the existing Vercel project **`apps-cmdspace`**, and obtain approval before deployment. Staging excludes candidate reports and local configuration, and removes known private-repository links from the public manifest. It does not deploy, commit, or push.
+
+The documented DNS record for **apps.cmdspace.work** is an `apps` CNAME to `cname.vercel-dns.com`. No new subdomain is needed for `/plugins/`. Do not assume Git pushes automatically publish; verify the configured deployment path.
+
+`scripts/build-og.sh` renders 1200×630 templates using local Chrome. The plugin template is `assets/og/templates/og-plugins.html`; its image is served at `plugins/assets/og-plugins.png`.
+
+## Author
+
+**Yohan Koo (CMDSPACE)** | [cmdspace.work](https://cmdspace.work)
+
+By CMDSPACE.
