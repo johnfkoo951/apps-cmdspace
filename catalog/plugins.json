@@ -125,8 +125,8 @@
           "문헌 노트와 주석 가져오기",
           "참고문헌 목록과 원문 이동"
         ],
-        "requires": "개발 중 / 데스크톱 Obsidian 1.7.2+ / Zotero + Better BibTeX",
-        "boundary": "일반 배포 완료 제품이 아닙니다. 0.4 에이전트 기능은 별도 개발 중이며, 오늘 참가자용 필수 설치나 실습으로 요구하지 않습니다."
+        "requires": "공개 소스 0.2.0 / 로컬 0.3.0 미공개 / Obsidian 데스크톱 + Zotero + Better BibTeX",
+        "boundary": "이 설명서는 미공개 로컬 0.3 개발본을 다룹니다. 공개 main을 복제하면 0.2.0만 받을 수 있으며 0.3 설치 경로는 아직 없습니다. 일반 배포와 오늘 참가자용 필수 설치를 약속하지 않습니다."
       },
       "en": {
         "role": "Return to the evidence",
@@ -137,11 +137,12 @@
           "Import literature notes and annotations",
           "Build bibliographies and return to sources"
         ],
-        "requires": "In development / desktop Obsidian 1.7.2+ / Zotero + Better BibTeX",
-        "boundary": "Not a finished general release. Agent features for 0.4 are separate work in progress, not required installation or hands-on work for seminar participants."
+        "requires": "Public source 0.2.0 / local 0.3.0 unpublished / desktop Obsidian + Zotero + Better BibTeX",
+        "boundary": "This guide covers unpublished local 0.3 development. Cloning public main yields 0.2.0; there is no public 0.3 installation path yet. It is not a general release or required seminar installation."
       },
       "publicRepo": true,
-      "communityListed": false
+      "communityListed": false,
+      "publicSourceVersion": "0.2.0"
     }
   ]
 }

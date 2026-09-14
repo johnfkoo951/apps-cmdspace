@@ -40,15 +40,15 @@
     },
     {
       "file": "cmds-zotero/guide.ko.md",
-      "sha256": "9730ab40f0bb7ea6a8b7fda7460d6ce1fecf58656ba1dbb7b65725802b075893"
+      "sha256": "2856ea78f63a722ff390b8eae9783a2374405575091f667e0ba3fff11e608b3f"
     },
     {
       "file": "cmds-zotero/guide.en.md",
-      "sha256": "9f366bcc282af0371299a9edd302554437921ce601bc05c86b2342cbe63c1e3b"
+      "sha256": "9ad78ab625b09fb6ba10816bde7de96a8da0d3bf2f297480e3f0d325a4eb18a2"
     },
     {
       "file": "cmds-zotero/index.html",
-      "sha256": "050a47189defcca2898393a01848298f50fbe51ac3705cb5a5833c831a6f55f7"
+      "sha256": "dc80ed30a7db0ceb37dac455057d310e9330f2c46346572ff7c22f6ad9ad6e78"
     }
   ]
 }
