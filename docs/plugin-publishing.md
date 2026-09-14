@@ -60,3 +60,7 @@ Permanent product guides live under `apps.cmdspace.work/plugins/`. The dated Sep
 ## Verification scope
 
 `check-plugins.py` tests the actual generated website: 400/1440px × KO/EN × light/dark, local links and anchors, duplicate IDs, theme/language switching, keyboard glossary, direct English heading links, JavaScript-free reading and blocked-storage fallback. It does **not** establish live plugin execution, external repository availability, Community registration, or production deployment.
+
+## Git-integrated Vercel builds
+
+The Apps project also has a live Git integration. `vercel.json` runs `npm run build:public` and serves only the generated `public/` directory, applying the same allowlist to automatic deployments. The committed HTML guides are already built; this step needs no vault access. The source working tree and candidate reports are not served. A direct upload stage removes those source-build settings because it contains only ready-to-serve files, not npm build sources.

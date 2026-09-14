@@ -92,3 +92,7 @@ OG 템플릿은 `assets/og/templates/`에 있으며 기존 `scripts/build-og.sh`
 ## 만든 사람
 
 Yohan Koo (CMDSPACE) | https://cmdspace.work
+
+### Git 자동 배포의 공개 범위
+
+Git 연동도 확인했습니다. `vercel.json`의 `npm run build:public`이 공개 allowlist만 `public/`에 구성하며 Vercel은 그 디렉터리만 제공합니다. 볼트 원문이나 후보 보고서를 자동 배포하지 않습니다.

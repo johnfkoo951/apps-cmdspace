@@ -10,7 +10,8 @@
     "dev": "python3 -m http.server 4321",
     "build:plugins": "node scripts/build-plugins.mjs",
     "sync:plugins": "node scripts/sync-plugin-docs.mjs",
-    "stage:public": "node scripts/stage-public.mjs"
+    "stage:public": "node scripts/stage-public.mjs",
+    "build:public": "node scripts/stage-public.mjs --out public"
   },
   "dependencies": {
     "marked": "18.0.13",

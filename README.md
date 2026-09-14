@@ -108,7 +108,7 @@ node scripts/stage-public.mjs --out "$PUBLIC_STAGE"
 
 Use a new directory. Review the entire stage, confirm the existing Vercel project **`apps-cmdspace`**, and obtain approval before deployment. Staging excludes candidate reports and local configuration, and removes known private-repository links from the public manifest. It does not deploy, commit, or push.
 
-The documented DNS record for **apps.cmdspace.work** is an `apps` CNAME to `cname.vercel-dns.com`. No new subdomain is needed for `/plugins/`. Do not assume Git pushes automatically publish; verify the configured deployment path.
+The documented DNS record for **apps.cmdspace.work** is an `apps` CNAME to `cname.vercel-dns.com`. No new subdomain is needed for `/plugins/`. The project has a verified Git integration. Its Vercel build runs `npm run build:public` and serves only `public/`, applying the same file allowlist to automatic deployments.
 
 `scripts/build-og.sh` renders 1200×630 templates using local Chrome. The plugin template is `assets/og/templates/og-plugins.html`; its image is served at `plugins/assets/og-plugins.png`.
 

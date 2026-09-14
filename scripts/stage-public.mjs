@@ -30,4 +30,8 @@ mkdirSync(OUT,{recursive:true});
 for(const name of files){const dest=join(OUT,name);mkdirSync(dirname(dest),{recursive:true});copyFileSync(join(ROOT,name),dest);}
 mkdirSync(join(OUT,'data'),{recursive:true});
 writeFileSync(join(OUT,'data/apps.json'),JSON.stringify(appData,null,2)+'\n');
+// A ready-to-upload stage has no npm sources; remove source-build settings.
+const config=JSON.parse(readFileSync(join(ROOT,'vercel.json'),'utf8'));
+delete config.buildCommand;delete config.outputDirectory;
+writeFileSync(join(OUT,'vercel.json'),JSON.stringify(config,null,2)+'\n');
 console.log(JSON.stringify({output:OUT,files:files.length+1,removedPrivateRepoLinks:hidden,excluded:['candidate reports','local catalog source','scanners','private notes','node_modules','.git','.vercel'],deployment:'NOT performed'},null,2));
