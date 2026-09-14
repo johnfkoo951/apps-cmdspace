@@ -7,9 +7,14 @@
   "scripts": {
     "scan": "node scripts/scan.mjs --local",
     "scan:public": "node scripts/scan.mjs --public-only",
-    "dev": "python3 -m http.server 4321"
+    "dev": "python3 -m http.server 4321",
+    "build:plugins": "node scripts/build-plugins.mjs",
+    "sync:plugins": "node scripts/sync-plugin-docs.mjs",
+    "stage:public": "node scripts/stage-public.mjs",
+    "build:public": "node scripts/stage-public.mjs --out public"
   },
   "dependencies": {
+    "marked": "18.0.13",
     "yaml": "^2.6.1"
   }
 }

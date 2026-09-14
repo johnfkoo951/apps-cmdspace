@@ -13,18 +13,19 @@
 //   --fail-on-candidates                         exit 20 when NEW feature-candidates appear
 //
 // Env:
-//   DEV_ROOT   override local DEV workspace path (default /Users/yohankoo/DEV)
+//   DEV_ROOT   override local DEV workspace path (default ~/DEV)
 //   GH_USER    GitHub owner for repo enumeration (default johnfkoo951)
 
 import { readFileSync, writeFileSync, existsSync, readdirSync, statSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { homedir } from 'node:os';
 import { parse as parseYAML } from 'yaml';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
-const DEV_ROOT = process.env.DEV_ROOT || '/Users/yohankoo/DEV';
+const DEV_ROOT = process.env.DEV_ROOT || join(homedir(), 'DEV');
 const GH_USER = process.env.GH_USER || 'johnfkoo951';
 
 const ARGV = process.argv.slice(2);
@@ -169,6 +170,7 @@ async function enrichApp(app) {
     tags: app.tags || [],
     status: app.status || '',            // editorial status from apps.yaml (not overwritten)
     url: app.url || '',
+    docs_url: app.docs_url || '',
     download_url,
     repo_url: repoUrl(app.repo) || gh?.url || '',
     // ── live fields ──

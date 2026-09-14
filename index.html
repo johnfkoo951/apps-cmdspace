@@ -51,7 +51,7 @@
 <style>
 :root {
   color-scheme: light;
-  --font-sans: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Pretendard Variable', 'Pretendard', 'Helvetica Neue', Arial, sans-serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Pretendard Variable', 'Pretendard', system-ui, sans-serif;
   --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard Variable', 'Pretendard', sans-serif;
   --font-mono: ui-monospace, 'SF Mono', 'Menlo', monospace;
 
@@ -97,6 +97,7 @@ header {
 .brand img { width: 28px; height: 28px; border-radius: 50%; object-fit: contain; }
 .brand small { color: var(--text-faint); font-weight: 500; }
 .controls { display: flex; align-items: center; gap: 8px; }
+.plugins-entry { margin-top: 20px; text-decoration: none; }
 .ctl {
   height: 34px; padding: 0 12px; display: inline-flex; align-items: center; gap: 6px;
   border: 1px solid var(--border); border-radius: 999px; background: var(--surface);
@@ -308,6 +309,7 @@ mark { background: transparent; color: var(--accent); font-weight: 700; }
 <section class="hero">
   <h1 id="heroTitle">커맨드스페이스가<br><span class="accent-word">만든 것들</span></h1>
   <p class="lede" id="heroLede">직접 만든 앱·도구를 한곳에서. macOS 앱부터 Obsidian 플러그인, 웹 플랫폼, AI 개발 도구, Claude Code 생태계까지.</p>
+  <a class="ctl plugins-entry" href="/plugins/" id="pluginsNav">플러그인 설명서</a>
   <div class="stat-strip" id="statStrip">
     <div class="stat"><b>–</b><span>앱</span></div>
     <div class="stat"><b>–</b><span>카테고리</span></div>
@@ -430,6 +432,7 @@ function cardHTML(app) {
   // Action footer — each link names its destination so you know what opens BEFORE clicking:
   // web = globe + host, download = ⬇ + version, source = GitHub mark + "GitHub".
   const acts = [];
+  if (app.docs_url) acts.push(`<a class="act web" href="${esc(app.docs_url)}" title="${LANG === 'ko' ? '소개와 사용설명서' : 'Overview and user guide'}">${ICON.web}<span>${LANG === 'ko' ? '소개와 사용설명서' : 'Overview & guide'}</span></a>`);
   if (app.url) acts.push(`<a class="act web" href="${esc(app.url)}" target="_blank" rel="noopener" title="${t.open}: ${esc(app.url)}">${ICON.web}<span class="host">${esc(hostOf(app.url))}</span></a>`);
   if (app.download_url) acts.push(`<a class="act" href="${esc(app.download_url)}" target="_blank" rel="noopener" title="${t.download}: ${esc(app.download_url)}">${ICON.dl}${esc(app.latest_release || t.download)}</a>`);
   if (app.repo_url) acts.push(`<a class="act" href="${esc(app.repo_url)}" target="_blank" rel="noopener" title="${esc(app.repo_url)}">${ICON.gh}GitHub</a>`);
@@ -453,6 +456,7 @@ function cardHTML(app) {
 // Static chrome (hero, placeholders, labels, footer text) — applies instantly, no data needed.
 function applyChrome() {
   const t = I18N[LANG];
+  document.getElementById('pluginsNav').textContent = LANG === 'ko' ? '플러그인 설명서' : 'Plugin guides';
   document.title = t.docTitle;
   document.getElementById('heroTitle').innerHTML = t.heroTitle;
   document.getElementById('heroLede').textContent = t.heroLede;

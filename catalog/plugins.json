@@ -1,0 +1,147 @@
+{
+  "updated": "2026-09-14",
+  "products": [
+    {
+      "slug": "cmds-eagle",
+      "name": "CMDS Eagle",
+      "repo": "johnfkoo951/cmds-eagle",
+      "directory": "cmds-eagle",
+      "sourceVersion": "1.8.4",
+      "stage": "source-checked",
+      "ko": {
+        "role": "자료를 연결하다",
+        "headline": "모아 둔 이미지가\n노트의 재료가 된다.",
+        "description": "Eagle의 에셋을 Obsidian에서 검색하고 노트에 넣습니다. 저장 위치와 링크 방식을 선택해 내 작업 환경에 맞게 연결합니다.",
+        "tasks": [
+          "현재 Eagle 라이브러리 검색",
+          "노트에 이미지와 에셋 삽입",
+          "붙여넣기, 가져오기와 클라우드 업로드"
+        ],
+        "requires": "데스크톱 Obsidian 1.6.6+ / 실행 중인 Eagle",
+        "boundary": "로컬 경로 링크는 다른 컴퓨터에서 바로 열리지 않을 수 있습니다. 공유 목적이라면 링크 방식과 원본 접근성을 먼저 확인하세요.",
+        "screenshotCaption": "저장 위치 선택 화면. 클라우드 항목은 설정한 제공자에 따라 달라집니다. 기존 공개 캡처의 항목을 현재 소스와 대조했습니다."
+      },
+      "en": {
+        "role": "Connect your assets",
+        "headline": "Collected images.\nWorking knowledge.",
+        "description": "Find Eagle assets from Obsidian and bring them into your notes. Choose storage destinations and link formats that fit your workspace.",
+        "tasks": [
+          "Search the active Eagle library",
+          "Embed images and assets in a note",
+          "Paste, import and upload assets to the cloud"
+        ],
+        "requires": "Desktop Obsidian 1.6.6+ / Eagle running",
+        "boundary": "Local-path links may not work on another computer. Check your link format and access to the original before sharing.",
+        "screenshotCaption": "Choose where to save an image. The cloud option follows the configured provider. This existing public capture was checked against the current source labels."
+      },
+      "screenshot": "eagle-storage-choice.png",
+      "publicRepo": true,
+      "releaseVersion": "1.8.4",
+      "communityListed": true
+    },
+    {
+      "slug": "cmds-achmage",
+      "name": "CMDS Achmage",
+      "repo": "CMDSPACE-DEV/CMDS-Achmage",
+      "directory": "CMDS-Achmage",
+      "sourceVersion": "1.1.0",
+      "stage": "source-checked",
+      "ko": {
+        "role": "노트를 바탕으로 작업하다",
+        "headline": "AI에게 질문하기 전에,\n내 노트를 건넨다.",
+        "description": "노트와 폴더를 대화의 맥락으로 지정하고, 편집 제안을 검토해 문서에 반영합니다. 생성과 검토가 볼트 안에서 이어집니다.",
+        "tasks": [
+          "노트와 폴더를 지정한 대화",
+          "선택한 문장과 문서 편집 검토",
+          "이미지 생성과 문서 작업 확장"
+        ],
+        "requires": "데스크톱 Obsidian 1.11.4+ / 사용할 AI 제공자 설정",
+        "boundary": "활성 노트가 기본으로 맥락에 포함될 수 있습니다. MCP 실행은 Full auto가 기본이므로 외부 도구 연결 전 Per-tool approvals를 확인하세요. 제공자별 비용은 별도이며 Plan 인증은 실험 기능입니다."
+      },
+      "en": {
+        "role": "Work from your notes",
+        "headline": "Give AI your context.\nKeep the final say.",
+        "description": "Bring selected notes and folders into a conversation, review proposed edits, and apply the changes you choose. Generation and review stay connected to your vault.",
+        "tasks": [
+          "Chat with selected notes and folders",
+          "Review inline and document edits",
+          "Extend work with image generation"
+        ],
+        "requires": "Desktop Obsidian 1.11.4+ / configured AI provider",
+        "boundary": "The active note may be included by default. MCP execution defaults to Full auto: check Per-tool approvals before connecting tools. Provider costs are separate, and Plan authentication is experimental."
+      },
+      "publicRepo": true,
+      "releaseVersion": "1.1.0",
+      "communityListed": true
+    },
+    {
+      "slug": "cmds-share",
+      "name": "CMDS Share",
+      "repo": "johnfkoo951/cmds-share",
+      "directory": "cmds-share",
+      "sourceVersion": "2.1.1",
+      "stage": "source-checked",
+      "ko": {
+        "role": "완성한 노트를 건네다",
+        "headline": "볼트 전체가 아니라,\n노트 하나를 공유한다.",
+        "description": "선택한 노트를 웹페이지로 내보내고 공유 링크를 관리합니다. 공개 위치와 보호 기능은 선택한 백엔드에 맞춰 결정합니다.",
+        "tasks": [
+          "노트를 웹페이지로 공유",
+          "링크 복사와 공유 목록 관리",
+          "백엔드별 지원 범위에 맞춘 보호 설정"
+        ],
+        "requires": "Obsidian 1.7.2+ / 데스크톱 또는 모바일 / 게시할 서비스 계정",
+        "boundary": "기본 GitHub Pages 설정은 공개 저장소를 만듭니다. 암호화한 노트의 이미지도 이미지 자체가 암호화되는 것은 아닙니다."
+      },
+      "en": {
+        "role": "Share a finished note",
+        "headline": "Share one note.\nNot your whole vault.",
+        "description": "Publish a selected note as a web page and manage its link. Choose a hosting backend and the protection features that backend actually supports.",
+        "tasks": [
+          "Publish a note as a web page",
+          "Copy links and manage shared notes",
+          "Use backend-specific protection settings"
+        ],
+        "requires": "Obsidian 1.7.2+ / desktop or mobile / hosting account",
+        "boundary": "The default GitHub Pages setup creates a public repository. Images are not themselves encrypted, even when note encryption is enabled."
+      },
+      "publicRepo": true,
+      "releaseVersion": "2.1.1",
+      "communityListed": true
+    },
+    {
+      "slug": "cmds-zotero",
+      "name": "CMDS Zotero",
+      "repo": "johnfkoo951/cmds-zotero",
+      "directory": "cmds-zotero",
+      "sourceVersion": "0.3.0",
+      "stage": "development",
+      "ko": {
+        "role": "문헌으로 돌아가다",
+        "headline": "내 노트의 근거를\n문헌과 다시 잇는다.",
+        "description": "Zotero의 문헌과 주석을 노트로 가져오고 인용과 원문 이동을 연결하는 개발 중 플러그인입니다. 현재 구현과 검증 대기 항목을 나누어 안내합니다.",
+        "tasks": [
+          "문헌 검색과 인용 삽입",
+          "문헌 노트와 주석 가져오기",
+          "참고문헌 목록과 원문 이동"
+        ],
+        "requires": "개발 중 / 데스크톱 Obsidian 1.7.2+ / Zotero + Better BibTeX",
+        "boundary": "일반 배포 완료 제품이 아닙니다. 0.4 에이전트 기능은 별도 개발 중이며, 오늘 참가자용 필수 설치나 실습으로 요구하지 않습니다."
+      },
+      "en": {
+        "role": "Return to the evidence",
+        "headline": "Keep your notes\nconnected to their sources.",
+        "description": "A plugin in development for importing Zotero literature and annotations, inserting citations, and returning to the original source. Implemented features and pending validation are described separately.",
+        "tasks": [
+          "Search literature and insert citations",
+          "Import literature notes and annotations",
+          "Build bibliographies and return to sources"
+        ],
+        "requires": "In development / desktop Obsidian 1.7.2+ / Zotero + Better BibTeX",
+        "boundary": "Not a finished general release. Agent features for 0.4 are separate work in progress, not required installation or hands-on work for seminar participants."
+      },
+      "publicRepo": true,
+      "communityListed": false
+    }
+  ]
+}
