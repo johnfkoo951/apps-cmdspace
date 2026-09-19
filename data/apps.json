@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T23:20:14.517Z",
+  "generated_at": "2026-09-19T23:10:33.580Z",
   "site": {
     "title": "CMDSPACE Apps",
     "tagline_ko": "커맨드스페이스가 만든 것들",
@@ -226,7 +226,7 @@
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/cmds-eagle",
       "last_commit": "2026-09-14",
-      "stars": 60,
+      "stars": 61,
       "latest_release": "1.8.4",
       "url_alive": null,
       "is_private": false,
@@ -343,8 +343,8 @@
       "docs_url": "",
       "download_url": "",
       "repo_url": "https://github.com/getagentseal/codeburn",
-      "last_commit": "2026-09-18",
-      "stars": 11089,
+      "last_commit": "2026-09-19",
+      "stars": 11112,
       "latest_release": "desktop-v0.9.24",
       "url_alive": null,
       "is_private": false,
