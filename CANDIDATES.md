@@ -1,6 +1,6 @@
 # 카탈로그 드리프트 리포트
 
-> 생성: 2026-09-22T23:36:40.678Z · 모드: `public-only` · 카탈로그 37개 · 신규후보 10개 · 이상 0건
+> 생성: 2026-09-23T23:44:47.446Z · 모드: `public-only` · 카탈로그 37개 · 신규후보 10개 · 이상 0건
 
 이 파일은 `scripts/scan.mjs`가 자동 생성합니다. 새 프로젝트는 `catalog/apps.yaml`(피처링) 또는 `catalog/ignore.yaml`(제외)로 옮기면 다음 스캔부터 사라집니다.
 
@@ -8,16 +8,16 @@
 
 | 프로젝트 | 소스 | 최근 커밋 | 신호 | 판단 이유 |
 |---|---|---|---|---|
-| `awesome-jev` | github | 2026-09-20 | git | 최근 2일 내 커밋된 활성 git 프로젝트 |
-| `cmds-share-server` | github | 2026-09-14 | git | 최근 8일 내 커밋된 활성 git 프로젝트 |
-| `cmds-vault` | github | 2026-09-21 | git | 최근 1일 내 커밋된 활성 git 프로젝트 |
-| `cmux-tips` | github | 2026-08-23 | git | 최근 30일 내 커밋된 활성 git 프로젝트 |
-| `jisan-blog` | github | 2026-09-04 | git | 최근 18일 내 커밋된 활성 git 프로젝트 |
-| `johnfkoo951` | github | 2026-09-16 | git | 최근 6일 내 커밋된 활성 git 프로젝트 |
-| `obsidian-releases` | github | 2026-08-21 | git | 최근 32일 내 커밋된 활성 git 프로젝트 |
-| `obsidian-shared-notes` | github | 2026-09-14 | git | 최근 8일 내 커밋된 활성 git 프로젝트 |
-| `openbot` | github | 2026-08-20 | git | 최근 33일 내 커밋된 활성 git 프로젝트 |
-| `plaud-note-manager-community` | github | 2026-09-16 | git | 최근 6일 내 커밋된 활성 git 프로젝트 |
+| `awesome-jev` | github | 2026-09-20 | git | 최근 3일 내 커밋된 활성 git 프로젝트 |
+| `cmds-share-server` | github | 2026-09-14 | git | 최근 9일 내 커밋된 활성 git 프로젝트 |
+| `cmds-vault` | github | 2026-09-21 | git | 최근 2일 내 커밋된 활성 git 프로젝트 |
+| `cmux-tips` | github | 2026-08-23 | git | 최근 31일 내 커밋된 활성 git 프로젝트 |
+| `jisan-blog` | github | 2026-09-04 | git | 최근 19일 내 커밋된 활성 git 프로젝트 |
+| `johnfkoo951` | github | 2026-09-16 | git | 최근 7일 내 커밋된 활성 git 프로젝트 |
+| `obsidian-releases` | github | 2026-08-21 | git | 최근 33일 내 커밋된 활성 git 프로젝트 |
+| `obsidian-shared-notes` | github | 2026-09-14 | git | 최근 9일 내 커밋된 활성 git 프로젝트 |
+| `openbot` | github | 2026-08-20 | git | 최근 34일 내 커밋된 활성 git 프로젝트 |
+| `plaud-note-manager-community` | github | 2026-09-16 | git | 최근 7일 내 커밋된 활성 git 프로젝트 |
 
 ## ⚠️ 기존 앱 이상 (알림 대상)
 
