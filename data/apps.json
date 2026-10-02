@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T00:35:11.062Z",
+  "generated_at": "2026-10-02T00:50:07.175Z",
   "site": {
     "title": "CMDSPACE Apps",
     "tagline_ko": "커맨드스페이스가 만든 것들",
@@ -343,8 +343,8 @@
       "docs_url": "",
       "download_url": "",
       "repo_url": "https://github.com/getagentseal/codeburn",
-      "last_commit": "2026-09-30",
-      "stars": 11289,
+      "last_commit": "2026-10-01",
+      "stars": 11299,
       "latest_release": "mac-v0.9.25",
       "url_alive": null,
       "is_private": false,
@@ -488,7 +488,7 @@
       "docs_url": "https://apps.cmdspace.work/plugins/cmds-achmage/",
       "download_url": "",
       "repo_url": "https://github.com/CMDSPACE-DEV/CMDS-Achmage",
-      "last_commit": "2026-09-15",
+      "last_commit": "2026-10-01",
       "stars": 6,
       "latest_release": "1.2.0",
       "url_alive": null,
