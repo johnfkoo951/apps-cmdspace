@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T00:32:12.277Z",
+  "generated_at": "2026-10-03T23:47:43.205Z",
   "site": {
     "title": "CMDSPACE Apps",
     "tagline_ko": "커맨드스페이스가 만든 것들",
@@ -343,8 +343,8 @@
       "docs_url": "",
       "download_url": "",
       "repo_url": "https://github.com/getagentseal/codeburn",
-      "last_commit": "2026-10-02",
-      "stars": 11312,
+      "last_commit": "2026-10-03",
+      "stars": 11324,
       "latest_release": "mac-v0.9.25",
       "url_alive": null,
       "is_private": false,
@@ -553,7 +553,7 @@
       "is_private": false,
       "is_archived": false,
       "dirty": null,
-      "stale": false
+      "stale": true
     },
     {
       "name": "vault-map",
