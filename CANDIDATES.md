@@ -1,6 +1,6 @@
 # 카탈로그 드리프트 리포트
 
-> 생성: 2026-10-02T00:50:07.175Z · 모드: `public-only` · 카탈로그 37개 · 신규후보 12개 · 이상 0건
+> 생성: 2026-10-03T00:32:12.277Z · 모드: `public-only` · 카탈로그 37개 · 신규후보 12개 · 이상 0건
 
 이 파일은 `scripts/scan.mjs`가 자동 생성합니다. 새 프로젝트는 `catalog/apps.yaml`(피처링) 또는 `catalog/ignore.yaml`(제외)로 옮기면 다음 스캔부터 사라집니다.
 
@@ -8,18 +8,18 @@
 
 | 프로젝트 | 소스 | 최근 커밋 | 신호 | 판단 이유 |
 |---|---|---|---|---|
-| `archify` | github | 2026-10-01 | git | 최근 1일 내 커밋된 활성 git 프로젝트 |
-| `awesome-jev` | github | 2026-09-21 | git | 최근 11일 내 커밋된 활성 git 프로젝트 |
-| `cmds-share-server` | github | 2026-09-15 | git | 최근 17일 내 커밋된 활성 git 프로젝트 |
-| `cmds-vault` | github | 2026-09-22 | git | 최근 10일 내 커밋된 활성 git 프로젝트 |
-| `cmux-tips` | github | 2026-08-24 | git | 최근 39일 내 커밋된 활성 git 프로젝트 |
-| `jisan-blog` | github | 2026-09-05 | git | 최근 27일 내 커밋된 활성 git 프로젝트 |
-| `johnfkoo951` | github | 2026-09-17 | git | 최근 15일 내 커밋된 활성 git 프로젝트 |
-| `obs-share-test` | github | 2026-10-01 | git | 최근 1일 내 커밋된 활성 git 프로젝트 |
-| `obsidian-releases` | github | 2026-08-21 | git | 최근 42일 내 커밋된 활성 git 프로젝트 |
-| `obsidian-shared-notes` | github | 2026-09-15 | git | 최근 17일 내 커밋된 활성 git 프로젝트 |
-| `openbot` | github | 2026-08-21 | git | 최근 42일 내 커밋된 활성 git 프로젝트 |
-| `plaud-note-manager-community` | github | 2026-09-17 | git | 최근 15일 내 커밋된 활성 git 프로젝트 |
+| `archify` | github | 2026-10-01 | git | 최근 2일 내 커밋된 활성 git 프로젝트 |
+| `awesome-jev` | github | 2026-09-21 | git | 최근 12일 내 커밋된 활성 git 프로젝트 |
+| `cmds-share-server` | github | 2026-09-15 | git | 최근 18일 내 커밋된 활성 git 프로젝트 |
+| `cmds-vault` | github | 2026-09-22 | git | 최근 11일 내 커밋된 활성 git 프로젝트 |
+| `cmux-tips` | github | 2026-08-24 | git | 최근 40일 내 커밋된 활성 git 프로젝트 |
+| `jisan-blog` | github | 2026-09-05 | git | 최근 28일 내 커밋된 활성 git 프로젝트 |
+| `johnfkoo951` | github | 2026-09-17 | git | 최근 16일 내 커밋된 활성 git 프로젝트 |
+| `obs-share-test` | github | 2026-10-01 | git | 최근 2일 내 커밋된 활성 git 프로젝트 |
+| `obsidian-releases` | github | 2026-08-21 | git | 최근 43일 내 커밋된 활성 git 프로젝트 |
+| `obsidian-shared-notes` | github | 2026-09-15 | git | 최근 18일 내 커밋된 활성 git 프로젝트 |
+| `openbot` | github | 2026-08-21 | git | 최근 43일 내 커밋된 활성 git 프로젝트 |
+| `plaud-note-manager-community` | github | 2026-09-17 | git | 최근 16일 내 커밋된 활성 git 프로젝트 |
 
 ## ⚠️ 기존 앱 이상 (알림 대상)
 
