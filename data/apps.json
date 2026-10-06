@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-04T23:58:27.808Z",
+  "generated_at": "2026-10-06T01:46:21.175Z",
   "site": {
     "title": "CMDSPACE Apps",
     "tagline_ko": "커맨드스페이스가 만든 것들",
@@ -343,8 +343,8 @@
       "docs_url": "",
       "download_url": "",
       "repo_url": "https://github.com/getagentseal/codeburn",
-      "last_commit": "2026-10-04",
-      "stars": 11338,
+      "last_commit": "2026-10-05",
+      "stars": 11344,
       "latest_release": "mac-v0.9.25",
       "url_alive": null,
       "is_private": false,
@@ -754,7 +754,7 @@
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/cmds-system-files",
       "last_commit": "2026-09-21",
-      "stars": 274,
+      "stars": 275,
       "latest_release": "v4.12.0",
       "url_alive": true,
       "is_private": false,
