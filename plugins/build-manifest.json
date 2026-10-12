@@ -1,7 +1,43 @@
 {
-  "updated": "2026-09-14",
+  "updated": "2026-10-12",
   "renderer": "marked@18.0.13",
   "outputs": [
+    {
+      "file": "cmds-zotero/guide.ko.md",
+      "sha256": "103cec15ac0e31ac0101abda2bee006118bd5203627be2be0e0746c0960ce16c"
+    },
+    {
+      "file": "cmds-zotero/guide.en.md",
+      "sha256": "209c70cd40458c34064e43e9ff31f65df60e4ac9b1d1a6975c51a1e9a90b778b"
+    },
+    {
+      "file": "cmds-zotero/index.html",
+      "sha256": "be41c49684457c517858ed4e9726a2cc7c30f461f7f9d160d7bc4e72a9bbeaf0"
+    },
+    {
+      "file": "cmds-achmage/guide.ko.md",
+      "sha256": "5e254e63c412b88ed232bc631606fb5fd88d3597fb77a18430aba9b2877734e9"
+    },
+    {
+      "file": "cmds-achmage/guide.en.md",
+      "sha256": "a6a14212e88b9b04b65b18bf917fa2a52dfef69a52de96ab21f2d68106694d3d"
+    },
+    {
+      "file": "cmds-achmage/index.html",
+      "sha256": "4e4c4782ef70576f33342249cae9eb4834a664ccae94523622338d136587cf96"
+    },
+    {
+      "file": "cmds-share/guide.ko.md",
+      "sha256": "6a82a4eb618e596901d5c31c74d8ade57450dd76e83311c6a0c8fc97ef09044a"
+    },
+    {
+      "file": "cmds-share/guide.en.md",
+      "sha256": "6b77fb6087bf5be7c015376759f2eb997b3c16e5510193eb9b4e585f9791821b"
+    },
+    {
+      "file": "cmds-share/index.html",
+      "sha256": "2f1f514cc1aa91374cae7328c85cc508198403f4f4a3ce4153e8bb66f4ae13e9"
+    },
     {
       "file": "cmds-eagle/guide.ko.md",
       "sha256": "aec32702aebf4475b3ac5d03d22625284e49b2cc8cfb433177e080b1c0035ae7"
@@ -12,43 +48,7 @@
     },
     {
       "file": "cmds-eagle/index.html",
-      "sha256": "83d53b99d8f223c7e552ad795278debfb19e44533d7c9f7ecd17218393585948"
-    },
-    {
-      "file": "cmds-achmage/guide.ko.md",
-      "sha256": "f823dc2781c40799407ec470529870561efa8152b4b10382d7dcea6e3f062919"
-    },
-    {
-      "file": "cmds-achmage/guide.en.md",
-      "sha256": "205ea5562243467f225161f152e6ec80455637302a7f34d763e15e0e1aff6fb5"
-    },
-    {
-      "file": "cmds-achmage/index.html",
-      "sha256": "7ca36eb5a8c9c55bb4ee988091bda82360f07fd3192623f1d53504576f6832b6"
-    },
-    {
-      "file": "cmds-share/guide.ko.md",
-      "sha256": "610fe5c3505447ca8ed45be8bd4a56bf512d30980e23afcd638d863e080183a9"
-    },
-    {
-      "file": "cmds-share/guide.en.md",
-      "sha256": "5da6cd9fdfe18f812a883d699dba61789e90cbbf0a90e5fc0ad85838e95a4287"
-    },
-    {
-      "file": "cmds-share/index.html",
-      "sha256": "73bcf70601ec8d2a59be4e693faac975b5c9d70115b348d646be65293e7e3191"
-    },
-    {
-      "file": "cmds-zotero/guide.ko.md",
-      "sha256": "2856ea78f63a722ff390b8eae9783a2374405575091f667e0ba3fff11e608b3f"
-    },
-    {
-      "file": "cmds-zotero/guide.en.md",
-      "sha256": "9ad78ab625b09fb6ba10816bde7de96a8da0d3bf2f297480e3f0d325a4eb18a2"
-    },
-    {
-      "file": "cmds-zotero/index.html",
-      "sha256": "dc80ed30a7db0ceb37dac455057d310e9330f2c46346572ff7c22f6ad9ad6e78"
+      "sha256": "d0ccb5d3fa3ea3069d4b63b89ab059ac8b2d7daaed34e54b21f35921c3093ecb"
     }
   ]
 }
