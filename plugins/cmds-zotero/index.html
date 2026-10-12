@@ -1,556 +1,610 @@
 <!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CMDS Zotero | CMDSPACE Plugins</title><meta name="description" content="Zotero의 문헌과 주석을 노트로 가져오고 인용과 원문 이동을 연결하는 개발 중 플러그인입니다. 현재 구현과 검증 대기 항목을 나누어 안내합니다."><link rel="canonical" href="https://apps.cmdspace.work/plugins/cmds-zotero/">
-<meta property="og:type" content="website"><meta property="og:site_name" content="CMDSPACE"><meta property="og:title" content="CMDS Zotero | CMDSPACE Plugins"><meta property="og:description" content="Zotero의 문헌과 주석을 노트로 가져오고 인용과 원문 이동을 연결하는 개발 중 플러그인입니다. 현재 구현과 검증 대기 항목을 나누어 안내합니다."><meta property="og:url" content="https://apps.cmdspace.work/plugins/cmds-zotero/"><meta property="og:image" content="https://apps.cmdspace.work/plugins/assets/og-plugins.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="CMDSPACE Plugins: Eagle, Achmage, Share, Zotero"><meta property="og:locale" content="ko_KR"><meta property="og:locale:alternate" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="CMDS Zotero | CMDSPACE Plugins"><meta name="twitter:description" content="Zotero의 문헌과 주석을 노트로 가져오고 인용과 원문 이동을 연결하는 개발 중 플러그인입니다. 현재 구현과 검증 대기 항목을 나누어 안내합니다."><meta name="twitter:image" content="https://apps.cmdspace.work/plugins/assets/og-plugins.png"><meta name="twitter:image:alt" content="CMDSPACE Plugins"><meta name="theme-color" content="#134538">
+<title>CMDS Zotero | CMDSPACE Obsidian Plugins</title><meta name="description" content="Zotero 리더로 읽고 표시한 논문을 문헌 노트로 보냅니다. 메타데이터, 하이라이트와 메모, Zotero 노트, 인용과 원문 링크를 모으고 내가 쓴 글은 그대로 둡니다."><link rel="canonical" href="https://apps.cmdspace.work/plugins/cmds-zotero/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="CMDSPACE"><meta property="og:title" content="CMDS Zotero | CMDSPACE Obsidian Plugins"><meta property="og:description" content="Zotero 리더로 읽고 표시한 논문을 문헌 노트로 보냅니다. 메타데이터, 하이라이트와 메모, Zotero 노트, 인용과 원문 링크를 모으고 내가 쓴 글은 그대로 둡니다."><meta property="og:url" content="https://apps.cmdspace.work/plugins/cmds-zotero/"><meta property="og:image" content="https://apps.cmdspace.work/plugins/assets/og-plugins.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="CMDSPACE Plugins: Eagle, Achmage, Share, Zotero"><meta property="og:locale" content="ko_KR"><meta property="og:locale:alternate" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="CMDS Zotero | CMDSPACE Obsidian Plugins"><meta name="twitter:description" content="Zotero 리더로 읽고 표시한 논문을 문헌 노트로 보냅니다. 메타데이터, 하이라이트와 메모, Zotero 노트, 인용과 원문 링크를 모으고 내가 쓴 글은 그대로 둡니다."><meta name="twitter:image" content="https://apps.cmdspace.work/plugins/assets/og-plugins.png"><meta name="twitter:image:alt" content="CMDSPACE Plugins"><meta name="theme-color" content="#134538">
 <link rel="icon" type="image/png" href="../assets/logo.png"><link rel="apple-touch-icon" href="../assets/logo.png"><link rel="stylesheet" href="../assets/plugins.css"><script src="../assets/plugins.js" defer></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <script>try{const l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('cmds-lang');if(l==='en')document.documentElement.lang='en';const t=localStorage.getItem('cmds-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch{}</script></head><body>
-<a href="#main" class="skip"><span data-lang="ko">본문으로 바로가기</span><span data-lang="en">Skip to content</span></a><header class="site-header"><a class="brand" href="/" aria-label="CMDSPACE Apps"><img src="../assets/logo.png" alt="" width="34" height="34"><span>CMDSPACE <b>Plugins</b></span></a><nav aria-label="Primary"><a href="/" data-ko="모든 앱" data-en="All apps">모든 앱</a><a href="/plugins/" data-ko="플러그인" data-en="Plugins">플러그인</a><button id="language" type="button" aria-label="Switch language">EN</button><button id="theme" type="button" aria-label="Toggle theme" data-ko="테마" data-en="Theme">테마</button></nav></header><main id="main" class="product-page"><div data-lang="ko"><section class="product-hero"><div class="product-meta"><a href="../?lang=ko">← 플러그인</a><span class="status development">개발 중</span></div><p class="eyebrow">CMDS Zotero / 문헌으로 돌아가다</p><h1>내 노트의 근거를<br>문헌과 다시 잇는다.</h1><p class="lede">Zotero의 문헌과 주석을 노트로 가져오고 인용과 원문 이동을 연결하는 개발 중 플러그인입니다. 현재 구현과 검증 대기 항목을 나누어 안내합니다.</p><div class="actions"><a class="button primary" href="#ko-manual">사용설명서 ↓</a><a class="button" href="https://github.com/johnfkoo951/cmds-zotero">GitHub 소스 ↗</a></div><div class="requirements"><div><h2>시작 전 준비</h2><p>공개 소스 0.2.0 / 로컬 0.3.0 미공개 / Obsidian 데스크톱 + Zotero + Better BibTeX</p></div><div><h2>먼저 알아둘 것</h2><p>이 설명서는 미공개 로컬 0.3 개발본을 다룹니다. 공개 main을 복제하면 0.2.0만 받을 수 있으며 0.3 설치 경로는 아직 없습니다. 일반 배포와 오늘 참가자용 필수 설치를 약속하지 않습니다.</p></div></div></section><div class="docs-layout" id="ko-manual"><aside class="toc"><p>이 문서의 내용</p><nav aria-label="이 문서의 내용"><a href="#ko-먼저-확인할-개발-상태" class="depth-2">먼저 확인할 개발 상태</a><a href="#ko-준비물과-용어" class="depth-2">준비물과 용어</a><a href="#ko-로컬-시험용-빌드와-설치" class="depth-2">로컬 시험용 빌드와 설치</a><a href="#ko-첫-성공-연결-인덱스-자료-하나-가져오기" class="depth-2">첫 성공: 연결, 인덱스, 자료 하나 가져오기</a><a href="#ko-인용과-사이드바-작업" class="depth-2">인용과 사이드바 작업</a><a href="#ko-글을-쓰며-인용" class="depth-3">글을 쓰며 인용</a><a href="#ko-references-사이드바" class="depth-3">References 사이드바</a><a href="#ko-annotations-사이드바" class="depth-3">Annotations 사이드바</a><a href="#ko-인용-노트-찾기와-갱신" class="depth-3">인용 노트 찾기와 갱신</a><a href="#ko-전체-명령어-사전" class="depth-2">전체 명령어 사전</a><a href="#ko-0-3-0의-실제-설정" class="depth-2">0.3.0의 실제 설정</a><a href="#ko-가져온-노트-구조와-보존" class="depth-2">가져온 노트 구조와 보존</a><a href="#ko-교차-볼트와-hookmark" class="depth-2">교차 볼트와 Hookmark</a><a href="#ko-데이터와-개인정보" class="depth-2">데이터와 개인정보</a><a href="#ko-문제-해결과-수용-시험" class="depth-2">문제 해결과 수용 시험</a><a href="#ko-옛-플러그인-id에서-이전" class="depth-2">옛 플러그인 ID에서 이전</a><a href="#ko-연동과-개발-참고" class="depth-2">연동과 개발 참고</a><a href="#ko-업데이트-지원-라이선스" class="depth-2">업데이트, 지원, 라이선스</a></nav><a class="download" href="guide.ko.md" download>Markdown 내려받기 ↙</a></aside><article class="prose"><div class="doc-meta"><span>문서 기준 2026-09-14</span><span>로컬 개발본 0.3.0</span><span>Public main 0.2.0</span><a href="guide.ko.md" download>Markdown ↙</a></div><h1 id="ko-cmds-zotero-개발-버전-사용설명서">CMDS Zotero 개발 버전 사용설명서</h1>
-<p>검증된 Zotero 식별자, 인용, 주석, 문헌 노트를 연구 볼트에 연결합니다. Zotero는 읽기 전용으로 다루고 사람이 쓴 노트는 보존합니다.</p>
-<h2 id="ko-먼저-확인할-개발-상태">먼저 확인할 개발 상태</h2>
-<p><strong>0.3.0은 개발 버전이며 공개 플러그인 릴리스가 아닙니다.</strong> <strong>2026-09-14</strong> 기준 공개 저장소에는 GitHub Release가 없고 Obsidian Community Plugins 목록에도 없습니다. <strong>공개 <code>main</code>의 코드는 아직 0.2.0입니다. 이 설명서는 공개 복제로 받을 수 있는 코드가 아니라 미공개 로컬 0.3.0 개발본을 설명합니다.</strong> 저장소 복제나 릴리스 다운로드로 0.3 기능을 받을 수는 없습니다. 별도 0.4 개발은 이 설명서나 설치 약속에 포함되지 않습니다.
-과거 0.2 기준선은 Obsidian 1.13.7, Zotero 9.0.6, Better BibTeX 9.0.63에서 인덱스 재구축, APA 참고문헌, 텍스트/이미지 가져오기, 재가져오기 보존, 개명 노트 링크, 교차 볼트 검색을 시험했다고 기록합니다. <strong>0.3의 모든 기능을 새로 검증했다는 뜻은 아닙니다.</strong> 그룹 라이브러리 실사용, 대화형 인용 선택기, Hookmark 수신/왕복은 수동 확인이 필요합니다.
-백업한 테스트 볼트에서 사용하고 본인 작업이 검증될 때까지 기존 연동을 유지합니다. ZotLit/Zotero Integration 전체 호환이나 기존 Nunjucks 템플릿의 즉시 교체를 제공하지 않습니다.</p>
+<a href="#main" class="skip"><span data-lang="ko">본문으로 바로가기</span><span data-lang="en">Skip to content</span></a><header class="site-header"><a class="brand" href="/" aria-label="CMDSPACE Apps"><img src="../assets/logo.png" alt="" width="34" height="34"><span>CMDSPACE <b>Obsidian Plugins</b></span></a><nav aria-label="Primary"><a href="/" data-ko="모든 앱" data-en="All apps">모든 앱</a><a href="/plugins/" data-ko="플러그인" data-en="Plugins">플러그인</a><button id="language" type="button" aria-label="Switch language">EN</button><button id="theme" type="button" aria-label="Toggle theme" data-ko="테마" data-en="Theme">테마</button></nav></header><main id="main" class="product-page"><div data-lang="ko"><section class="product-hero"><div class="product-meta"><a href="../?lang=ko">← 플러그인</a><span class="status">공개 릴리스 0.5.0</span></div><p class="eyebrow">CMDS Zotero / 읽은 것을 노트로 가져오다</p><h1>Zotero에서 읽은 것을<br>노트로 가져온다.</h1><p class="lede">Zotero 리더로 읽고 표시한 논문을 문헌 노트로 보냅니다. 메타데이터, 하이라이트와 메모, Zotero 노트, 인용과 원문 링크를 모으고 내가 쓴 글은 그대로 둡니다.</p><div class="actions"><a class="button primary" href="#ko-manual">사용설명서 ↓</a><a class="button" href="https://github.com/johnfkoo951/cmds-zotero">GitHub 소스 ↗</a></div><div class="requirements"><div><h2>시작 전 준비</h2><p>Obsidian 데스크톱 1.7.2+ / Zotero + Better BibTeX / GitHub 릴리스 또는 BRAT 설치</p></div><div><h2>먼저 알아둘 것</h2><p>Community Plugins에는 아직 등록하지 않았습니다. Zotero는 읽기 전용이며 최근 읽은 논문 목록은 Zotero가 실행 중일 때 보입니다.</p></div></div></section><div class="docs-layout" id="ko-manual"><aside class="toc"><p>이 문서의 내용</p><nav aria-label="이 문서의 내용"><a href="#ko-버전과-공개-상태" class="depth-2">버전과 공개 상태</a><a href="#ko-준비물과-용어" class="depth-2">준비물과 용어</a><a href="#ko-설치" class="depth-2">설치</a><a href="#ko-첫-성공-최근-읽은-논문을-노트로-보내기" class="depth-2">첫 성공: 최근 읽은 논문을 노트로 보내기</a><a href="#ko-문헌-노트-가져오기와-갱신" class="depth-2">문헌 노트 가져오기와 갱신</a><a href="#ko-노트-구조와-보존-규칙" class="depth-2">노트 구조와 보존 규칙</a><a href="#ko-인용-참고문헌-사이드바" class="depth-2">인용, 참고문헌, 사이드바</a><a href="#ko-전체-명령어" class="depth-2">전체 명령어</a><a href="#ko-설정" class="depth-2">설정</a><a href="#ko-pdf-텍스트와-에이전트" class="depth-2">PDF 텍스트와 에이전트</a><a href="#ko-교차-볼트와-hookmark" class="depth-2">교차 볼트와 Hookmark</a><a href="#ko-데이터와-개인정보" class="depth-2">데이터와 개인정보</a><a href="#ko-문제-해결" class="depth-2">문제 해결</a><a href="#ko-옛-플러그인-id에서-이전" class="depth-2">옛 플러그인 ID에서 이전</a><a href="#ko-업데이트-지원-라이선스" class="depth-2">업데이트, 지원, 라이선스</a></nav><a class="download" href="guide.ko.md" download>Markdown 내려받기 ↙</a></aside><article class="prose"><div class="doc-meta"><span>문서 기준 2026-10-12</span><span>소스 버전 0.5.0</span><a href="guide.ko.md" download>Markdown ↙</a></div><h1 id="ko-cmds-zotero-사용설명서">CMDS Zotero 사용설명서</h1>
+<p>Zotero에서 읽고 표시한 내용을 Obsidian 문헌 노트로 보냅니다. 메타데이터, 하이라이트와 메모, Zotero 노트, 인용과 원문 링크를 한 노트에 모으고, 사람이 쓴 글은 그대로 둡니다. Zotero는 읽기 전용으로 다룹니다.</p>
+<h2 id="ko-버전과-공개-상태">버전과 공개 상태</h2>
+<p><strong>2026-10-12</strong>에 공개한 <strong>CMDS Zotero 0.5.0</strong> 기준입니다. <a href="https://github.com/johnfkoo951/cmds-zotero/releases/tag/0.5.0">GitHub 릴리스</a>에는 CI가 빌드하고 출처를 증명한 <code>main.js</code>, <code>manifest.json</code>, <code>styles.css</code>가 있습니다. <strong>Obsidian Community Plugins 목록에는 아직 등록하지 않았습니다.</strong> 수동 설치나 BRAT로 설치합니다.
+검증 환경은 Obsidian 1.14.4, Zotero 10.0.5, Better BibTeX 9.0.71, macOS입니다. 실제 서재로 최근 읽은 논문 목록, 문헌 노트 생성·갱신 4건, PDF 텍스트 추출 4건(스캔본 1건 포함), 인용문 위치 찾기를 확인했습니다. 그룹 라이브러리와 Windows/Linux는 실사용 검증 범위가 아닙니다.</p>
 <h2 id="ko-준비물과-용어">준비물과 용어</h2>
 <ul>
-<li><strong>Obsidian 데스크톱 1.7.2 이상</strong>. 모바일 미지원.</li>
-<li>실행 중인 <a href="https://www.zotero.org/">Zotero</a>와 <a href="https://retorque.re/zotero-better-bibtex/">Better BibTeX</a>. BBT는 이 플러그인이 사용하는 로컬 인용/메타데이터 기능을 제공하는 Zotero 추가 기능입니다.</li>
-<li>기본 로컬 주소 <code>http://127.0.0.1:23119/better-bibtex</code>. Zotero Web API 키, native Local API 설정 변경, SQLite 접근, 별도 PDF 도구는 이 구현에서 필요 없습니다.</li>
-<li>첫 시험용 자료 하나와 로컬 PDF, 비민감 텍스트 주석 하나. 이미지 주석 가져오기에는 읽을 수 있는 원본 이미지 파일도 필요합니다.</li>
-<li><strong>Node.js 22</strong>는 빌드/유지보수 스크립트용이며 설치된 플러그인 사용의 별도 필수조건은 아닙니다. 플러그인은 MIT, Zotero 저장 서비스나 선택적 유료 Hookmark의 조건은 별도입니다.
-<strong>citekey</strong>는 <code>Example2026</code> 같은 인용 라벨이며 영구 항목 식별자가 아닙니다. 정식 식별은 라이브러리 종류, 로컬 library ID, Zotero item key를 함께 사용합니다. 첨부와 주석에는 별도 ID가 있으며 부모 항목이 곧 PDF는 아닙니다.</li>
+<li><strong>Obsidian 데스크톱 1.7.2 이상</strong>. 모바일은 지원하지 않습니다.</li>
+<li>실행 중인 <a href="https://www.zotero.org/">Zotero</a>와 <a href="https://retorque.re/zotero-better-bibtex/">Better BibTeX</a>(BBT). 플러그인은 BBT의 로컬 JSON-RPC만 사용합니다.</li>
+<li><strong>최근 읽은 논문</strong> 기능은 Zotero가 PDF를 리더로 열 때 남기는 읽기 기록을 씁니다. Zotero 10에서 확인했습니다.</li>
+<li>기본 로컬 주소 <code>http://127.0.0.1:23119/better-bibtex</code>. Zotero Web API 키, native Local API 설정 변경, SQLite 접근, 별도 PDF 도구는 필요 없습니다.
+<strong>citekey</strong>는 <code>Example2026</code> 같은 인용 라벨이며 영구 식별자가 아닙니다. 플러그인은 라이브러리 종류, 로컬 library ID, Zotero item key로 항목을 식별합니다. 첨부와 주석은 별도 키를 가지며 부모 항목이 곧 PDF는 아닙니다.</li>
 </ul>
-<h2 id="ko-로컬-시험용-빌드와-설치">로컬 시험용 빌드와 설치</h2>
-<p>아직 공개 릴리스 파일이나 공개된 0.3 소스는 없습니다. <strong>공개 <code>main</code>을 복제하고 아래 명령을 실행하면 이 설명서의 0.3이 아니라 0.2 기준선이 빌드됩니다.</strong> 공개 기준선을 시험하려면 <a href="https://github.com/johnfkoo951/cmds-zotero/blob/b58adb733bcd5bc0734ca2f31d6cb420fd8e8fbe/README.md">해당 버전의 README</a>를 따릅니다.</p>
-<pre><code class="language-sh">npm ci
-npm run lint
-npm run typecheck
-npm test
-npm run build
-</code></pre>
-<p>먼저 빌드한 <code>manifest.json</code>을 확인합니다. 현재 공개 main 빌드는 <strong>0.2.0</strong>이며, 아래 0.3 전용 자동완성/사이드바/설정 동작을 그 빌드에서 보장하지 않습니다. <code>main.js</code>, <code>manifest.json</code>, <code>styles.css</code>만 <code>&lt;vault&gt;/.obsidian/plugins/cmds-zotero/</code>에 복사합니다. Obsidian을 다시 로드하고 <strong>CMDS Zotero</strong>를 직접 활성화합니다. 다른 컴퓨터의 설정/개인 인덱스를 복사하지 않습니다. 위 명령은 사용 안내이며 이번 문서 작업에서 실행했다는 뜻은 아닙니다.
-기존 <code>cmds-link-zotero</code>에서 이전한다면 아래 전용 이전 절차를 사용합니다. 실행 중 설치본을 덮어쓰거나 두 ID를 동시에 활성화하지 않습니다.</p>
-<h2 id="ko-첫-성공-연결-인덱스-자료-하나-가져오기">첫 성공: 연결, 인덱스, 자료 하나 가져오기</h2>
-<p>아래 절차와 기능 사전은 <strong>미공개 로컬 0.3 개발 환경</strong>을 설명합니다. 해당 소스가 없는 독자에게는 개발 미리보기이며, 공개 저장소를 복제한 경우에는 위의 0.2 기준선 안내를 사용합니다.</p>
+<h2 id="ko-설치">설치</h2>
+<p><strong>수동 설치</strong></p>
 <ol>
-<li>Better BibTeX이 활성화된 Zotero를 실행합니다.</li>
-<li><strong>설정 → CMDS Zotero</strong>에서 <strong>Server endpoint</strong>, <strong>Output folder</strong>, <strong>Image folder</strong>, <strong>Index path</strong>를 확인합니다. 출력/인덱스 경로는 볼트 상대경로입니다.</li>
-<li><strong>Save configuration</strong>을 먼저 누릅니다. 수정값은 저장 전까지 초안이며 <strong>Test connection → Test</strong>는 저장된 설정을 시험합니다.</li>
-<li>Ctrl/Cmd+P의 <strong>Refresh citekey index</strong>를 실행합니다. 전체 발견/내보내기와 제한된 동시 첨부 요청을 수행하며 서버의 증분 커서 동기화가 아닙니다.</li>
-<li><strong>Diagnose index and links</strong>로 사용 불가/모호한 식별을 먼저 확인합니다.</li>
-<li><strong>Search literature</strong> 또는 <strong>Import literature note</strong>에서 예제 자료를 고르고 <strong>Literature import preview</strong>의 경로, 내용, 충돌을 확인합니다.</li>
-<li>맞으면 <strong>Apply import</strong>를 누릅니다. 충돌이 있으면 버튼이 비활성화됩니다. 새 노트 또는 플러그인 소유 구역만 다루며 임의의 기존 산문을 덮어쓰지 않습니다.</li>
-<li>가져온 노트에서 Zotero/PDF 링크와 텍스트 주석을 원본과 비교합니다.</li>
-<li>생성 마커 밖의 본인 구역에 문장을 쓰고 다시 가져와 그대로 남는지 확인합니다. 일괄 갱신 전에 반드시 작은 시험을 합니다.
-자료 식별, PDF/주석 링크, 사람 글 보존이 모두 맞아야 첫 성공입니다. 연결 성공만으로 특정 첨부가 존재한다고 판단하지 않습니다.</li>
+<li><a href="https://github.com/johnfkoo951/cmds-zotero/releases/tag/0.5.0">0.5.0 릴리스</a>에서 <code>main.js</code>, <code>manifest.json</code>, <code>styles.css</code>를 받습니다.</li>
+<li><code>&lt;vault&gt;/.obsidian/plugins/cmds-zotero/</code> 폴더에 세 파일을 넣습니다.</li>
+<li>Obsidian을 다시 로드하고 <strong>설정 → 커뮤니티 플러그인</strong>에서 <strong>CMDS Zotero</strong>를 켭니다.</li>
 </ol>
-<h2 id="ko-인용과-사이드바-작업">인용과 사이드바 작업</h2>
-<h3 id="ko-글을-쓰며-인용">글을 쓰며 인용</h3>
-<p>편집기에서 <strong>Insert citation from Zotero</strong>를 실행하면 BBT의 대화형 Cite As You Write 선택기(CAYW)를 사용합니다. 기본 <code>pandoc</code> 형식은 <code>[@citekey]</code>입니다. 선택기 흐름은 사용 환경에서 별도 확인해야 합니다.
-0.3 소스에는 로컬 자동완성도 있습니다. <code>[@</code> 뒤에 ASCII citekey/제목/저자/연도 일부를 입력하고 공백 대신 <code>_</code>를 사용할 수 있습니다. 현재 트리거는 영문/숫자와 <code>_ : . + / -</code>를 최대 80자까지 받으며 한글 입력은 받지 않습니다. Enter는 <code>[@citekey]</code>를 완성하고 기존 대괄호 안에서는 Shift+Enter도 괄호를 유지합니다. 괄호 밖 Shift+Enter의 단독 <code>@citekey</code> 삽입은 기본값이 아닌 bare-at 트리거를 설정한 경우에 적용됩니다. 위키링크 완성도 기존 구조를 유지합니다. 매 키 입력마다 BBT를 부르는 것이 아니라 캐시된 인덱스를 읽고, 준비/갱신은 백그라운드에서 일어날 수 있습니다.
-데이터 모델에는 <code>bracket</code>, <code>at</code>, <code>off</code>가 있지만 <strong>확인한 0.3 UI에는 “Writing → Citekey completion” 설정이 없습니다.</strong> 과거 README/changelog의 해당 표현을 설치 안내로 따라가지 않습니다. 첫 사용은 기본 대괄호 트리거로 시험합니다.</p>
-<h3 id="ko-references-사이드바">References 사이드바</h3>
-<p><strong>Open references sidebar</strong>는 현재 노트의 <code>[@key]</code>, 단독 <code>@key</code>, 인용 위키링크를 찾습니다. frontmatter/코드 펜스를 제외하고 자료를 중복 제거하며 선택한 CSL 스타일의 참고문헌과 모호/미해결 상태를 보여줍니다. 노트, Zotero 항목, PDF를 열고 인용 텍스트를 선택해 첫 출현으로 이동할 수 있습니다. 참고문헌 복사는 일반 텍스트이지 Word의 동적 인용 필드가 아닙니다.</p>
-<h3 id="ko-annotations-사이드바">Annotations 사이드바</h3>
-<p><strong>Open annotations sidebar</strong> 또는 형광펜 리본은 식별된 문헌 노트나 고정한 자료를 따릅니다. 색, 페이지 라벨, 텍스트, 메모, 태그를 보고 Zotero 열기, 커서 삽입, 링크/텍스트 복사를 수행합니다. 이미지 카드는 바이트 복사 없이 링크만 넣을 수 있으므로 검증된 볼트 사본이 필요하면 명시적 가져오기를 사용합니다. Zotero 리더의 실시간 위치 추종은 아닙니다.</p>
-<h3 id="ko-인용-노트-찾기와-갱신">인용 노트 찾기와 갱신</h3>
-<p><strong>Find notes citing a source</strong>는 현재/과거 citekey를 검색합니다. <strong>Update all owned literature notes</strong>는 보존 엔진으로 소유 노트를 즉시 순회해 갱신/동일/건너뜀 결과를 보고하고 충돌을 제외합니다. <strong>항목마다 승인 미리보기를 열지 않습니다.</strong> 백업과 단일 노트 재가져오기 시험 뒤에 실행합니다.</p>
-<h2 id="ko-전체-명령어-사전">전체 명령어 사전</h2>
+<p><strong>BRAT 설치</strong>: BRAT 플러그인에서 <code>johnfkoo951/cmds-zotero</code>를 베타 플러그인으로 추가합니다.</p>
+<p>이전 버전에서 올리면 설정(<code>data.json</code>)과 인덱스는 그대로 쓰입니다. 업그레이드 전에 플러그인 폴더를 백업합니다. 옛 플러그인 <code>cmds-link-zotero</code>가 같은 인덱스 경로를 쓰고 있다면 꺼 두어야 인덱스를 갱신할 수 있습니다.</p>
+<h2 id="ko-첫-성공-최근-읽은-논문을-노트로-보내기">첫 성공: 최근 읽은 논문을 노트로 보내기</h2>
+<ol>
+<li>Better BibTeX가 켜진 Zotero를 실행합니다.</li>
+<li><strong>설정 → CMDS Zotero</strong>에서 <strong>Output folder</strong>, <strong>Image folder</strong>, <strong>Index path</strong>를 볼트 상대경로로 정하고 <strong>Save configuration</strong>을 누릅니다. <strong>Test connection</strong>은 저장된 설정을 시험합니다.</li>
+<li>명령 팔레트(Ctrl/Cmd+P)에서 <strong>Refresh citekey index</strong>를 한 번 실행합니다.</li>
+<li>Zotero 리더에서 논문 PDF를 열고 하이라이트나 메모를 남깁니다.</li>
+<li><strong>Send recently read papers to notes</strong>를 실행하거나 펼친 책 모양 리본 아이콘을 누릅니다.</li>
+<li>목록에서 논문마다 노트 상태를 확인합니다: <em>No literature note yet</em>(노트 없음), <em>N new annotations not in the note</em>(새 주석 N개), <em>Note is up to date</em>(최신), CMDS Zotero가 만들지 않은 노트(덮어쓰지 않음).</li>
+<li>보낼 필요가 있는 논문은 미리 선택되어 있습니다. <strong>Send</strong>를 누르면 노트를 새로 만들거나 관리 구역만 갱신합니다.</li>
+<li>행의 노트 버튼으로 결과를 열고 주석, 페이지 링크, 메타데이터를 Zotero와 비교합니다.</li>
+<li>노트의 <code>## Synthesis</code>나 <code>## Notes</code>에 문장을 쓰고 Zotero에서 하이라이트를 하나 더 한 뒤 다시 보냅니다. 내가 쓴 문장은 그대로 있고 새 주석만 추가되면 첫 성공입니다.</li>
+</ol>
+<p><strong>Reading window</strong>는 7/30/90/365일 중에서 고릅니다. 기본값은 설정의 <strong>Recently read window</strong>(30일)입니다. 목록을 보려면 Zotero가 실행 중이어야 합니다.</p>
+<h2 id="ko-문헌-노트-가져오기와-갱신">문헌 노트 가져오기와 갱신</h2>
+<p><strong>Import literature note</strong>는 자료를 골라 미리보기(경로, 구역별 상태, 충돌)를 연 뒤 적용합니다. 자료 선택 창은 최근 읽은 논문을 맨 위에 <code>· read 3 days ago</code>처럼 표시합니다.
+가져오기는 저장된 인덱스가 아니라 <strong>Zotero의 현재 데이터</strong>(그 항목의 export와 첨부·주석)로 노트를 렌더링합니다. 그래서 인덱스를 갱신하지 않아도 방금 단 하이라이트가 들어갑니다. citekey가 Zotero에서 바뀌었으면 item key로 다시 찾고, 다른 항목으로 대체하지 않습니다. Zotero가 꺼져 있으면 저장된 인덱스로 미리보기하고 그 사실을 알립니다. 처음 만드는 노트는 참고문헌 문장이 필요하므로 Zotero가 실행 중이어야 합니다.
+<strong>Update all owned literature notes</strong>는 이 플러그인이 만든 노트를 모두 순회하며 관리 구역을 갱신합니다. 결과는 <em>Updated</em>, <em>Partial(편집 구역 보존)</em>, <em>Unchanged</em>, <em>Skipped</em>로 보고합니다. 노트마다 승인 창을 열지 않으므로 작은 시험 뒤에 사용합니다.</p>
+<h2 id="ko-노트-구조와-보존-규칙">노트 구조와 보존 규칙</h2>
+<p>새 노트의 frontmatter에는 <code>type: zotero</code>, <code>zoteroID</code>, <code>zoteroSelectURI</code>, <code>zotero-key</code>, <code>citekey</code>, <code>doi</code>, <code>title</code>, <code>authors</code>, <code>year</code>, <code>tags</code>와 <code>zotero_title</code> 같은 <code>zotero_*</code> 필드가 들어갑니다. <strong>frontmatter는 처음 한 번만 만들고 이후에는 사용자 소유</strong>입니다.
+본문은 다음 순서입니다.</p>
+<ul>
+<li>제목과 초록(<code>overview</code>), 참고문헌(<code>citation</code>)</li>
+<li><code>## Synthesis</code>: 사용자 영역(<code>**Contribution**::</code>, <code>**Related**::</code>)</li>
+<li>메타데이터와 링크(<code>metadata</code>): 저자, 학술지, DOI, URL, 태그, 컬렉션, Zotero 관련 항목, Zotero와 PDF 열기 링크</li>
+<li><code>## Zotero notes</code>(<code>notes</code>): Zotero 자식 노트를 제목·목록·링크를 살린 Markdown으로 넣습니다. 코드 블록은 그대로 둡니다.</li>
+<li><code>## Notes</code>: 사용자 영역</li>
+<li><code>## Annotations</code>: 주석마다 블록 하나. Zotero의 읽기 순서대로 놓이고, 나중에 앞쪽 페이지에 단 주석도 제자리에 들어갑니다. 하이라이트, 밑줄, 이미지, 메모, 손그림(ink)을 구분하며 페이지 링크는 Zotero 리더의 해당 위치를 엽니다.</li>
+</ul>
+<p>관리 구역은 <code>&lt;!-- cmds-zotero:&lt;id&gt;:&lt;해시&gt; --&gt;</code>와 <code>&lt;!-- /cmds-zotero:&lt;id&gt; --&gt;</code> 사이입니다. 관리 구역을 고치면 그 구역만 **편집됨(보존)**으로 남고 나머지는 갱신됩니다. 미리보기에서 구역마다 다음 중 하나를 고릅니다.</p>
+<ul>
+<li><strong>Keep this time</strong>: 이번에는 그대로 둡니다.</li>
+<li><strong>Detach</strong>: 그 블록을 영구히 내 것으로 만듭니다. 다시 렌더링하지 않습니다.</li>
+<li><strong>Reset from Zotero</strong>: Zotero 내용으로 되돌립니다. 이전 노트는 <code>.cmds-zotero/backups/notes/</code>에 백업합니다.
+마커가 손상되었거나, 중복되었거나, CMDS Zotero가 만들지 않은 노트이거나, 같은 식별을 가진 노트가 여럿이면 쓰지 않고 이유와 줄 번호를 보여 줍니다. Zotero에서 지운 주석의 블록은 노트에서 지우지 않습니다.</li>
+</ul>
+<h2 id="ko-인용-참고문헌-사이드바">인용, 참고문헌, 사이드바</h2>
+<ul>
+<li><strong>Insert citation from Zotero</strong>: BBT의 Cite As You Write 선택기로 인용을 넣습니다. 기본 형식은 <code>[@citekey]</code>입니다.</li>
+<li>편집기에서 <code>[@</code> 뒤에 citekey·제목·저자·연도 일부를 입력하면 로컬 자동완성이 나옵니다. 캐시된 인덱스를 읽으므로 키 입력마다 Zotero를 부르지 않습니다.</li>
+<li><strong>Open references sidebar</strong>: 현재 노트의 <code>[@key]</code>, <code>@key</code>, 인용 위키링크를 모아 참고문헌과 미해결 상태를 보여 줍니다. Zotero가 꺼져 있어도 저장된 참고문헌(<code>.cmds-zotero/bibliography.json</code>)으로 표시합니다.</li>
+<li><strong>Open annotations sidebar</strong>: 현재 문헌 노트나 고정한 자료의 주석을 보고 커서 위치에 넣거나 복사합니다.</li>
+<li><strong>Insert bibliography</strong>: 자료 하나의 CSL 참고문헌을 편집기에 넣습니다.</li>
+<li><strong>Copy CSL-JSON for cited sources</strong>와 <strong>Write pandoc bibliography sidecar for current note</strong>: 현재 노트가 인용한 자료를 CSL-JSON으로 복사하거나 <code>.cmds-zotero/bibliography/&lt;노트&gt;.json</code>에 저장하고, frontmatter에 넣을 <code>bibliography:</code> 줄을 알려 줍니다. pandoc으로 DOCX를 만드는 방법은 <a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/docs/pandoc-docx.md">pandoc/DOCX 가이드</a>에 있습니다.</li>
+</ul>
+<h2 id="ko-전체-명령어">전체 명령어</h2>
 <table>
 <thead>
 <tr>
-<th>실제 명령 이름</th>
-<th>기능과 경계</th>
+<th>명령</th>
+<th>기능</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>Insert citation from Zotero</td>
-<td>활성 편집기에서 대화형 CAYW 삽입</td>
-</tr>
-<tr>
-<td>Refresh citekey index</td>
-<td>로컬 BBT에서 전체 인덱스 갱신</td>
-</tr>
-<tr>
-<td>Search literature</td>
-<td>인덱스 자료 선택과 동작 열기</td>
-</tr>
-<tr>
-<td>Open source PDF at page</td>
-<td>자료와 PDF 파일 페이지 선택, 1부터 시작</td>
+<td>Send recently read papers to notes</td>
+<td>Zotero에서 최근 읽은 논문과 노트 상태를 보고 노트로 보냄</td>
 </tr>
 <tr>
 <td>Import literature note</td>
-<td>단일 자료 보존형 가져오기 미리보기</td>
+<td>자료 하나를 미리보기 뒤 가져오기·갱신</td>
 </tr>
 <tr>
 <td>Update all owned literature notes</td>
-<td>소유 구역 일괄 갱신; 노트별 재확인 없음</td>
+<td>플러그인이 만든 노트의 관리 구역 일괄 갱신</td>
+</tr>
+<tr>
+<td>Refresh citekey index</td>
+<td>BBT에서 인덱스 전체 갱신</td>
+</tr>
+<tr>
+<td>Search literature</td>
+<td>자료를 고르고 동작(열기, 가져오기, 링크 복사 등) 선택</td>
+</tr>
+<tr>
+<td>Insert citation from Zotero</td>
+<td>CAYW 인용 삽입</td>
 </tr>
 <tr>
 <td>Insert bibliography</td>
-<td>선택한 자료 하나의 CSL 참고문헌을 편집기에 삽입</td>
+<td>자료 하나의 참고문헌 삽입</td>
+</tr>
+<tr>
+<td>Copy CSL-JSON for cited sources</td>
+<td>현재 노트 인용의 CSL-JSON 복사</td>
+</tr>
+<tr>
+<td>Write pandoc bibliography sidecar for current note</td>
+<td>pandoc용 참고문헌 파일 저장</td>
 </tr>
 <tr>
 <td>Open references sidebar</td>
-<td>현재 노트의 인용 검토</td>
+<td>현재 노트 인용 검토</td>
 </tr>
 <tr>
 <td>Open annotations sidebar</td>
-<td>식별/고정 자료 주석 검토와 삽입</td>
+<td>주석 검토와 삽입</td>
+</tr>
+<tr>
+<td>Open source PDF at page</td>
+<td>PDF를 파일 위치 기준 쪽으로 열기</td>
+</tr>
+<tr>
+<td>Open link under cursor</td>
+<td>커서의 Zotero 링크나 <code>[@citekey]</code> 열기</td>
 </tr>
 <tr>
 <td>Find notes citing a source</td>
-<td>현재/과거 citekey 출현 검색</td>
-</tr>
-<tr>
-<td>Copy Hookmark-compatible link</td>
-<td>검증된 Zotero Markdown 링크 복사; Hookmark 북마크 생성 아님</td>
-</tr>
-<tr>
-<td>Copy stable literature note link</td>
-<td>항목 식별 기반 노트 이동 링크 복사</td>
-</tr>
-<tr>
-<td>Diagnose index and links</td>
-<td>연결/인덱스/식별 진단</td>
+<td>현재·과거 citekey를 쓴 노트 찾기</td>
 </tr>
 <tr>
 <td>Find literature across vaults</td>
-<td>허용한 다른 볼트 맵 읽기와 이동</td>
+<td>허용한 다른 볼트의 같은 자료 노트 찾기</td>
+</tr>
+<tr>
+<td>Copy Zotero item link (Hookmark-compatible)</td>
+<td>Zotero 항목 Markdown 링크 복사</td>
+</tr>
+<tr>
+<td>Copy literature note identity link (rename-safe)</td>
+<td>노트 이름이 바뀌어도 열리는 링크 복사</td>
+</tr>
+<tr>
+<td>Copy Obsidian file link (Hookmark-native)</td>
+<td>문헌 노트의 <code>obsidian://open</code> 주소 복사</td>
+</tr>
+<tr>
+<td>Diagnose index and links</td>
+<td>연결, 인덱스, 식별 진단</td>
 </tr>
 </tbody></table>
-<p>PDF 페이지는 <strong>1부터 시작하는 파일 위치</strong>이지 인쇄 페이지 라벨이 아닙니다. “12”라고 인쇄된 쪽이 파일에서는 18번째일 수 있습니다. 그룹 링크는 로컬 library ID와 다른 실제 group ID가 필요합니다. 누락/모호한 자료를 첫 검색 결과로 임의 대체하지 않습니다.</p>
-<h2 id="ko-0-3-0의-실제-설정">0.3.0의 실제 설정</h2>
-<p>수정 후 <strong>Save configuration</strong>을 누릅니다. 저장 전 Test/Refresh는 기존 값을 사용하고 인덱스 갱신 서비스가 바쁘면 설정 변경이 차단됩니다.</p>
+<p>PDF 쪽 번호는 <strong>1부터 시작하는 파일 위치</strong>이지 인쇄된 쪽 번호가 아닙니다.</p>
+<h2 id="ko-설정">설정</h2>
+<p>값을 바꾼 뒤 <strong>Save configuration</strong>을 누릅니다. 저장 전에는 이전 값이 쓰입니다.</p>
 <table>
 <thead>
 <tr>
-<th>화면의 설정</th>
-<th>기본값, 범위, 의미</th>
+<th>설정</th>
+<th>기본값과 의미</th>
 </tr>
 </thead>
 <tbody><tr>
 <td>Server endpoint</td>
-<td><code>http://127.0.0.1:23119/better-bibtex</code>; localhost HTTP(S), 인증/쿼리/fragment 없는 주소</td>
+<td><code>http://127.0.0.1:23119/better-bibtex</code>; localhost 주소만 허용</td>
 </tr>
 <tr>
 <td>Test connection</td>
-<td>저장된 주소 시험; 인용 선택기를 열지 않음</td>
+<td>저장된 주소로 BBT 연결 시험</td>
 </tr>
 <tr>
 <td>Request timeout</td>
-<td>20초, 1–180</td>
+<td>20초(1–180)</td>
 </tr>
 <tr>
 <td>Attachment timeout</td>
-<td>60초, 1–180</td>
+<td>60초(1–180); 이미지 렌더링이 필요한 첨부는 더 걸릴 수 있음</td>
 </tr>
 <tr>
 <td>Index path</td>
-<td><code>80. References/zotero-index.json</code>, 볼트 상대경로</td>
+<td><code>80. References/zotero-index.json</code></td>
 </tr>
 <tr>
 <td>Maximum index age</td>
-<td>60분, 1–10080; 오래된 조회는 전체 스냅샷 갱신 가능</td>
+<td>60분(1–10080); 지나면 다음 조회 때 백그라운드 갱신</td>
 </tr>
 <tr>
 <td>Parallel requests</td>
-<td>2, 1–8 동시 첨부 요청</td>
+<td>2(1–8)</td>
 </tr>
 <tr>
 <td>Refresh saved index</td>
-<td>저장된 설정으로 갱신</td>
+<td>지금 인덱스 갱신</td>
 </tr>
 <tr>
 <td>Output folder</td>
-<td><code>References/Zotero</code>, 새 문헌 노트</td>
+<td><code>References/Zotero</code>; 새 문헌 노트 위치</td>
 </tr>
 <tr>
 <td>Image folder</td>
-<td><code>References/Zotero/images</code>, 명시적으로 가져온 주석 이미지</td>
+<td><code>References/Zotero/images</code>; 이미지 주석 사본 위치</td>
 </tr>
 <tr>
 <td>Bibliography style</td>
-<td><code>apa</code>, Zotero에 설치된 CSL 스타일</td>
+<td><code>apa</code>; Zotero에 설치된 CSL 스타일 ID</td>
 </tr>
 <tr>
 <td>Citation format</td>
-<td><code>pandoc</code>, CAYW 형식</td>
+<td><code>pandoc</code>; CAYW 형식</td>
+</tr>
+<tr>
+<td>Recently read window</td>
+<td>30일(7/30/90/365); 최근 읽은 논문 목록과 자료 선택 창 정렬</td>
 </tr>
 <tr>
 <td>Peer vaults</td>
-<td>기본 비어 있음; 한 줄마다 볼트 이름, 파이프, 절대 폴더 경로</td>
+<td>한 줄에 <code>볼트 이름 | 절대 경로</code>; 다른 볼트 노트 찾기용</td>
 </tr>
 <tr>
-<td>Save configuration</td>
-<td>초안 설정 검증과 저장</td>
+<td>References headings</td>
+<td>References 구역으로 볼 제목; 기본 <code>References</code>, <code>Bibliography</code>, <code>Works Cited</code>, <code>참고 문헌</code>, <code>참고 자료</code></td>
 </tr>
 </tbody></table>
-<p>스키마에는 <code>citationTrigger</code>, <code>excludedTags</code>(기본 <code>obscite</code>), <code>headingHighlightColor</code>(기본 gray), <code>referencesFollowActiveNote</code>(true)도 있습니다. <strong>현재 설정 탭에 대응 제어가 없는 데이터 모델 필드입니다.</strong> 존재하지 않는 Excluded tags/제목 색상 UI를 찾지 않습니다. 설정 파일 수동 수정은 첫 사용의 필수 절차가 아닙니다.</p>
-<h2 id="ko-가져온-노트-구조와-보존">가져온 노트 구조와 보존</h2>
-<p>내장 템플릿은 Cite/Abstract/메타데이터/Link와 Highlight/Image/Note 콜아웃을 사용합니다. 별도 Dataview가 있으면 인라인 필드도 활용할 수 있습니다. 하이라이트는 가까운 Zotero 팔레트 색을 사용하고 기본 gray 제목 색은 5단계 제목으로 바뀝니다. 제외 태그는 데이터 모델에 따라 빠집니다.
-초기 frontmatter에는 식별키와 <code>zotero_title</code>, <code>zotero_author</code>, <code>zotero_year</code>, 학술지, DOI, URL, 태그가 들어갑니다. <strong>생성 이후 frontmatter는 사용자 소유</strong>이며 최신 메타데이터는 관리되는 본문 구역에 반영됩니다. <code>zoteroID</code>는 노트 개명/citekey 변경 뒤에도 위치를 유지하도록 돕습니다.
-소유 구역 ID는 <code>overview</code>, <code>citation</code>, <code>metadata</code>, <code>notes</code>와 주석별 식별자입니다. 양식 정리라며 소유 마커를 지우지 않습니다. 생성 구역을 사람이 고치면 충돌을 감지하므로 본인의 분석은 비소유 구역에 쓰고 강제 덮어쓰기를 피합니다.
-기존 비소유 노트는 자동 인수하지 않습니다. 별도 출력 폴더에 나란히 가져옵니다. 이미지 파일명에는 라이브러리 식별과 콘텐츠 해시가 들어가며 원본 변화는 새 버전을 만들고 이전/사용자 수정 이미지를 지우지 않습니다.</p>
+<h2 id="ko-pdf-텍스트와-에이전트">PDF 텍스트와 에이전트</h2>
+<p>AI 에이전트와 스크립트는 같은 기능을 CLI로 씁니다. CLI는 실행 중인 Obsidian의 플러그인에 작업을 맡기고, 가능한 읽기 작업은 Obsidian 없이 인덱스 파일로 답합니다.</p>
+<pre><code class="language-sh">node scripts/ingest.mjs --vault &quot;Research&quot; --action recent --days 30
+node scripts/ingest.mjs --vault &quot;Research&quot; --action import --citekey Example2026
+node scripts/ingest.mjs --vault &quot;Research&quot; --action import --citekey Example2026 --apply
+node scripts/ingest.mjs --vault &quot;Research&quot; --action pdf-text --citekey Example2026 --pages 1-3
+node scripts/ingest.mjs --vault &quot;Research&quot; --action locate --citekey Example2026 --quote &quot;quoted text&quot;
+</code></pre>
+<ul>
+<li><code>recent</code>는 읽은 날짜와 노트 상태(<code>none</code>, <code>behind</code>, <code>current</code>, <code>foreign</code>, <code>duplicate</code>)를 돌려줍니다.</li>
+<li><code>import</code>는 <code>--apply</code>가 없으면 미리보기만 합니다. 하드 충돌은 <code>note-conflict</code>로 거절합니다. Zotero에서 실시간으로 읽지 못하면 <code>--allow-stale</code> 없이는 쓰지 않습니다.</li>
+<li><code>pdf-text</code>는 Obsidian에 내장된 pdf.js로 텍스트를 뽑아 비공개 캐시(<code>.cmds-zotero/pdf-text/</code>)에 저장합니다. 한·중·일 글꼴용 문자 지도를 함께 씁니다. 텍스트 레이어가 없는 스캔본은 <code>textLayer: none</code>과 OCR 권장 경고를 냅니다. 페이지마다 반복되는 워터마크는 본문으로 세지 않습니다.</li>
+<li><code>locate</code>는 인용문이 있는 쪽을 찾아 Zotero 리더 링크와 함께 돌려줍니다.</li>
+<li>읽기 전용 환경에서는 <code>scripts/ingest-ro.mjs</code>를 씁니다. 쓰기와 <code>--apply</code>를 거절합니다.
+에이전트는 관리 구역을 직접 고치지 않고, 자기 요약은 <code>## Synthesis</code>나 <code>## Notes</code>에 씁니다. 전체 규약은 <a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/docs/agent-contract-v2/contract.md">에이전트 계약</a>에 있습니다.</li>
+</ul>
 <h2 id="ko-교차-볼트와-hookmark">교차 볼트와 Hookmark</h2>
-<p>다른 볼트 접근은 명시 동의한 읽기 전용입니다. 이름과 절대경로를 등록하고 각 볼트의 인덱스/맵을 갱신한 뒤 <strong>Find literature across vaults</strong>를 사용합니다. 다른 볼트의 같은 citekey가 자동으로 같은 자료는 아니므로 정식 식별을 확인합니다.
-Hookmark-compatible은 복사 가능한 Markdown 링크입니다. Hookmark 설정 변경, 스크립트 실행, 북마크 생성은 하지 않으며 일반 Zotero 이동에 Hookmark가 필요하지도 않습니다. 수신 앱을 따로 시험한 뒤 왕복 호환을 판단합니다. 개명 노트 딥링크에는 올바른 플러그인 설치와 식별 맵이 필요합니다.</p>
+<p><strong>Peer vaults</strong>에 등록한 다른 볼트의 노트 지도를 읽기 전용으로 읽고 <strong>Find literature across vaults</strong>로 이동합니다. 같은 citekey라도 다른 볼트에서는 다른 자료일 수 있으므로 식별을 확인합니다.
+Hookmark 관련 명령은 링크를 클립보드에 복사할 뿐입니다. Hookmark 설정을 바꾸거나 북마크를 만들거나 스크립트를 실행하지 않습니다.</p>
 <h2 id="ko-데이터와-개인정보">데이터와 개인정보</h2>
-<p>로컬 BBT에 메타데이터, 인용 선택, 참고문헌, 첨부/주석을 요청합니다. 주소 검증은 로컬 HTTP(S)로 제한합니다. Zotero는 <strong>읽기 전용</strong>이며 설정/DB 변경, citekey 고정, 라이브러리 기록 수정이 없습니다.
-명시적 이미지 가져오기는 <strong>볼트 밖의</strong> 첨부/주석 이미지 파일을 읽고 이미지 폴더에 복사할 수 있습니다. 설정한 경우 다른 볼트 맵도 읽습니다. 설정, 인덱스, 맵, 진단 보고에는 개인 경로, 서지정보, 주석과 식별자가 들어갈 수 있으므로 공개하지 않습니다.
-런타임은 현재 볼트의 설정, 인덱스, 요청한 노트, 가져온 이미지를 씁니다. 텔레메트리, 자체 HTTP 리스너, 자체 업데이트, 내장 유료 서비스는 없습니다. 명시적으로 연 웹/외부 앱 링크는 해당 앱 정책을 따릅니다. 로컬 우선이라고 나중의 Share/AI 공개까지 자동으로 안전해지는 것은 아닙니다.</p>
-<h2 id="ko-문제-해결과-수용-시험">문제 해결과 수용 시험</h2>
+<ul>
+<li>로컬 BBT에 메타데이터, 인용, 참고문헌, 첨부와 주석, 읽기 기록을 요청합니다. Zotero 설정, 데이터베이스, citekey, 라이브러리 기록은 바꾸지 않습니다.</li>
+<li>이미지 주석을 가져오면 볼트 밖의 Zotero 캐시 이미지를 읽어 이미지 폴더에 복사합니다.</li>
+<li>볼트에 쓰는 것은 설정, 인덱스, 문헌 노트, 이미지 사본, <code>.cmds-zotero/</code> 아래의 비공개 파일(참고문헌·노트 지도·백업·PDF 텍스트 캐시)입니다. 플러그인은 <code>.cmds-zotero/.gitignore</code>를 먼저 만들어 이 폴더가 git에 올라가지 않게 합니다. PDF 텍스트 캐시는 논문 전문이므로 공유하지 않습니다.</li>
+<li>인덱스와 노트 지도에는 서지정보, 개인 경로, 주석이 들어갈 수 있습니다. 공개 저장소에 올리지 않습니다.</li>
+<li>텔레메트리, 자체 HTTP 서버, 자동 업데이트는 없습니다.</li>
+</ul>
+<h2 id="ko-문제-해결">문제 해결</h2>
 <table>
 <thead>
 <tr>
 <th>증상</th>
-<th>다음 확인</th>
+<th>확인할 것</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>Test가 옛 주소를 사용</td>
-<td>Save configuration 후 Test</td>
+<td>최근 읽은 논문이 비어 있음</td>
+<td>Zotero 실행 여부, 기간(Reading window), PDF를 Zotero 리더로 열었는지</td>
+</tr>
+<tr>
+<td>새 하이라이트가 노트에 없음</td>
+<td>Zotero 실행 여부; 꺼져 있으면 저장된 인덱스로 렌더링됨</td>
+</tr>
+<tr>
+<td>노트가 &quot;not created by CMDS Zotero&quot;로 거절됨</td>
+<td>다른 플러그인이 만든 노트; 덮어쓰지 않으므로 출력 폴더나 파일명을 확인</td>
+</tr>
+<tr>
+<td>가져오기 차단(손상된 마커)</td>
+<td>미리보기의 줄 번호에서 마커를 고치거나 Reset 사용</td>
+</tr>
+<tr>
+<td>인덱스 갱신이 거부됨</td>
+<td>옛 플러그인 <code>cmds-link-zotero</code>가 켜져 있는지</td>
 </tr>
 <tr>
 <td>연결 실패</td>
-<td>Zotero 실행, BBT 설치/활성화, localhost 주소, 요청 시간</td>
-</tr>
-<tr>
-<td>갱신 실패/일부 누락</td>
-<td>진단을 읽고 마지막 유효 스냅샷 보존; 실패를 빈 라이브러리로 간주하지 않기</td>
-</tr>
-<tr>
-<td>자동완성 결과 없음</td>
-<td><code>[@</code> 사용, 인덱스 준비/갱신, 제목/citekey 확인; 없는 UI 토글 찾지 않기</td>
-</tr>
-<tr>
-<td>citekey가 틀리거나 모호함</td>
-<td>정식 식별 확인; 중복키를 첫 결과로 대체 금지</td>
+<td>Zotero·BBT 실행과 localhost 주소, 시간 제한</td>
 </tr>
 <tr>
 <td>PDF가 다른 쪽으로 열림</td>
-<td>인쇄 라벨이 아닌 파일 페이지와 첨부 식별 확인</td>
+<td>인쇄 쪽 번호가 아닌 파일 위치 기준인지</td>
 </tr>
 <tr>
-<td>주석 이미지 없음</td>
-<td>원본 파일의 존재/읽기 권한 확인, 사이드바 삽입 대신 명시적 가져오기</td>
-</tr>
-<tr>
-<td>가져오기 차단</td>
-<td>수동 편집, 소유권, 중복 식별, 경로 충돌 확인; 원본 보존</td>
-</tr>
-<tr>
-<td>그룹 링크 실패</td>
-<td>실제 group ID/로컬 library ID 구분; 실사용 검증 미완</td>
-</tr>
-<tr>
-<td>다른 볼트 노트 없음</td>
-<td>허용 경로, 양쪽 맵 갱신, 정식 식별과 실제 위치 확인</td>
+<td><code>pdf-text</code>가 빈 결과</td>
+<td><code>textLayer</code> 값; <code>none</code>이면 스캔본이므로 OCR 필요</td>
 </tr>
 </tbody></table>
-<p>의존하기 전에 오프라인/부분 갱신 보존, 누락 첨부, 중복 citekey, 가져오기→사람 글→재가져오기, 이미지 누락, PDF/주석 이동, 노트 개명, 교차 볼트 이동, 롤백을 확인합니다. 일괄 성공으로 작은 보존 시험을 대신하지 않습니다.</p>
 <h2 id="ko-옛-플러그인-id에서-이전">옛 플러그인 ID에서 이전</h2>
-<p><code>scripts/migrate-local.mjs</code> 사용 전 Obsidian을 종료하고 동기화 writer를 멈춥니다. 도구가 실행 중 플러그인을 대신 멈추지는 않습니다. <code>dry-run</code>과 <code>check</code>는 읽기 전용이고 <code>apply</code>는 파일/레지스트리를 쓰며 check의 정확한 fingerprint가 필요합니다. 계획을 검토하고 <strong>볼트/저장소 밖의 새 비공개 백업 폴더</strong>를 사용합니다. 부모 폴더는 미리 있어야 합니다.</p>
+<p><code>cmds-link-zotero</code>에서 옮길 때는 Obsidian을 끄고 <code>scripts/migrate-local.mjs</code>를 <code>dry-run</code> → <code>check</code> → <code>apply</code> 순서로 씁니다. 백업 폴더는 볼트와 저장소 밖의 새 비공개 폴더로 정합니다.</p>
 <pre><code class="language-sh">node scripts/migrate-local.mjs --vault /path/to/vault --backup /path/to/private-backups/migration-001 --mode dry-run
 node scripts/migrate-local.mjs --vault /path/to/vault --backup /path/to/private-backups/migration-001 --mode check
+node scripts/migrate-local.mjs --vault /path/to/vault --backup /path/to/private-backups/migration-001 --mode apply --expect CHECK_FINGERPRINT
 </code></pre>
-<p>검토 후에만 적용합니다.</p>
-<pre><code class="language-sh">node scripts/migrate-local.mjs --vault /path/to/vault --backup /path/to/private-backups/migration-001 --mode apply --expect CHECK_FINGERPRINT
-</code></pre>
-<p>양쪽 설치/레지스트리를 백업하고 파일 3종을 설치하며 기존 옛 ID 활성화/단축키만 매핑하고 옛 설치본은 남깁니다. 새 설정 파일이 없을 때만 옛 설정을 복사하며 설정/단축키 충돌 시 중단합니다. 비활성이던 연동을 켜거나 다른 플러그인을 끄지 않고 옛 인덱스 식별도 복구하지 않으므로 이후 재구축합니다.
-롤백은 명시적으로 실행합니다.</p>
-<pre><code class="language-sh">node scripts/migrate-local.mjs --vault /path/to/vault --backup /path/to/private-backups/migration-001 --mode rollback
-</code></pre>
-<p>롤백은 배포 이후 바뀐 파일/설정을 덮어쓰지 않고 거부합니다. 백업을 유지해 충돌을 수동 해결합니다. 재시작 후 의도한 새 ID만 활성화되었는지, 설정/인덱스/자료 하나가 맞는지 확인합니다. 이 설명서 작성 중 실제 이전은 실행하지 않았습니다.</p>
-<h2 id="ko-연동과-개발-참고">연동과 개발 참고</h2>
-<p>아래 구현 설명은 로컬 0.3을 확인한 결과입니다. 공개 소스 링크는 현재 받을 수 있는 0.2 기준선을 가리키며 0.3 전체 구현이 공개됐다는 근거가 아닙니다.
-<a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/src/types.ts">소스 타입</a>의 schema 2는 생성 시각, 개수, 항목, 기능, 진단, 완전성을 정의합니다. <code>resolved</code>, <code>ambiguous</code>, <code>not-found</code>, <code>unavailable</code>을 구분하며 레거시 인덱스는 재구축 전까지 정식 식별을 신뢰하지 않습니다.
-<a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/src/ingest-api.ts">ingest API</a>와 <a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/scripts/ingest.mjs">CLI</a>는 별도 HTTP 서버 없이 제한된 작업/결과 계약을 제공합니다. UI 명령 실행만으로 완료 데이터를 얻었다고 가정하지 말고 direct-BBT/오프라인 대안을 유지합니다.</p>
-<pre><code class="language-sh">node scripts/ingest.mjs --vault &quot;Research&quot; --action connection
-node scripts/ingest.mjs --vault &quot;Research&quot; --action refresh
-node scripts/ingest.mjs --vault &quot;Research&quot; --action resolve --citekey Example2026
-node scripts/ingest.mjs --vault &quot;Research&quot; --action diagnostics
-</code></pre>
-<p>가상 볼트/키를 사용한 예입니다. Obsidian과 의도한 CLI/API 경로가 있어야 하며 원격 SaaS 엔드포인트가 아닙니다.
-개발 검사는 lint, typecheck, tests, build입니다. 릴리스 자동화 파일이 있다는 사실은 공개 배포 완료가 아닙니다. <code>v</code> 없는 semver 태그는 릴리스 워크플로를 실행하므로 문서/로컬 시험 단계에서 push하지 않습니다.</p>
+<p><code>rollback</code> 모드로 되돌릴 수 있으며, 배포 이후 바뀐 파일은 덮어쓰지 않고 거부합니다. 이전 뒤에는 새 ID만 켜져 있는지 확인하고 인덱스를 다시 만듭니다.</p>
 <h2 id="ko-업데이트-지원-라이선스">업데이트, 지원, 라이선스</h2>
-<p><a href="https://apps.cmdspace.work/plugins/cmds-zotero/">웹 설명서</a> | <a href="https://github.com/johnfkoo951/cmds-zotero">저장소</a> | <a href="https://github.com/johnfkoo951/cmds-zotero/issues">문제 신고</a> | <a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/CHANGELOG.md">변경 이력</a>.
-실제 실행 버전의 소스/배포 설명을 사용합니다. 신고에는 플러그인/Obsidian/Zotero/BBT 버전, OS, 비밀정보를 제거한 진단, 가상 레코드를 넣습니다. 실제 인덱스, 개인 첨부 경로, 주석 원본, 설정을 게시하지 않습니다. 대체 작업이 검증되기 전까지 기존 연동을 유지합니다.
-<strong>Yohan Koo (CMDSPACE)</strong>, <a href="https://cmdspace.work">https://cmdspace.work</a>. MIT, <a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/LICENSE">LICENSE</a>.
-루트 0.3의 <code>main.ts</code>, <code>settings.ts</code>, <code>settings-data.ts</code>, <code>types.ts</code>, <code>modals.ts</code>와 배포 상태를 확인했습니다. 새 가져오기, 이전, 그룹/Hookmark 시험, 별도 0.4 개발은 실행하지 않았습니다. 현재 스크린샷을 촬영했다고 주장하거나 꾸며내지 않았습니다.</p>
-<a href="#main" class="back-top">맨 위로 ↑</a></article></div></div><div data-lang="en"><section class="product-hero"><div class="product-meta"><a href="../?lang=en">← Plugins</a><span class="status development">In development</span></div><p class="eyebrow">CMDS Zotero / Return to the evidence</p><h1>Keep your notes<br>connected to their sources.</h1><p class="lede">A plugin in development for importing Zotero literature and annotations, inserting citations, and returning to the original source. Implemented features and pending validation are described separately.</p><div class="actions"><a class="button primary" href="#en-manual">User guide ↓</a><a class="button" href="https://github.com/johnfkoo951/cmds-zotero">GitHub source ↗</a></div><div class="requirements"><div><h2>Before you start</h2><p>Public source 0.2.0 / local 0.3.0 unpublished / desktop Obsidian + Zotero + Better BibTeX</p></div><div><h2>Know the boundaries</h2><p>This guide covers unpublished local 0.3 development. Cloning public main yields 0.2.0; there is no public 0.3 installation path yet. It is not a general release or required seminar installation.</p></div></div></section><div class="docs-layout" id="en-manual"><aside class="toc"><p>On this page</p><nav aria-label="On this page"><a href="#en-development-status-read-this-first" class="depth-2">Development status: read this first</a><a href="#en-requirements-and-terminology" class="depth-2">Requirements and terminology</a><a href="#en-build-and-install-for-a-local-test" class="depth-2">Build and install for a local test</a><a href="#en-first-success-connect-index-import-one-source" class="depth-2">First success: connect, index, import one source</a><a href="#en-citation-and-sidebar-workflow" class="depth-2">Citation and sidebar workflow</a><a href="#en-cite-while-writing" class="depth-3">Cite while writing</a><a href="#en-references-sidebar" class="depth-3">References sidebar</a><a href="#en-annotations-sidebar" class="depth-3">Annotations sidebar</a><a href="#en-find-citations-and-update-notes" class="depth-3">Find citations and update notes</a><a href="#en-complete-command-reference" class="depth-2">Complete command reference</a><a href="#en-actual-settings-in-0-3-0" class="depth-2">Actual settings in 0.3.0</a><a href="#en-imported-note-structure-and-preservation" class="depth-2">Imported note structure and preservation</a><a href="#en-cross-vault-and-hookmark-use" class="depth-2">Cross-vault and Hookmark use</a><a href="#en-data-and-privacy" class="depth-2">Data and privacy</a><a href="#en-troubleshooting-and-acceptance-checklist" class="depth-2">Troubleshooting and acceptance checklist</a><a href="#en-migration-from-the-old-plugin-id" class="depth-2">Migration from the old plugin ID</a><a href="#en-integration-and-development-reference" class="depth-2">Integration and development reference</a><a href="#en-updates-support-and-license" class="depth-2">Updates, support, and license</a></nav><a class="download" href="guide.en.md" download>Download Markdown ↙</a></aside><article class="prose"><div class="doc-meta"><span>Documentation checked 2026-09-14</span><span>Local development 0.3.0</span><span>Public main 0.2.0</span><a href="guide.en.md" download>Markdown ↙</a></div><h1 id="en-cmds-zotero-development-user-guide">CMDS Zotero development user guide</h1>
-<p>Connect verified Zotero identities, citations, annotations and literature notes to a research vault, while keeping Zotero read-only and preserving human-written notes.</p>
-<h2 id="en-development-status-read-this-first">Development status: read this first</h2>
-<p><strong>0.3.0 is a development version, not a published plugin release.</strong> On <strong>2026-09-14</strong>, the public repository had no GitHub releases and no entry in Obsidian&#39;s Community Plugins registry. <strong>Public <code>main</code> is still 0.2.0. This manual describes unpublished local 0.3.0 development, not code available from a public clone.</strong> Its 0.3 features cannot currently be obtained by cloning this repository or downloading a release. Separate 0.4 development is not part of this manual or an installation promise.
-The earlier 0.2 baseline records local testing with Obsidian 1.13.7, Zotero 9.0.6 and Better BibTeX 9.0.63: index rebuilds, APA bibliography, text/image import, repeat-import preservation, renamed-note links and cross-vault lookup. These are historical baseline checks, <strong>not fresh acceptance of every 0.3 feature</strong>. Live group-library behavior, interactive citation-picker acceptance and Hookmark receiving/round trips still need manual testing.
-Use a backed-up test vault. Keep existing Zotero integrations installed until your own workflow is verified. This is not full ZotLit/Zotero Integration compatibility and does not accept their Nunjucks templates as a drop-in API.</p>
-<h2 id="en-requirements-and-terminology">Requirements and terminology</h2>
+<p><a href="https://apps.cmdspace.work/plugins/cmds-zotero/">웹 설명서</a> | <a href="https://github.com/johnfkoo951/cmds-zotero">저장소</a> | <a href="https://github.com/johnfkoo951/cmds-zotero/releases">릴리스</a> | <a href="https://github.com/johnfkoo951/cmds-zotero/issues">문제 신고</a> | <a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/CHANGELOG.md">변경 이력</a>
+문제를 신고할 때는 플러그인·Obsidian·Zotero·BBT 버전과 OS, 개인정보를 지운 진단 결과를 적습니다. 실제 인덱스, 개인 경로, 주석 원문, PDF 텍스트 캐시는 올리지 않습니다.
+<strong>Yohan Koo (CMDSPACE)</strong>, <a href="https://cmdspace.work">https://cmdspace.work</a>. MIT, <a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/LICENSE">LICENSE</a>.</p>
+<a href="#main" class="back-top">맨 위로 ↑</a></article></div></div><div data-lang="en"><section class="product-hero"><div class="product-meta"><a href="../?lang=en">← Plugins</a><span class="status">Public release 0.5.0</span></div><p class="eyebrow">CMDS Zotero / Bring what you read into notes</p><h1>What you read in Zotero,<br>in your notes.</h1><p class="lede">Send papers you read and marked up in Zotero&#39;s reader to literature notes: metadata, highlights and comments, Zotero notes, citations and links back to the source, while the text you write stays yours.</p><div class="actions"><a class="button primary" href="#en-manual">User guide ↓</a><a class="button" href="https://github.com/johnfkoo951/cmds-zotero">GitHub source ↗</a></div><div class="requirements"><div><h2>Before you start</h2><p>Obsidian desktop 1.7.2+ / Zotero + Better BibTeX / install from the GitHub release or BRAT</p></div><div><h2>Know the boundaries</h2><p>Not yet listed in Community Plugins. Zotero is read-only, and the recently read list needs Zotero running.</p></div></div></section><div class="docs-layout" id="en-manual"><aside class="toc"><p>On this page</p><nav aria-label="On this page"><a href="#en-version-and-release-status" class="depth-2">Version and release status</a><a href="#en-requirements-and-terms" class="depth-2">Requirements and terms</a><a href="#en-installation" class="depth-2">Installation</a><a href="#en-first-success-send-recently-read-papers-to-notes" class="depth-2">First success: send recently read papers to notes</a><a href="#en-importing-and-updating-literature-notes" class="depth-2">Importing and updating literature notes</a><a href="#en-note-layout-and-preservation" class="depth-2">Note layout and preservation</a><a href="#en-citations-bibliographies-and-sidebars" class="depth-2">Citations, bibliographies and sidebars</a><a href="#en-all-commands" class="depth-2">All commands</a><a href="#en-settings" class="depth-2">Settings</a><a href="#en-pdf-text-and-agents" class="depth-2">PDF text and agents</a><a href="#en-cross-vault-and-hookmark" class="depth-2">Cross-vault and Hookmark</a><a href="#en-data-and-privacy" class="depth-2">Data and privacy</a><a href="#en-troubleshooting" class="depth-2">Troubleshooting</a><a href="#en-migrating-from-the-old-plugin-id" class="depth-2">Migrating from the old plugin ID</a><a href="#en-updates-support-and-license" class="depth-2">Updates, support and license</a></nav><a class="download" href="guide.en.md" download>Download Markdown ↙</a></aside><article class="prose"><div class="doc-meta"><span>Documentation checked 2026-10-12</span><span>Source version 0.5.0</span><a href="guide.en.md" download>Markdown ↙</a></div><h1 id="en-cmds-zotero-user-guide">CMDS Zotero user guide</h1>
+<p>Send what you read and mark up in Zotero to Obsidian literature notes. Metadata, highlights and comments, Zotero notes, citations and links back to the source end up in one note, and the text you write yourself stays untouched. Zotero is treated as read-only.</p>
+<h2 id="en-version-and-release-status">Version and release status</h2>
+<p>This guide covers <strong>CMDS Zotero 0.5.0</strong>, released on <strong>2026-10-12</strong>. The <a href="https://github.com/johnfkoo951/cmds-zotero/releases/tag/0.5.0">GitHub release</a> carries <code>main.js</code>, <code>manifest.json</code> and <code>styles.css</code>, built and attested by CI. <strong>The plugin is not yet listed in Obsidian Community Plugins</strong>; install it manually or with BRAT.
+It was verified with Obsidian 1.14.4, Zotero 10.0.5 and Better BibTeX 9.0.71 on macOS. Checks on a real library covered the recently read list, creating and updating four literature notes, PDF text extraction for four papers (one of them a scan) and quote location. Group libraries and Windows/Linux are outside the verified scope.</p>
+<h2 id="en-requirements-and-terms">Requirements and terms</h2>
 <ul>
-<li><strong>Obsidian desktop 1.7.2+</strong>. Mobile is not supported.</li>
-<li>Running <a href="https://www.zotero.org/">Zotero</a> and <a href="https://retorque.re/zotero-better-bibtex/">Better BibTeX</a>. BBT is the Zotero add-on that exposes the local citation/metadata facilities this plugin uses.</li>
-<li>A local endpoint, default <code>http://127.0.0.1:23119/better-bibtex</code>. No Zotero Web API key, native Local API preference change, SQLite access, or external PDF utility is required by this implementation.</li>
-<li>A source item and local PDF with one harmless text annotation for first testing. Annotation-image import additionally needs a readable source image file.</li>
-<li><strong>Node.js 22</strong> for building/maintenance scripts, not as a separate requirement for an installed plugin. Plugin code is MIT; Zotero storage services and optional commercial Hookmark software have their own terms.
-A <strong>citekey</strong> is a citation label such as <code>Example2026</code>. It is not a stable item identity. Canonical identity combines library type, local library ID and Zotero item key. Attachments and annotations have their own identities; a parent item is not a PDF.</li>
+<li><strong>Obsidian desktop 1.7.2 or later</strong>. Mobile is not supported.</li>
+<li>A running <a href="https://www.zotero.org/">Zotero</a> with <a href="https://retorque.re/zotero-better-bibtex/">Better BibTeX</a> (BBT). The plugin talks only to BBT&#39;s local JSON-RPC.</li>
+<li><strong>Recently read papers</strong> use the reading history Zotero records when a PDF opens in its reader; this was verified on Zotero 10.</li>
+<li>The default local endpoint is <code>http://127.0.0.1:23119/better-bibtex</code>. No Zotero Web API key, native Local API setting, SQLite access or separate PDF tool is needed.
+A <strong>citekey</strong> such as <code>Example2026</code> is a citation label, not a permanent identifier. The plugin identifies an item by library type, local library ID and Zotero item key. Attachments and annotations have their own keys; a parent item is not a PDF.</li>
 </ul>
-<h2 id="en-build-and-install-for-a-local-test">Build and install for a local test</h2>
-<p>There is no released asset set or public 0.3 source to download yet. <strong>Cloning public <code>main</code> and running the commands below builds the 0.2 baseline only, not the 0.3 implementation described in the rest of this guide.</strong> For that public baseline, follow its <a href="https://github.com/johnfkoo951/cmds-zotero/blob/b58adb733bcd5bc0734ca2f31d6cb420fd8e8fbe/README.md">version-specific README</a>.</p>
-<pre><code class="language-sh">npm ci
-npm run lint
-npm run typecheck
-npm test
-npm run build
-</code></pre>
-<p>Check the built <code>manifest.json</code> first: a public-main build currently says <strong>0.2.0</strong>. Do not follow the 0.3-only completion/sidebar/settings behavior below as a guarantee for that build. Copy only <code>main.js</code>, <code>manifest.json</code>, and <code>styles.css</code> to <code>&lt;vault&gt;/.obsidian/plugins/cmds-zotero/</code>. Reload Obsidian and enable <strong>CMDS Zotero</strong> manually. Never copy another machine&#39;s settings or private indexes. The commands above are instructions, not a claim they were executed during this documentation pass.
-If migrating from <code>cmds-link-zotero</code>, use the dedicated migration appendix below instead of overwriting a live install. Do not enable both plugin IDs.</p>
-<h2 id="en-first-success-connect-index-import-one-source">First success: connect, index, import one source</h2>
-<p>The steps and feature reference below describe the <strong>unpublished local 0.3 development environment</strong>. They are a development preview for readers without that source; public-clone users should use the linked 0.2 baseline guide instead.</p>
+<h2 id="en-installation">Installation</h2>
+<p><strong>Manual</strong></p>
+<ol>
+<li>Download <code>main.js</code>, <code>manifest.json</code> and <code>styles.css</code> from the <a href="https://github.com/johnfkoo951/cmds-zotero/releases/tag/0.5.0">0.5.0 release</a>.</li>
+<li>Put the three files in <code>&lt;vault&gt;/.obsidian/plugins/cmds-zotero/</code>.</li>
+<li>Reload Obsidian and enable <strong>CMDS Zotero</strong> under <strong>Settings → Community plugins</strong>.</li>
+</ol>
+<p><strong>BRAT</strong>: add <code>johnfkoo951/cmds-zotero</code> as a beta plugin in BRAT.</p>
+<p>Upgrading keeps your settings (<code>data.json</code>) and index. Back up the plugin folder first. If the old <code>cmds-link-zotero</code> plugin shares the index path, disable it, or index refreshes are refused.</p>
+<h2 id="en-first-success-send-recently-read-papers-to-notes">First success: send recently read papers to notes</h2>
 <ol>
 <li>Start Zotero with Better BibTeX enabled.</li>
-<li>Open <strong>Settings → CMDS Zotero</strong> and inspect <strong>Server endpoint</strong>, <strong>Output folder</strong>, <strong>Image folder</strong>, and <strong>Index path</strong>. Paths for output/index are relative to the current vault, not arbitrary absolute paths.</li>
-<li>Click <strong>Save configuration</strong> first. Edits remain a draft until saved. <strong>Test connection → Test</strong> tests the saved configuration, not unsaved text.</li>
-<li>Run <strong>Refresh citekey index</strong> from Ctrl/Cmd+P. This makes a full discovery/export scan and bounded attachment requests; it is not a server-side incremental cursor.</li>
-<li>Run <strong>Diagnose index and links</strong>. Resolve unavailable or ambiguous identities before relying on links.</li>
-<li>Run <strong>Search literature</strong> or <strong>Import literature note</strong>, choose the sample source, and inspect the <strong>Literature import preview</strong>, destination path and conflict report.</li>
-<li>Click <strong>Apply import</strong> only when the preview is correct. A conflict disables that action. The plugin creates a new note or updates its own managed sections, not arbitrary existing prose.</li>
-<li>Open the imported note, follow its Zotero/PDF link, and check the text annotation against Zotero.</li>
-<li>Write a sentence in your own section outside generated markers, import again, and verify it remains. Do this before a batch update.
-Success means the intended source identity, PDF/annotation link and preservation behavior all match. A connection success alone is not proof that a particular attachment exists.</li>
+<li>In <strong>Settings → CMDS Zotero</strong>, set <strong>Output folder</strong>, <strong>Image folder</strong> and <strong>Index path</strong> (vault-relative) and press <strong>Save configuration</strong>. <strong>Test connection</strong> tests the saved settings.</li>
+<li>Run <strong>Refresh citekey index</strong> once from the command palette (Ctrl/Cmd+P).</li>
+<li>Open a paper&#39;s PDF in Zotero&#39;s reader and add a highlight or a comment.</li>
+<li>Run <strong>Send recently read papers to notes</strong>, or click the open-book ribbon icon.</li>
+<li>Each row shows the state of its literature note: <em>No literature note yet</em>, <em>N new annotations not in the note</em>, <em>Note is up to date</em>, or a note CMDS Zotero did not create (never overwritten).</li>
+<li>Papers that need sending are preselected. <strong>Send</strong> creates the note or refreshes only its managed sections.</li>
+<li>Open the result with the row&#39;s note button and compare annotations, page links and metadata with Zotero.</li>
+<li>Write a sentence under <code>## Synthesis</code> or <code>## Notes</code>, add another highlight in Zotero and send again. Your sentence stays and only the new annotation is added: that is the first success.</li>
 </ol>
-<h2 id="en-citation-and-sidebar-workflow">Citation and sidebar workflow</h2>
-<h3 id="en-cite-while-writing">Cite while writing</h3>
-<p>Run <strong>Insert citation from Zotero</strong> in an editor to open Better BibTeX&#39;s interactive Cite As You Write picker (CAYW). The default <code>pandoc</code> format inserts <code>[@citekey]</code>. This picker path still needs environment-specific acceptance.
-The 0.3 source also implements local completion: type <code>[@</code> and an ASCII citekey/title/author/year fragment; <code>_</code> can stand for spaces. The current trigger accepts up to 80 letters/numbers or <code>_ : . + / -</code>, not Korean characters. Enter completes <code>[@citekey]</code>; inside existing brackets Shift+Enter also retains the bracket structure. Bare <code>@citekey</code> insertion with Shift+Enter applies outside brackets when the non-default bare-at trigger is configured. Wikilink completion keeps its existing structure. Suggestions read the cached index, not a BBT request for every keystroke. Warm-up/refresh can still happen in the background.
-The data model supports <code>bracket</code>, <code>at</code>, and <code>off</code> triggers, but <strong>there is no “Writing → Citekey completion” settings control in the inspected 0.3 UI</strong>. Older README/changelog wording naming such a control is not an installation instruction. Use the default bracket trigger for beginner testing.</p>
-<h3 id="en-references-sidebar">References sidebar</h3>
-<p><strong>Open references sidebar</strong> lists sources cited in the active note using <code>[@key]</code>, bare <code>@key</code>, or citation wikilinks. It skips frontmatter and fenced code, deduplicates sources, shows bibliography text in the chosen CSL style and identifies unresolved/ambiguous keys. Actions open the note, Zotero item or PDF; selecting the citation text navigates to its first occurrence. Copy bibliography produces plain text, not a live citation field in Word.</p>
-<h3 id="en-annotations-sidebar">Annotations sidebar</h3>
-<p><strong>Open annotations sidebar</strong> (also the highlighter ribbon) follows an identified literature note or a pinned indexed item. Cards show color, page label, text, comment and tags. Open in Zotero, insert at the cursor, copy link or copy text. Image cards can link an image without copying its bytes: use explicit import for validated vault copies. It does not continuously follow Zotero&#39;s live reader position.</p>
-<h3 id="en-find-citations-and-update-notes">Find citations and update notes</h3>
-<p><strong>Find notes citing a source</strong> scans notes for current and previous citekeys. <strong>Update all owned literature notes</strong> immediately loops over owned notes using the preservation engine, reports updated/unchanged/skipped results, and skips conflicts. It does <strong>not</strong> open an approval preview for every item. Back up and test single-note re-import before invoking this batch command.</p>
-<h2 id="en-complete-command-reference">Complete command reference</h2>
+<p>The <strong>Reading window</strong> offers 7, 30, 90 or 365 days; the default is the <strong>Recently read window</strong> setting (30 days). Zotero must be running for the list.</p>
+<h2 id="en-importing-and-updating-literature-notes">Importing and updating literature notes</h2>
+<p><strong>Import literature note</strong> lets you pick a source, shows a preview (path, per-section states, conflicts) and applies it. The picker lists recently read papers first, labelled like <code>· read 3 days ago</code>.
+Imports render from <strong>Zotero&#39;s current data</strong> (that item&#39;s export plus its attachments and annotations), not from the saved index, so highlights made a minute ago are included without refreshing the index. If the citekey changed in Zotero, the item is found again by item key; another item is never substituted. With Zotero closed, the preview uses the saved index and says so. Creating a new note needs bibliography text, so Zotero must be running for a first import.
+<strong>Update all owned literature notes</strong> walks every note this plugin created and refreshes its managed sections, reporting <em>Updated</em>, <em>Partial (edited sections preserved)</em>, <em>Unchanged</em> and <em>Skipped</em>. It does not ask per note, so run it after a small test.</p>
+<h2 id="en-note-layout-and-preservation">Note layout and preservation</h2>
+<p>A new note&#39;s frontmatter holds <code>type: zotero</code>, <code>zoteroID</code>, <code>zoteroSelectURI</code>, <code>zotero-key</code>, <code>citekey</code>, <code>doi</code>, <code>title</code>, <code>authors</code>, <code>year</code>, <code>tags</code> and the <code>zotero_*</code> fields such as <code>zotero_title</code>. <strong>Frontmatter is written once and is yours afterwards.</strong>
+The body follows this order:</p>
+<ul>
+<li>Title and abstract (<code>overview</code>), bibliography text (<code>citation</code>)</li>
+<li><code>## Synthesis</code>: your area (<code>**Contribution**::</code>, <code>**Related**::</code>)</li>
+<li>Metadata and links (<code>metadata</code>): creators, journal, DOI, URL, tags, collections, related Zotero items, links that open Zotero and the PDF</li>
+<li><code>## Zotero notes</code> (<code>notes</code>): Zotero child notes as Markdown with headings, lists and links kept; code blocks pass through unchanged</li>
+<li><code>## Notes</code>: your area</li>
+<li><code>## Annotations</code>: one block per annotation, in Zotero&#39;s reading order, so an annotation added later on an earlier page still lands in place. Highlights, underlines, images, comments and ink drawings are distinguished, and page links open that spot in Zotero&#39;s reader.</li>
+</ul>
+<p>Managed sections sit between <code>&lt;!-- cmds-zotero:&lt;id&gt;:&lt;hash&gt; --&gt;</code> and <code>&lt;!-- /cmds-zotero:&lt;id&gt; --&gt;</code>. If you edit one, only that section is kept as <strong>edited (preserved)</strong> while the rest of the note updates. In the preview you choose per section:</p>
+<ul>
+<li><strong>Keep this time</strong>: leave it as it is for this update.</li>
+<li><strong>Detach</strong>: make the block permanently yours; it is never rendered again.</li>
+<li><strong>Reset from Zotero</strong>: replace it with Zotero&#39;s content; the previous note is first backed up to <code>.cmds-zotero/backups/notes/</code>.
+Damaged or duplicate markers, a note CMDS Zotero did not create, or several notes with one identity block the write, with the reason and line number shown. Blocks for annotations deleted in Zotero are never removed from the note.</li>
+</ul>
+<h2 id="en-citations-bibliographies-and-sidebars">Citations, bibliographies and sidebars</h2>
+<ul>
+<li><strong>Insert citation from Zotero</strong> uses BBT&#39;s Cite As You Write picker; the default format is <code>[@citekey]</code>.</li>
+<li>Typing part of a citekey, title, author or year after <code>[@</code> in the editor opens local completion. It reads the cached index, so Zotero is not called on every keystroke.</li>
+<li><strong>Open references sidebar</strong> collects <code>[@key]</code>, <code>@key</code> and citation wikilinks in the current note and shows their bibliography and unresolved states. With Zotero closed it uses saved bibliography text (<code>.cmds-zotero/bibliography.json</code>).</li>
+<li><strong>Open annotations sidebar</strong> shows the annotations of the current literature note or a pinned source, to insert at the cursor or copy.</li>
+<li><strong>Insert bibliography</strong> inserts one source&#39;s CSL bibliography text.</li>
+<li><strong>Copy CSL-JSON for cited sources</strong> and <strong>Write pandoc bibliography sidecar for current note</strong> copy the current note&#39;s cited sources as CSL-JSON, or save them to <code>.cmds-zotero/bibliography/&lt;note&gt;.json</code> and show the <code>bibliography:</code> line for the frontmatter. The <a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/docs/pandoc-docx.md">pandoc/DOCX guide</a> explains the export.</li>
+</ul>
+<h2 id="en-all-commands">All commands</h2>
 <table>
 <thead>
 <tr>
-<th>Exact command</th>
-<th>Purpose / boundary</th>
+<th>Command</th>
+<th>What it does</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>Insert citation from Zotero</td>
-<td>Interactive CAYW insertion into the active editor</td>
-</tr>
-<tr>
-<td>Refresh citekey index</td>
-<td>Full index refresh from local BBT</td>
-</tr>
-<tr>
-<td>Search literature</td>
-<td>Pick an indexed source and open its actions</td>
-</tr>
-<tr>
-<td>Open source PDF at page</td>
-<td>Resolve a source and choose PDF page position, starting at 1</td>
+<td>Send recently read papers to notes</td>
+<td>Shows papers recently read in Zotero with their note states and sends them</td>
 </tr>
 <tr>
 <td>Import literature note</td>
-<td>Preview a single preservation-aware import</td>
+<td>Previews and imports or updates one source</td>
 </tr>
 <tr>
 <td>Update all owned literature notes</td>
-<td>Batch-update owned managed sections; no per-note confirmation</td>
+<td>Refreshes managed sections of every note the plugin created</td>
+</tr>
+<tr>
+<td>Refresh citekey index</td>
+<td>Rebuilds the index from BBT</td>
+</tr>
+<tr>
+<td>Search literature</td>
+<td>Picks a source and an action (open, import, copy links and more)</td>
+</tr>
+<tr>
+<td>Insert citation from Zotero</td>
+<td>Inserts a CAYW citation</td>
 </tr>
 <tr>
 <td>Insert bibliography</td>
-<td>Insert one selected source&#39;s CSL bibliography into the editor</td>
+<td>Inserts one source&#39;s bibliography</td>
+</tr>
+<tr>
+<td>Copy CSL-JSON for cited sources</td>
+<td>Copies CSL-JSON for the current note&#39;s citations</td>
+</tr>
+<tr>
+<td>Write pandoc bibliography sidecar for current note</td>
+<td>Saves a bibliography file for pandoc</td>
 </tr>
 <tr>
 <td>Open references sidebar</td>
-<td>Review citations in the active note</td>
+<td>Reviews the current note&#39;s citations</td>
 </tr>
 <tr>
 <td>Open annotations sidebar</td>
-<td>Review/insert annotations for an identified or pinned source</td>
+<td>Reviews and inserts annotations</td>
+</tr>
+<tr>
+<td>Open source PDF at page</td>
+<td>Opens the PDF at a file-position page</td>
+</tr>
+<tr>
+<td>Open link under cursor</td>
+<td>Opens the Zotero link or <code>[@citekey]</code> under the cursor</td>
 </tr>
 <tr>
 <td>Find notes citing a source</td>
-<td>Find occurrences of current and previous citekeys</td>
-</tr>
-<tr>
-<td>Copy Hookmark-compatible link</td>
-<td>Copy a validated Zotero Markdown link; does not create a Hookmark bookmark</td>
-</tr>
-<tr>
-<td>Copy stable literature note link</td>
-<td>Copy an identity-based note navigation link</td>
-</tr>
-<tr>
-<td>Diagnose index and links</td>
-<td>Inspect connection/index/identity diagnostics</td>
+<td>Finds notes that use the current or a previous citekey</td>
 </tr>
 <tr>
 <td>Find literature across vaults</td>
-<td>Read opt-in peer maps and navigate to matches</td>
+<td>Finds notes for the same source in allowed peer vaults</td>
+</tr>
+<tr>
+<td>Copy Zotero item link (Hookmark-compatible)</td>
+<td>Copies a Markdown link to the Zotero item</td>
+</tr>
+<tr>
+<td>Copy literature note identity link (rename-safe)</td>
+<td>Copies a link that keeps working after the note is renamed</td>
+</tr>
+<tr>
+<td>Copy Obsidian file link (Hookmark-native)</td>
+<td>Copies the literature note&#39;s <code>obsidian://open</code> address</td>
+</tr>
+<tr>
+<td>Diagnose index and links</td>
+<td>Diagnoses connection, index and identities</td>
 </tr>
 </tbody></table>
-<p>PDF page numbers are <strong>1-based file positions</strong>, not printed page labels (a page labeled “12” may be file page 18). Group links need a real group ID distinct from the local library ID. Missing/ambiguous sources must not silently resolve to the first match.</p>
-<h2 id="en-actual-settings-in-0-3-0">Actual settings in 0.3.0</h2>
-<p>Click <strong>Save configuration</strong> after edits. Testing or refreshing before saving still uses saved values. Configuration changes are blocked while the ingest service is busy refreshing.</p>
+<p>PDF page numbers are <strong>one-based file positions</strong>, not printed page labels.</p>
+<h2 id="en-settings">Settings</h2>
+<p>Press <strong>Save configuration</strong> after changing values; until then the previous values apply.</p>
 <table>
 <thead>
 <tr>
-<th>Visible control</th>
-<th>Default / range / meaning</th>
+<th>Setting</th>
+<th>Default and meaning</th>
 </tr>
 </thead>
 <tbody><tr>
 <td>Server endpoint</td>
-<td><code>http://127.0.0.1:23119/better-bibtex</code>; localhost HTTP(S) only, no credentials/query/fragment</td>
+<td><code>http://127.0.0.1:23119/better-bibtex</code>; localhost only</td>
 </tr>
 <tr>
 <td>Test connection</td>
-<td>Saved endpoint test, without the citation picker</td>
+<td>Tests the saved endpoint</td>
 </tr>
 <tr>
 <td>Request timeout</td>
-<td>20 seconds; 1–180</td>
+<td>20 s (1–180)</td>
 </tr>
 <tr>
 <td>Attachment timeout</td>
-<td>60 seconds; 1–180</td>
+<td>60 s (1–180); attachments that need image rendering can take longer</td>
 </tr>
 <tr>
 <td>Index path</td>
-<td><code>80. References/zotero-index.json</code>; vault-relative</td>
+<td><code>80. References/zotero-index.json</code></td>
 </tr>
 <tr>
 <td>Maximum index age</td>
-<td>60 minutes; 1–10080; stale queries may refresh a full snapshot</td>
+<td>60 min (1–10080); older indexes refresh in the background on the next read</td>
 </tr>
 <tr>
 <td>Parallel requests</td>
-<td>2; 1–8 attachment-request concurrency</td>
+<td>2 (1–8)</td>
 </tr>
 <tr>
 <td>Refresh saved index</td>
-<td>Run refresh using saved configuration</td>
+<td>Refreshes the index now</td>
 </tr>
 <tr>
 <td>Output folder</td>
-<td><code>References/Zotero</code>; new literature notes</td>
+<td><code>References/Zotero</code>; where new literature notes go</td>
 </tr>
 <tr>
 <td>Image folder</td>
-<td><code>References/Zotero/images</code>; explicitly imported annotation images</td>
+<td><code>References/Zotero/images</code>; copies of image annotations</td>
 </tr>
 <tr>
 <td>Bibliography style</td>
-<td><code>apa</code>; a CSL style installed in Zotero</td>
+<td><code>apa</code>; an installed Zotero CSL style ID</td>
 </tr>
 <tr>
 <td>Citation format</td>
-<td><code>pandoc</code>; CAYW format</td>
+<td><code>pandoc</code>; the CAYW format</td>
+</tr>
+<tr>
+<td>Recently read window</td>
+<td>30 days (7/30/90/365); the recently read list and picker ordering</td>
 </tr>
 <tr>
 <td>Peer vaults</td>
-<td>Empty by default; one line <code>Vault name</code> plus a pipe plus its absolute folder path</td>
+<td>One <code>Vault name | absolute path</code> per line, for cross-vault lookup</td>
 </tr>
 <tr>
-<td>Save configuration</td>
-<td>Validate and save the draft settings</td>
+<td>References headings</td>
+<td>Headings that mark a References section; defaults <code>References</code>, <code>Bibliography</code>, <code>Works Cited</code>, <code>참고 문헌</code>, <code>참고 자료</code></td>
 </tr>
 </tbody></table>
-<p>The schema also contains <code>citationTrigger</code>, <code>excludedTags</code> (default <code>obscite</code>), <code>headingHighlightColor</code> (default gray), and <code>referencesFollowActiveNote</code> (true). <strong>These are data-model settings without matching controls in the current settings tab.</strong> Do not search for invented “Excluded tags” or heading-color UI. Manual settings-file modification is not required for first use and is not part of this beginner workflow.</p>
-<h2 id="en-imported-note-structure-and-preservation">Imported note structure and preservation</h2>
-<p>The built-in template uses Cite/Abstract/metadata/Link callouts and Highlight/Image/Note annotation callouts, with inline fields suitable for Dataview when that separate plugin is installed. Highlight classes choose the nearest Zotero palette color; the default gray heading color becomes a fifth-level heading. Excluded tags are omitted according to the data model.
-Initial frontmatter includes source metadata (<code>zotero_title</code>, <code>zotero_author</code>, <code>zotero_year</code>, journal, DOI, URL and tags) alongside identity keys. <strong>After creation the frontmatter is user-owned</strong>; fresh metadata goes in managed body sections. <code>zoteroID</code> helps preserve note location after renaming or citekey changes.
-Owned section IDs include <code>overview</code>, <code>citation</code>, <code>metadata</code>, <code>notes</code>, and per-annotation identifiers. Do not remove/edit ownership markers as a formatting cleanup. Manual changes to a generated region cause conflict detection; move your analysis to an unowned section rather than forcing an overwrite.
-Existing unowned notes are not automatically adopted. Choose a separate output folder to import alongside them. Imported image names include library identity and content hashes; a changed source image creates a new version rather than deleting older or user-modified assets.</p>
-<h2 id="en-cross-vault-and-hookmark-use">Cross-vault and Hookmark use</h2>
-<p>Peer-vault access is opt-in and read-only: enter named absolute vault paths, publish/refresh the relevant index/maps in each vault, and use <strong>Find literature across vaults</strong>. A different vault with the same citekey is not automatically the same source; resolve canonical identity.
-Copyable Hookmark-compatible links are Markdown links only. The plugin does not change Hookmark settings, script it, create bookmarks, or require it for ordinary Zotero navigation. Test the receiving application separately before assuming round-trip compatibility. Renamed-note deep links rely on the correct installed plugin and identity maps.</p>
+<h2 id="en-pdf-text-and-agents">PDF text and agents</h2>
+<p>AI agents and scripts use the same features through the CLI. It hands work to the plugin in the running Obsidian and answers read-only requests from the index file when Obsidian is not available.</p>
+<pre><code class="language-sh">node scripts/ingest.mjs --vault &quot;Research&quot; --action recent --days 30
+node scripts/ingest.mjs --vault &quot;Research&quot; --action import --citekey Example2026
+node scripts/ingest.mjs --vault &quot;Research&quot; --action import --citekey Example2026 --apply
+node scripts/ingest.mjs --vault &quot;Research&quot; --action pdf-text --citekey Example2026 --pages 1-3
+node scripts/ingest.mjs --vault &quot;Research&quot; --action locate --citekey Example2026 --quote &quot;quoted text&quot;
+</code></pre>
+<ul>
+<li><code>recent</code> returns read days and note states (<code>none</code>, <code>behind</code>, <code>current</code>, <code>foreign</code>, <code>duplicate</code>).</li>
+<li><code>import</code> previews only unless <code>--apply</code> is given. Hard conflicts are refused with <code>note-conflict</code>. If Zotero cannot be read fresh, nothing is written unless <code>--allow-stale</code> is given.</li>
+<li><code>pdf-text</code> extracts text with Obsidian&#39;s bundled pdf.js into a private cache (<code>.cmds-zotero/pdf-text/</code>), with the character maps CJK fonts need. A scan without a text layer reports <code>textLayer: none</code> and an OCR warning; watermarks repeated on every page are not counted as body text.</li>
+<li><code>locate</code> finds the page of a quote and returns a link into Zotero&#39;s reader.</li>
+<li>In read-only contexts use <code>scripts/ingest-ro.mjs</code>, which refuses writes and <code>--apply</code>.
+Agents never edit managed sections; their own summaries go under <code>## Synthesis</code> or <code>## Notes</code>. The full rules are in the <a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/docs/agent-contract-v2/contract.md">agent contract</a>.</li>
+</ul>
+<h2 id="en-cross-vault-and-hookmark">Cross-vault and Hookmark</h2>
+<p>The plugin reads the note maps of vaults listed in <strong>Peer vaults</strong>, read-only, and <strong>Find literature across vaults</strong> opens them. The same citekey in another vault can be a different source, so check the identity.
+The Hookmark commands only copy links to the clipboard. They do not change Hookmark settings, create bookmarks or run scripts.</p>
 <h2 id="en-data-and-privacy">Data and privacy</h2>
-<p>Requests go to the local BBT endpoint for metadata, citation selection, bibliography, attachments and annotations. Endpoint validation limits it to local HTTP(S). Zotero remains <strong>read-only</strong>: no preference/database edits, citation-key pinning or library record changes.
-Explicit image imports may read attachment/annotation image paths <strong>outside the vault</strong> and copy them into the image folder. Peer-vault discovery reads other local vault maps when configured. Settings, indexes, maps and reports can contain private paths, bibliographic metadata, annotation text and source identities; do not publish them.
-The runtime writes current-vault settings, indexes, requested notes and imported images. There is no telemetry, plugin-owned HTTP listener, self-updater or built-in paid service. Opening a deliberate website or external-app link delegates to that app and its policies. Local-first does not make later Share/AI publication automatically safe.</p>
-<h2 id="en-troubleshooting-and-acceptance-checklist">Troubleshooting and acceptance checklist</h2>
+<ul>
+<li>The plugin asks the local BBT for metadata, citations, bibliographies, attachments and annotations, and reading history. It never changes Zotero settings, the database, citekeys or library records.</li>
+<li>Importing image annotations reads Zotero&#39;s cached images outside the vault and copies them into the image folder.</li>
+<li>In the vault it writes settings, the index, literature notes, image copies and private files under <code>.cmds-zotero/</code> (bibliography, note map, backups, PDF text caches). It creates <code>.cmds-zotero/.gitignore</code> first so the folder stays out of git. PDF text caches hold full paper text; do not share them.</li>
+<li>The index and note map can contain bibliographic data, private paths and annotations. Keep them out of public repositories.</li>
+<li>No telemetry, own HTTP server or self-updater.</li>
+</ul>
+<h2 id="en-troubleshooting">Troubleshooting</h2>
 <table>
 <thead>
 <tr>
 <th>Symptom</th>
-<th>Check next</th>
+<th>Check</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>Test uses old endpoint</td>
-<td>Save configuration first, then Test</td>
+<td>The recently read list is empty</td>
+<td>Zotero is running, the reading window, and the PDF was opened in Zotero&#39;s reader</td>
+</tr>
+<tr>
+<td>A new highlight is missing from the note</td>
+<td>Zotero is running; with Zotero closed the saved index is used</td>
+</tr>
+<tr>
+<td>A note is refused as &quot;not created by CMDS Zotero&quot;</td>
+<td>Another plugin created it; it is never overwritten, so check the output folder and file name</td>
+</tr>
+<tr>
+<td>Import blocked by damaged markers</td>
+<td>Fix the marker at the line shown in the preview, or use Reset</td>
+</tr>
+<tr>
+<td>Index refresh refused</td>
+<td>Whether the old <code>cmds-link-zotero</code> plugin is enabled</td>
 </tr>
 <tr>
 <td>Connection fails</td>
-<td>Zotero running, BBT installed/enabled, valid localhost endpoint and request timeout</td>
+<td>Zotero and BBT are running, the localhost endpoint, timeouts</td>
 </tr>
 <tr>
-<td>Index refresh fails or is partial</td>
-<td>Read diagnostics; preserve last usable snapshot, do not treat failure as an empty library</td>
+<td>A PDF opens on the wrong page</td>
+<td>Page numbers are file positions, not printed labels</td>
 </tr>
 <tr>
-<td>No completion results</td>
-<td>Use <code>[@</code>, refresh/warm the index, check known title/citekey; do not look for a nonexistent UI toggle</td>
-</tr>
-<tr>
-<td>Wrong/ambiguous citekey</td>
-<td>Resolve canonical identity; duplicate keys are not safe first-match selections</td>
-</tr>
-<tr>
-<td>PDF opens on wrong page</td>
-<td>Use file page position, not printed label; verify attachment identity</td>
-</tr>
-<tr>
-<td>Missing annotation image</td>
-<td>Confirm source image file exists and is readable; try explicit import rather than sidebar insertion</td>
-</tr>
-<tr>
-<td>Import blocked</td>
-<td>Inspect manual edits, ownership, duplicate identity and destination conflicts; keep the original</td>
-</tr>
-<tr>
-<td>Group-library link fails</td>
-<td>Check real group ID versus local library ID; live group support remains unverified</td>
-</tr>
-<tr>
-<td>Peer note missing</td>
-<td>Confirm opt-in path, maps refreshed in both vaults, canonical identity and actual note location</td>
+<td><code>pdf-text</code> returns nothing</td>
+<td>The <code>textLayer</code> value; <code>none</code> means a scan that needs OCR</td>
 </tr>
 </tbody></table>
-<p>Before relying on the plugin test: offline/partial index retention, missing attachment, duplicate citekeys, import → handwritten section → re-import, missing image, PDF/annotation navigation, note rename, peer navigation and rollback. A successful bulk run is not a substitute for these small checks.</p>
-<h2 id="en-migration-from-the-old-plugin-id">Migration from the old plugin ID</h2>
-<p>Quit Obsidian and pause vault-sync writers before using <code>scripts/migrate-local.mjs</code>. It does not stop running plugins for you. <code>dry-run</code> and <code>check</code> are read-only; <code>apply</code> writes files and registries and needs the exact fingerprint from check. Inspect that plan and use a <strong>new private backup directory outside both vault and repository</strong>, with an existing parent.</p>
+<h2 id="en-migrating-from-the-old-plugin-id">Migrating from the old plugin ID</h2>
+<p>To move from <code>cmds-link-zotero</code>, quit Obsidian and run <code>scripts/migrate-local.mjs</code> as <code>dry-run</code>, then <code>check</code>, then <code>apply</code>, with a new private backup folder outside the vault and the repository.</p>
 <pre><code class="language-sh">node scripts/migrate-local.mjs --vault /path/to/vault --backup /path/to/private-backups/migration-001 --mode dry-run
 node scripts/migrate-local.mjs --vault /path/to/vault --backup /path/to/private-backups/migration-001 --mode check
+node scripts/migrate-local.mjs --vault /path/to/vault --backup /path/to/private-backups/migration-001 --mode apply --expect CHECK_FINGERPRINT
 </code></pre>
-<p>Only after reviewing the result:</p>
-<pre><code class="language-sh">node scripts/migrate-local.mjs --vault /path/to/vault --backup /path/to/private-backups/migration-001 --mode apply --expect CHECK_FINGERPRINT
-</code></pre>
-<p>The helper snapshots both installs/registries, installs the three assets, maps existing old-ID enablement/hotkeys, and preserves the old installation. It copies old settings only when the new file is absent; differing settings or conflicting hotkeys stop for resolution. It does not enable a previously disabled integration, disable unrelated plugins, or repair old index identities. Rebuild the index afterward.
-Rollback is explicit:</p>
-<pre><code class="language-sh">node scripts/migrate-local.mjs --vault /path/to/vault --backup /path/to/private-backups/migration-001 --mode rollback
-</code></pre>
-<p>Rollback refuses changed deployed files/settings rather than overwriting later work. Keep the backup and resolve conflicts manually. After restarting Obsidian, ensure only the intended new ID is enabled and verify settings, index and one source before regular work. No migration was executed while preparing this guide.</p>
-<h2 id="en-integration-and-development-reference">Integration and development reference</h2>
-<p>The implementation discussed here was inspected locally at 0.3. Public source links below point to the available 0.2 baseline and are not evidence that the full 0.3 implementation has been published.
-<a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/src/types.ts">Source types</a> define schema 2 with generated time, count, entries, capabilities, diagnostics and completeness. Resolution distinguishes <code>resolved</code>, <code>ambiguous</code>, <code>not-found</code>, and <code>unavailable</code>. Legacy indexes remain identity-untrusted until rebuilt.
-The <a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/src/ingest-api.ts">ingest API</a> and <a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/scripts/ingest.mjs">CLI</a> provide a bounded job/result contract without an independent HTTP listener. Consumers should keep direct-BBT/offline fallbacks rather than assume a UI command returned completed data.</p>
-<pre><code class="language-sh">node scripts/ingest.mjs --vault &quot;Research&quot; --action connection
-node scripts/ingest.mjs --vault &quot;Research&quot; --action refresh
-node scripts/ingest.mjs --vault &quot;Research&quot; --action resolve --citekey Example2026
-node scripts/ingest.mjs --vault &quot;Research&quot; --action diagnostics
-</code></pre>
-<p>These examples use a fictional vault/key. CLI integration requires Obsidian and its intended command/API path to be available; it is not a remote SaaS endpoint.
-Development checks are lint, typecheck, tests and build. Release automation being present does not mean a release was published. Exact semver tags without <code>v</code> trigger the release workflow; do not push release tags as a documentation or local-test step.</p>
-<h2 id="en-updates-support-and-license">Updates, support, and license</h2>
-<p><a href="https://apps.cmdspace.work/plugins/cmds-zotero/">Web manual</a> | <a href="https://github.com/johnfkoo951/cmds-zotero">Repository</a> | <a href="https://github.com/johnfkoo951/cmds-zotero/issues">Issues</a> | <a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/CHANGELOG.md">Changelog</a>.
-Use source/release notes appropriate to the version you actually run. For a report include plugin/Obsidian/Zotero/BBT versions, OS, sanitized diagnostics and synthetic records. Never attach actual indexes, personal attachment paths, private annotation exports or settings. Keep existing integrations until the replacement is validated.
-<strong>Yohan Koo (CMDSPACE)</strong>, <a href="https://cmdspace.work">https://cmdspace.work</a>. MIT; <a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/LICENSE">LICENSE</a>.
-This manual checked root 0.3 source (<code>main.ts</code>, <code>settings.ts</code>, <code>settings-data.ts</code>, <code>types.ts</code>, <code>modals.ts</code>) and public distribution state. It did not run new imports, migrations, group tests, Hookmark tests or separate 0.4 work. No current screenshot is claimed or fabricated.</p>
+<p><code>rollback</code> mode undoes it and refuses to overwrite files changed after deployment. Afterwards check that only the new ID is enabled and rebuild the index.</p>
+<h2 id="en-updates-support-and-license">Updates, support and license</h2>
+<p><a href="https://apps.cmdspace.work/plugins/cmds-zotero/">Web guide</a> | <a href="https://github.com/johnfkoo951/cmds-zotero">Repository</a> | <a href="https://github.com/johnfkoo951/cmds-zotero/releases">Releases</a> | <a href="https://github.com/johnfkoo951/cmds-zotero/issues">Issues</a> | <a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/CHANGELOG.md">Changelog</a>
+When reporting a problem, include the plugin, Obsidian, Zotero and BBT versions, your OS and diagnostics with private data removed. Do not post real indexes, private paths, annotation text or PDF text caches.
+<strong>Yohan Koo (CMDSPACE)</strong>, <a href="https://cmdspace.work">https://cmdspace.work</a>. MIT, <a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/LICENSE">LICENSE</a>.</p>
 <a href="#main" class="back-top">Back to top ↑</a></article></div></div></main><footer class="site-footer"><a href="https://cmdspace.work">CMDSPACE</a><p data-ko="Yohan Koo (CMDSPACE). 내게 필요한 도구를 만들고 나눕니다." data-en="Yohan Koo (CMDSPACE). Build the tools you need. Share what works.">Yohan Koo (CMDSPACE). 내게 필요한 도구를 만들고 나눕니다.</p><a href="https://bio.cmdspace.work">bio.cmdspace.work ↗</a></footer><div id="glossTip" role="tooltip" hidden></div><p class="sr-only" id="feedback" aria-live="polite"></p></body></html>

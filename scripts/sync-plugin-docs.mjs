@@ -15,7 +15,7 @@ const {products}=JSON.parse(readFileSync(join(root,'catalog/plugins.json'),'utf8
 const digest=s=>createHash('sha256').update(s).digest('hex');
 const jobs=[];
 for(const p of products)for(const lang of ['ko','en']){
-  const master=join(vaultRoot,'70. Outputs/74. Projects/CMDSPACE Plugins',`2026-09-14-${p.slug}-guide.${lang}.md`);
+  const master=join(vaultRoot,'70. Outputs/74. Projects/CMDSPACE Plugins/설명서',`2026-09-14-${p.slug}-guide.${lang}.md`);
   const text=readFileSync(master,'utf8');
   const front=text.match(/^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/);
   if(!front)throw new Error(`Missing frontmatter: ${master}`);
