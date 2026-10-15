@@ -6,7 +6,8 @@
       "name": "CMDS Zotero",
       "repo": "johnfkoo951/cmds-zotero",
       "directory": "cmds-zotero",
-      "sourceVersion": "0.5.0",
+      "sourceVersion": "0.6.5",
+      "updated": "2026-10-15",
       "stage": "source-checked",
       "ko": {
         "role": "읽은 것을 노트로 가져오다",
@@ -17,8 +18,8 @@
           "주석·Zotero 노트·참고문헌을 한 노트에",
           "인용 삽입, PDF 텍스트, 에이전트 CLI"
         ],
-        "requires": "Obsidian 데스크톱 1.7.2+ / Zotero + Better BibTeX / GitHub 릴리스 또는 BRAT 설치",
-        "boundary": "Community Plugins에는 아직 등록하지 않았습니다. Zotero는 읽기 전용이며 최근 읽은 논문 목록은 Zotero가 실행 중일 때 보입니다."
+        "requires": "Obsidian 데스크톱 1.7.2+ / Zotero + Better BibTeX / 커뮤니티 플러그인에서 설치",
+        "boundary": "Zotero는 읽기 전용이며 최근 읽은 논문 목록은 Zotero가 실행 중일 때 보입니다."
       },
       "en": {
         "role": "Bring what you read into notes",
@@ -29,12 +30,12 @@
           "Annotations, Zotero notes and bibliography in one note",
           "Citations, PDF text and an agent CLI"
         ],
-        "requires": "Obsidian desktop 1.7.2+ / Zotero + Better BibTeX / install from the GitHub release or BRAT",
-        "boundary": "Not yet listed in Community Plugins. Zotero is read-only, and the recently read list needs Zotero running."
+        "requires": "Obsidian desktop 1.7.2+ / Zotero + Better BibTeX / install from Community plugins",
+        "boundary": "Zotero is read-only, and the recently read list needs Zotero running."
       },
       "publicRepo": true,
-      "communityListed": false,
-      "releaseVersion": "0.5.0",
+      "communityListed": true,
+      "releaseVersion": "0.6.5",
       "series": true
     },
     {
