@@ -1,6 +1,6 @@
 # 카탈로그 드리프트 리포트
 
-> 생성: 2026-10-22T23:59:57.837Z · 모드: `public-only` · 카탈로그 37개 · 신규후보 13개 · 이상 0건
+> 생성: 2026-10-23T23:52:08.020Z · 모드: `public-only` · 카탈로그 37개 · 신규후보 14개 · 이상 0건
 
 이 파일은 `scripts/scan.mjs`가 자동 생성합니다. 새 프로젝트는 `catalog/apps.yaml`(피처링) 또는 `catalog/ignore.yaml`(제외)로 옮기면 다음 스캔부터 사라집니다.
 
@@ -8,19 +8,20 @@
 
 | 프로젝트 | 소스 | 최근 커밋 | 신호 | 판단 이유 |
 |---|---|---|---|---|
-| `archify` | github | 2026-09-30 | git | 최근 22일 내 커밋된 활성 git 프로젝트 |
-| `awesome-jev` | github | 2026-09-20 | git | 최근 32일 내 커밋된 활성 git 프로젝트 |
-| `cmds-share-server` | github | 2026-10-14 | git | 최근 8일 내 커밋된 활성 git 프로젝트 |
-| `cmds-vault` | github | 2026-10-10 | git | 최근 12일 내 커밋된 활성 git 프로젝트 |
-| `jisan-blog` | github | 2026-10-22 | git | 최근 0일 내 커밋된 활성 git 프로젝트 |
-| `johnfkoo951` | github | 2026-10-22 | git | 최근 0일 내 커밋된 활성 git 프로젝트 |
-| `obs-share-test` | github | 2026-09-30 | git | 최근 22일 내 커밋된 활성 git 프로젝트 |
-| `obsidian-shared-notes` | github | 2026-09-14 | git | 최근 38일 내 커밋된 활성 git 프로젝트 |
-| `open-knowledge` | github | 2026-10-12 | git | 최근 10일 내 커밋된 활성 git 프로젝트 |
-| `plaud-note-manager-community` | github | 2026-09-16 | git | 최근 36일 내 커밋된 활성 git 프로젝트 |
-| `quartz` | github | 2026-10-04 | git | 최근 18일 내 커밋된 활성 git 프로젝트 |
-| `rea` | github | 2026-10-19 | git | 최근 3일 내 커밋된 활성 git 프로젝트 |
-| `vault-blog-starter` | github | 2026-10-21 | git | 최근 1일 내 커밋된 활성 git 프로젝트 |
+| `akm-eval` | github | 2026-10-23 | git | 최근 0일 내 커밋된 활성 git 프로젝트 |
+| `archify` | github | 2026-09-30 | git | 최근 23일 내 커밋된 활성 git 프로젝트 |
+| `awesome-jev` | github | 2026-09-20 | git | 최근 33일 내 커밋된 활성 git 프로젝트 |
+| `cmds-share-server` | github | 2026-10-14 | git | 최근 9일 내 커밋된 활성 git 프로젝트 |
+| `cmds-vault` | github | 2026-10-10 | git | 최근 13일 내 커밋된 활성 git 프로젝트 |
+| `jisan-blog` | github | 2026-10-23 | git | 최근 0일 내 커밋된 활성 git 프로젝트 |
+| `johnfkoo951` | github | 2026-10-23 | git | 최근 0일 내 커밋된 활성 git 프로젝트 |
+| `obs-share-test` | github | 2026-09-30 | git | 최근 23일 내 커밋된 활성 git 프로젝트 |
+| `obsidian-shared-notes` | github | 2026-09-14 | git | 최근 39일 내 커밋된 활성 git 프로젝트 |
+| `open-knowledge` | github | 2026-10-12 | git | 최근 11일 내 커밋된 활성 git 프로젝트 |
+| `plaud-note-manager-community` | github | 2026-09-16 | git | 최근 37일 내 커밋된 활성 git 프로젝트 |
+| `quartz` | github | 2026-10-04 | git | 최근 19일 내 커밋된 활성 git 프로젝트 |
+| `rea` | github | 2026-10-19 | git | 최근 4일 내 커밋된 활성 git 프로젝트 |
+| `vault-blog-starter` | github | 2026-10-21 | git | 최근 2일 내 커밋된 활성 git 프로젝트 |
 
 ## ⚠️ 기존 앱 이상 (알림 대상)
 
@@ -37,7 +38,7 @@ _없음._
 
 </details>
 
-<details><summary>스킵된 후보 (저신호) 33개</summary>
+<details><summary>스킵된 후보 (저신호) 32개</summary>
 
 - `Doit_R` — 배포/앱 신호 없음 (저신호)
 - `LDA` — 배포/앱 신호 없음 (저신호)
@@ -47,7 +48,6 @@ _없음._
 - `LDA_visualization` — 배포/앱 신호 없음 (저신호)
 - `Osync-p` — 배포/앱 신호 없음 (저신호)
 - `achmage-markdown-renderer` — 배포/앱 신호 없음 (저신호)
-- `akm-eval` — 배포/앱 신호 없음 (저신호)
 - `audiocraft` — 배포/앱 신호 없음 (저신호)
 - `claude-code` — 배포/앱 신호 없음 (저신호)
 - `cmux-tips` — 배포/앱 신호 없음 (저신호)
