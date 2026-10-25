@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T23:18:57.084Z",
+  "generated_at": "2026-10-25T23:18:31.622Z",
   "site": {
     "title": "CMDSPACE Apps",
     "tagline_ko": "커맨드스페이스가 만든 것들",
@@ -344,7 +344,7 @@
       "download_url": "",
       "repo_url": "https://github.com/getagentseal/codeburn",
       "last_commit": "2026-10-21",
-      "stars": 11570,
+      "stars": 11577,
       "latest_release": "mac-v0.9.27",
       "url_alive": null,
       "is_private": false,
@@ -517,7 +517,7 @@
       "docs_url": "https://apps.cmdspace.work/plugins/cmds-zotero/",
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/cmds-zotero",
-      "last_commit": "2026-10-15",
+      "last_commit": "2026-10-25",
       "stars": 0,
       "latest_release": "0.6.5",
       "url_alive": null,
@@ -754,7 +754,7 @@
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/cmds-system-files",
       "last_commit": "2026-10-10",
-      "stars": 278,
+      "stars": 279,
       "latest_release": "v4.13.0",
       "url_alive": true,
       "is_private": false,
