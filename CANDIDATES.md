@@ -1,6 +1,6 @@
 # 카탈로그 드리프트 리포트
 
-> 생성: 2026-10-29T01:00:23.026Z · 모드: `public-only` · 카탈로그 37개 · 신규후보 14개 · 이상 0건
+> 생성: 2026-10-29T10:26:59.431Z · 모드: `public-only` · 카탈로그 37개 · 신규후보 14개 · 이상 0건
 
 이 파일은 `scripts/scan.mjs`가 자동 생성합니다. 새 프로젝트는 `catalog/apps.yaml`(피처링) 또는 `catalog/ignore.yaml`(제외)로 옮기면 다음 스캔부터 사라집니다.
 
@@ -8,20 +8,20 @@
 
 | 프로젝트 | 소스 | 최근 커밋 | 신호 | 판단 이유 |
 |---|---|---|---|---|
-| `akm-eval` | github | 2026-10-24 | git | 최근 5일 내 커밋된 활성 git 프로젝트 |
-| `archify` | github | 2026-10-01 | git | 최근 28일 내 커밋된 활성 git 프로젝트 |
-| `awesome-jev` | github | 2026-09-21 | git | 최근 38일 내 커밋된 활성 git 프로젝트 |
-| `cmds-share-server` | github | 2026-10-15 | git | 최근 14일 내 커밋된 활성 git 프로젝트 |
-| `cmds-vault` | github | 2026-10-11 | git | 최근 18일 내 커밋된 활성 git 프로젝트 |
+| `akm-eval` | github | 2026-10-23 | git | 최근 6일 내 커밋된 활성 git 프로젝트 |
+| `archify` | github | 2026-09-30 | git | 최근 29일 내 커밋된 활성 git 프로젝트 |
+| `awesome-jev` | github | 2026-09-20 | git | 최근 39일 내 커밋된 활성 git 프로젝트 |
+| `cmds-share-server` | github | 2026-10-14 | git | 최근 15일 내 커밋된 활성 git 프로젝트 |
+| `cmds-vault` | github | 2026-10-10 | git | 최근 19일 내 커밋된 활성 git 프로젝트 |
 | `jisan-blog` | github | 2026-10-29 | git | 최근 0일 내 커밋된 활성 git 프로젝트 |
-| `johnfkoo951` | github | 2026-10-24 | git | 최근 5일 내 커밋된 활성 git 프로젝트 |
+| `johnfkoo951` | github | 2026-10-23 | git | 최근 6일 내 커밋된 활성 git 프로젝트 |
 | `obs-share-test` | github | 2026-10-01 | git | 최근 28일 내 커밋된 활성 git 프로젝트 |
 | `obsidian-shared-notes` | github | 2026-09-15 | git | 최근 44일 내 커밋된 활성 git 프로젝트 |
 | `open-knowledge` | github | 2026-10-13 | git | 최근 16일 내 커밋된 활성 git 프로젝트 |
-| `plaud-note-manager-community` | github | 2026-09-17 | git | 최근 42일 내 커밋된 활성 git 프로젝트 |
+| `plaud-note-manager-community` | github | 2026-09-16 | git | 최근 43일 내 커밋된 활성 git 프로젝트 |
 | `quartz` | github | 2026-10-05 | git | 최근 24일 내 커밋된 활성 git 프로젝트 |
-| `rea` | github | 2026-10-20 | git | 최근 9일 내 커밋된 활성 git 프로젝트 |
-| `vault-blog-starter` | github | 2026-10-22 | git | 최근 7일 내 커밋된 활성 git 프로젝트 |
+| `rea` | github | 2026-10-19 | git | 최근 10일 내 커밋된 활성 git 프로젝트 |
+| `vault-blog-starter` | github | 2026-10-21 | git | 최근 8일 내 커밋된 활성 git 프로젝트 |
 
 ## ⚠️ 기존 앱 이상 (알림 대상)
 
