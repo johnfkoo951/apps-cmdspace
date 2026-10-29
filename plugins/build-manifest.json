@@ -4,15 +4,15 @@
   "outputs": [
     {
       "file": "cmds-zotero/guide.ko.md",
-      "sha256": "4b9fed8d43cce148797f917f8b6cfa365bdb469592fb4aadcd13e0c98a4e17f7"
+      "sha256": "bef625c752b73a687e03c40b57a814122f1cb1f0258548601c645b452faa9944"
     },
     {
       "file": "cmds-zotero/guide.en.md",
-      "sha256": "c01d5adeedb540624ec1848136a8a5e90983aea2fa7f17e935544bdc957a7996"
+      "sha256": "3a944601e41b00e9842f219203e0415aa5502f9bacb54b21abe3a2e7898542a2"
     },
     {
       "file": "cmds-zotero/index.html",
-      "sha256": "d03eeaf07055a97021a9abf0484d33afafddc8633feaf528b3f76133b6cac4ce"
+      "sha256": "dd725a429e1574d19db3c9121d76777f33e5785f77e3e6795aa8583e71f882f0"
     },
     {
       "file": "cmds-achmage/guide.ko.md",
