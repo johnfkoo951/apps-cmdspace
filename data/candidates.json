@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T10:26:59.431Z",
+  "generated_at": "2026-10-29T10:28:08.496Z",
   "mode": "public-only",
   "counts": {
     "catalogued": 37,
@@ -402,13 +402,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/cmux-tips",
       "is_private": false,
-      "last_commit": "2026-08-24",
+      "last_commit": "2026-08-23",
       "signals": {
         "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 66
+        "lastCommitDays": 67
       }
     },
     {
