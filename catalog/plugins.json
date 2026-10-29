@@ -6,8 +6,8 @@
       "name": "CMDS Zotero",
       "repo": "johnfkoo951/cmds-zotero",
       "directory": "cmds-zotero",
-      "sourceVersion": "0.6.5",
-      "updated": "2026-10-15",
+      "sourceVersion": "0.6.7",
+      "updated": "2026-10-29",
       "stage": "source-checked",
       "ko": {
         "role": "읽은 것을 노트로 가져오다",
@@ -16,7 +16,7 @@
         "tasks": [
           "최근 읽은 논문을 노트로 보내기",
           "주석·Zotero 노트·참고문헌을 한 노트에",
-          "인용 삽입, PDF 텍스트, 에이전트 CLI"
+          "인용 삽입, Zotero 인용을 살린 Word 내보내기, 에이전트 CLI"
         ],
         "requires": "Obsidian 데스크톱 1.7.2+ / Zotero + Better BibTeX / 커뮤니티 플러그인에서 설치",
         "boundary": "Zotero는 읽기 전용이며 최근 읽은 논문 목록은 Zotero가 실행 중일 때 보입니다."
@@ -28,14 +28,14 @@
         "tasks": [
           "Send recently read papers to notes",
           "Annotations, Zotero notes and bibliography in one note",
-          "Citations, PDF text and an agent CLI"
+          "Citations, a Word hand-off with live Zotero citations, an agent CLI"
         ],
         "requires": "Obsidian desktop 1.7.2+ / Zotero + Better BibTeX / install from Community plugins",
         "boundary": "Zotero is read-only, and the recently read list needs Zotero running."
       },
       "publicRepo": true,
       "communityListed": true,
-      "releaseVersion": "0.6.5",
+      "releaseVersion": "0.6.7",
       "series": true
     },
     {

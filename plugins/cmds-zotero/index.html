@@ -5,10 +5,10 @@
 <link rel="icon" type="image/png" href="../assets/logo.png"><link rel="apple-touch-icon" href="../assets/logo.png"><link rel="stylesheet" href="../assets/plugins.css"><script src="../assets/plugins.js" defer></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <script>try{const l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('cmds-lang');if(l==='en')document.documentElement.lang='en';const t=localStorage.getItem('cmds-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch{}</script></head><body>
-<a href="#main" class="skip"><span data-lang="ko">본문으로 바로가기</span><span data-lang="en">Skip to content</span></a><header class="site-header"><a class="brand" href="/" aria-label="CMDSPACE Apps"><img src="../assets/logo.png" alt="" width="34" height="34"><span>CMDSPACE <b>Obsidian Plugins</b></span></a><nav aria-label="Primary"><a href="/" data-ko="모든 앱" data-en="All apps">모든 앱</a><a href="/plugins/" data-ko="플러그인" data-en="Plugins">플러그인</a><button id="language" type="button" aria-label="Switch language">EN</button><button id="theme" type="button" aria-label="Toggle theme" data-ko="테마" data-en="Theme">테마</button></nav></header><main id="main" class="product-page"><div data-lang="ko"><section class="product-hero"><div class="product-meta"><a href="../?lang=ko">← 플러그인</a><span class="status">공개 릴리스 0.6.5</span></div><p class="eyebrow">CMDS Zotero / 읽은 것을 노트로 가져오다</p><h1>Zotero에서 읽은 것을<br>노트로 가져온다.</h1><p class="lede">Zotero 리더로 읽고 표시한 논문을 문헌 노트로 보냅니다. 메타데이터, 하이라이트와 메모, Zotero 노트, 인용과 원문 링크를 모으고 내가 쓴 글은 그대로 둡니다.</p><div class="actions"><a class="button primary" href="#ko-manual">사용설명서 ↓</a><a class="button" href="https://github.com/johnfkoo951/cmds-zotero">GitHub 소스 ↗</a></div><div class="requirements"><div><h2>시작 전 준비</h2><p>Obsidian 데스크톱 1.7.2+ / Zotero + Better BibTeX / 커뮤니티 플러그인에서 설치</p></div><div><h2>먼저 알아둘 것</h2><p>Zotero는 읽기 전용이며 최근 읽은 논문 목록은 Zotero가 실행 중일 때 보입니다.</p></div></div></section><div class="docs-layout" id="ko-manual"><aside class="toc"><p>이 문서의 내용</p><nav aria-label="이 문서의 내용"><a href="#ko-버전과-공개-상태" class="depth-2">버전과 공개 상태</a><a href="#ko-준비물과-용어" class="depth-2">준비물과 용어</a><a href="#ko-설치" class="depth-2">설치</a><a href="#ko-첫-성공-최근-읽은-논문을-노트로-보내기" class="depth-2">첫 성공: 최근 읽은 논문을 노트로 보내기</a><a href="#ko-문헌-노트-가져오기와-갱신" class="depth-2">문헌 노트 가져오기와 갱신</a><a href="#ko-노트-구조와-보존-규칙" class="depth-2">노트 구조와 보존 규칙</a><a href="#ko-인용-참고문헌-사이드바" class="depth-2">인용, 참고문헌, 사이드바</a><a href="#ko-전체-명령어" class="depth-2">전체 명령어</a><a href="#ko-설정" class="depth-2">설정</a><a href="#ko-pdf-텍스트와-에이전트" class="depth-2">PDF 텍스트와 에이전트</a><a href="#ko-교차-볼트와-hookmark" class="depth-2">교차 볼트와 Hookmark</a><a href="#ko-데이터와-개인정보" class="depth-2">데이터와 개인정보</a><a href="#ko-문제-해결" class="depth-2">문제 해결</a><a href="#ko-옛-플러그인-id에서-이전" class="depth-2">옛 플러그인 ID에서 이전</a><a href="#ko-업데이트-지원-라이선스" class="depth-2">업데이트, 지원, 라이선스</a></nav><a class="download" href="guide.ko.md" download>Markdown 내려받기 ↙</a></aside><article class="prose"><div class="doc-meta"><span>문서 기준 2026-10-15</span><span>소스 버전 0.6.5</span><a href="guide.ko.md" download>Markdown ↙</a></div><h1 id="ko-cmds-zotero-사용설명서">CMDS Zotero 사용설명서</h1>
+<a href="#main" class="skip"><span data-lang="ko">본문으로 바로가기</span><span data-lang="en">Skip to content</span></a><header class="site-header"><a class="brand" href="/" aria-label="CMDSPACE Apps"><img src="../assets/logo.png" alt="" width="34" height="34"><span>CMDSPACE <b>Obsidian Plugins</b></span></a><nav aria-label="Primary"><a href="/" data-ko="모든 앱" data-en="All apps">모든 앱</a><a href="/plugins/" data-ko="플러그인" data-en="Plugins">플러그인</a><button id="language" type="button" aria-label="Switch language">EN</button><button id="theme" type="button" aria-label="Toggle theme" data-ko="테마" data-en="Theme">테마</button></nav></header><main id="main" class="product-page"><div data-lang="ko"><section class="product-hero"><div class="product-meta"><a href="../?lang=ko">← 플러그인</a><span class="status">공개 릴리스 0.6.7</span></div><p class="eyebrow">CMDS Zotero / 읽은 것을 노트로 가져오다</p><h1>Zotero에서 읽은 것을<br>노트로 가져온다.</h1><p class="lede">Zotero 리더로 읽고 표시한 논문을 문헌 노트로 보냅니다. 메타데이터, 하이라이트와 메모, Zotero 노트, 인용과 원문 링크를 모으고 내가 쓴 글은 그대로 둡니다.</p><div class="actions"><a class="button primary" href="#ko-manual">사용설명서 ↓</a><a class="button" href="https://github.com/johnfkoo951/cmds-zotero">GitHub 소스 ↗</a></div><div class="requirements"><div><h2>시작 전 준비</h2><p>Obsidian 데스크톱 1.7.2+ / Zotero + Better BibTeX / 커뮤니티 플러그인에서 설치</p></div><div><h2>먼저 알아둘 것</h2><p>Zotero는 읽기 전용이며 최근 읽은 논문 목록은 Zotero가 실행 중일 때 보입니다.</p></div></div></section><div class="docs-layout" id="ko-manual"><aside class="toc"><p>이 문서의 내용</p><nav aria-label="이 문서의 내용"><a href="#ko-버전과-공개-상태" class="depth-2">버전과 공개 상태</a><a href="#ko-준비물과-용어" class="depth-2">준비물과 용어</a><a href="#ko-설치" class="depth-2">설치</a><a href="#ko-첫-성공-최근-읽은-논문을-노트로-보내기" class="depth-2">첫 성공: 최근 읽은 논문을 노트로 보내기</a><a href="#ko-문헌-노트-가져오기와-갱신" class="depth-2">문헌 노트 가져오기와 갱신</a><a href="#ko-노트-구조와-보존-규칙" class="depth-2">노트 구조와 보존 규칙</a><a href="#ko-인용-참고문헌-사이드바" class="depth-2">인용, 참고문헌, 사이드바</a><a href="#ko-전체-명령어" class="depth-2">전체 명령어</a><a href="#ko-설정" class="depth-2">설정</a><a href="#ko-pdf-텍스트와-에이전트" class="depth-2">PDF 텍스트와 에이전트</a><a href="#ko-교차-볼트와-hookmark" class="depth-2">교차 볼트와 Hookmark</a><a href="#ko-데이터와-개인정보" class="depth-2">데이터와 개인정보</a><a href="#ko-문제-해결" class="depth-2">문제 해결</a><a href="#ko-옛-플러그인-id에서-이전" class="depth-2">옛 플러그인 ID에서 이전</a><a href="#ko-업데이트-지원-라이선스" class="depth-2">업데이트, 지원, 라이선스</a></nav><a class="download" href="guide.ko.md" download>Markdown 내려받기 ↙</a></aside><article class="prose"><div class="doc-meta"><span>문서 기준 2026-10-29</span><span>소스 버전 0.6.7</span><a href="guide.ko.md" download>Markdown ↙</a></div><h1 id="ko-cmds-zotero-사용설명서">CMDS Zotero 사용설명서</h1>
 <p>Zotero에서 읽고 표시한 내용을 Obsidian 문헌 노트로 보냅니다. 메타데이터, 하이라이트와 메모, Zotero 노트, 인용과 원문 링크를 한 노트에 모으고, 사람이 쓴 글은 그대로 둡니다. Zotero는 읽기 전용으로 다룹니다.</p>
 <h2 id="ko-버전과-공개-상태">버전과 공개 상태</h2>
-<p><strong>2026-10-15</strong>에 공개한 <strong>CMDS Zotero 0.6.5</strong> 기준입니다. <a href="https://github.com/johnfkoo951/cmds-zotero/releases/tag/0.6.5">GitHub 릴리스</a>에는 CI가 빌드하고 출처를 증명한 <code>main.js</code>, <code>manifest.json</code>, <code>styles.css</code>가 있습니다. <strong>설정 → 커뮤니티 플러그인 → 탐색</strong>에서 설치하거나, 수동 설치나 BRAT로 설치합니다.
+<p><strong>2026-10-29</strong>에 공개한 <strong>CMDS Zotero 0.6.7</strong> 기준입니다. <a href="https://github.com/johnfkoo951/cmds-zotero/releases/tag/0.6.7">GitHub 릴리스</a>에는 CI가 빌드하고 출처를 증명한 <code>main.js</code>, <code>manifest.json</code>, <code>styles.css</code>가 있습니다. <strong>설정 → 커뮤니티 플러그인 → 탐색</strong>에서 설치하거나, 수동 설치나 BRAT로 설치합니다.
 0.6.5는 새로 설치한 경우 인덱스를 번호 붙은 <code>80. References</code> 폴더 대신 문헌 노트 옆 <code>References/Zotero/zotero-index.json</code>에 만듭니다. 그 자리에 인덱스가 이미 있는 설치는 그대로 씁니다. 0.6.4는 커뮤니티 디렉터리 등록을 준비했습니다. Obsidian 1.13 이상에서도 설치된 스타일을 고르면 설정 칸이 바로 바뀌고, 현재 노트용 명령은 노트가 열려 있을 때만 나타납니다. 0.6.3은 옮긴 문헌 노트를 찾아내고, 새 노트 이름을 고정 토큰으로 정하고, 검색으로 일괄 가져오고, 모든 일괄 작업 전에 검토 목록을 보여 주고, 다른 Zotero 플러그인이 만든 노트를 넘겨받고(adopt), 노트별 갱신·재생성·frontmatter 새로 고침·옛 키 정리·병합 항목 재연결을 추가합니다. 같은 날 공개한 0.6.2는 인용 편집기, Zotero에 설치된 스타일과 로캘로 만드는 참고문헌, 인용 점검(Check citations), 참고문헌 구역, pandoc 내보내기 키트를 추가했습니다. 0.6.1은 노트 레이아웃 설정, 항목 내용 삽입, 더 풍부한 주석 사이드바, 필드 검색, Zotero 선택 항목 명령, 설정 진단을 추가했습니다. 0.6.0은 인덱스 갱신·시작·일괄 갱신을 빠르게 하고, 문제 있는 항목이 있어도 갱신을 이어 가며, 인용 선택기가 기다리게 하고, 설정 탭을 다시 정리하고, 에이전트 액션을 추가했습니다. 모든 변경은 <a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/CHANGELOG.md">변경 기록</a>에 있습니다. 검증 환경은 Obsidian 1.14.4, Zotero 10.0.6, Better BibTeX 9.0.71, macOS입니다. 0.5 때 실제 서재로 최근 읽은 논문 목록, 문헌 노트 생성·갱신 4건, PDF 텍스트 추출 4건(스캔본 1건 포함), 인용문 위치 찾기를 확인했습니다. 그룹 라이브러리와 Windows/Linux는 실사용 검증 범위가 아닙니다.
 0.6.1에서 올리면 기본 설정에서 네 가지가 달라 보입니다. 편집기에서 citekey 문제에 밑줄이 그어지고, 복사한 참고문헌은 스타일 자체의 순서를 따르고, <strong>Update all owned literature notes</strong>는 먼저 검토 목록을 보여 주고, 출력 폴더 밖으로 옮긴 문헌 노트는 옮긴 자리에서 갱신됩니다. 새 노트의 이름과 폴더는 0.6.1과 같습니다.</p>
 <h2 id="ko-준비물과-용어">준비물과 용어</h2>
@@ -88,6 +88,7 @@
 <li>편집기에서 <code>[@</code> 뒤에 citekey·제목·저자·연도 일부를 입력하면 로컬 자동완성이 나옵니다. 캐시된 인덱스를 읽으므로 키 입력마다 Zotero를 부르지 않습니다. 한글은 조합형·분리형 어느 쪽으로 입력해도 찾고, 악센트는 무시합니다(<code>é</code>는 <code>e</code>와 맞음). Enter는 인용을, Shift+Enter는 서술형 <code>@key</code>를, Mod+Enter는 문헌 노트 링크를 넣습니다.</li>
 <li>새 인용은 커서의 인용에 합쳐집니다. <code>[@kim2020]</code> 바로 뒤에서 <code>[@</code>를 입력하거나 Zotero 선택기, Zotero 선택 항목, 자료 선택 창으로 인용하면 키를 반복하지 않고 <code>[@kim2020; @lee2021]</code>이 됩니다.</li>
 <li>pandoc의 접두어, 위치(locator), 접미어를 이해합니다(예: <code>[see @kim2020, pp. 33–35; also -@lee2021, ch. 1]</code>). <strong>Edit citation locator</strong>는 커서에 있는 인용의 위치를 고칩니다.</li>
+<li>한국어 문장에서는 <code>@key</code> 바로 뒤에 조사를 붙이지 않습니다(조사까지 citekey로 읽힘). <code>@key 는</code>처럼 띄우거나 대괄호 뒤에 붙입니다. &quot;구요한 외(2005)&quot;처럼 한국어 저자를 쓰려면 이름을 직접 쓰고 연도만 인용합니다: <code>구요한 외[-@key]는</code>. 스타일은 &quot;외&quot;를 만들지 않습니다. 각주식 스타일에서는 <code>[@key]</code>만 씁니다. 실제로 그린 예시는 <a href="https://zotero.cmdspace.work/citations/">웹 설명서의 인용 쓰기</a>에 있습니다.</li>
 <li><strong>Insert citation from the literature index</strong>는 인덱스에서 자료를 골라 <strong>Default citation format</strong> 형식으로 넣습니다. 형식마다 명령도 따로 있습니다: <strong>Insert pandoc citation</strong>(<code>[@key]</code>), <strong>Insert narrative citation</strong>(<code>@key</code>), <strong>Insert citekey wikilink</strong>(<code>[[@key]]</code>), <strong>Insert author-date citation text</strong>(<code>(Kim &amp; Lee, 2020)</code>, 인덱스로 만든 근사치), <strong>Insert Zotero item link</strong>, <strong>Insert literature note link</strong>. 템플릿이 아니라 고정된 형식입니다.</li>
 <li>자료 선택 창과 자동완성은 필드를 이해합니다: <code>author:</code>, <code>title:</code>, <code>year:2019-2021</code>, <code>tag:</code>, <code>col:&lt;컬렉션 경로&gt;</code>, <code>lib:</code>, <code>type:</code>, <code>has:pdf|note|annotations</code>(앞에 <code>-</code>를 붙이면 제외, 공백이 있는 값은 따옴표).</li>
 <li><strong>Insert item content from Zotero</strong>는 자료의 Zotero 노트·참고문헌·메타데이터·초록·링크·주석을 사용자 소유 텍스트로 현재 노트에 넣습니다.</li>
@@ -105,7 +106,7 @@
 <ul>
 <li><strong>Bibliography style</strong>: <strong>Choose style</strong>(설정 → Bibliography and references)과 명령 <strong>Choose bibliography style from installed styles</strong>는 Zotero의 <code>styles</code> 폴더에 있는 스타일을 읽기 전용으로 보여 줍니다(<code>~/Zotero</code>가 아니면 <strong>Zotero data directory</strong>를 정합니다). Better BibTeX가 렌더링하지 못하는 스타일은 이유와 함께 거절합니다. 직접 입력한 스타일이나 로캘도 <strong>Save configuration</strong>을 누를 때 같은 방식으로 확인합니다.</li>
 <li><strong>Bibliography locale</strong>은 참고문헌 용어와 날짜의 언어·지역을 정합니다(예: <code>ko-KR</code>, <code>de-DE</code>). 비워 두면 스타일의 기본값을 씁니다.</li>
-<li>노트의 <code>csl</code>과 <code>lang</code> frontmatter는 그 노트의 스타일과 로캘을 정합니다. 참고문헌 사이드바, Insert bibliography, 복사한 참고문헌, 참고문헌 구역, 내보내기 키트에 적용됩니다. <code>csl: apa.csl</code>은 파일 이름으로 설치된 스타일과 맞춥니다.</li>
+<li>노트의 <code>csl</code>과 <code>lang</code> frontmatter는 그 노트의 스타일과 로캘을 정합니다. 참고문헌 사이드바, Insert bibliography, 복사한 참고문헌, 참고문헌 구역, 내보내기 키트에 적용됩니다. <code>csl: apa.csl</code>은 파일 이름으로 설치된 스타일과 맞춥니다. <code>lang</code>은 원고가 아니라 참고문헌 용어의 언어입니다. 한국어 원고라도 영어 문헌을 영어 양식으로 적으면 <code>en-US</code>를 씁니다. <code>ko-KR</code>은 영어 양식 안의 용어만 바꿔(&quot;Eds.&quot;는 &quot;편집자&quot;, &quot;et al.&quot;은 &quot;기타&quot;) 둘이 섞입니다. <code>csl</code>과 <code>lang</code>의 세 가지 예는 <a href="https://zotero.cmdspace.work/references/">웹 설명서의 참고문헌과 Word</a>에 있습니다.</li>
 <li><strong>Open references sidebar</strong>: 현재 노트의 <code>[@key]</code>, <code>@key</code>, 인용 위키링크를 모아 참고문헌과 미해결 상태를 보여 줍니다. Zotero가 꺼져 있어도 저장된 참고문헌(<code>.cmds-zotero/bibliography.json</code>)으로 표시합니다. 인용은 pandoc과 같은 방식으로 셉니다. 코드, HTML 주석, <code>%%</code> 주석 안의 인용, 이스케이프한 <code>\@</code>, 이메일 주소는 빼고, <code>-@key</code>와 <code>nocite</code>의 키는 셉니다. 행마다 이전·다음 위치로 이동할 수 있고, 편집기에서는 <strong>Go to next occurrence of the citation at cursor</strong>와 <strong>Go to previous occurrence of the citation at cursor</strong>로 같은 일을 합니다.</li>
 <li><strong>Check citations in current note</strong>는 인덱스에 없는 키, 여러 항목이 쓰는 키, 예전 키, 문헌 노트가 없는 키, <code>nocite</code> 키를 저장된 인덱스로 보여 줍니다. 각 위치를 노트에서 열 수 있습니다.</li>
 <li><strong>Copy bibliography for current note</strong>(참고문헌 사이드바의 버튼도 같음)는 서식 있는 HTML과 일반 텍스트를 함께 클립보드에 넣으므로 워드프로세서에 서식째 붙습니다. 순서는 <strong>Bibliography order</strong>로 정합니다: 스타일이 정한 순서(기본), 처음 인용한 순서, 가나다·알파벳순.</li>
@@ -115,7 +116,8 @@
 </ul>
 <p><strong>pandoc으로 내보내기</strong></p>
 <ul>
-<li><strong>Export pandoc kit for current note</strong>는 <strong>Export kit folder</strong>(기본 <code>CMDS Zotero exports</code>) 안에 노트마다 하위 폴더를 만들어 씁니다. 정리한 노트 사본(문헌 링크는 <code>[@key]</code>로, 콜아웃은 인용 블록으로 바꾸고 주석과 마커는 지움), 인용한 자료의 CSL-JSON, pandoc defaults 파일이 들어가고, pandoc 명령줄은 클립보드에 복사합니다. 원래 노트는 바꾸지 않고, 플러그인이 pandoc을 실행하지도 않습니다. 내가 고친 이전 키트는 덮어쓰지 않고 새 폴더를 제안합니다.</li>
+<li><strong>Export pandoc kit for current note</strong>는 <strong>Export kit folder</strong>(기본 <code>CMDS Zotero exports</code>) 안에 노트마다 하위 폴더를 만들어 씁니다. 정리한 노트 사본(문헌 링크는 <code>[@key]</code>로, 콜아웃은 인용 블록으로 바꾸고 주석과 마커는 지움), 인용한 자료의 CSL-JSON, pandoc defaults 파일, <code>.docx</code>에 로컬 경로가 남지 않게 하는 작은 필터가 들어가고(사본의 프론트매터는 문서에 필요한 항목만 남김), pandoc 명령줄은 클립보드에 복사합니다. 원래 노트는 바꾸지 않고, 플러그인이 pandoc을 실행하지도 않습니다. 내가 고친 이전 키트는 덮어쓰지 않고 새 폴더를 제안합니다.</li>
+<li><strong>Export Word kit with live Zotero citations for current note</strong>(0.6.6)는 같은 폴더에 <code>&lt;노트&gt; (Word)</code>를 만들어 정리한 사본, defaults 파일, 작은 필터를 씁니다. 복사된 명령을 Zotero를 켠 채 실행하면 <code>.docx</code>의 인용이 Zotero 필드로 들어갑니다. Word의 Zotero 탭에서 Refresh를 한 번 누르면 그다음부터 인용 추가, 갱신, 스타일 변경을 Word에서 합니다. 노트의 스타일은 Zotero에 설치돼 있어야 하고, Better BibTeX의 <code>zotero.lua</code>가 pandoc 필터 폴더에 있어야 합니다(없으면 보고 창에 설치 명령이 나옵니다). 자세한 내용은 <a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/docs/pandoc-docx.md">pandoc-docx.md</a> §0b.</li>
 <li><strong>Copy CSL-JSON for cited sources</strong>와 <strong>Write pandoc bibliography sidecar for current note</strong>: 현재 노트가 인용한 자료를 CSL-JSON으로 복사하거나 <code>.cmds-zotero/bibliography/&lt;노트&gt;.json</code>에 저장하고, frontmatter에 넣을 <code>bibliography:</code> 줄을 알려 줍니다.</li>
 <li>키트와 내보내기 과정은 <a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/docs/pandoc-docx.md">pandoc/DOCX 가이드</a>에 단계별로 있습니다.</li>
 </ul>
@@ -256,6 +258,10 @@
 <td>내보내기용 정리 사본·CSL-JSON·pandoc defaults 작성</td>
 </tr>
 <tr>
+<td>Export Word kit with live Zotero citations for current note</td>
+<td>Word에서 Zotero 필드로 이어 쓰는 <code>.docx</code>용 정리 사본·pandoc defaults 작성</td>
+</tr>
+<tr>
 <td>Copy CSL-JSON for cited sources</td>
 <td>현재 노트 인용의 CSL-JSON 복사</td>
 </tr>
@@ -330,7 +336,7 @@
 </tbody></table>
 <p>PDF 쪽 번호는 <strong>1부터 시작하는 파일 위치</strong>이지 인쇄된 쪽 번호가 아닙니다.</p>
 <h2 id="ko-설정">설정</h2>
-<p>설정은 영역별 구역으로 나뉘며, 요청 한도와 에이전트 전용 References headings는 <strong>Advanced</strong> 아래에 있습니다. 입력하는 동안 값을 검사합니다. 값을 바꾼 뒤 <strong>Save configuration</strong>을 누릅니다. 저장 전에는 이전 값이 쓰입니다.</p>
+<p>설정은 영역별 구역으로 나뉘며, 요청 한도와 에이전트 전용 References headings는 <strong>Advanced</strong> 아래에 있습니다. 입력하는 동안 값을 검사합니다. 스위치와 선택 상자는 바꾸는 즉시 저장됩니다(0.6.7). 글자로 입력한 값은 <strong>Save configuration</strong>을 눌러야 저장되고, 그 전에는 이전 값이 쓰입니다.</p>
 <table>
 <thead>
 <tr>
@@ -506,8 +512,28 @@
 </tr>
 <tr>
 <td>Bibliography and references</td>
+<td>Allow export kits outside the vault</td>
+<td>꺼짐. 켜면 <em>Export kit folder</em>에 절대경로나 <code>~/</code> 경로를 쓸 수 있음(0.6.6)</td>
+</tr>
+<tr>
+<td>Bibliography and references</td>
 <td>Export kit folder</td>
-<td><code>CMDS Zotero exports</code>; pandoc 내보내기 키트 위치, 노트마다 하위 폴더</td>
+<td><code>CMDS Zotero exports</code>; 내보내기 키트 위치, 노트마다 하위 폴더</td>
+</tr>
+<tr>
+<td>Bibliography and references</td>
+<td>Run pandoc after export</td>
+<td>꺼짐. 켜면 키트에 pandoc을 실행하고 <code>.docx</code>를 엶(0.6.6)</td>
+</tr>
+<tr>
+<td>Bibliography and references</td>
+<td>Pandoc path</td>
+<td>비우면 흔한 설치 폴더, 그다음 시스템 검색 경로</td>
+</tr>
+<tr>
+<td>Bibliography and references</td>
+<td>Link exports in Hookmark</td>
+<td>꺼짐. 켜면(macOS) <code>.docx</code>와 노트를 Hookmark로 연결(0.6.6)</td>
 </tr>
 <tr>
 <td>Bibliography and references</td>
@@ -571,14 +597,14 @@ node scripts/ingest.mjs --vault &quot;Research&quot; --action locate --citekey E
 </ul>
 <h2 id="ko-교차-볼트와-hookmark">교차 볼트와 Hookmark</h2>
 <p><strong>Peer vaults</strong>에 등록한 다른 볼트의 노트 지도를 읽기 전용으로 읽고 <strong>Find literature across vaults</strong>로 이동합니다. 같은 citekey라도 다른 볼트에서는 다른 자료일 수 있으므로 식별을 확인합니다.
-Hookmark 관련 명령은 링크를 클립보드에 복사할 뿐입니다. Hookmark 설정을 바꾸거나 북마크를 만들거나 스크립트를 실행하지 않습니다.</p>
+Hookmark 링크 명령은 링크를 클립보드에 복사할 뿐입니다. 북마크는 <strong>Link exports in Hookmark</strong>(기본 꺼짐, macOS)를 켰을 때만 만듭니다. pandoc이 끝난 뒤 <code>.docx</code>와 원고 노트를 북마크 두 개로 만들어 서로 연결합니다.</p>
 <h2 id="ko-데이터와-개인정보">데이터와 개인정보</h2>
 <ul>
 <li>로컬 BBT에 메타데이터, 인용, 참고문헌, 첨부와 주석, 읽기 기록을 요청합니다. Zotero 설정, 데이터베이스, citekey, 라이브러리 기록은 바꾸지 않습니다.</li>
 <li>이미지 주석을 가져오거나 주석 사이드바·Search annotations에서 콜아웃으로 넣으면 볼트 밖의 Zotero 캐시 이미지를 읽어 이미지 폴더에 복사합니다. 설치된 스타일이 필요할 때(스타일 고르기, <code>csl</code>로 스타일을 지정한 노트, pandoc 내보내기 키트) Zotero <code>styles</code> 폴더의 <code>.csl</code> 파일을 읽기 전용으로 읽습니다.</li>
 <li>볼트에 쓰는 것은 설정, 인덱스, 문헌 노트, 이미지 사본, 요청한 내보내기 키트, <code>.cmds-zotero/</code> 아래의 비공개 파일(참고문헌·노트 지도·백업·PDF 텍스트 캐시)입니다. 플러그인은 <code>.cmds-zotero/.gitignore</code>를 먼저 만들어 이 폴더가 git에 올라가지 않게 합니다. PDF 텍스트 캐시는 논문 전문이므로 공유하지 않습니다.</li>
 <li>인덱스와 노트 지도에는 서지정보, 개인 경로, 주석이 들어갈 수 있습니다. 공개 저장소에 올리지 않습니다.</li>
-<li>에이전트 요청과 <strong>Diagnose setup</strong>·<strong>Diagnose index and links</strong> 명령을 처리할 때, 볼트가 Git 저장소이면 비공개 파일이 git에서 무시되는지 알리려고 <code>git</code>을 읽기 전용(<code>ls-files</code>, <code>check-ignore</code>)으로 실행합니다. 그 밖의 프로그램은 실행하지 않으며, 내보내기 키트의 pandoc 실행도 사용자에게 맡깁니다.</li>
+<li>에이전트 요청과 <strong>Diagnose setup</strong>·<strong>Diagnose index and links</strong> 명령을 처리할 때, 볼트가 Git 저장소이면 비공개 파일이 git에서 무시되는지 알리려고 <code>git</code>을 읽기 전용(<code>ls-files</code>, <code>check-ignore</code>)으로 실행합니다. 선택 설정(모두 기본 꺼짐)을 켠 경우에만 내보내기 때 다른 프로그램을 띄웁니다. <strong>Run pandoc after export</strong>는 키트에 pandoc을 실행하고 <code>.docx</code>를 열며, <strong>Link exports in Hookmark</strong>는 <code>osascript</code>로 Hookmark 북마크를 만듭니다. 모두 셸 없이, 시간 제한을 두고 실행합니다. 그 밖의 프로그램은 실행하지 않습니다.</li>
 <li>텔레메트리, 자체 HTTP 서버, 자동 업데이트는 없습니다.</li>
 </ul>
 <h2 id="ko-문제-해결">문제 해결</h2>
@@ -662,13 +688,13 @@ node scripts/migrate-local.mjs --vault /path/to/vault --backup /path/to/private-
 </code></pre>
 <p><code>rollback</code> 모드로 되돌릴 수 있으며, 배포 이후 바뀐 파일은 덮어쓰지 않고 거부합니다. 이전 뒤에는 새 ID만 켜져 있는지 확인하고 인덱스를 다시 만듭니다.</p>
 <h2 id="ko-업데이트-지원-라이선스">업데이트, 지원, 라이선스</h2>
-<p><a href="https://apps.cmdspace.work/plugins/cmds-zotero/">웹 설명서</a> | <a href="https://github.com/johnfkoo951/cmds-zotero">저장소</a> | <a href="https://github.com/johnfkoo951/cmds-zotero/releases">릴리스</a> | <a href="https://github.com/johnfkoo951/cmds-zotero/issues">문제 신고</a> | <a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/CHANGELOG.md">변경 이력</a>
+<p><a href="https://zotero.cmdspace.work">웹 설명서</a> | <a href="https://github.com/johnfkoo951/cmds-zotero">저장소</a> | <a href="https://github.com/johnfkoo951/cmds-zotero/releases">릴리스</a> | <a href="https://github.com/johnfkoo951/cmds-zotero/issues">문제 신고</a> | <a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/CHANGELOG.md">변경 이력</a>
 문제를 신고할 때는 플러그인·Obsidian·Zotero·BBT 버전과 OS, 개인정보를 지운 진단 결과를 적습니다. 실제 인덱스, 개인 경로, 주석 원문, PDF 텍스트 캐시는 올리지 않습니다.
 <strong>Yohan Koo (CMDSPACE)</strong>, <a href="https://cmdspace.work">https://cmdspace.work</a>. MIT, <a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/LICENSE">LICENSE</a>.</p>
-<a href="#main" class="back-top">맨 위로 ↑</a></article></div></div><div data-lang="en"><section class="product-hero"><div class="product-meta"><a href="../?lang=en">← Plugins</a><span class="status">Public release 0.6.5</span></div><p class="eyebrow">CMDS Zotero / Bring what you read into notes</p><h1>What you read in Zotero,<br>in your notes.</h1><p class="lede">Send papers you read and marked up in Zotero&#39;s reader to literature notes: metadata, highlights and comments, Zotero notes, citations and links back to the source, while the text you write stays yours.</p><div class="actions"><a class="button primary" href="#en-manual">User guide ↓</a><a class="button" href="https://github.com/johnfkoo951/cmds-zotero">GitHub source ↗</a></div><div class="requirements"><div><h2>Before you start</h2><p>Obsidian desktop 1.7.2+ / Zotero + Better BibTeX / install from Community plugins</p></div><div><h2>Know the boundaries</h2><p>Zotero is read-only, and the recently read list needs Zotero running.</p></div></div></section><div class="docs-layout" id="en-manual"><aside class="toc"><p>On this page</p><nav aria-label="On this page"><a href="#en-version-and-release-status" class="depth-2">Version and release status</a><a href="#en-requirements-and-terms" class="depth-2">Requirements and terms</a><a href="#en-installation" class="depth-2">Installation</a><a href="#en-first-success-send-recently-read-papers-to-notes" class="depth-2">First success: send recently read papers to notes</a><a href="#en-importing-and-updating-literature-notes" class="depth-2">Importing and updating literature notes</a><a href="#en-note-layout-and-preservation" class="depth-2">Note layout and preservation</a><a href="#en-citations-bibliographies-and-sidebars" class="depth-2">Citations, bibliographies and sidebars</a><a href="#en-all-commands" class="depth-2">All commands</a><a href="#en-settings" class="depth-2">Settings</a><a href="#en-pdf-text-and-agents" class="depth-2">PDF text and agents</a><a href="#en-cross-vault-and-hookmark" class="depth-2">Cross-vault and Hookmark</a><a href="#en-data-and-privacy" class="depth-2">Data and privacy</a><a href="#en-troubleshooting" class="depth-2">Troubleshooting</a><a href="#en-migrating-from-the-old-plugin-id" class="depth-2">Migrating from the old plugin ID</a><a href="#en-updates-support-and-license" class="depth-2">Updates, support and license</a></nav><a class="download" href="guide.en.md" download>Download Markdown ↙</a></aside><article class="prose"><div class="doc-meta"><span>Documentation checked 2026-10-15</span><span>Source version 0.6.5</span><a href="guide.en.md" download>Markdown ↙</a></div><h1 id="en-cmds-zotero-user-guide">CMDS Zotero user guide</h1>
+<a href="#main" class="back-top">맨 위로 ↑</a></article></div></div><div data-lang="en"><section class="product-hero"><div class="product-meta"><a href="../?lang=en">← Plugins</a><span class="status">Public release 0.6.7</span></div><p class="eyebrow">CMDS Zotero / Bring what you read into notes</p><h1>What you read in Zotero,<br>in your notes.</h1><p class="lede">Send papers you read and marked up in Zotero&#39;s reader to literature notes: metadata, highlights and comments, Zotero notes, citations and links back to the source, while the text you write stays yours.</p><div class="actions"><a class="button primary" href="#en-manual">User guide ↓</a><a class="button" href="https://github.com/johnfkoo951/cmds-zotero">GitHub source ↗</a></div><div class="requirements"><div><h2>Before you start</h2><p>Obsidian desktop 1.7.2+ / Zotero + Better BibTeX / install from Community plugins</p></div><div><h2>Know the boundaries</h2><p>Zotero is read-only, and the recently read list needs Zotero running.</p></div></div></section><div class="docs-layout" id="en-manual"><aside class="toc"><p>On this page</p><nav aria-label="On this page"><a href="#en-version-and-release-status" class="depth-2">Version and release status</a><a href="#en-requirements-and-terms" class="depth-2">Requirements and terms</a><a href="#en-installation" class="depth-2">Installation</a><a href="#en-first-success-send-recently-read-papers-to-notes" class="depth-2">First success: send recently read papers to notes</a><a href="#en-importing-and-updating-literature-notes" class="depth-2">Importing and updating literature notes</a><a href="#en-note-layout-and-preservation" class="depth-2">Note layout and preservation</a><a href="#en-citations-bibliographies-and-sidebars" class="depth-2">Citations, bibliographies and sidebars</a><a href="#en-all-commands" class="depth-2">All commands</a><a href="#en-settings" class="depth-2">Settings</a><a href="#en-pdf-text-and-agents" class="depth-2">PDF text and agents</a><a href="#en-cross-vault-and-hookmark" class="depth-2">Cross-vault and Hookmark</a><a href="#en-data-and-privacy" class="depth-2">Data and privacy</a><a href="#en-troubleshooting" class="depth-2">Troubleshooting</a><a href="#en-migrating-from-the-old-plugin-id" class="depth-2">Migrating from the old plugin ID</a><a href="#en-updates-support-and-license" class="depth-2">Updates, support and license</a></nav><a class="download" href="guide.en.md" download>Download Markdown ↙</a></aside><article class="prose"><div class="doc-meta"><span>Documentation checked 2026-10-29</span><span>Source version 0.6.7</span><a href="guide.en.md" download>Markdown ↙</a></div><h1 id="en-cmds-zotero-user-guide">CMDS Zotero user guide</h1>
 <p>Send what you read and mark up in Zotero to Obsidian literature notes. Metadata, highlights and comments, Zotero notes, citations and links back to the source end up in one note, and the text you write yourself stays untouched. Zotero is treated as read-only.</p>
 <h2 id="en-version-and-release-status">Version and release status</h2>
-<p>This guide covers <strong>CMDS Zotero 0.6.5</strong>, released on <strong>2026-10-15</strong>. The <a href="https://github.com/johnfkoo951/cmds-zotero/releases/tag/0.6.5">GitHub release</a> carries <code>main.js</code>, <code>manifest.json</code> and <code>styles.css</code>, built and attested by CI. Install it from <strong>Settings → Community plugins → Browse</strong>, manually, or with BRAT.
+<p>This guide covers <strong>CMDS Zotero 0.6.7</strong>, released on <strong>2026-10-29</strong>. The <a href="https://github.com/johnfkoo951/cmds-zotero/releases/tag/0.6.7">GitHub release</a> carries <code>main.js</code>, <code>manifest.json</code> and <code>styles.css</code>, built and attested by CI. Install it from <strong>Settings → Community plugins → Browse</strong>, manually, or with BRAT.
 0.6.5 builds the index of a new install at <code>References/Zotero/zotero-index.json</code>, next to the literature notes, instead of a numbered <code>80. References</code> folder; an install that already has an index there keeps it. 0.6.4 readied the plugin for the Community directory: choosing an installed style now updates the settings field on Obsidian 1.13 and later, and commands for the current note appear only while a note is open. 0.6.3 finds literature notes you moved, names new notes from fixed tokens, imports by search, shows a review list before every batch, adopts notes made by other Zotero plugins, and adds per-note update, rebuild, frontmatter refresh, legacy-key cleanup and merged-item relink. 0.6.2, released the same day, added a citation editor, bibliographies in Zotero&#39;s installed styles and locales, Check citations, a references section and a pandoc export kit. 0.6.1 added note layout settings, Insert item content, a richer annotations sidebar, fielded search, Zotero selection commands and Diagnose setup. 0.6.0 made refreshes, startup and batch updates faster, keeps refreshes going past bad items, lets the citation picker wait for you, reorganises the settings tab and adds agent actions; the <a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/CHANGELOG.md">changelog</a> lists every change. It was verified with Obsidian 1.14.4, Zotero 10.0.6 and Better BibTeX 9.0.71 on macOS. Checks of 0.5 on a real library covered the recently read list, creating and updating four literature notes, PDF text extraction for four papers (one of them a scan) and quote location. Group libraries and Windows/Linux are outside the verified scope.
 Coming from 0.6.1, four things look different with the default settings: citekey problems are underlined in the editor, a copied bibliography keeps the style&#39;s own order, <strong>Update all owned literature notes</strong> first shows a review list, and literature notes you moved out of the output folder are updated where they are. New notes keep the names and folders 0.6.1 gave them.</p>
 <h2 id="en-requirements-and-terms">Requirements and terms</h2>
@@ -748,6 +774,7 @@ Damaged or duplicate markers, a note CMDS Zotero did not create, or several note
 <li>Typing part of a citekey, title, author or year after <code>[@</code> in the editor opens local completion. It reads the cached index, so Zotero is not called on every keystroke. Korean is found whether it is typed composed or decomposed, and accents are ignored (<code>é</code> matches <code>e</code>). Enter inserts the citation, Shift+Enter a narrative <code>@key</code>, Mod+Enter a link to the literature note.</li>
 <li>A new citation joins the one at the cursor: typing <code>[@</code> right after <code>[@kim2020]</code>, or citing from Zotero&#39;s picker, the Zotero selection or the literature picker, gives <code>[@kim2020; @lee2021]</code> without repeating a key.</li>
 <li>Pandoc prefixes, locators and suffixes are understood, as in <code>[see @kim2020, pp. 33–35; also -@lee2021, ch. 1]</code>. <strong>Edit citation locator</strong> changes the locator of the citation at the cursor.</li>
+<li>In Korean sentences, do not attach a particle right after <code>@key</code>: pandoc reads it as part of the citekey. Add a space (<code>@key 는</code>) or attach the particle after a bracket. To write a Korean author as &quot;구요한 외(2005)&quot;, write the name and cite only the year: <code>구요한 외[-@key]는</code>; styles do not produce &quot;외&quot;. With a note style, use <code>[@key]</code> only. Rendered examples are on the <a href="https://zotero.cmdspace.work/citations/">Korean docs site</a>.</li>
 <li><strong>Insert citation from the literature index</strong> picks a source from the index and inserts it in the <strong>Default citation format</strong>. Each format also has its own command: <strong>Insert pandoc citation</strong> (<code>[@key]</code>), <strong>Insert narrative citation</strong> (<code>@key</code>), <strong>Insert citekey wikilink</strong> (<code>[[@key]]</code>), <strong>Insert author-date citation text</strong> (<code>(Kim &amp; Lee, 2020)</code>, an approximation from the index), <strong>Insert Zotero item link</strong> and <strong>Insert literature note link</strong>. These are fixed formats, not templates.</li>
 <li>Pickers and completion understand fields: <code>author:</code>, <code>title:</code>, <code>year:2019-2021</code>, <code>tag:</code>, <code>col:&lt;collection path&gt;</code>, <code>lib:</code>, <code>type:</code> and <code>has:pdf|note|annotations</code>, each negatable with <code>-</code>; quote values with spaces.</li>
 <li><strong>Insert item content from Zotero</strong> inserts a source&#39;s Zotero notes, bibliography entry, metadata, abstract, links or annotations into the current note as text you own.</li>
@@ -765,7 +792,7 @@ Damaged or duplicate markers, a note CMDS Zotero did not create, or several note
 <ul>
 <li><strong>Bibliography style</strong>: <strong>Choose style</strong> (Settings → Bibliography and references) and the command <strong>Choose bibliography style from installed styles</strong> list the styles in Zotero&#39;s <code>styles</code> folder, read-only (set <strong>Zotero data directory</strong> if it is not <code>~/Zotero</code>). A style Better BibTeX cannot render is refused with the reason. A style or locale typed by hand is checked the same way when you press <strong>Save configuration</strong>.</li>
 <li><strong>Bibliography locale</strong> sets the language and region of bibliography terms and dates, for example <code>ko-KR</code> or <code>de-DE</code>; empty keeps the style&#39;s default.</li>
-<li>A note&#39;s own <code>csl</code> and <code>lang</code> frontmatter set the style and locale for that note: its references sidebar, Insert bibliography, copied bibliography, references section and export kit. <code>csl: apa.csl</code> is matched to an installed style by file name.</li>
+<li>A note&#39;s own <code>csl</code> and <code>lang</code> frontmatter set the style and locale for that note: its references sidebar, Insert bibliography, copied bibliography, references section and export kit. <code>csl: apa.csl</code> is matched to an installed style by file name. <code>lang</code> sets the language of the bibliography terms, not of the manuscript: a Korean manuscript citing English sources in English style keeps <code>en-US</code>, while <code>ko-KR</code> only translates the terms inside the English style (&quot;Eds.&quot; becomes &quot;편집자&quot;, &quot;et al.&quot; becomes &quot;기타&quot;). Three <code>csl</code>/<code>lang</code> recipes are on the <a href="https://zotero.cmdspace.work/references/">Korean docs site</a>.</li>
 <li><strong>Open references sidebar</strong> collects <code>[@key]</code>, <code>@key</code> and citation wikilinks in the current note and shows their bibliography and unresolved states. With Zotero closed it uses saved bibliography text (<code>.cmds-zotero/bibliography.json</code>). It counts citations the way pandoc does: citations in code, HTML comments and <code>%%</code> comments, an escaped <code>\@</code> and e-mail addresses are left out; <code>-@key</code> and keys in <code>nocite</code> are counted. Each row jumps to the previous or next occurrence, and <strong>Go to next occurrence of the citation at cursor</strong> and <strong>Go to previous occurrence of the citation at cursor</strong> do the same from the editor.</li>
 <li><strong>Check citations in current note</strong> lists unknown, ambiguous and former keys, keys without a literature note and <code>nocite</code> keys, from the saved index; each occurrence opens in the note.</li>
 <li><strong>Copy bibliography for current note</strong> (also a button in the references sidebar) puts formatted (HTML) and plain text on the clipboard, so it pastes formatted into word processors. <strong>Bibliography order</strong> decides the order: as the style orders it (default), order of first citation, or alphabetical.</li>
@@ -775,7 +802,8 @@ Damaged or duplicate markers, a note CMDS Zotero did not create, or several note
 </ul>
 <p><strong>Exporting with pandoc</strong></p>
 <ul>
-<li><strong>Export pandoc kit for current note</strong> writes into <strong>Export kit folder</strong> (default <code>CMDS Zotero exports</code>), one subfolder per note: a cleaned copy of the note (literature links become <code>[@key]</code>, callouts become blockquotes, comments and markers are removed), the cited sources as CSL-JSON and a pandoc defaults file. The pandoc command line goes to the clipboard. The source note is not changed, the plugin never runs pandoc, and an earlier kit you changed is never overwritten; a new folder is offered instead.</li>
+<li><strong>Export pandoc kit for current note</strong> writes into <strong>Export kit folder</strong> (default <code>CMDS Zotero exports</code>), one subfolder per note: a cleaned copy of the note (literature links become <code>[@key]</code>, callouts become blockquotes, comments and markers are removed), the cited sources as CSL-JSON, a pandoc defaults file and a small filter that keeps local paths out of the <code>.docx</code>. The copy&#39;s frontmatter keeps only the fields meant for the document. The pandoc command line goes to the clipboard. The source note is not changed, the plugin never runs pandoc, and an earlier kit you changed is never overwritten; a new folder is offered instead.</li>
+<li><strong>Export Word kit with live Zotero citations for current note</strong> (0.6.6) writes <code>&lt;note&gt; (Word)</code> in the same folder: the cleaned copy, a defaults file and a small filter. Run the copied command while Zotero is open; the <code>.docx</code> holds Zotero fields, so in Word you press Refresh in the Zotero tab once and then add citations, refresh and change the style there. The note&#39;s style must be installed in Zotero, and Better BibTeX&#39;s <code>zotero.lua</code> must be in pandoc&#39;s filters folder (the report shows the install line). See <a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/docs/pandoc-docx.md">pandoc-docx.md</a> §0b.</li>
 <li><strong>Copy CSL-JSON for cited sources</strong> and <strong>Write pandoc bibliography sidecar for current note</strong> copy the current note&#39;s cited sources as CSL-JSON, or save them to <code>.cmds-zotero/bibliography/&lt;note&gt;.json</code> and show the <code>bibliography:</code> line for the frontmatter.</li>
 <li>The <a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/docs/pandoc-docx.md">pandoc/DOCX guide</a> explains the kit and the export step by step.</li>
 </ul>
@@ -916,6 +944,10 @@ Damaged or duplicate markers, a note CMDS Zotero did not create, or several note
 <td>Writes a cleaned copy, CSL-JSON and pandoc defaults for export</td>
 </tr>
 <tr>
+<td>Export Word kit with live Zotero citations for current note</td>
+<td>Writes a cleaned copy and pandoc defaults whose <code>.docx</code> keeps Zotero fields for Word</td>
+</tr>
+<tr>
 <td>Copy CSL-JSON for cited sources</td>
 <td>Copies CSL-JSON for the current note&#39;s citations</td>
 </tr>
@@ -990,7 +1022,7 @@ Damaged or duplicate markers, a note CMDS Zotero did not create, or several note
 </tbody></table>
 <p>PDF page numbers are <strong>one-based file positions</strong>, not printed page labels.</p>
 <h2 id="en-settings">Settings</h2>
-<p>Settings are grouped by area; request limits and the agent-only References headings are under <strong>Advanced</strong>. Values are checked as you type. Press <strong>Save configuration</strong> after changing values; until then the previous values apply.</p>
+<p>Settings are grouped by area; request limits and the agent-only References headings are under <strong>Advanced</strong>. Values are checked as you type. Switches and menus are saved as soon as they change (0.6.7). After typing a value, press <strong>Save configuration</strong>; until then the previous value applies.</p>
 <table>
 <thead>
 <tr>
@@ -1166,8 +1198,28 @@ Damaged or duplicate markers, a note CMDS Zotero did not create, or several note
 </tr>
 <tr>
 <td>Bibliography and references</td>
+<td>Allow export kits outside the vault</td>
+<td>Off; on lets <em>Export kit folder</em> be an absolute folder or one under <code>~/</code> (0.6.6)</td>
+</tr>
+<tr>
+<td>Bibliography and references</td>
 <td>Export kit folder</td>
-<td><code>CMDS Zotero exports</code>; where the pandoc export kit goes, one subfolder per note</td>
+<td><code>CMDS Zotero exports</code>; where the export kits go, one subfolder per note</td>
+</tr>
+<tr>
+<td>Bibliography and references</td>
+<td>Run pandoc after export</td>
+<td>Off; on runs pandoc on the kit and opens the <code>.docx</code> (0.6.6)</td>
+</tr>
+<tr>
+<td>Bibliography and references</td>
+<td>Pandoc path</td>
+<td>Empty: the usual install folders, then the system&#39;s search path</td>
+</tr>
+<tr>
+<td>Bibliography and references</td>
+<td>Link exports in Hookmark</td>
+<td>Off; on (macOS) hooks the <code>.docx</code> and the note in Hookmark (0.6.6)</td>
 </tr>
 <tr>
 <td>Bibliography and references</td>
@@ -1231,14 +1283,14 @@ Agents never edit managed sections; their own summaries go under <code>## Synthe
 </ul>
 <h2 id="en-cross-vault-and-hookmark">Cross-vault and Hookmark</h2>
 <p>The plugin reads the note maps of vaults listed in <strong>Peer vaults</strong>, read-only, and <strong>Find literature across vaults</strong> opens them. The same citekey in another vault can be a different source, so check the identity.
-The Hookmark commands only copy links to the clipboard. They do not change Hookmark settings, create bookmarks or run scripts.</p>
+The Hookmark link commands only copy links to the clipboard. Bookmarks are made only when you turn on <strong>Link exports in Hookmark</strong> (off by default, macOS): after pandoc, the <code>.docx</code> and its source note become two bookmarks hooked together.</p>
 <h2 id="en-data-and-privacy">Data and privacy</h2>
 <ul>
 <li>The plugin asks the local BBT for metadata, citations, bibliographies, attachments and annotations, and reading history. It never changes Zotero settings, the database, citekeys or library records.</li>
 <li>Importing image annotations, or inserting one as a callout from the annotations sidebar or Search annotations, reads Zotero&#39;s cached image outside the vault and copies it into the image folder. Listing Zotero&#39;s installed styles (choosing a style, a note whose <code>csl</code> names one, the pandoc export kit) reads the <code>.csl</code> files in Zotero&#39;s <code>styles</code> folder, read-only.</li>
 <li>In the vault it writes settings, the index, literature notes, image copies, export kits you ask for and private files under <code>.cmds-zotero/</code> (bibliography, note map, backups, PDF text caches). It creates <code>.cmds-zotero/.gitignore</code> first so the folder stays out of git. PDF text caches hold full paper text; do not share them.</li>
 <li>The index and note map can contain bibliographic data, private paths and annotations. Keep them out of public repositories.</li>
-<li>For agent requests and the <strong>Diagnose setup</strong> and <strong>Diagnose index and links</strong> commands, when the vault is a Git repository, the plugin runs <code>git</code> read-only (<code>ls-files</code>, <code>check-ignore</code>) to report whether private files are ignored. It runs nothing else; the export kit leaves running pandoc to you.</li>
+<li>For agent requests and the <strong>Diagnose setup</strong> and <strong>Diagnose index and links</strong> commands, when the vault is a Git repository, the plugin runs <code>git</code> read-only (<code>ls-files</code>, <code>check-ignore</code>) to report whether private files are ignored. Three opt-in settings (all off by default) start other programs only during an export: <strong>Run pandoc after export</strong> runs pandoc on the kit and opens the <code>.docx</code>, and <strong>Link exports in Hookmark</strong> runs <code>osascript</code> to make the Hookmark bookmarks. Each runs without a shell and with a time limit. It runs nothing else.</li>
 <li>No telemetry, own HTTP server or self-updater.</li>
 </ul>
 <h2 id="en-troubleshooting">Troubleshooting</h2>
@@ -1322,7 +1374,7 @@ node scripts/migrate-local.mjs --vault /path/to/vault --backup /path/to/private-
 </code></pre>
 <p><code>rollback</code> mode undoes it and refuses to overwrite files changed after deployment. Afterwards check that only the new ID is enabled and rebuild the index.</p>
 <h2 id="en-updates-support-and-license">Updates, support and license</h2>
-<p><a href="https://apps.cmdspace.work/plugins/cmds-zotero/">Web guide</a> | <a href="https://github.com/johnfkoo951/cmds-zotero">Repository</a> | <a href="https://github.com/johnfkoo951/cmds-zotero/releases">Releases</a> | <a href="https://github.com/johnfkoo951/cmds-zotero/issues">Issues</a> | <a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/CHANGELOG.md">Changelog</a>
+<p><a href="https://apps.cmdspace.work/plugins/cmds-zotero/">Web guide</a> | <a href="https://zotero.cmdspace.work">Korean docs site</a> | <a href="https://github.com/johnfkoo951/cmds-zotero">Repository</a> | <a href="https://github.com/johnfkoo951/cmds-zotero/releases">Releases</a> | <a href="https://github.com/johnfkoo951/cmds-zotero/issues">Issues</a> | <a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/CHANGELOG.md">Changelog</a>
 When reporting a problem, include the plugin, Obsidian, Zotero and BBT versions, your OS and diagnostics with private data removed. Do not post real indexes, private paths, annotation text or PDF text caches.
 <strong>Yohan Koo (CMDSPACE)</strong>, <a href="https://cmdspace.work">https://cmdspace.work</a>. MIT, <a href="https://github.com/johnfkoo951/cmds-zotero/blob/main/LICENSE">LICENSE</a>.</p>
 <a href="#main" class="back-top">Back to top ↑</a></article></div></div></main><footer class="site-footer"><a href="https://cmdspace.work">CMDSPACE</a><p data-ko="Yohan Koo (CMDSPACE). 내게 필요한 도구를 만들고 나눕니다." data-en="Yohan Koo (CMDSPACE). Build the tools you need. Share what works.">Yohan Koo (CMDSPACE). 내게 필요한 도구를 만들고 나눕니다.</p><a href="https://bio.cmdspace.work">bio.cmdspace.work ↗</a></footer><div id="glossTip" role="tooltip" hidden></div><p class="sr-only" id="feedback" aria-live="polite"></p></body></html>

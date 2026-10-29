@@ -2,7 +2,7 @@
 Zotero에서 읽고 표시한 내용을 Obsidian 문헌 노트로 보냅니다. 메타데이터, 하이라이트와 메모, Zotero 노트, 인용과 원문 링크를 한 노트에 모으고, 사람이 쓴 글은 그대로 둡니다. Zotero는 읽기 전용으로 다룹니다.
 
 ## 버전과 공개 상태
-**2026-10-15**에 공개한 **CMDS Zotero 0.6.5** 기준입니다. [GitHub 릴리스](https://github.com/johnfkoo951/cmds-zotero/releases/tag/0.6.5)에는 CI가 빌드하고 출처를 증명한 `main.js`, `manifest.json`, `styles.css`가 있습니다. **설정 → 커뮤니티 플러그인 → 탐색**에서 설치하거나, 수동 설치나 BRAT로 설치합니다.
+**2026-10-29**에 공개한 **CMDS Zotero 0.6.7** 기준입니다. [GitHub 릴리스](https://github.com/johnfkoo951/cmds-zotero/releases/tag/0.6.7)에는 CI가 빌드하고 출처를 증명한 `main.js`, `manifest.json`, `styles.css`가 있습니다. **설정 → 커뮤니티 플러그인 → 탐색**에서 설치하거나, 수동 설치나 BRAT로 설치합니다.
 0.6.5는 새로 설치한 경우 인덱스를 번호 붙은 `80. References` 폴더 대신 문헌 노트 옆 `References/Zotero/zotero-index.json`에 만듭니다. 그 자리에 인덱스가 이미 있는 설치는 그대로 씁니다. 0.6.4는 커뮤니티 디렉터리 등록을 준비했습니다. Obsidian 1.13 이상에서도 설치된 스타일을 고르면 설정 칸이 바로 바뀌고, 현재 노트용 명령은 노트가 열려 있을 때만 나타납니다. 0.6.3은 옮긴 문헌 노트를 찾아내고, 새 노트 이름을 고정 토큰으로 정하고, 검색으로 일괄 가져오고, 모든 일괄 작업 전에 검토 목록을 보여 주고, 다른 Zotero 플러그인이 만든 노트를 넘겨받고(adopt), 노트별 갱신·재생성·frontmatter 새로 고침·옛 키 정리·병합 항목 재연결을 추가합니다. 같은 날 공개한 0.6.2는 인용 편집기, Zotero에 설치된 스타일과 로캘로 만드는 참고문헌, 인용 점검(Check citations), 참고문헌 구역, pandoc 내보내기 키트를 추가했습니다. 0.6.1은 노트 레이아웃 설정, 항목 내용 삽입, 더 풍부한 주석 사이드바, 필드 검색, Zotero 선택 항목 명령, 설정 진단을 추가했습니다. 0.6.0은 인덱스 갱신·시작·일괄 갱신을 빠르게 하고, 문제 있는 항목이 있어도 갱신을 이어 가며, 인용 선택기가 기다리게 하고, 설정 탭을 다시 정리하고, 에이전트 액션을 추가했습니다. 모든 변경은 [변경 기록](https://github.com/johnfkoo951/cmds-zotero/blob/main/CHANGELOG.md)에 있습니다. 검증 환경은 Obsidian 1.14.4, Zotero 10.0.6, Better BibTeX 9.0.71, macOS입니다. 0.5 때 실제 서재로 최근 읽은 논문 목록, 문헌 노트 생성·갱신 4건, PDF 텍스트 추출 4건(스캔본 1건 포함), 인용문 위치 찾기를 확인했습니다. 그룹 라이브러리와 Windows/Linux는 실사용 검증 범위가 아닙니다.
 0.6.1에서 올리면 기본 설정에서 네 가지가 달라 보입니다. 편집기에서 citekey 문제에 밑줄이 그어지고, 복사한 참고문헌은 스타일 자체의 순서를 따르고, **Update all owned literature notes**는 먼저 검토 목록을 보여 주고, 출력 폴더 밖으로 옮긴 문헌 노트는 옮긴 자리에서 갱신됩니다. 새 노트의 이름과 폴더는 0.6.1과 같습니다.
 
@@ -85,6 +85,7 @@ Zotero에서 읽고 표시한 내용을 Obsidian 문헌 노트로 보냅니다. 
 - 편집기에서 `[@` 뒤에 citekey·제목·저자·연도 일부를 입력하면 로컬 자동완성이 나옵니다. 캐시된 인덱스를 읽으므로 키 입력마다 Zotero를 부르지 않습니다. 한글은 조합형·분리형 어느 쪽으로 입력해도 찾고, 악센트는 무시합니다(`é`는 `e`와 맞음). Enter는 인용을, Shift+Enter는 서술형 `@key`를, Mod+Enter는 문헌 노트 링크를 넣습니다.
 - 새 인용은 커서의 인용에 합쳐집니다. `[@kim2020]` 바로 뒤에서 `[@`를 입력하거나 Zotero 선택기, Zotero 선택 항목, 자료 선택 창으로 인용하면 키를 반복하지 않고 `[@kim2020; @lee2021]`이 됩니다.
 - pandoc의 접두어, 위치(locator), 접미어를 이해합니다(예: `[see @kim2020, pp. 33–35; also -@lee2021, ch. 1]`). **Edit citation locator**는 커서에 있는 인용의 위치를 고칩니다.
+- 한국어 문장에서는 `@key` 바로 뒤에 조사를 붙이지 않습니다(조사까지 citekey로 읽힘). `@key 는`처럼 띄우거나 대괄호 뒤에 붙입니다. "구요한 외(2005)"처럼 한국어 저자를 쓰려면 이름을 직접 쓰고 연도만 인용합니다: `구요한 외[-@key]는`. 스타일은 "외"를 만들지 않습니다. 각주식 스타일에서는 `[@key]`만 씁니다. 실제로 그린 예시는 [웹 설명서의 인용 쓰기](https://zotero.cmdspace.work/citations/)에 있습니다.
 - **Insert citation from the literature index**는 인덱스에서 자료를 골라 **Default citation format** 형식으로 넣습니다. 형식마다 명령도 따로 있습니다: **Insert pandoc citation**(`[@key]`), **Insert narrative citation**(`@key`), **Insert citekey wikilink**(`[[@key]]`), **Insert author-date citation text**(`(Kim & Lee, 2020)`, 인덱스로 만든 근사치), **Insert Zotero item link**, **Insert literature note link**. 템플릿이 아니라 고정된 형식입니다.
 - 자료 선택 창과 자동완성은 필드를 이해합니다: `author:`, `title:`, `year:2019-2021`, `tag:`, `col:<컬렉션 경로>`, `lib:`, `type:`, `has:pdf|note|annotations`(앞에 `-`를 붙이면 제외, 공백이 있는 값은 따옴표).
 - **Insert item content from Zotero**는 자료의 Zotero 노트·참고문헌·메타데이터·초록·링크·주석을 사용자 소유 텍스트로 현재 노트에 넣습니다.
@@ -100,7 +101,7 @@ Zotero에서 읽고 표시한 내용을 Obsidian 문헌 노트로 보냅니다. 
 **참고문헌과 참고 목록**
 - **Bibliography style**: **Choose style**(설정 → Bibliography and references)과 명령 **Choose bibliography style from installed styles**는 Zotero의 `styles` 폴더에 있는 스타일을 읽기 전용으로 보여 줍니다(`~/Zotero`가 아니면 **Zotero data directory**를 정합니다). Better BibTeX가 렌더링하지 못하는 스타일은 이유와 함께 거절합니다. 직접 입력한 스타일이나 로캘도 **Save configuration**을 누를 때 같은 방식으로 확인합니다.
 - **Bibliography locale**은 참고문헌 용어와 날짜의 언어·지역을 정합니다(예: `ko-KR`, `de-DE`). 비워 두면 스타일의 기본값을 씁니다.
-- 노트의 `csl`과 `lang` frontmatter는 그 노트의 스타일과 로캘을 정합니다. 참고문헌 사이드바, Insert bibliography, 복사한 참고문헌, 참고문헌 구역, 내보내기 키트에 적용됩니다. `csl: apa.csl`은 파일 이름으로 설치된 스타일과 맞춥니다.
+- 노트의 `csl`과 `lang` frontmatter는 그 노트의 스타일과 로캘을 정합니다. 참고문헌 사이드바, Insert bibliography, 복사한 참고문헌, 참고문헌 구역, 내보내기 키트에 적용됩니다. `csl: apa.csl`은 파일 이름으로 설치된 스타일과 맞춥니다. `lang`은 원고가 아니라 참고문헌 용어의 언어입니다. 한국어 원고라도 영어 문헌을 영어 양식으로 적으면 `en-US`를 씁니다. `ko-KR`은 영어 양식 안의 용어만 바꿔("Eds."는 "편집자", "et al."은 "기타") 둘이 섞입니다. `csl`과 `lang`의 세 가지 예는 [웹 설명서의 참고문헌과 Word](https://zotero.cmdspace.work/references/)에 있습니다.
 - **Open references sidebar**: 현재 노트의 `[@key]`, `@key`, 인용 위키링크를 모아 참고문헌과 미해결 상태를 보여 줍니다. Zotero가 꺼져 있어도 저장된 참고문헌(`.cmds-zotero/bibliography.json`)으로 표시합니다. 인용은 pandoc과 같은 방식으로 셉니다. 코드, HTML 주석, `%%` 주석 안의 인용, 이스케이프한 `\@`, 이메일 주소는 빼고, `-@key`와 `nocite`의 키는 셉니다. 행마다 이전·다음 위치로 이동할 수 있고, 편집기에서는 **Go to next occurrence of the citation at cursor**와 **Go to previous occurrence of the citation at cursor**로 같은 일을 합니다.
 - **Check citations in current note**는 인덱스에 없는 키, 여러 항목이 쓰는 키, 예전 키, 문헌 노트가 없는 키, `nocite` 키를 저장된 인덱스로 보여 줍니다. 각 위치를 노트에서 열 수 있습니다.
 - **Copy bibliography for current note**(참고문헌 사이드바의 버튼도 같음)는 서식 있는 HTML과 일반 텍스트를 함께 클립보드에 넣으므로 워드프로세서에 서식째 붙습니다. 순서는 **Bibliography order**로 정합니다: 스타일이 정한 순서(기본), 처음 인용한 순서, 가나다·알파벳순.
@@ -109,7 +110,8 @@ Zotero에서 읽고 표시한 내용을 Obsidian 문헌 노트로 보냅니다. 
 - **Open annotations sidebar**: 현재 문헌 노트, Zotero에서 선택한 항목, 커서의 citekey, 고정한 자료의 주석을 보여 줍니다. 색·유형·태그·첨부로 거르고 정렬·묶기, Zotero에서 최신 주석 가져오기, 카드를 노트로 끌어 넣기, 카드의 More actions 메뉴를 쓸 수 있습니다. **Search annotations**는 색인된 모든 주석을 검색해 콜아웃이나 인용문으로 넣습니다.
 
 **pandoc으로 내보내기**
-- **Export pandoc kit for current note**는 **Export kit folder**(기본 `CMDS Zotero exports`) 안에 노트마다 하위 폴더를 만들어 씁니다. 정리한 노트 사본(문헌 링크는 `[@key]`로, 콜아웃은 인용 블록으로 바꾸고 주석과 마커는 지움), 인용한 자료의 CSL-JSON, pandoc defaults 파일이 들어가고, pandoc 명령줄은 클립보드에 복사합니다. 원래 노트는 바꾸지 않고, 플러그인이 pandoc을 실행하지도 않습니다. 내가 고친 이전 키트는 덮어쓰지 않고 새 폴더를 제안합니다.
+- **Export pandoc kit for current note**는 **Export kit folder**(기본 `CMDS Zotero exports`) 안에 노트마다 하위 폴더를 만들어 씁니다. 정리한 노트 사본(문헌 링크는 `[@key]`로, 콜아웃은 인용 블록으로 바꾸고 주석과 마커는 지움), 인용한 자료의 CSL-JSON, pandoc defaults 파일, `.docx`에 로컬 경로가 남지 않게 하는 작은 필터가 들어가고(사본의 프론트매터는 문서에 필요한 항목만 남김), pandoc 명령줄은 클립보드에 복사합니다. 원래 노트는 바꾸지 않고, 플러그인이 pandoc을 실행하지도 않습니다. 내가 고친 이전 키트는 덮어쓰지 않고 새 폴더를 제안합니다.
+- **Export Word kit with live Zotero citations for current note**(0.6.6)는 같은 폴더에 `<노트> (Word)`를 만들어 정리한 사본, defaults 파일, 작은 필터를 씁니다. 복사된 명령을 Zotero를 켠 채 실행하면 `.docx`의 인용이 Zotero 필드로 들어갑니다. Word의 Zotero 탭에서 Refresh를 한 번 누르면 그다음부터 인용 추가, 갱신, 스타일 변경을 Word에서 합니다. 노트의 스타일은 Zotero에 설치돼 있어야 하고, Better BibTeX의 `zotero.lua`가 pandoc 필터 폴더에 있어야 합니다(없으면 보고 창에 설치 명령이 나옵니다). 자세한 내용은 [pandoc-docx.md](pandoc-docx.md) §0b.
 - **Copy CSL-JSON for cited sources**와 **Write pandoc bibliography sidecar for current note**: 현재 노트가 인용한 자료를 CSL-JSON으로 복사하거나 `.cmds-zotero/bibliography/<노트>.json`에 저장하고, frontmatter에 넣을 `bibliography:` 줄을 알려 줍니다.
 - 키트와 내보내기 과정은 [pandoc/DOCX 가이드](https://github.com/johnfkoo951/cmds-zotero/blob/main/docs/pandoc-docx.md)에 단계별로 있습니다.
 
@@ -149,6 +151,7 @@ Zotero에서 읽고 표시한 내용을 Obsidian 문헌 노트로 보냅니다. 
 | Insert or update references section | 노트 끝의 관리형 참고문헌 블록 작성·갱신 |
 | Choose bibliography style from installed styles | Zotero styles 폴더에서 스타일을 골라 BBT로 확인 |
 | Export pandoc kit for current note | 내보내기용 정리 사본·CSL-JSON·pandoc defaults 작성 |
+| Export Word kit with live Zotero citations for current note | Word에서 Zotero 필드로 이어 쓰는 `.docx`용 정리 사본·pandoc defaults 작성 |
 | Copy CSL-JSON for cited sources | 현재 노트 인용의 CSL-JSON 복사 |
 | Write pandoc bibliography sidecar for current note | pandoc용 참고문헌 파일 저장 |
 | Open references sidebar | 현재 노트 인용 검토 |
@@ -171,7 +174,7 @@ Zotero에서 읽고 표시한 내용을 Obsidian 문헌 노트로 보냅니다. 
 PDF 쪽 번호는 **1부터 시작하는 파일 위치**이지 인쇄된 쪽 번호가 아닙니다.
 
 ## 설정
-설정은 영역별 구역으로 나뉘며, 요청 한도와 에이전트 전용 References headings는 **Advanced** 아래에 있습니다. 입력하는 동안 값을 검사합니다. 값을 바꾼 뒤 **Save configuration**을 누릅니다. 저장 전에는 이전 값이 쓰입니다.
+설정은 영역별 구역으로 나뉘며, 요청 한도와 에이전트 전용 References headings는 **Advanced** 아래에 있습니다. 입력하는 동안 값을 검사합니다. 스위치와 선택 상자는 바꾸는 즉시 저장됩니다(0.6.7). 글자로 입력한 값은 **Save configuration**을 눌러야 저장되고, 그 전에는 이전 값이 쓰입니다.
 
 | 구역 | 설정 | 기본값과 의미 |
 |---|---|---|
@@ -208,7 +211,11 @@ PDF 쪽 번호는 **1부터 시작하는 파일 위치**이지 인쇄된 쪽 번
 | Bibliography and references | Bibliography locale | 비움(스타일 기본값); 예: `ko-KR`; 노트의 `lang`이 우선 |
 | Bibliography and references | Bibliography order | 스타일이 정한 순서; 또는 처음 인용한 순서, 가나다·알파벳순 |
 | Bibliography and references | Zotero data directory | `~/Zotero`; Zotero의 `styles` 폴더가 있는 폴더, 읽기 전용 |
-| Bibliography and references | Export kit folder | `CMDS Zotero exports`; pandoc 내보내기 키트 위치, 노트마다 하위 폴더 |
+| Bibliography and references | Allow export kits outside the vault | 꺼짐. 켜면 *Export kit folder*에 절대경로나 `~/` 경로를 쓸 수 있음(0.6.6) |
+| Bibliography and references | Export kit folder | `CMDS Zotero exports`; 내보내기 키트 위치, 노트마다 하위 폴더 |
+| Bibliography and references | Run pandoc after export | 꺼짐. 켜면 키트에 pandoc을 실행하고 `.docx`를 엶(0.6.6) |
+| Bibliography and references | Pandoc path | 비우면 흔한 설치 폴더, 그다음 시스템 검색 경로 |
+| Bibliography and references | Link exports in Hookmark | 꺼짐. 켜면(macOS) `.docx`와 노트를 Hookmark로 연결(0.6.6) |
 | Bibliography and references | References sidebar follows the active note | 켬; 끄면 Refresh를 누를 때까지 보던 노트를 유지 |
 | Recently read | Recently read window | 30일(7/30/90/365); 최근 읽은 논문 목록과 자료 선택 창 정렬 |
 | Connected vaults | Peer vaults | 한 줄에 `볼트 이름 \| 절대 경로`; 다른 볼트 노트 찾기용 |
@@ -239,14 +246,14 @@ node scripts/ingest.mjs --vault "Research" --action locate --citekey Example2026
 
 ## 교차 볼트와 Hookmark
 **Peer vaults**에 등록한 다른 볼트의 노트 지도를 읽기 전용으로 읽고 **Find literature across vaults**로 이동합니다. 같은 citekey라도 다른 볼트에서는 다른 자료일 수 있으므로 식별을 확인합니다.
-Hookmark 관련 명령은 링크를 클립보드에 복사할 뿐입니다. Hookmark 설정을 바꾸거나 북마크를 만들거나 스크립트를 실행하지 않습니다.
+Hookmark 링크 명령은 링크를 클립보드에 복사할 뿐입니다. 북마크는 **Link exports in Hookmark**(기본 꺼짐, macOS)를 켰을 때만 만듭니다. pandoc이 끝난 뒤 `.docx`와 원고 노트를 북마크 두 개로 만들어 서로 연결합니다.
 
 ## 데이터와 개인정보
 - 로컬 BBT에 메타데이터, 인용, 참고문헌, 첨부와 주석, 읽기 기록을 요청합니다. Zotero 설정, 데이터베이스, citekey, 라이브러리 기록은 바꾸지 않습니다.
 - 이미지 주석을 가져오거나 주석 사이드바·Search annotations에서 콜아웃으로 넣으면 볼트 밖의 Zotero 캐시 이미지를 읽어 이미지 폴더에 복사합니다. 설치된 스타일이 필요할 때(스타일 고르기, `csl`로 스타일을 지정한 노트, pandoc 내보내기 키트) Zotero `styles` 폴더의 `.csl` 파일을 읽기 전용으로 읽습니다.
 - 볼트에 쓰는 것은 설정, 인덱스, 문헌 노트, 이미지 사본, 요청한 내보내기 키트, `.cmds-zotero/` 아래의 비공개 파일(참고문헌·노트 지도·백업·PDF 텍스트 캐시)입니다. 플러그인은 `.cmds-zotero/.gitignore`를 먼저 만들어 이 폴더가 git에 올라가지 않게 합니다. PDF 텍스트 캐시는 논문 전문이므로 공유하지 않습니다.
 - 인덱스와 노트 지도에는 서지정보, 개인 경로, 주석이 들어갈 수 있습니다. 공개 저장소에 올리지 않습니다.
-- 에이전트 요청과 **Diagnose setup**·**Diagnose index and links** 명령을 처리할 때, 볼트가 Git 저장소이면 비공개 파일이 git에서 무시되는지 알리려고 `git`을 읽기 전용(`ls-files`, `check-ignore`)으로 실행합니다. 그 밖의 프로그램은 실행하지 않으며, 내보내기 키트의 pandoc 실행도 사용자에게 맡깁니다.
+- 에이전트 요청과 **Diagnose setup**·**Diagnose index and links** 명령을 처리할 때, 볼트가 Git 저장소이면 비공개 파일이 git에서 무시되는지 알리려고 `git`을 읽기 전용(`ls-files`, `check-ignore`)으로 실행합니다. 선택 설정(모두 기본 꺼짐)을 켠 경우에만 내보내기 때 다른 프로그램을 띄웁니다. **Run pandoc after export**는 키트에 pandoc을 실행하고 `.docx`를 열며, **Link exports in Hookmark**는 `osascript`로 Hookmark 북마크를 만듭니다. 모두 셸 없이, 시간 제한을 두고 실행합니다. 그 밖의 프로그램은 실행하지 않습니다.
 - 텔레메트리, 자체 HTTP 서버, 자동 업데이트는 없습니다.
 
 ## 문제 해결
@@ -280,6 +287,6 @@ node scripts/migrate-local.mjs --vault /path/to/vault --backup /path/to/private-
 `rollback` 모드로 되돌릴 수 있으며, 배포 이후 바뀐 파일은 덮어쓰지 않고 거부합니다. 이전 뒤에는 새 ID만 켜져 있는지 확인하고 인덱스를 다시 만듭니다.
 
 ## 업데이트, 지원, 라이선스
-[웹 설명서](https://apps.cmdspace.work/plugins/cmds-zotero/) | [저장소](https://github.com/johnfkoo951/cmds-zotero) | [릴리스](https://github.com/johnfkoo951/cmds-zotero/releases) | [문제 신고](https://github.com/johnfkoo951/cmds-zotero/issues) | [변경 이력](https://github.com/johnfkoo951/cmds-zotero/blob/main/CHANGELOG.md)
+[웹 설명서](https://zotero.cmdspace.work) | [저장소](https://github.com/johnfkoo951/cmds-zotero) | [릴리스](https://github.com/johnfkoo951/cmds-zotero/releases) | [문제 신고](https://github.com/johnfkoo951/cmds-zotero/issues) | [변경 이력](https://github.com/johnfkoo951/cmds-zotero/blob/main/CHANGELOG.md)
 문제를 신고할 때는 플러그인·Obsidian·Zotero·BBT 버전과 OS, 개인정보를 지운 진단 결과를 적습니다. 실제 인덱스, 개인 경로, 주석 원문, PDF 텍스트 캐시는 올리지 않습니다.
 **Yohan Koo (CMDSPACE)**, https://cmdspace.work. MIT, [LICENSE](https://github.com/johnfkoo951/cmds-zotero/blob/main/LICENSE).
