@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-06T01:35:19.007Z",
+  "generated_at": "2026-11-06T15:17:17.405Z",
   "site": {
     "title": "CMDSPACE Apps",
     "tagline_ko": "커맨드스페이스가 만든 것들",
     "tagline_en": "Everything CMDSPACE builds"
   },
   "stats": {
-    "total": 37,
-    "live": 17,
+    "total": 38,
+    "live": 18,
     "categories": 6
   },
   "categories": [
@@ -343,8 +343,8 @@
       "docs_url": "",
       "download_url": "",
       "repo_url": "https://github.com/getagentseal/codeburn",
-      "last_commit": "2026-11-05",
-      "stars": 11701,
+      "last_commit": "2026-11-06",
+      "stars": 11711,
       "latest_release": "mac-v0.9.27",
       "url_alive": null,
       "is_private": false,
@@ -488,7 +488,7 @@
       "docs_url": "https://apps.cmdspace.work/plugins/cmds-achmage/",
       "download_url": "",
       "repo_url": "https://github.com/CMDSPACE-DEV/CMDS-Achmage",
-      "last_commit": "2026-10-26",
+      "last_commit": "2026-11-06",
       "stars": 7,
       "latest_release": "1.3.2",
       "url_alive": null,
@@ -517,7 +517,7 @@
       "docs_url": "https://apps.cmdspace.work/plugins/cmds-zotero/",
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/cmds-zotero",
-      "last_commit": "2026-11-04",
+      "last_commit": "2026-11-06",
       "stars": 0,
       "latest_release": "0.6.7",
       "url_alive": null,
@@ -1137,6 +1137,36 @@
       "is_archived": null,
       "dirty": null,
       "stale": null
+    },
+    {
+      "name": "akm-eval",
+      "category": "claude-ecosystem",
+      "tier": "featured",
+      "priority": 36,
+      "headline": "AKM Eval — 에이전트 지식관리 셀프 평가 스킬",
+      "sub": "AKM Index v1.2로 사람·지식 저장소·에이전트 런타임·운영 루프의 성숙도를 0–100점으로 측정하는 Claude Code 스킬. 결과는 안내 후 CMDSPACE로 업로드되며, 원치 않으면 거절할 수 있습니다.",
+      "tech": "Claude Code 스킬 (SKILL.md + references/ 루브릭·리포트 스키마·HTML 템플릿, 한/영)",
+      "tags": [
+        "5필러·25기준",
+        "증거 기반 채점",
+        "M0–M4 밴드",
+        "평가 리포트",
+        "보드 공개 opt-in",
+        "한/영 문서"
+      ],
+      "status": "active",
+      "url": "https://akm.cmdspace.work",
+      "docs_url": "",
+      "download_url": "",
+      "repo_url": "https://github.com/johnfkoo951/akm-eval",
+      "last_commit": "2026-10-23",
+      "stars": 13,
+      "latest_release": null,
+      "url_alive": true,
+      "is_private": false,
+      "is_archived": false,
+      "dirty": null,
+      "stale": false
     }
   ],
   "longtail": [
