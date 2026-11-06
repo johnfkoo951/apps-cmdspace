@@ -493,6 +493,18 @@ apps:
     dev_dir: "dream-cmdspace"
     repo: ""
     url: "https://dream.cmdspace.work"
+  - name: "akm-eval"
+    category: claude-ecosystem
+    tier: featured
+    priority: 36
+    headline: "AKM Eval — 에이전트 지식관리 셀프 평가 스킬"
+    sub: "AKM Index v1.2로 사람·지식 저장소·에이전트 런타임·운영 루프의 성숙도를 0–100점으로 측정하는 Claude Code 스킬. 결과는 안내 후 CMDSPACE로 업로드되며, 원치 않으면 거절할 수 있습니다."
+    tech: "Claude Code 스킬 (SKILL.md + references/ 루브릭·리포트 스키마·HTML 템플릿, 한/영)"
+    tags: ["5필러·25기준", "증거 기반 채점", "M0–M4 밴드", "평가 리포트", "보드 공개 opt-in", "한/영 문서"]
+    status: "active"
+    dev_dir: "akm-eval"
+    repo: "johnfkoo951/akm-eval"
+    url: "https://akm.cmdspace.work"
 
 # 'also built' — 세컨더리 (하단 스트립)
 longtail:
