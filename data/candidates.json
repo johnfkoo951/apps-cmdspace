@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T01:15:36.039Z",
+  "generated_at": "2026-11-12T02:17:23.383Z",
   "mode": "public-only",
   "counts": {
     "catalogued": 38,
@@ -12,7 +12,7 @@
     {
       "name": "joyeondang-online",
       "verdict": "feature-candidate",
-      "reason": "최근 1일 내 커밋된 활성 git 프로젝트",
+      "reason": "최근 2일 내 커밋된 활성 git 프로젝트",
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/joyeondang-online",
       "is_private": false,
@@ -22,7 +22,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 1
+        "lastCommitDays": 2
       }
     }
   ],
@@ -40,7 +40,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 2391
+        "lastCommitDays": 2392
       }
     },
     {
@@ -56,7 +56,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 2100
+        "lastCommitDays": 2101
       }
     },
     {
@@ -72,7 +72,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 2132
+        "lastCommitDays": 2133
       }
     },
     {
@@ -88,7 +88,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 2132
+        "lastCommitDays": 2133
       }
     },
     {
@@ -104,7 +104,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 2132
+        "lastCommitDays": 2133
       }
     },
     {
@@ -114,13 +114,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/LDA_visualization",
       "is_private": false,
-      "last_commit": "2021-06-24",
+      "last_commit": "2021-06-23",
       "signals": {
         "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 1966
+        "lastCommitDays": 1968
       }
     },
     {
@@ -136,7 +136,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 149
+        "lastCommitDays": 150
       }
     },
     {
@@ -152,7 +152,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 219
+        "lastCommitDays": 220
       }
     },
     {
@@ -168,7 +168,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 1197
+        "lastCommitDays": 1198
       }
     },
     {
@@ -184,7 +184,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 51
+        "lastCommitDays": 52
       }
     },
     {
@@ -200,7 +200,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 224
+        "lastCommitDays": 225
       }
     },
     {
@@ -216,7 +216,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 79
+        "lastCommitDays": 80
       }
     },
     {
@@ -232,7 +232,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 216
+        "lastCommitDays": 217
       }
     },
     {
@@ -248,7 +248,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 196
+        "lastCommitDays": 197
       }
     },
     {
@@ -264,7 +264,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 204
+        "lastCommitDays": 205
       }
     },
     {
@@ -280,7 +280,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 2142
+        "lastCommitDays": 2143
       }
     },
     {
@@ -290,13 +290,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/kordoc",
       "is_private": false,
-      "last_commit": "2026-06-14",
+      "last_commit": "2026-06-13",
       "signals": {
         "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 150
+        "lastCommitDays": 152
       }
     },
     {
@@ -312,7 +312,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 1677
+        "lastCommitDays": 1678
       }
     },
     {
@@ -328,7 +328,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 524
+        "lastCommitDays": 525
       }
     },
     {
@@ -344,7 +344,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 82
+        "lastCommitDays": 83
       }
     },
     {
@@ -360,7 +360,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 57
+        "lastCommitDays": 58
       }
     },
     {
@@ -376,7 +376,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 222
+        "lastCommitDays": 223
       }
     },
     {
@@ -392,7 +392,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 190
+        "lastCommitDays": 191
       }
     },
     {
@@ -408,7 +408,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 145
+        "lastCommitDays": 146
       }
     },
     {
@@ -424,7 +424,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 82
+        "lastCommitDays": 83
       }
     },
     {
@@ -440,7 +440,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 95
+        "lastCommitDays": 96
       }
     },
     {
@@ -456,7 +456,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 55
+        "lastCommitDays": 56
       }
     },
     {
@@ -466,13 +466,13 @@
       "source": "github",
       "repo_url": "https://github.com/johnfkoo951/plfetch",
       "is_private": false,
-      "last_commit": "2026-04-26",
+      "last_commit": "2026-04-25",
       "signals": {
         "git": true,
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 199
+        "lastCommitDays": 201
       }
     },
     {
@@ -488,7 +488,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 608
+        "lastCommitDays": 609
       }
     },
     {
@@ -504,7 +504,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 223
+        "lastCommitDays": 224
       }
     },
     {
@@ -520,7 +520,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 179
+        "lastCommitDays": 180
       }
     },
     {
@@ -536,7 +536,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 2692
+        "lastCommitDays": 2693
       }
     },
     {
@@ -552,7 +552,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 520
+        "lastCommitDays": 521
       }
     },
     {
@@ -568,7 +568,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 824
+        "lastCommitDays": 825
       }
     },
     {
@@ -584,7 +584,7 @@
         "vercel": false,
         "nativeApp": false,
         "obsidianPlugin": false,
-        "lastCommitDays": 135
+        "lastCommitDays": 136
       }
     }
   ],
