@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T02:17:23.383Z",
+  "generated_at": "2026-11-13T01:52:34.498Z",
   "site": {
     "title": "CMDSPACE Apps",
     "tagline_ko": "커맨드스페이스가 만든 것들",
@@ -344,7 +344,7 @@
       "download_url": "",
       "repo_url": "https://github.com/getagentseal/codeburn",
       "last_commit": "2026-11-09",
-      "stars": 11773,
+      "stars": 11781,
       "latest_release": "desktop-v0.9.28",
       "url_alive": null,
       "is_private": false,
