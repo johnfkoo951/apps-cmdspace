@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T01:22:40.157Z",
+  "generated_at": "2026-11-23T01:47:01.358Z",
   "site": {
     "title": "CMDSPACE Apps",
     "tagline_ko": "커맨드스페이스가 만든 것들",
@@ -344,7 +344,7 @@
       "download_url": "",
       "repo_url": "https://github.com/getagentseal/codeburn",
       "last_commit": "2026-11-20",
-      "stars": 11881,
+      "stars": 11889,
       "latest_release": "desktop-v0.9.28",
       "url_alive": null,
       "is_private": false,
@@ -461,7 +461,7 @@
       "download_url": "",
       "repo_url": "https://github.com/johnfkoo951/cmds-share",
       "last_commit": "2026-11-20",
-      "stars": 24,
+      "stars": 25,
       "latest_release": "2.5.6",
       "url_alive": null,
       "is_private": false,
