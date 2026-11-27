@@ -1,6 +1,6 @@
 # 카탈로그 드리프트 리포트
 
-> 생성: 2026-11-26T03:36:33.502Z · 모드: `public-only` · 카탈로그 38개 · 신규후보 2개 · 이상 0건
+> 생성: 2026-11-27T03:39:23.700Z · 모드: `public-only` · 카탈로그 38개 · 신규후보 4개 · 이상 0건
 
 이 파일은 `scripts/scan.mjs`가 자동 생성합니다. 새 프로젝트는 `catalog/apps.yaml`(피처링) 또는 `catalog/ignore.yaml`(제외)로 옮기면 다음 스캔부터 사라집니다.
 
@@ -8,8 +8,10 @@
 
 | 프로젝트 | 소스 | 최근 커밋 | 신호 | 판단 이유 |
 |---|---|---|---|---|
-| `joyeondang-online` | github | 2026-11-15 | git | 최근 11일 내 커밋된 활성 git 프로젝트 |
-| `sword-continent` | github | 2026-11-15 | git | 최근 11일 내 커밋된 활성 git 프로젝트 |
+| `DeepTutor` | github | 2026-11-27 | git | 최근 0일 내 커밋된 활성 git 프로젝트 |
+| `elanous` | github | 2026-11-27 | git | 최근 0일 내 커밋된 활성 git 프로젝트 |
+| `joyeondang-online` | github | 2026-11-15 | git | 최근 12일 내 커밋된 활성 git 프로젝트 |
+| `sword-continent` | github | 2026-11-15 | git | 최근 12일 내 커밋된 활성 git 프로젝트 |
 
 ## ⚠️ 기존 앱 이상 (알림 대상)
 
